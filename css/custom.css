@@ -1,0 +1,163 @@
+
+.navbar {
+  padding-left: 40px;	
+  padding-right: 40px;	
+  font-weight: 200;
+}
+
+#logo {
+	max-height: 30px;
+}
+
+.header {
+  	background-color: #343a40;
+	background-image: url('../img/bg2.jpg');
+	background-position: right center;
+	background-repeat: no-repeat;
+	min-height: 270px;
+}
+
+.header h1 {
+	margin-top: 1.4em;
+	max-width: 900px;
+	font-weight: 200;
+	color: #eee;
+}
+
+.header img.logo {
+	max-width: 250px;
+	float: left;
+	margin-right: 20px;
+}
+
+.header h1 b {
+	color: #fcb040;
+	font-weight: 200;
+}
+
+.featurette-heading {
+	margin-top: 1em;
+}
+
+.featurette-heading b {
+	color: #fcb040;
+	font-weight: 200;
+}
+
+
+footer {
+	padding: -20px 20px;
+}
+
+.navbar {
+	background-color: #fff;
+}
+
+.featurette-heading {
+	border-bottom: 2px dotted #ddd;
+	padding-bottom: 0.2em;
+}
+
+.featurette img {
+	max-width: 350px;
+	margin: 50px auto 50px auto;
+}
+
+.bg-dark .container {
+	color: #eee;
+}
+
+.container-fluid .container { 
+	padding: 20px; 
+	font-weight: normal;
+}
+
+a:link, a:visited { color: #fcb040; }
+a:hover { color: #ffd060; }
+
+ul {
+	margin: 1.2em 0 1em 1.1em;	
+	padding: 0;
+}
+
+ul li {
+	margin: 0 1em 0.6em 0em;
+	padding: 0;
+}
+
+.funded img {
+	max-width: 200px;
+}
+
+@media (max-width: 992px) {
+	.header {
+		min-height: 220px;
+	}
+
+	.header img.logo {
+		max-width: 200px;
+		display: block;
+	}			   
+				   
+	.header h1 {
+		font-size: 24pt;
+	}
+	
+	.featurette {
+		margin-top: 20px;
+		text-align: left;
+	}
+
+	.featurette-heading {
+		margin-top: 1em;
+	}
+
+	.featurette img {
+		max-width: 250px;
+		margin: 40px auto 20px auto;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+	.header {
+		min-height: auto;
+		text-align: center;
+	}
+
+	.header img.logo {
+		max-width: 200px;
+		float: none;
+		margin: 10px auto 10px auto;
+	}			   
+				   
+	.header h1 {
+		margin-top: 0.4em;
+		font-size: 16pt;
+		max-width: 400px;
+		margin: 0.4em auto 0.4em auto;
+	}
+	
+	.featurette {
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.featurette-heading {
+		margin-top: 1em;
+	}
+
+	.featurette img {
+		max-width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.featurette ul {
+		text-align: left;
+	}
+
+}
+
+div { border: 0px solid #eee; }
