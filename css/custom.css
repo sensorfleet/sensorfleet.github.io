@@ -75,6 +75,13 @@ footer {
 a:link, a:visited { color: #fcb040; }
 a:hover { color: #ffd060; }
 
+.anchor { 
+  display: block;
+  height: 100px; /*same height as header*/
+  margin-top: -100px; /*same height as header*/
+  visibility: hidden;
+}
+
 ul {
 	margin: 1.2em 0 1em 1.1em;	
 	padding: 0;
@@ -157,7 +164,4 @@ ul li {
 	.featurette ul {
 		text-align: left;
 	}
-
 }
-
-div { border: 0px solid #eee; }
