@@ -96,6 +96,28 @@ ul li {
 	max-width: 200px;
 }
 
+img.sf {
+	max-width: 220px;	
+}
+
+img.scanabc {
+	max-width: 170px;	
+	margin-right: 20px;
+}
+
+img.fsolutions {
+	max-width: 240px; 
+	margin-right: 20px;
+}
+
+img.leverageeu {
+	max-width: 120px; 
+	margin-right: 20px;
+}
+img.eu {
+	max-width: 80px; 	
+}
+
 @media (max-width: 992px) {
 	.header {
 		min-height: 220px;
@@ -123,6 +145,33 @@ ul li {
 		max-width: 250px;
 		margin: 40px auto 20px auto;
 	}
+
+	img.sf {
+		max-width: 140px;	
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	img.scanabc {
+		max-width: 120px;	
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	img.fsolutions {
+		max-width: 160px; 
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	img.leverageeu {
+		max-width: 100px; 
+		margin-right: 20px;
+	}
+	img.eu {
+		max-width: 80px; 	
+	}
+	
 
 }
 
