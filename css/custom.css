@@ -100,6 +100,18 @@ img.sf {
 	max-width: 220px;	
 }
 
+.content {
+	padding: 40px 0;
+}
+
+.logos {
+	display: block;
+}
+
+.logos:hover {
+	text-decoration: none;
+}
+
 img.scanabc {
 	max-width: 170px;	
 	margin-right: 20px;
