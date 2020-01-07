@@ -3,14 +3,28 @@ on:
   push:
     branches:
       - 'autoupdate-datasheets'
-jobs:
-  update-datasheets:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create pull request
-        id: cpr
-        uses: peter-evans/create-pull-request@v1
-        with:
-          title: Auto-update datasheets
-          branch: autoupdate-datasheets
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build the site in the jekyll/builder container
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+
+      - name: Create PR using REST API
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/pulls \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+                    "title": "Auto-update datasheets",
+                    "body": "Created by GitHub Action",
+                    "head": "autoupdate-datasheets",
+                    "base": "master"
+                  }'
