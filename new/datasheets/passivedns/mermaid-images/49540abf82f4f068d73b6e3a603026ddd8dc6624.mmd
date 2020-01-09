@@ -1,0 +1,15 @@
+sequenceDiagram
+  Participant Suricata
+  Participant Fleetgram
+  Participant PassiveDNS
+  loop For each DNS response seen
+  Suricata ->> Fleetgram: DNS event
+  Fleetgram ->> PassiveDNS: DNS event
+  note right of PassiveDNS: Store DNS </br>information from</br>event
+  end
+  opt Suricata Alert triggers
+  Suricata ->> Fleetgram: Suricata Alert Event
+  Fleetgram ->> PassiveDNS: Suricata Alert Event
+  note right of PassiveDNS: Search database,</br>Create Augmentation</br>event containing</br>resolved names
+  PassiveDNS ->> Fleetgram: Augmentation event (ref: Alert)
+  end
