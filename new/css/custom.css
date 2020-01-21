@@ -6,9 +6,8 @@ body {
   background-repeat: no-repeat;
 }
 
-a:link, a:visitd {
-  color: #fff !important;
-  font-weight: bold;
+a:link, a:visited {
+  color: #fff;
 }
 
 div#mobilelogo {
@@ -35,7 +34,7 @@ h2 {
   text-transform: uppercase;
 }
 
-h3 {
+h3, h3 a, h3 a:visited {
   margin: 1.4em 0 0.6em 0;
   color: #d48500;
   font-size: 16pt;
@@ -68,11 +67,11 @@ table td {
 }
 
 .bg-dark tr.even td, .bg-dark2 tr.even td {
-  background-color: #545a60;
+  background-color: #4b4f55;
 }
 
 .bg-dark tr.odd td, .bg-dark2 tr.odd td {
-  background-color: #343a40;
+  background-color: #2c3438;
 }
 
 .bg-light tr.even td {
@@ -87,7 +86,7 @@ table td {
   min-height: 80vh;
   text-align: center;
   padding-top: 25vh;
-  font-style: italic;;
+  font-style: italic;
 }
 
 .header h1 {
@@ -101,14 +100,14 @@ table td {
 }
 
 .header2 {
-  min-height: 26vh;
+  min-height: 22vh;
   text-align: center;
   padding-top: 0vh;
   font-style: italic;;
   margin-bottom: -4vh;
 }
 
-.footer img {
+.footer img, .funded img {
   max-height: 70px;
 }
 
@@ -120,6 +119,26 @@ table td {
   filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.2));
 }
 
+div.boxes div {
+  margin: 10px;
+  padding: 10px 20px 20px 20px;
+  text-align: center;
+  background-color: #2c3438;
+}
+
+div.boxes div:nth-of-type(2n) {
+  background-color: #4b4f55;
+}
+
+div.boxes h3 {
+  min-height: 2.3em;
+}
+
+.bio {
+  display: block;
+  padding-left: 20px;
+  border-left: 4px solid #4b4f55;
+}
 
 img.dropshadow {
   filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.2));
@@ -136,6 +155,14 @@ img.dropshadow {
   background: linear-gradient(-180deg, rgba(70,77,84,1) 0%, rgba(52,58,64,1) 85%);
 }
 
+.bg-img {
+  min-height: 100vh;
+  text-align: center;
+  margin-top: -20vh;
+  padding-top: 50vh;
+  background-size: cover;
+}
+
 .bg-dark {
   background: rgb(42,48,53);
   background: linear-gradient(90deg, rgba(42,48,53,1) 0%, rgba(52,58,64,1) 50%);
@@ -143,8 +170,9 @@ img.dropshadow {
 }
 
 .bg-dark2 {
-  background-color: #3e454c !important;
+/*  background-color: #3e454c !important; */
   color: #f5f5f5;
+  background: linear-gradient(-180deg, rgba(70,77,84,1) 0%, rgba(52,58,64,1) 85%);
 }
 
 .bg-dark3 {
@@ -288,10 +316,9 @@ img.dropshadow {
     background: #202529;
     padding: 10px;
   }
-  .footer img {
+  .footer img, .funded img {
     max-height: 36px;
     max-width: 96px;
-
   }
   .slanted, .slanted2 {
     margin-top: -30px;

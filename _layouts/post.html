@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+		<h1>{{ page.title }}</h1>
+
+		<p class="lead">{{ page.excerpt }}</p>
+
+		<div class="post-content">
+			{{ content }}
+		</div>
+
+    <div class="bio">
+      {% assign author = site.data.staff[page.author] %}
+      <p><i>{{ author.name }}, {{ author.position }}<br>
+      <a href="{{ author.linkedin }}" target="_new">LinkedIn &raquo;</a></i></p>
+    </div>
+
+		<div class="blog-pagination">
+		   {% if page.previous %}
+		       <p><a href="{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a></p>
+		   {% endif %}
+		   {% if page.next %}
+		       <p><a href="{{ site.baseurl }}{{page.next.url}}">&raquo; {{page.next.title}}</a></p>
+		   {% endif %}
+		</div>
