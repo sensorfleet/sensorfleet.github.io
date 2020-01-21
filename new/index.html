@@ -1,4 +1,5 @@
-
+---
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,19 +33,25 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="solution-description.html">Solution Description</a>
+          <a class="nav-link" href="solution-description/">Solution Description</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="in-action/index.html">In action</a>
+          <a class="nav-link" href="in-action/">In action</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="datasheets/index.html">Datasheets</a>
+          <a class="nav-link" href="datasheets/">Datasheets</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="our-approach.html">Our Approach</a>
+          <a class="nav-link" href="our-approach/">Our Approach</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact us</a>
+            <a class="nav-link" href="/new/about-us/">About us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="blog/">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact/">Contact us</a>
         </li>
       </ul>
     </div>
@@ -174,12 +181,37 @@
 <div class="container">
 
   <h1>Our Approach</h1>
+
+  <div class="row">
+  <div class="col-md-6 text-left">
+
   <p>
-  Our team has long experience on developing network security sensor technology for a national Security Operations Centre protecting the critical infrastructure in Finland. At the inception of SensorFleet, we set out to re-imagine network level detection and solve the pain points we had observed over the years.
+  Our team has a long experience in developing cyber security sensor technology for a national early warning system
+  protecting the critical infrastructure in Finland. At the inception of SensorFleet in 2018, we set out to re-imagine
+  cyber security monitoring.
   <p>
-  <a href="our-approach.html" class="btn btn-secondary">Read more</a>
+  <a href="about-us.html" class="btn btn-secondary">Read more &raquo;</a>
+
+
+  <h3>Latest blog posts</h3>
+  <ul>
+  {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}
+      - {{ post.date | date:"%d %b %Y" }} - {{ site.data.staff[post.author].name }}</a>
+  {% endfor %}
+  </ul>
+
+  </div>
+
+  <div class="col-md-6 text-left">
+    <img src="img/sensorfleet-team.jpg" style="max-height: 400px;">
+  </div>
+  </div>
 
 </div>
+
+
+
 </div>
 
 <a name="contact"></a>
@@ -198,6 +230,9 @@
     <p><i>
       &copy; SensorFleet Oy<br>Business ID: 2884312-2
     </i></p>
+    <p>
+      <a href="privacy-policy/">Privacy policy &raquo;</a>
+    </p>
 
       </div>
       <div class="col-md-8 text-left">
