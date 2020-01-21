@@ -1,6 +1,4 @@
 _site/
 .jekyll-metadata
 .DS_Store
-new/.DS_Store
-new/datasheets/.DS_Store
-new/img/.DS_Store
+**/.DS_Store
