@@ -63,13 +63,15 @@
 
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
-
-  <div class="container-fluid bg-dark header2">
-    <div class="container">
+  {% if page.url == "/" %}
+    <div class="container-fluid bg-dark header" style="background-image: url('/img/bg.jpg');">
+    {% else %}
+    <div class="container-fluid bg-dark header2">
+      <div class="container">
+      </div>
     </div>
-  </div>
-
-  <div class="container-fluid bg-dark2 slanted2" style="margin-top: 30px; padding-top: 40px;">
+    <div class="container-fluid bg-dark2 slanted2" style="margin-top: 30px; padding-top: 40px;">
+  {% endif %}
     <div class="container">
 
       {{ content }}
