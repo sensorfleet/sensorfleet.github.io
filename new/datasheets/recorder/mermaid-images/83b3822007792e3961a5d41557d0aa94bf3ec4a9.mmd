@@ -1,0 +1,21 @@
+graph TB
+    suricatalogic("Suricata IDS logic")
+    idsevent("IDS alert event<br>{ src_ip, dest_ip, ... }")
+    subgraph Sensor
+        suricatalogic-- produce --> idsevent
+        subgraph Suricata IDS Instrument
+            capture("Capture interface<br>(mirror-bridge input)")
+            capture-- "live analyzation"-->suricatalogic
+        end
+
+        subgraph Recorder Instrument
+        recorderlogic("Recorder logic")
+        capture2("Capture interface<br>(mirror-bridge input)")
+        capture2-->timedelay
+        timedelay("Time delay<br>e.g. 60 seconds")
+        timedelay-->filter
+        filter("Filtering based on alerts")
+        filter-->recorderlogic
+        end
+        idsevent-- subscribe-->recorderlogic
+    end
