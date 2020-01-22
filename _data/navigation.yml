@@ -1,0 +1,25 @@
+- name: Home
+  link: /
+
+- name: Solution Description
+  link: /solution-description/
+
+- name: In action
+  link: /in-action/
+
+- name: Datasheets
+  link: /datasheets/
+
+- name: Our Approach
+  link: /our-approach/
+
+- name: About us
+  link: /about-us/
+
+- name: Blog
+  link: /blog/
+
+- name: Contact us
+  link: /contact/
+
+
