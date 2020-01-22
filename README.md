@@ -8,6 +8,10 @@ Development version can be started locally using command
 
 `docker-compose -f _docker-compose.yml up`
 
+or
+
+`bundle exec jekyll serve --watch --livereload`
+
 ## References
 
 ## Graphics
