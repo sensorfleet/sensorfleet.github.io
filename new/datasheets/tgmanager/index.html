@@ -6,11 +6,14 @@ layout: datasheet
 
 <h1 id="trafficguard-management-instrument">TrafficGuard Management Instrument</h1>
 <h2 id="overview">Overview</h2>
-<p>There are several ways of integrating TrafficGuard as a SensorFleet intrument. There is a choice between reusability and speed of integration.</p>
-<p>It was decided 2018-12-18 that we will implement whatever integration is the easiest to do, with the argument that this is a good integration test for SensorFleet.</p>
-<p>If integration of such software proves to be too difficult, we might need to reconsider some of our design strategies.</p>
-<h1 id="portdiff-instrument-properties">PortDiff instrument properties</h1>
+<p>TrafficGuard Manager Instrument collects and manages information gathered by TrafficGuard Probe Instrument(s). Using TrafficGuard Manager UI it is easy to view assets currently active on monitoried network and get events on new assets found to be active.</p>
+<p>While the Traffic Guard Probe Instruments collect data from networks, the TrafficGuard Manager itself does not need any access to network.</p>
+<h1 id="trafficguard-management-instrument-properties">TrafficGuard Management instrument properties</h1>
 <table>
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 46%" />
+</colgroup>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Instrument developer</td>
@@ -33,18 +36,24 @@ layout: datasheet
 <td style="text-align: left;">None</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Data retention</td>
-<td style="text-align: left;">None</td>
+<td style="text-align: left;">Related Instruments</td>
+<td style="text-align: left;">TrafficGuard Probe</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">Data retention</td>
+<td style="text-align: left;">Traffic Guard Manager keeps the collected information up to configured retention period</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Management UI</td>
 <td style="text-align: left;">Yes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Performance</td>
 <td style="text-align: left;">None</td>
 </tr>
 </tbody>
 </table>
-<h1 id="examples">Examples</h1>
-<h2 id="example-use-case">Example use case</h2>
+<h1 id="example-use-case">Example use case</h1>
+<p>TrafficGuard Probe Instrument is set to monitor a protected network which has stable set of assets deployed. Installed TrafficGuard Manager will gather all information detected by the Probe Instrument.</p>
+<p>After the setup has been runnig for a while, TrafficGuard Manager has collected information on assets currently running on the network. These assets can be marked as known and from then on an event is provided if new assets show up on the monitored network.</p>
+<p>This allows to quickly react to rogue devices appearing on the protected network due to misconfiguration or malicious activity.</p>
