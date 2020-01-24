@@ -1,16 +1,16 @@
 - name: Home
   link: /
 
-- name: Solution Description
+- name: Solution description
   link: /solution-description/
 
 - name: In action
   link: /in-action/
 
-- name: Datasheets
-  link: /datasheets/
+- name: Instruments
+  link: /instruments/
 
-- name: Our Approach
+- name: Our approach
   link: /our-approach/
 
 - name: About us
