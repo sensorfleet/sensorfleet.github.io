@@ -26,5 +26,5 @@ jobs:
                     "title": "Auto-update datasheets",
                     "body": "Created by GitHub Action",
                     "head": "autoupdate-datasheets",
-                    "base": "master"
+                    "base": "new"
                   }'
