@@ -6,13 +6,18 @@ layout: default
 
 <p class="lead">
   More details of available instruments.
-<p>
-    <div class="row boxes">
-      {% for instrument in site.data.instruments %}
-      <div class="col-md-3 text-center">
-        <h3>{{ instrument[1].name }}</h3>
-        <p>{{ instrument[1].description }}</p>
-        <a href="{{ instrument[0] }}/" class="btn btn-secondary">Datasheet &raquo;</a>
-      </div>
-      {% endfor %}
-    </div>
+</p>
+
+<p></p>
+
+<div class="row boxes">
+  {% for instrument in site.data.instruments %}
+  <div class="col-md-3 text-center">
+    <h3>{{ instrument[1].name }}</h3>
+    <p>
+      {{ instrument[1].description }}
+    </p>
+    <a href="{{ instrument[0] }}/" class="btn btn-secondary">Datasheet &raquo;</a>
+  </div>
+  {% endfor %}
+</div>

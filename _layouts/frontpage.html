@@ -1,18 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<body class="d-flex flex-column">
-<header>
- {% include navbar.html %}
-</header>
+  {% include head.html %}
+  <body class="d-flex flex-column">
+    <header>
+      {% include navbar.html %}
+    </header>
 
-<!-- Begin page content -->
-<main role="main" class="flex-shrink-0">
-
-  {{ content }}
-
-  {% include footer.html %}
-</main>
-{% include scripts.html %}
-</body>
+    <!-- Begin page content -->
+    <main role="main" class="flex-shrink-0">
+      {{ content }} {% include footer.html %}
+    </main>
+    {% include scripts.html %}
+  </body>
 </html>
