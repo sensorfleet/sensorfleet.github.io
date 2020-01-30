@@ -12,6 +12,10 @@ or
 
 `bundle exec jekyll serve --watch --livereload`
 
+Formatting with Prettier:
+
+`prettier --write --prose-wrap=always **/*`
+
 ## References
 
 ## Graphics
