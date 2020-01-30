@@ -1,0 +1,30 @@
+{
+  "name": "Suricata IDS",
+  "developer": "SensorFleet Oy",
+  "title": "Fast and scalable IDS engine",
+  "categories": ["Attack Detection", "Traffic Analysis", "IDS"],
+  "description": "Suricata is a free and open source, mature, fast and robust network threat detection engine. The Suricata engine is capable of real time intrusion detection (IDS), inline intrusion prevention (IPS), network security monitoring (NSM) and offline pcap processing. Suricata inspects the network traffic using a powerful and extensive rules and signature language, and has powerful Lua scripting support for detection of complex threats.",
+  "has_ui": false,
+  "data_retention_desc": "The latest rulelists are stored at Suricata Instrument persistent data. Events are exported to Sensor and respect Sensor's data retention rules.",
+  "relations": [
+      {
+          "description": "Rule Mananger can manage Suricata Rule lists.",
+          "instrument_type": "rmgr",
+          "instrument_name": "Rule Manager",
+          "required": false,
+          "permissions": []
+      },
+      {
+          "description": "Rule Importer can manage Suricata Rule lists.",
+          "instrument_type": "rule_importer",
+          "instrument_name": "Rule Importer",
+          "required": false,
+          "permissions": []
+      }
+  ],
+  "required_interfaces": [
+      {"type": "mirror-bridge", "capabilities": ["rx"], "description": "Monitored network"}
+  ],
+  "network_access_type": "passive",
+  "performance_desc": "Suricata Instrument should easily handle several gigabits of traffic on a F-Probe hardware on a typical traffic profile."
+}
