@@ -1,0 +1,27 @@
+{
+    "name": "SensorFleet capture engine",
+    "developer": "SensorFleet Oy",
+    "title": "SensorFleet capture engine",
+    "categories": ["Internal"],
+    "description": "Capture Engine redistributes packets from physical interface to mirror-bridge interface(s).",
+    "has_ui": false,
+    "data_retention_desc": "Capture Engine does not store information",
+    "required_interfaces": [
+        {
+            "type": "phy",
+            "capabilities": [
+                "rx"
+            ],
+            "description": "The physical interface whose data is to be copied"
+        },
+        {
+            "type": "mirror-bridge",
+            "capabilities": [
+                "tx"
+            ],
+            "description": "Interface(s) where to mirror the data from physical interface"
+        }
+    ],
+    "network_access_type": "passive",
+    "performance_desc": "Capture Engine should be able to mirror gigabits/sec of traffic with F-Probe hardware"
+}
