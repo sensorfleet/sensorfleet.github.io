@@ -15,7 +15,7 @@ or
 
 Formatting with Prettier:
 
-`prettier --write **/*`
+`prettier --write "**/*"`
 
 ## References
 
