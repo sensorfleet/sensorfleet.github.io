@@ -3,7 +3,7 @@
   "developer": "SensorFleet Oy",
   "title": "Builds a history database from DNS queries",
   "categories": ["Traffic Analysis", "Traffic Recording", "DNS"],
-  "description": "PassiveDNS along with good IDS configuration allows for very effective detection on malware hosts.",
+  "description": "PassiveDNS can be used to store information from DNS requests and uses that stored information to augment other events.",
   "has_ui": true,
   "data_retention_desc": "PassiveDNS Instrument stores DNS information up to the configured period.",
   "performance_desc": "PassiveDNS Instrument can handle thousands of DNS requests per second(??)",
