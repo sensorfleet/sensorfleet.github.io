@@ -11,6 +11,10 @@ a:visited {
   color: #fff;
 }
 
+pre {
+  color: #69665e;
+}
+
 div#mobilelogo {
   display: none;
 }
@@ -55,7 +59,8 @@ h3 a:visited {
 }
 
 .navbar img {
-  max-height: 28px;
+  margin-top: -5px;
+  max-height: 36px;
 }
 
 table {
@@ -125,17 +130,26 @@ table td {
 
 div.boxes div {
   margin: 10px;
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 60px 20px;
   text-align: center;
   background-color: #2c3438;
+  filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.2));
 }
 
 div.boxes div:nth-of-type(2n) {
-  background-color: #4b4f55;
+  /*  background-color: #4b4f55; */
 }
 
 div.boxes h3 {
   min-height: 2.3em;
+}
+
+div.boxes a.btn {
+  width: 200px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -100px;
 }
 
 .bio {
@@ -171,7 +185,8 @@ img.dropshadow {
   background-size: cover;
 }
 
-.bg-dark {
+.bg-dark,
+pre {
   background: rgb(42, 48, 53);
   background: linear-gradient(
     90deg,
@@ -179,6 +194,10 @@ img.dropshadow {
     rgba(52, 58, 64, 1) 50%
   );
   color: #f5f5f5;
+}
+
+pre {
+  padding: 20px;
 }
 
 .bg-dark2 {
@@ -310,7 +329,7 @@ bg-dark2 h1,
     position: absolute;
     top: 30px;
     left: 75px;
-    width: calc(100% - 150px);
+    width: calc(100% - 100px);
     display: block;
     border: 0;
     text-align: center;
@@ -321,7 +340,7 @@ bg-dark2 h1,
     padding: 0;
   }
   div#mobilelogo img {
-    max-height: 22px;
+    max-height: 30px;
     margin-left: auto;
     margin-right: auto;
   }
