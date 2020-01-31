@@ -1,6 +1,7 @@
 # SensorFleet webpage
 
-All changes will be automatically reflected in the webpage at www.sensorfleet.com
+All changes will be automatically reflected in the webpage at
+www.sensorfleet.com
 
 ## Developing
 
@@ -14,7 +15,7 @@ or
 
 Formatting with Prettier:
 
-`prettier --write --prose-wrap=always **/*`
+`prettier --write **/*`
 
 ## References
 
