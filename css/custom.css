@@ -11,6 +11,10 @@ a:visited {
   color: #fff;
 }
 
+pre {
+  color: #69665e;
+}
+
 div#mobilelogo {
   display: none;
 }
@@ -172,7 +176,8 @@ img.dropshadow {
   background-size: cover;
 }
 
-.bg-dark {
+.bg-dark,
+pre {
   background: rgb(42, 48, 53);
   background: linear-gradient(
     90deg,
@@ -180,6 +185,10 @@ img.dropshadow {
     rgba(52, 58, 64, 1) 50%
   );
   color: #f5f5f5;
+}
+
+pre {
+  padding: 20px;
 }
 
 .bg-dark2 {
