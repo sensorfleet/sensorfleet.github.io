@@ -3,16 +3,15 @@
   "developer": "F-Solutions Oy",
   "title": "Network data collector component of F-Solutions TrafficGuard",
   "categories": ["Integrity Monitoring", "Asset Tracking"],
-  "description": "TrafficGuard Probe is the asset gathering part of Traffic Guard Instruments",
+  "description": "Traffic Guard Probe is the lower level network probe that delivers identities to TrafficGuard Manager.",
   "has_ui": false,
-  "data_retention_desc": "TrafficGuard Probe does not store data localy",
-  "performance_desc": "TrafficGuard Probe is able to hanldle XXmbits/sec with standadrd F-Probe hardware",
+  "data_retention_desc": "TrafficGuard Probe does not store data locally.",
   "network_access_type": "passive",
   "required_interfaces": [
     {
       "type": "mirror-bridge",
       "capabilities": ["rx"],
-      "description": "The interface tgprobe gathers asset information from"
+      "description": "Monitored network."
     }
   ],
   "relations": [
@@ -20,7 +19,7 @@
       "description": "TrafficGuard Management can manage TrafficGuard Probe.",
       "instrument_type": "tgmanager",
       "instrument_name": "TrafficGuard Management",
-      "required": false,
+      "required": true,
       "permissions": []
     }
   ]
