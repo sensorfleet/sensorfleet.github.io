@@ -4,39 +4,21 @@ layout: datasheet
 
 <!-- File is generated automatically, do not edit directly. -->
 
-<h1 id="downloader-instrument">Downloader Instrument</h1>
-<h2 id="overview">Overview</h2>
 <p>
-  Downloader is helper Instrument providing other Instruments the ability to
-  download resources from outside the sensor (intra-/internet).
+  Helper Instrument providing other Instruments the ability to download
+  resources outside the Sensor.
 </p>
 <p>
   Some Instruments do not require active network connection for their operation,
-  but can use outside resources for configuration. Using downloader Instrument
-  to fetch those resources allows them to require only passive network
-  connection while still be able to get the updated resources.
+  but can use outside resources for configuration. Downloader can fetch those
+  resources for Instrument and enables separating it from the network.
 </p>
 <p>
-  Downloader Instrument will handle fetching the resources from internet and
-  placing them where the requesting Instrument can then read them. Using
-  downloader Instrument also allows to separate internet access to single
-  Instrument while still maintaining the ability for fetching resources when
-  needed.
+  Downloader Instrument fetches the resources from network and places them where
+  the requesting Instrument can then read them. Downloader checks configured
+  resources periodically and fetches them only if the content has been changed.
 </p>
-<p>
-  Downloader checks configured resources periodically fetching them only if the
-  server indicates that the contents have been changed.
-</p>
-<p>
-  Required downloads for Instruments can be configured using the Fleet
-  Management UI.
-</p>
-<p>
-  For operation, Downloader Instrument needs interface with network address,
-  route to resources and configured name server. These can be configured using
-  the Fleet Management UI.
-</p>
-<h1 id="instrument-properties">Instrument properties</h1>
+<h2 id="properties">Properties</h2>
 <table>
   <colgroup>
     <col style="width: 53%" />
@@ -58,8 +40,8 @@ layout: datasheet
     <tr class="even">
       <td style="text-align: left;">Required interfaces</td>
       <td style="text-align: left;">
-        Interface the instrument uses to download items (phy with receive, send
-        capabilities)
+        Interface with access to the downloaded resource. (phy with receive,
+        send capabilities)
       </td>
     </tr>
     <tr class="odd">
