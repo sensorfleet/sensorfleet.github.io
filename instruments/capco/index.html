@@ -6,46 +6,64 @@ layout: datasheet
 
 <h1 id="capture-engine-instrument">Capture Engine Instrument</h1>
 <h2 id="overview">Overview</h2>
-<p>Capture Engine Instrument is used to mirror traffic from one physical interface to one or more mirror-bridge interfaces. Using Capture Engine allows multiple Instruments to have access to same traffic flow without the need for them to all have access to the physical interface.</p>
-<p>Using Capture Engine separates the physical interface from any Instrument actually parsing the traffic, thus reducing possibility that Instrument could access the network through physical interface.</p>
+<p>
+  Capture Engine Instrument is used to mirror traffic from one physical
+  interface to one or more mirror-bridge interfaces. Using Capture Engine allows
+  multiple Instruments to have access to same traffic flow without the need for
+  them to all have access to the physical interface.
+</p>
+<p>
+  Using Capture Engine separates the physical interface from any Instrument
+  actually parsing the traffic, thus reducing possibility that Instrument could
+  access the network through physical interface.
+</p>
 <h1 id="instrument-properties">Instrument properties</h1>
 <table>
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 46%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Instrument developer</td>
-<td style="text-align: left;">SensorFleet Oy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Categories</td>
-<td style="text-align: left;">Internal</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Network access type</td>
-<td style="text-align: left;">Passive</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Required interfaces</td>
-<td style="text-align: left;">The physical interface whose data is to be copied (phy with receive capabilities), Interface(s) where to mirror the data from physical interface (mirror-bridge with send capabilities)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Instrument dependencies</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Data retention</td>
-<td style="text-align: left;">Capture Engine does not store information</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Management UI</td>
-<td style="text-align: left;">No</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Performance</td>
-<td style="text-align: left;">Capture Engine should be able to mirror gigabits/sec of traffic with F-Probe hardware</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 53%" />
+    <col style="width: 46%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td style="text-align: left;">Developer</td>
+      <td style="text-align: left;">SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Categories</td>
+      <td style="text-align: left;">Internal</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Network access type</td>
+      <td style="text-align: left;">Passive</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Required interfaces</td>
+      <td style="text-align: left;">
+        The physical interface whose data is to be copied (phy with receive
+        capabilities), Interface(s) where to mirror the data from physical
+        interface (mirror-bridge with send capabilities)
+      </td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Dependencies</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Data retention</td>
+      <td style="text-align: left;">
+        Capture Engine does not store information
+      </td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Management UI</td>
+      <td style="text-align: left;">No</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Performance</td>
+      <td style="text-align: left;">
+        Capture Engine should be able to mirror gigabits/sec of traffic with
+        F-Probe hardware
+      </td>
+    </tr>
+  </tbody>
 </table>
