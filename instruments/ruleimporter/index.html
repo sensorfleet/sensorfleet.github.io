@@ -5,52 +5,80 @@ layout: datasheet
 <!-- File is generated automatically, do not edit directly. -->
 
 <h1 id="rule-importer-instrument">Rule Importer Instrument</h1>
-<p>Tool for importing, generating and deploying Suricata rules from packaged rule sets and blacklisted addresses.</p>
+<p>
+  Tool for importing, generating and deploying Suricata rules from packaged rule
+  sets and blacklisted addresses.
+</p>
 <h2 id="general-usage">General usage</h2>
-<p>Pre-created rules can be obtained from rule packages such as <a href="https://rules.emergingthreats.net/">Emerging Threats</a>. Blacklist rule generation supports IP addresses and DNS names with optional comment listed in semicolon-separated CSV file.</p>
-<p>These files are configured for download using Fleet Management, and Rule Importer does the rest. It keeps track of Suricata instruments and delivers rules to them when downloaded files are changed.</p>
-<p>Suricata group ID (gid) is added or changed from rules so Rule Importer won’t conflict with other rule sources such as Rule Manager Instrument.</p>
+<p>
+  Pre-created rules can be obtained from rule packages such as
+  <a href="https://rules.emergingthreats.net/">Emerging Threats</a>. Blacklist
+  rule generation supports IP addresses and DNS names with optional comment
+  listed in semicolon-separated CSV file.
+</p>
+<p>
+  These files are configured for download using Fleet Management, and Rule
+  Importer does the rest. It keeps track of Suricata instruments and delivers
+  rules to them when downloaded files are changed.
+</p>
+<p>
+  Suricata group ID (gid) is added or changed from rules so Rule Importer won’t
+  conflict with other rule sources such as Rule Manager Instrument.
+</p>
 <h1 id="rule-importer-properties">Rule Importer properties</h1>
 <table>
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 46%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Instrument developer</td>
-<td style="text-align: left;">SensorFleet Oy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Categories</td>
-<td style="text-align: left;">Attack Detection, Traffic Analysis, IDS</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Network access type</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Required interfaces</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Instrument dependencies</td>
-<td style="text-align: left;">Suricata IDS</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Data retention</td>
-<td style="text-align: left;">Stores latest generated rule set to application RAM and a list of current Suricata Instruments to persistent data. Does not store user specific data.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Management UI</td>
-<td style="text-align: left;">No</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Performance</td>
-<td style="text-align: left;">Handles easily rule packages and blacklists with tens of thousands of entries</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 53%" />
+    <col style="width: 46%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td style="text-align: left;">Developer</td>
+      <td style="text-align: left;">SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Categories</td>
+      <td style="text-align: left;">Attack Detection, Traffic Analysis, IDS</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Network access type</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Required interfaces</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Dependencies</td>
+      <td style="text-align: left;">Suricata IDS</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Data retention</td>
+      <td style="text-align: left;">
+        Stores latest generated rule set to application RAM and a list of
+        current Suricata Instruments to persistent data. Does not store user
+        specific data.
+      </td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Management UI</td>
+      <td style="text-align: left;">No</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Performance</td>
+      <td style="text-align: left;">
+        Handles easily rule packages and blacklists with tens of thousands of
+        entries
+      </td>
+    </tr>
+  </tbody>
 </table>
 <h1 id="example-use-cases">Example use cases</h1>
-<p>Rule importer can be used when ready-to-use rule set and/or set of blacklisted addresses is already available.</p>
-<p>Otherwise Rule Manager can be used as it supports enabling and disabling individual rules etc.</p>
+<p>
+  Rule importer can be used when ready-to-use rule set and/or set of blacklisted
+  addresses is already available.
+</p>
+<p>
+  Otherwise Rule Manager can be used as it supports enabling and disabling
+  individual rules etc.
+</p>

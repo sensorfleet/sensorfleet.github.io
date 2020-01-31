@@ -11,10 +11,12 @@ description: Collects Suricata IDS rules from rule set packages, generates new
   Suricata instances.
 
 has_ui: false
-data_retention_desc: Stores latest generated rule set to application RAM and a list
+data_retention_desc:
+  Stores latest generated rule set to application RAM and a list
   of current Suricata Instruments to persistent data. Does not store user specific
   data.
-performance_desc: Handles easily rule packages and blacklists with tens of thousands
+performance_desc:
+  Handles easily rule packages and blacklists with tens of thousands
   of entries
 relations:
   - description: Needs at least one Suricata IDS instrument to function.

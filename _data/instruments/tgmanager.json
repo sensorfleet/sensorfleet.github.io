@@ -2,10 +2,7 @@
   "name": "TrafficGuard Management",
   "developer": "F-Solutions Oy",
   "title": "Management UI and rule logic for F-Solutions TrafficGuard",
-  "categories": [
-    "Integrity Monitoring",
-    "Asset Tracking"
-  ],
+  "categories": ["Integrity Monitoring", "Asset Tracking"],
   "description": "Traffic Guard Management Instrument is used to view and manage the instrument gathered by Traffic Guard Probe",
   "has_ui": true,
   "data_retention_desc": "Traffic Guard Manager keeps the collected information up to configured retention period",
