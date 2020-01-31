@@ -6,7 +6,8 @@ body {
   background-repeat: no-repeat;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: #fff;
 }
 
@@ -34,7 +35,9 @@ h2 {
   text-transform: uppercase;
 }
 
-h3, h3 a, h3 a:visited {
+h3,
+h3 a,
+h3 a:visited {
   margin: 1.4em 0 0.6em 0;
   color: #d48500;
   font-size: 16pt;
@@ -43,18 +46,17 @@ h3, h3 a, h3 a:visited {
 }
 
 .navbar {
-    background: transparent;
-    background-color: none;
-    top: 0;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
+  background: transparent;
+  background-color: none;
+  top: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
 }
 
 .navbar img {
   max-height: 28px;
 }
-
 
 table {
   margin: 1.6em 1.6em 1.6em 0.2em;
@@ -62,15 +64,17 @@ table {
 }
 
 table td {
-  padding: 8px 20px  8px 20px;
+  padding: 8px 20px 8px 20px;
   min-width: 200px;
 }
 
-.bg-dark tr.even td, .bg-dark2 tr.even td {
+.bg-dark tr.even td,
+.bg-dark2 tr.even td {
   background-color: #4b4f55;
 }
 
-.bg-dark tr.odd td, .bg-dark2 tr.odd td {
+.bg-dark tr.odd td,
+.bg-dark2 tr.odd td {
   background-color: #2c3438;
 }
 
@@ -103,14 +107,14 @@ table td {
   min-height: 22vh;
   text-align: center;
   padding-top: 0vh;
-  font-style: italic;;
+  font-style: italic;
   margin-bottom: -4vh;
 }
 
-.footer img, .funded img {
+.footer img,
+.funded img {
   max-height: 70px;
 }
-
 
 .highlights img {
   max-height: 100px;
@@ -145,14 +149,18 @@ img.dropshadow {
 }
 
 .box {
-  -webkit-box-shadow: 5px 5px 14px 0px rgba(7,6,6,0.4);
-  -moz-box-shadow: 5px 5px 14px 0px rgba(7,6,6,0.4);
-  box-shadow: 5px 5px 14px 0px rgba(7,6,6,0.4);
+  -webkit-box-shadow: 5px 5px 14px 0px rgba(7, 6, 6, 0.4);
+  -moz-box-shadow: 5px 5px 14px 0px rgba(7, 6, 6, 0.4);
+  box-shadow: 5px 5px 14px 0px rgba(7, 6, 6, 0.4);
   padding: 40px;
   width: 60vw;
   margin: -180px auto 70px auto;
-  background: rgb(70,77,84);
-  background: linear-gradient(-180deg, rgba(70,77,84,1) 0%, rgba(52,58,64,1) 85%);
+  background: rgb(70, 77, 84);
+  background: linear-gradient(
+    -180deg,
+    rgba(70, 77, 84, 1) 0%,
+    rgba(52, 58, 64, 1) 85%
+  );
 }
 
 .bg-img {
@@ -164,15 +172,23 @@ img.dropshadow {
 }
 
 .bg-dark {
-  background: rgb(42,48,53);
-  background: linear-gradient(90deg, rgba(42,48,53,1) 0%, rgba(52,58,64,1) 50%);
+  background: rgb(42, 48, 53);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 48, 53, 1) 0%,
+    rgba(52, 58, 64, 1) 50%
+  );
   color: #f5f5f5;
 }
 
 .bg-dark2 {
-/*  background-color: #3e454c !important; */
+  /*  background-color: #3e454c !important; */
   color: #f5f5f5;
-  background: linear-gradient(-180deg, rgba(70,77,84,1) 0%, rgba(52,58,64,1) 85%);
+  background: linear-gradient(
+    -180deg,
+    rgba(70, 77, 84, 1) 0%,
+    rgba(52, 58, 64, 1) 85%
+  );
 }
 
 .bg-dark3 {
@@ -185,7 +201,9 @@ img.dropshadow {
   color: #69665e;
 }
 
-.bg-dark h1, bg-dark2 h1, #header .container h1 {
+.bg-dark h1,
+bg-dark2 h1,
+#header .container h1 {
   color: #e9ae4a;
   font-weight: normal;
   text-transform: uppercase;
@@ -202,16 +220,16 @@ img.dropshadow {
   padding-bottom: 140px;
   width: 100%;
   /*   skew adds a 4.76 degree slope and the translateY equation is based on the fact that a 4.76 degree slope has a gradient of 1:12 */
-  -webkit-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
-      -ms-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
-          transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+  -webkit-transform: skew(0, -4.76deg) translateY(calc(50vw / -12));
+  -ms-transform: skew(0, -4.76deg) translateY(calc(50vw / -12));
+  transform: skew(0, -4.76deg) translateY(calc(50vw / -12));
   min-height: 50vh;
 }
 
 .slanted .container {
-  -webkit-transform: skew(0, +4.76deg) translateY(calc(50vw/-12));
-      -ms-transform: skew(0, +4.76deg) translateY(calc(50vw/-12));
-          transform: skew(0, +4.76deg) translateY(calc(50vw/-12));
+  -webkit-transform: skew(0, +4.76deg) translateY(calc(50vw / -12));
+  -ms-transform: skew(0, +4.76deg) translateY(calc(50vw / -12));
+  transform: skew(0, +4.76deg) translateY(calc(50vw / -12));
 }
 
 .slanted2 {
@@ -221,16 +239,16 @@ img.dropshadow {
   padding-bottom: 140px;
   width: 100%;
   /*   skew adds a 4.76 degree slope and the translateY equation is based on the fact that a 4.76 degree slope has a gradient of 1:12 */
-  -webkit-transform: skew(0, +4.76deg) translateY(calc(50vw/-12));
-      -ms-transform: skew(0, +4.76deg) translateY(calc(50vw/-12));
-          transform: skew(0, +4.76deg) translateY(calc(50vw/-12));
+  -webkit-transform: skew(0, +4.76deg) translateY(calc(50vw / -12));
+  -ms-transform: skew(0, +4.76deg) translateY(calc(50vw / -12));
+  transform: skew(0, +4.76deg) translateY(calc(50vw / -12));
   min-height: 50vh;
 }
 
 .slanted2 .container {
-  -webkit-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
-      -ms-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
-          transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+  -webkit-transform: skew(0, -4.76deg) translateY(calc(50vw / -12));
+  -ms-transform: skew(0, -4.76deg) translateY(calc(50vw / -12));
+  transform: skew(0, -4.76deg) translateY(calc(50vw / -12));
 }
 
 @media (max-width: 992px) {
@@ -248,7 +266,6 @@ img.dropshadow {
 }
 
 @media (max-width: 768px) {
-
   h1 {
     font-size: 24pt;
   }
@@ -263,7 +280,7 @@ img.dropshadow {
   }
 
   table td {
-    padding: 6px 10px  6px 10px;
+    padding: 6px 10px 6px 10px;
     min-width: 150px;
   }
 
@@ -316,11 +333,13 @@ img.dropshadow {
     background: #202529;
     padding: 10px;
   }
-  .footer img, .funded img {
+  .footer img,
+  .funded img {
     max-height: 36px;
     max-width: 96px;
   }
-  .slanted, .slanted2 {
+  .slanted,
+  .slanted2 {
     margin-top: -30px;
     margin-bottom: 20px;
     padding-top: 70px;
