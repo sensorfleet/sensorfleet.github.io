@@ -1,19 +1,18 @@
 ---
-name: SensorFleet Rule Importer
+name: Rule Importer
 developer: SensorFleet Oy
 title: Import rules and convert them to Suricata IDS format
 categories:
   - Attack Detection
   - Traffic Analysis
   - IDS
-description: Collects Suricata IDS rules from rule set packages, generates new
-  rules from blacklisted IP and DNS addresses, and delivers them to
-  Suricata instances.
+description: Tool for importing, generating and deploying Suricata rules from
+  packaged rule sets and blacklisted addresses.
 
 has_ui: false
 data_retention_desc:
   Stores latest generated rule set to application RAM and a list
-  of current Suricata Instruments to persistent data. Does not store user specific
+  of current Suricata IDS Instruments to persistent data. Does not store user specific
   data.
 performance_desc:
   Handles easily rule packages and blacklists with tens of thousands

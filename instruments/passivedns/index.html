@@ -4,30 +4,24 @@ layout: datasheet
 
 <!-- File is generated automatically, do not edit directly. -->
 
-<h1 id="passivedns-instrument">PassiveDNS Instrument</h1>
-<h2 id="overview">Overview</h2>
-<p>
-  PassiveDNS Instrument can be used to store information from DNS requests and
-  then use the stored information to augment other events.
-</p>
 <p>
   PassiveDNS uses DNS events from suricata to store the DNS information. The
-  database of collected address to name -mappings is then used to augment name
-  resolution information to Suricata alerts. Whenever Suricata alert is
-  received, PassiveDNS Instrument will submit another event containing names, if
+  database of collected address and name mappings is then used to augment name
+  resolution information to Suricata IDS Instrument alerts. Whenever Suricata
+  alert is received, PassiveDNS will submit another event containing names, if
   found, to IP addresses in Suricata alerts. This event might give forensic
   information about the names an address has been associated with.
 </p>
 <h2 id="api">API</h2>
 <p>
-  PassiveDNS Instrument also provides simple HTTP API which allows users to
-  query the database that has been collected. The API provides methdos for
+  PassiveDNS also provides simple HTTP API which allows users to query the
+  database that has been collected. The API provides methods for
 </p>
 <ul>
   <li>Getting all names associated with given IP address</li>
   <li>Getting all IP addresses associated with given name</li>
 </ul>
-<h1 id="instrument-properties">Instrument properties</h1>
+<h2 id="properties">Properties</h2>
 <table>
   <colgroup>
     <col style="width: 53%" />
@@ -76,16 +70,14 @@ layout: datasheet
     </tr>
   </tbody>
 </table>
-<h1 id="example">Example</h1>
+<h2 id="example">Example</h2>
 <p>
-  Following sequence shows the operation of PassiveDNS Instrument with Suricata
-  Instrument. Whenever DNS response is seen, Suricata Instrument will send DNS
-  event to SensorFleet message bus. This event is received by PassiveDNS
-  Instrument, which stores the DNS records to its database. Later, if Suricata
-  Alert is triggered, surciata will send Alert Event to SensorFleet message bus.
-  PassiveDNS Instrument will receive also this alert and for each IP address in
-  the Alert, it will query it’s database of stored DNS records and create
-  Augmentation Event containing this information and a reference to the Suricata
-  Alert for which the augmentation is made.
+  Following sequence shows the operation of PassiveDNS with Suricata. Whenever
+  DNS response is seen, Suricata will send DNS event to SensorFleet message bus.
+  This Event is received by PassiveDNS, which stores the DNS records to its
+  database. Later, if Suricata alert is triggered, Suricata will send an alert
+  Event to SensorFleet message bus. PassiveDNS will receive this alert and
+  queries database of stored DNS records and then creates an augmentation Event
+  containing this information.
 </p>
 <p><img src="mermaid-images/49540abf82f4f068d73b6e3a603026ddd8dc6624.png" /></p>

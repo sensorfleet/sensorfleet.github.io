@@ -4,12 +4,10 @@ layout: datasheet
 
 <!-- File is generated automatically, do not edit directly. -->
 
-<h1 id="rule-importer-instrument">Rule Importer Instrument</h1>
 <p>
   Tool for importing, generating and deploying Suricata rules from packaged rule
   sets and blacklisted addresses.
 </p>
-<h2 id="general-usage">General usage</h2>
 <p>
   Pre-created rules can be obtained from rule packages such as
   <a href="https://rules.emergingthreats.net/">Emerging Threats</a>. Blacklist
@@ -25,7 +23,7 @@ layout: datasheet
   Suricata group ID (gid) is added or changed from rules so Rule Importer won’t
   conflict with other rule sources such as Rule Manager Instrument.
 </p>
-<h1 id="rule-importer-properties">Rule Importer properties</h1>
+<h2 id="properties">Properties</h2>
 <table>
   <colgroup>
     <col style="width: 53%" />
@@ -56,7 +54,7 @@ layout: datasheet
       <td style="text-align: left;">Data retention</td>
       <td style="text-align: left;">
         Stores latest generated rule set to application RAM and a list of
-        current Suricata Instruments to persistent data. Does not store user
+        current Suricata IDS Instruments to persistent data. Does not store user
         specific data.
       </td>
     </tr>
@@ -73,12 +71,3 @@ layout: datasheet
     </tr>
   </tbody>
 </table>
-<h1 id="example-use-cases">Example use cases</h1>
-<p>
-  Rule importer can be used when ready-to-use rule set and/or set of blacklisted
-  addresses is already available.
-</p>
-<p>
-  Otherwise Rule Manager can be used as it supports enabling and disabling
-  individual rules etc.
-</p>
