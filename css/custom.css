@@ -55,7 +55,8 @@ h3 a:visited {
 }
 
 .navbar img {
-  max-height: 28px;
+  margin-top: -5px;
+  max-height: 36px;
 }
 
 table {
@@ -310,7 +311,7 @@ bg-dark2 h1,
     position: absolute;
     top: 30px;
     left: 75px;
-    width: calc(100% - 150px);
+    width: calc(100% - 100px);
     display: block;
     border: 0;
     text-align: center;
@@ -321,7 +322,7 @@ bg-dark2 h1,
     padding: 0;
   }
   div#mobilelogo img {
-    max-height: 22px;
+    max-height: 30px;
     margin-left: auto;
     margin-right: auto;
   }
