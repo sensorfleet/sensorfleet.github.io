@@ -1,5 +1,6 @@
 {
-  "description": "Creates full package captures, controlled by always_capture setting and Suricata IDS alerts. Provides a HTTP API for downloading pcap files.",
+  "name": "Traffic Recorder",
+  "description": "Captures network traffic to disk and provides indexing and searching capabilities through Moloch software.",
   "developer": "SensorFleet Oy",
   "global_sysctl": {
     "vm.max_map_count": 262144
@@ -9,7 +10,6 @@
     "limits.kernel.memlock": "unlimited:unlimited",
     "limits.kernel.nofile": "65536"
   },
-  "name": "Recorder Instrument",
   "network_access_type": "passive",
   "relations": [
     {
@@ -27,7 +27,7 @@
       "type": "mirror-bridge"
     }
   ],
-  "title": "Instrument for recording network traffic triggered by e.g. Suricata IDS alerts",
+  "title": "Instrument for recording network traffic triggered by e.g. Suricata IDS alerts.",
   "categories": ["Traffic Analysis", "Traffic Recording"],
   "performance_desc": "Depends on hardware and instrument configuration. Please contact SensorFleet for more details.",
   "data_retention_desc": "Recorder stores capture metadata (indexes) and raw captures for up to the configured data retention period. Temporary capture delay buffer is unaffected by data retention implementation."

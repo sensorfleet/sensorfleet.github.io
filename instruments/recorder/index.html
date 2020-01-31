@@ -4,30 +4,31 @@ layout: datasheet
 
 <!-- File is generated automatically, do not edit directly. -->
 
-<h1 id="recorder-instrument">Recorder Instrument</h1>
-<h2 id="overview">Overview</h2>
 <p>
-  Recorder Instrument provides packet recording capability to SensorFleet
-  Sensor. Recording can be triggered by Suricata Alerts or be continuous (full
-  packet capture). When in trigger-based mode, recorder also creates events for
-  recordings it creates. Recorder settings can be configured using standard
-  instrument configuration.
+  Provides packet recording capability to SensorFleet Sensor. Recording can be
+  triggered by Suricata IDS Alerts or be continuous (full packet capture). When
+  in trigger-based mode, Traffic Recorder will only record traffic related to
+  the triggering event.
 </p>
-<h3 id="moloch-integration">Moloch integration</h3>
 <p>
-  Recorder uses a modified Moloch capture engine internally. Moloch UI is also
-  provided to the user. It can be used by forensics purposes, internal debugging
-  and testing, etc. See http://molo.ch for more details about Moloch.
+  Recorder delays traffic to the temporary in-memory buffer in trigger mode.
+  This allows investigating matching traffic related to triggering event before
+  the event was even generated.
+</p>
+<p>
+  Recorder internally uses a modified
+  <a href="https://molo.ch/">Moloch</a> capture engine. Moloch UI is also
+  provided to the user. It can be used for forensics purposes, internal
+  debugging and testing.
 </p>
 <h3 id="pcap-export-api">PCAP export API</h3>
 <p>
   Provided standard Moloch UI can be directly used to download PCAPs, but an
   alternative method is also provided for automation purposes. Instrument UI has
-  a custom HTTP download endpoint that accepts time range, source &amp;
-  destination IPs as search criteria. The API will output a PCAP file that
-  contains the traffic that matches the search criteria.
+  a custom HTTP download endpoint. The API will output PCAP files containing
+  traffic matching the search criteria.
 </p>
-<h1 id="recorder-instrument-properties">Recorder Instrument properties</h1>
+<h2 id="properties">Properties</h2>
 <table>
   <colgroup>
     <col style="width: 53%" />
@@ -81,40 +82,20 @@ layout: datasheet
     </tr>
   </tbody>
 </table>
-<h1 id="examples">Examples</h1>
-<h2 id="example-use-case-recorder-in-trigger-mode-with-suricata-ids">
-  Example use case: recorder in trigger mode with Suricata IDS
+<h2 id="example-use-case-traffic-recorder-in-trigger-mode-with-suricata-ids">
+  Example use case: Traffic Recorder in trigger mode with Suricata IDS
 </h2>
 <p>
   A typical use case is to combine Recorder with Suricata IDS: only relevant
-  traffic is recorded which requires much less system resources. Suricata IDS
+  traffic is recorded requiring much less system resources. Suricata IDS
   analyzes live traffic and produces alert events for traffic that matches the
-  ruleset. Recorder sees the alert, creates a filtering rule internally and
-  stored records matching IP traffic. Since recorder has a delay buffer
-  internally, no matching traffic is lost due to the delay from receiving
-  suricata alerts. Recorder can also be configured in continuous recoding mode
-  (full packet capture), which requires much more system resources.
+  rule set.
+</p>
+<p>
+  Recorder receives the alert, creates a filtering rule internally and records
+  matching IP traffic. Since Recorder has a delay buffer internally, no matching
+  traffic is lost due to the delay from receiving Suricata alerts. Recorder can
+  also be configured to continuous recoding mode (full packet capture) which
+  requires much more system resources.
 </p>
 <p><img src="mermaid-images/83b3822007792e3961a5d41557d0aa94bf3ec4a9.png" /></p>
-<h2 id="examples-of-produced-events">Examples of produced events</h2>
-<h3 id="traffic-matches-recorder-filter">Traffic matches recorder filter</h3>
-<div class="sourceCode" id="cb1">
-  <pre
-    class="sourceCode json"
-  ><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;Recorder Rule Hit&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="dt">&quot;uuid&quot;</span><span class="fu">:</span> <span class="st">&quot;e3627666-4c09-4ef8-bb8a-429a87edc621&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">&quot;timestamp&quot;</span><span class="fu">:</span> <span class="fl">1574693289.2621856</span><span class="fu">,</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;instrument.recorder.rule_hit_event&quot;</span><span class="fu">,</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>        <span class="dt">&quot;signature&quot;</span><span class="fu">:</span> <span class="st">&quot;Lastpass DNS query&quot;</span><span class="fu">,</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>        <span class="dt">&quot;signature_id&quot;</span><span class="fu">:</span> <span class="dv">2010463</span><span class="fu">,</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>        <span class="dt">&quot;gid&quot;</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>        <span class="dt">&quot;rev&quot;</span><span class="fu">:</span> <span class="dv">7</span><span class="fu">,</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>        <span class="dt">&quot;count&quot;</span><span class="fu">:</span> <span class="dv">1</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="fu">},</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="dt">&quot;source_instrument&quot;</span><span class="fu">:</span> <span class="st">&quot;recorder_0@sensor1&quot;</span><span class="fu">,</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>    <span class="dt">&quot;source_sensor&quot;</span><span class="fu">:</span> <span class="st">&quot;sensor1&quot;</span><span class="fu">,</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="dt">&quot;sensor_event_id&quot;</span><span class="fu">:</span> <span class="dv">1864148</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="fu">}</span></span></code></pre>
-</div>
