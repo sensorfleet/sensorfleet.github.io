@@ -6,50 +6,80 @@ layout: datasheet
 
 <h1 id="downloader-instrument">Downloader Instrument</h1>
 <h2 id="overview">Overview</h2>
-<p>Downloader is helper Instrument providing other Instruments the ability to download resources from outside the sensor (intra-/internet).</p>
-<p>Some Instruments do not require active network connection for their operation, but can use outside resources for configuration. Using downloader Instrument to fetch those resources allows them to require only passive network connection while still be able to get the updated resources.</p>
-<p>Downloader Instrument will handle fetching the resources from internet and placing them where the requesting Instrument can then read them. Using downloader Instrument also allows to separate internet access to single Instrument while still maintaining the ability for fetching resources when needed.</p>
-<p>Downloader checks configured resources periodically fetching them only if the server indicates that the contents have been changed.</p>
-<p>Required downloads for Instruments can be configured using the Fleet Management UI.</p>
-<p>For operation, Downloader Instrument needs interface with network address, route to resources and configured name server. These can be configured using the Fleet Management UI.</p>
+<p>
+  Downloader is helper Instrument providing other Instruments the ability to
+  download resources from outside the sensor (intra-/internet).
+</p>
+<p>
+  Some Instruments do not require active network connection for their operation,
+  but can use outside resources for configuration. Using downloader Instrument
+  to fetch those resources allows them to require only passive network
+  connection while still be able to get the updated resources.
+</p>
+<p>
+  Downloader Instrument will handle fetching the resources from internet and
+  placing them where the requesting Instrument can then read them. Using
+  downloader Instrument also allows to separate internet access to single
+  Instrument while still maintaining the ability for fetching resources when
+  needed.
+</p>
+<p>
+  Downloader checks configured resources periodically fetching them only if the
+  server indicates that the contents have been changed.
+</p>
+<p>
+  Required downloads for Instruments can be configured using the Fleet
+  Management UI.
+</p>
+<p>
+  For operation, Downloader Instrument needs interface with network address,
+  route to resources and configured name server. These can be configured using
+  the Fleet Management UI.
+</p>
 <h1 id="instrument-properties">Instrument properties</h1>
 <table>
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 46%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Instrument developer</td>
-<td style="text-align: left;">SensorFleet Oy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Categories</td>
-<td style="text-align: left;">Internal</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Network access type</td>
-<td style="text-align: left;">Active</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Required interfaces</td>
-<td style="text-align: left;">Interface the instrument uses to download items (phy with receive, send capabilities)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Instrument dependencies</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Data retention</td>
-<td style="text-align: left;">This instrument does not store the downloaded data itself. The downloaded items are transferred to instruments requesting them.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Management UI</td>
-<td style="text-align: left;">No</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Performance</td>
-<td style="text-align: left;">None</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 53%" />
+    <col style="width: 46%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td style="text-align: left;">Developer</td>
+      <td style="text-align: left;">SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Categories</td>
+      <td style="text-align: left;">Internal</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Network access type</td>
+      <td style="text-align: left;">Active</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Required interfaces</td>
+      <td style="text-align: left;">
+        Interface the instrument uses to download items (phy with receive, send
+        capabilities)
+      </td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Dependencies</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Data retention</td>
+      <td style="text-align: left;">
+        This instrument does not store the downloaded data itself. The
+        downloaded items are transferred to instruments requesting them.
+      </td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Management UI</td>
+      <td style="text-align: left;">No</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Performance</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+  </tbody>
 </table>
