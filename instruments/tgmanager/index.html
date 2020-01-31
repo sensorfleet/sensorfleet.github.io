@@ -4,56 +4,83 @@ layout: datasheet
 
 <!-- File is generated automatically, do not edit directly. -->
 
-<h1 id="trafficguard-management-instrument">TrafficGuard Management Instrument</h1>
+<h1 id="trafficguard-management-instrument">
+  TrafficGuard Management Instrument
+</h1>
 <h2 id="overview">Overview</h2>
-<p>TrafficGuard Manager Instrument collects and manages information gathered by TrafficGuard Probe Instrument(s). Using TrafficGuard Manager UI it is easy to view assets currently active on monitoried network and get events on new assets found to be active.</p>
-<p>While the Traffic Guard Probe Instruments collect data from networks, the TrafficGuard Manager itself does not need any access to network.</p>
-<h1 id="trafficguard-management-instrument-properties">TrafficGuard Management instrument properties</h1>
+<p>
+  TrafficGuard Manager Instrument collects and manages information gathered by
+  TrafficGuard Probe Instrument(s). Using TrafficGuard Manager UI it is easy to
+  view assets currently active on monitoried network and get events on new
+  assets found to be active.
+</p>
+<p>
+  While the Traffic Guard Probe Instruments collect data from networks, the
+  TrafficGuard Manager itself does not need any access to network.
+</p>
+<h1 id="trafficguard-management-instrument-properties">
+  TrafficGuard Management instrument properties
+</h1>
 <table>
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 46%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Instrument developer</td>
-<td style="text-align: left;">F-Solutions Oy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Categories</td>
-<td style="text-align: left;">Integrity Monitoring, Asset Tracking</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Network access type</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Required interfaces</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Instrument dependencies</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Related Instruments</td>
-<td style="text-align: left;">TrafficGuard Probe</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Data retention</td>
-<td style="text-align: left;">Traffic Guard Manager keeps the collected information up to configured retention period</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Management UI</td>
-<td style="text-align: left;">Yes</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Performance</td>
-<td style="text-align: left;">None</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 53%" />
+    <col style="width: 46%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td style="text-align: left;">Developer</td>
+      <td style="text-align: left;">F-Solutions Oy</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Categories</td>
+      <td style="text-align: left;">Integrity Monitoring, Asset Tracking</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Network access type</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Required interfaces</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Dependencies</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Related Instruments</td>
+      <td style="text-align: left;">TrafficGuard Probe</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Data retention</td>
+      <td style="text-align: left;">
+        Traffic Guard Manager keeps the collected information up to configured
+        retention period
+      </td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: left;">Management UI</td>
+      <td style="text-align: left;">Yes</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: left;">Performance</td>
+      <td style="text-align: left;">None</td>
+    </tr>
+  </tbody>
 </table>
 <h1 id="example-use-case">Example use case</h1>
-<p>TrafficGuard Probe Instrument is set to monitor a protected network which has stable set of assets deployed. Installed TrafficGuard Manager will gather all information detected by the Probe Instrument.</p>
-<p>After the setup has been runnig for a while, TrafficGuard Manager has collected information on assets currently running on the network. These assets can be marked as known and from then on an event is provided if new assets show up on the monitored network.</p>
-<p>This allows to quickly react to rogue devices appearing on the protected network due to misconfiguration or malicious activity.</p>
+<p>
+  TrafficGuard Probe Instrument is set to monitor a protected network which has
+  stable set of assets deployed. Installed TrafficGuard Manager will gather all
+  information detected by the Probe Instrument.
+</p>
+<p>
+  After the setup has been runnig for a while, TrafficGuard Manager has
+  collected information on assets currently running on the network. These assets
+  can be marked as known and from then on an event is provided if new assets
+  show up on the monitored network.
+</p>
+<p>
+  This allows to quickly react to rogue devices appearing on the protected
+  network due to misconfiguration or malicious activity.
+</p>
