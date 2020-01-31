@@ -3,20 +3,20 @@
   "developer": "SensorFleet Oy",
   "title": "Fast and scalable IDS engine",
   "categories": ["Attack Detection", "Traffic Analysis", "IDS"],
-  "description": "Suricata is a free and open source, mature, fast and robust network threat detection engine. The Suricata engine is capable of real time intrusion detection (IDS), inline intrusion prevention (IPS), network security monitoring (NSM) and offline pcap processing. Suricata inspects the network traffic using a powerful and extensive rules and signature language, and has powerful Lua scripting support for detection of complex threats.",
+  "description": "Suricata IDS is a network threat detection engine. The integration to SensorFleet solution allows easily deployable and manageable intrusion detection.",
   "has_ui": false,
-  "data_retention_desc": "The latest rulelists are stored at Suricata Instrument persistent data. Events are exported to Sensor and respect Sensor's data retention rules.",
+  "data_retention_desc": "The latest rule lists are stored in Suricata IDS's persistent data.",
   "relations": [
     {
-      "description": "Rule Mananger can manage Suricata Rule lists.",
+      "description": "Rule Manager Instrument can manage Suricata Rule lists.",
       "instrument_type": "rmgr",
       "instrument_name": "Rule Manager",
       "required": false,
       "permissions": []
     },
     {
-      "description": "Rule Importer can manage Suricata Rule lists.",
-      "instrument_type": "rule_importer",
+      "description": "Rule Importer Instrument can manage Suricata Rule lists.",
+      "instrument_type": "ruleimporter",
       "instrument_name": "Rule Importer",
       "required": false,
       "permissions": []
@@ -30,5 +30,5 @@
     }
   ],
   "network_access_type": "passive",
-  "performance_desc": "Suricata Instrument should easily handle several gigabits of traffic on a F-Probe hardware on a typical traffic profile."
+  "performance_desc": "Suricata Instrument easily handles several gigabits per second of traffic on a F-Probe hardware on a typical traffic profile."
 }
