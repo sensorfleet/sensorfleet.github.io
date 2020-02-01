@@ -1,7 +1,7 @@
 {
-  "name": "SensorFleet Capture Engine",
+  "name": "Capture Engine",
   "developer": "SensorFleet Oy",
-  "title": "SensorFleet Capture Engine",
+  "title": "Capture Engine",
   "categories": ["Internal"],
   "description": "Capture Engine redistributes packets from physical interface to mirror-bridge interface(s).",
   "has_ui": false,
@@ -10,12 +10,12 @@
     {
       "type": "phy",
       "capabilities": ["rx"],
-      "description": "The physical interface whose data is to be copied."
+      "description": "Physical interface which is mirrored."
     },
     {
       "type": "mirror-bridge",
       "capabilities": ["tx"],
-      "description": "Interface(s) where to mirror the data from physical interface."
+      "description": "Mirror Interface(s) where physical interface data is mirrored."
     }
   ],
   "network_access_type": "passive",
