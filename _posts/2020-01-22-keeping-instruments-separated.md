@@ -1,13 +1,8 @@
 ---
 layout: post
-title: Keeping Instruments separated
-date: 2020-01-20
 author: jukka
 ---
 
-# Keeping Instruments separated
-
-## Introduction
 
 SensorFleet Sensor can contain multiple Instruments. One of the primary design
 goals for Sensor was to keep Instruments separated. This means that while

@@ -11,7 +11,9 @@ layout: default
     >{{ post.date | date:"%d %b %Y" }} - {{ post.title }}</a
   >
 </h3>
-<p>{{ post.excerpt }} - {{ site.data.staff[post.author].name }}</p>
+<p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+<p>- {{ site.data.staff[post.author].name }}</p>
 <p><a href="{{ post.url }}" class="btn btn-secondary">Read More &raquo;</a></p>
 <hr />
+
 {% endfor %}
