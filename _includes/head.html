@@ -4,7 +4,11 @@
     name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
   />
-  <title>SensorFleet</title>
+  {% if page.title %}
+    <title>{{ page.title }} - SensorFleet</title>
+  {% else %}}
+    <title>SensorFleet</title>
+  {% endif %}
 
   <!-- Bootstrap core CSS -->
   <link
