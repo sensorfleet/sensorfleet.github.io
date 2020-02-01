@@ -2,7 +2,7 @@ name: Create pull request for updated datasheets
 on:
   push:
     branches:
-      - 'autoupdate-datasheets'
+      - "autoupdate-datasheets"
 
 jobs:
   build:

@@ -4,3 +4,4 @@ instruments/*/*
 **/*.png
 **/*.svg
 **/*.jpg
+.idea
