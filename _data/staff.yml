@@ -1,13 +1,41 @@
+daedalus:
+  name: Antti Tönkyrä
+  position: Developer
+  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/daedalus.jpg
+
+esa:
+  name: Esa Törmikoski
+  position: Developer
+  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/esa.jpg
+
+fellu:
+  name: Felix Ippolitov
+  position: Developer
+  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/fellu.jpg
+
+jtt:
+  name: Jukka Taimisto
+  position: Developer
+  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/jukka.jpg
+
+keitsi:
+  name: Mikko Korkalo
+  position: R&R Lead
+  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/keitsi.jpg
+
 sami:
   name: Sami Petäjäsoja
   position: CEO
   linkedin: https://www.linkedin.com/in/petajasoja/
-  image: http://
-  blurb: Lorem ipsum
+  image: /img/staff/sami.jpg
 
-test:
-  name: Testi
-  position: testin
-  linked: n/a
-  image: n/a
-  blurb: n/a
+simo:
+  name: Simo Mäkipaja
+  position: Sales Director
+  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/simo.jpg
