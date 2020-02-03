@@ -31,11 +31,19 @@ layout: default
     <p>
       {{ person[1].name }}, {{ person[1].position }}
     </p>
-    {% if person[1].linkedin %}
     <p>
-      <a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a>
-      {% endif %} {% if person[1].phone %}
-      <br />{{ person[1].phone }} {% endif %}
+      {% if person[1].linkedin %}
+      <a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a><br />
+      {% endif %}
+      {% if person[1].github %}
+      <a href="{{ person[1].github }}" target="_new">GitHub &raquo;</a><br />
+      {% endif %}
+      {% if person[1].gitlab %}
+      <a href="{{ person[1].gitlab }}" target="_new">GitLab &raquo;</a><br />
+      {% endif %}
+      {% if person[1].phone %}
+      {{ person[1].phone }}
+      {% endif %}
     </p>
   </div>
 
