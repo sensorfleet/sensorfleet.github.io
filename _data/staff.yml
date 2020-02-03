@@ -8,7 +8,7 @@ sami:
 simo:
   name: Simo Mäkipaja
   position: Sales Director
-  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  linkedin: https://www.linkedin.com/in/simo-makipaja-5779a598/
   image: /img/staff/simo.jpg
 
 keitsi:
@@ -20,19 +20,21 @@ keitsi:
 esa:
   name: Esa Törmikoski
   position: Developer
-  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  linkedin: https://www.linkedin.com/in/esa-t%C3%B6rmikoski-66a45171/
   image: /img/staff/esa.jpg
 
 fellu:
   name: Felix Ippolitov
   position: Developer
-  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  linkedin: https://www.linkedin.com/in/fellu/
   image: /img/staff/fellu.jpg
+  github: https://github.com/fellu
+  gitlab: https://gitlab.com/fellu
 
 jtt:
   name: Jukka Taimisto
   position: Developer
-  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  linkedin: https://www.linkedin.com/in/jukka-taimisto-b200b22
   image: /img/staff/jtt.jpg
 
 daedalus:
@@ -40,3 +42,4 @@ daedalus:
   position: Developer
   #  linkedin: https://www.linkedin.com/in/petajasoja/
   image: /img/staff/daedalus.jpg
+  github: https://github.com/atonkyra
