@@ -1,7 +1,5 @@
 ---
 layout: post
-title: Our approach
-date: 2020-01-31
 author: sami
 ---
 
