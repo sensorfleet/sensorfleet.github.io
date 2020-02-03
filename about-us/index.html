@@ -18,13 +18,9 @@ layout: default
   improves response times for emerging threats.
 </p>
 
-<p>
-  <img src="../img/sensorfleet-team.jpg" style="" class="img-fluid" />
-</p>
-
 <h3>Team</h3>
 
-<div class="row text-center">
+<div class="row text-center team">
   {% for person in site.data.staff %}
   <div class="col-md-6 bio">
     {% if person[1].image %}
@@ -38,7 +34,8 @@ layout: default
     {% if person[1].linkedin %}
     <p>
       <a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a>
-      {% endif %}
+      {% endif %} {% if person[1].phone %}
+      <br />{{ person[1].phone }} {% endif %}
     </p>
   </div>
 
@@ -63,10 +60,10 @@ layout: default
 </div>
 <p>
   <small>
-    Vesihiisi project develops an open and scalable platform, SensorFleet, for
-    network level cyber security monitoring. Platform enables emergence of an
-    open ecosystem for development and distribution of cyber security monitoring
-    capabilities. SensorFleet prototype will be further developed to production
-    level maturity in this project.
+    <a href="/eu.html">Vesihiisi</a> project develops an open and scalable
+    platform, SensorFleet, for network level cyber security monitoring. Platform
+    enables emergence of an open ecosystem for development and distribution of
+    cyber security monitoring capabilities. SensorFleet prototype will be
+    further developed to production level maturity in this project.
   </small>
 </p>
