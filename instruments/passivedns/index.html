@@ -65,11 +65,10 @@ title: PassiveDNS Instrument
 <h2 id="example">Example</h2>
 <p>
   Following sequence shows the operation of PassiveDNS with Suricata. Whenever
-  DNS response is seen, Suricata will send DNS event to SensorFleet message bus.
+  DNS response is seen, Suricata will send DNS event to internal message bus.
   This Event is received by PassiveDNS, which stores the DNS records to its
-  database. Later, if Suricata alert is triggered, Suricata will send an alert
-  Event to SensorFleet message bus. PassiveDNS will receive this alert and
-  queries database of stored DNS records and then creates an augmentation Event
-  containing this information.
+  database. Later, if Suricata alert is triggered, Suricata will create and
+  alert. PassiveDNS will receive this alert and queries database of stored DNS
+  records and then creates an augmentation Event containing this information.
 </p>
 <p><img src="mermaid-images/49540abf82f4f068d73b6e3a603026ddd8dc6624.png" /></p>
