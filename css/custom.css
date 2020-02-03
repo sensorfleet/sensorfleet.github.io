@@ -20,6 +20,7 @@ main a:hover {
 h3 a,
 h3 a:visited {
   border-bottom: none;
+  text-decoration: none;
 }
 
 pre {
@@ -174,7 +175,7 @@ div.boxes a.btn {
   border-left: 4px solid #4b4f55;
   max-width: 300px;
   font-style: italic;
-  display: block:
+  display: block;
   float: left;
 }
 
