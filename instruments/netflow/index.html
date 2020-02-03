@@ -1,57 +1,77 @@
 ---
 layout: datasheet
+title: Netflow Instrument Instrument
 ---
+
+<!-- File is generated automatically, do not edit directly. -->
 
 <h1 id="netflow-instrument">Netflow Instrument</h1>
 <h2 id="overview">Overview</h2>
-<p>Netflow Instrument can be used to collect NetFlow information from network traffic. For introduction to NetFlow, see <a href="https://en.wikipedia.org/wiki/NetFlow">wikipedia</a>.</p>
-<p>The Instrument will listen traffic on mirror-bridge interface and store the traffic flows (as identified by source and destination IP addresses and protocol -specific ports) in NetFlow records. These NetFlow records can then be downloaded from the Instrument using the provided HTTP API.</p>
-<p>NetFlow records are stored in NetFlow format version 9 and they are stored in time-based fashion with new NetFlow file created every 5 minutes.</p>
+<p>
+  Netflow Instrument can be used to collect NetFlow information from network
+  traffic. For introduction to NetFlow, see
+  <a href="https://en.wikipedia.org/wiki/NetFlow">wikipedia</a>.
+</p>
+<p>
+  The Instrument will listen traffic on mirror-bridge interface and store the
+  traffic flows (as identified by source and destination IP addresses and
+  protocol -specific ports) in NetFlow records. These NetFlow records can then
+  be downloaded from the Instrument using the provided HTTP API.
+</p>
+<p>
+  NetFlow records are stored in NetFlow format version 9 and they are stored in
+  time-based fashion with new NetFlow file created every 5 minutes.
+</p>
 <h2 id="netflow-export-api">Netflow export API</h2>
 <p>The HTTP API provides endpoints for getting:</p>
 <ul>
-<li>List of all NetFlow files available</li>
-<li>A NetFlow file with a specified name</li>
-<li>A “next” NetFlow file (in time -based series) from given one</li>
+  <li>List of all NetFlow files available</li>
+  <li>A NetFlow file with a specified name</li>
+  <li>A “next” NetFlow file (in time -based series) from given one</li>
 </ul>
 <h1 id="instrument-properties">Instrument properties</h1>
-<table>
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 46%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Instrument developer</td>
-<td style="text-align: left;">SensorFleet Oy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Categories</td>
-<td style="text-align: left;">Traffic Analysis, Traffic Recording</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Network access type</td>
-<td style="text-align: left;">Passive</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Required interfaces</td>
-<td style="text-align: left;">NetFlow records are created from data received from this interface. (mirror-bridge with receive capabilities)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Instrument dependencies</td>
-<td style="text-align: left;">None</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Data retention</td>
-<td style="text-align: left;">Netflow instrument stores the NetFlow records up to the configured data retention period.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Management UI</td>
-<td style="text-align: left;">Yes</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Performance</td>
-<td style="text-align: left;">Netflow instrument is able to handle gigabbit/sec traffic with standard F-probe hardware.</td>
-</tr>
-</tbody>
+<table style="width:61%;">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Traffic Analysis, Traffic Recording</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>Passive</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>
+        <ul>
+          <li>
+            NetFlow records are created from data received from this interface.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Data retention</td>
+      <td>
+        Netflow instrument stores the NetFlow records up to the configured data
+        retention period.
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Management UI</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
