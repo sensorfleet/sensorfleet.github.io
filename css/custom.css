@@ -146,7 +146,8 @@ div.boxes h3 {
 
 div.boxes a.btn {
   width: 200px;
-  position: fixed;
+  display: block;
+  position: absolute;
   bottom: 10px;
   left: 50%;
   margin-left: -100px;
