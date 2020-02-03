@@ -1,8 +1,20 @@
-daedalus:
-  name: Antti Tönkyrä
-  position: Developer
+sami:
+  name: Sami Petäjäsoja
+  position: CEO
+  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/sami.jpg
+
+simo:
+  name: Simo Mäkipaja
+  position: Sales Director
   #  linkedin: https://www.linkedin.com/in/petajasoja/
-  image: /img/staff/daedalus.jpg
+  image: /img/staff/simo.jpg
+
+keitsi:
+  name: Mikko Korkalo
+  position: R&R Lead
+  #  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/keitsi.jpg
 
 esa:
   name: Esa Törmikoski
@@ -22,20 +34,8 @@ jtt:
   #  linkedin: https://www.linkedin.com/in/petajasoja/
   image: /img/staff/jtt.jpg
 
-keitsi:
-  name: Mikko Korkalo
-  position: R&R Lead
+daedalus:
+  name: Antti Tönkyrä
+  position: Developer
   #  linkedin: https://www.linkedin.com/in/petajasoja/
-  image: /img/staff/keitsi.jpg
-
-sami:
-  name: Sami Petäjäsoja
-  position: CEO
-  linkedin: https://www.linkedin.com/in/petajasoja/
-  image: /img/staff/sami.jpg
-
-simo:
-  name: Simo Mäkipaja
-  position: Sales Director
-  #  linkedin: https://www.linkedin.com/in/petajasoja/
-  image: /img/staff/simo.jpg
+  # image: /img/staff/daedalus.jpg

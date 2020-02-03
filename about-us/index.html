@@ -23,10 +23,27 @@ layout: default
 </p>
 
 <h3>Team</h3>
-<ul>
-  Sami Petäjäsoja - CEO Simo Mäkipaja - Sales Director Mikko Korkalo - R&D Lead
-  Antti Tönkyrä - Felix Ippolitov - Esa Törmikoski - Jukka Taimisto -
-</ul>
+
+<div class="row text-center">
+  {% for person in site.data.staff %}
+  <div class="col-md-6 bio">
+    {% if person[1].image %}
+    <p>
+      <img src="{{ person[1].image }}" alt="{{ person[1].name }}" />
+    </p>
+    {% endif %}
+    <p>
+      {{ person[1].name }}, {{ person[1].position }}
+    </p>
+    {% if person[1].linkedin %}
+    <p>
+      <a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a>
+      {% endif %}
+    </p>
+  </div>
+
+  {% endfor %}
+</div>
 
 <h3>Funded by</h3>
 
