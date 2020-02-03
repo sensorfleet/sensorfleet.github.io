@@ -5,12 +5,10 @@ title: Netflow Instrument Instrument
 
 <!-- File is generated automatically, do not edit directly. -->
 
-<h1 id="netflow-instrument">Netflow Instrument</h1>
-<h2 id="overview">Overview</h2>
 <p>
-  Netflow Instrument can be used to collect NetFlow information from network
-  traffic. For introduction to NetFlow, see
-  <a href="https://en.wikipedia.org/wiki/NetFlow">wikipedia</a>.
+  Netflow can be used to collect NetFlow information from network traffic. For
+  introduction to NetFlow, see
+  <a href="https://en.wikipedia.org/wiki/NetFlow">Wikipedia</a>.
 </p>
 <p>
   The Instrument will listen traffic on mirror-bridge interface and store the
@@ -22,14 +20,14 @@ title: Netflow Instrument Instrument
   NetFlow records are stored in NetFlow format version 9 and they are stored in
   time-based fashion with new NetFlow file created every 5 minutes.
 </p>
-<h2 id="netflow-export-api">Netflow export API</h2>
+<h2 id="api">API</h2>
 <p>The HTTP API provides endpoints for getting:</p>
 <ul>
   <li>List of all NetFlow files available</li>
   <li>A NetFlow file with a specified name</li>
   <li>A “next” NetFlow file (in time -based series) from given one</li>
 </ul>
-<h1 id="instrument-properties">Instrument properties</h1>
+<h2 id="properties">properties</h2>
 <table style="width:61%;">
   <colgroup>
     <col style="width: 30%" />
@@ -52,9 +50,7 @@ title: Netflow Instrument Instrument
       <td>Required interfaces</td>
       <td>
         <ul>
-          <li>
-            NetFlow records are created from data received from this interface.
-          </li>
+          <li>Monitored network</li>
         </ul>
       </td>
     </tr>
@@ -65,8 +61,8 @@ title: Netflow Instrument Instrument
     <tr class="even">
       <td>Data retention</td>
       <td>
-        Netflow instrument stores the NetFlow records up to the configured data
-        retention period.
+        Netflow stores the NetFlow records up to the configured data retention
+        period.
       </td>
     </tr>
     <tr class="odd">
