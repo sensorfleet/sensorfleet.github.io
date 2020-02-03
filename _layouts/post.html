@@ -11,10 +11,11 @@ layout: default
 <div class="bio">
   {% assign author = site.data.staff[page.author] %}
   <p>
-    <i
-      >{{ author.name }}, {{ author.position }}<br />
-      <a href="{{ author.linkedin }}" target="_new">LinkedIn &raquo;</a></i
-    >
+    {% if author.image %}
+    <img src="{{ author.image }}" alt="{{ author.name }}" />
+    {% endif %} {{ author.name }}, {{ author.position }} {% if author.linkedin
+    %} | <a href="{{ author.linkedin }}" target="_new">LinkedIn &raquo;</a>
+    {% endif %}
   </p>
 </div>
 
