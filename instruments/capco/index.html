@@ -1,0 +1,62 @@
+---
+layout: datasheet
+title: Capture Engine Instrument
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  Capture Engine is used to mirror traffic from one physical interface to one or
+  more mirror-bridge interfaces. Using Capture Engine allows multiple
+  Instruments to have access to same traffic flow without the need for accessing
+  the physical interface at all.
+</p>
+<p>
+  Using Capture Engine separates the physical interface from any Instrument
+  actually parsing the traffic, thus reducing possibility that Instrument could
+  access the network.
+</p>
+<h2 id="properties">Properties</h2>
+<table style="width:61%;">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Internal</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>Passive</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>
+        <ul>
+          <li>Physical interface which is mirrored.</li>
+          <li>
+            Mirror Interface(s) where physical interface data is mirrored.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Data retention</td>
+      <td>Capture Engine does not store information.</td>
+    </tr>
+    <tr class="odd">
+      <td>Management UI</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,97 @@
+---
+layout: datasheet
+title: Traffic Recorder Instrument
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  Provides packet recording capability to SensorFleet Sensor. Recording can be
+  triggered by Suricata IDS Alerts or be continuous (full packet capture). When
+  in trigger-based mode, Traffic Recorder will only record traffic related to
+  the triggering event.
+</p>
+<p>
+  Recorder delays traffic to the temporary in-memory buffer in trigger mode.
+  This allows investigating matching traffic related to triggering event before
+  the event was even generated.
+</p>
+<p>
+  Recorder internally uses a modified
+  <a href="https://molo.ch/">Moloch</a> capture engine. Moloch UI is also
+  provided to the user. It can be used for forensics purposes, internal
+  debugging and testing.
+</p>
+<h3 id="pcap-export-api">PCAP export API</h3>
+<p>
+  Provided standard Moloch UI can be directly used to download PCAPs, but an
+  alternative method is also provided for automation purposes. Instrument UI has
+  a custom HTTP download endpoint. The API will output PCAP files containing
+  traffic matching the search criteria.
+</p>
+<h2 id="properties">Properties</h2>
+<table style="width:61%;">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Traffic Analysis, Traffic Recording</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>Passive</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>
+        <ul>
+          <li>Monitored network</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Related Instruments</td>
+      <td>Suricata IDS</td>
+    </tr>
+    <tr class="odd">
+      <td>Data retention</td>
+      <td>
+        Recorder stores capture metadata (indexes) and raw captures for up to
+        the configured data retention period. Temporary capture delay buffer is
+        unaffected by data retention implementation.
+      </td>
+    </tr>
+    <tr class="even">
+      <td>Management UI</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="example-use-case-traffic-recorder-in-trigger-mode-with-suricata-ids">
+  Example use case: Traffic Recorder in trigger mode with Suricata IDS
+</h2>
+<p>
+  A typical use case is to combine Recorder with Suricata IDS: only relevant
+  traffic is recorded requiring much less system resources. Suricata IDS
+  analyzes live traffic and produces alert events for traffic that matches the
+  rule set.
+</p>
+<p>
+  Recorder receives the alert, creates a filtering rule internally and records
+  matching IP traffic. Since Recorder has a delay buffer internally, no matching
+  traffic is lost due to the delay from receiving Suricata alerts. Recorder can
+  also be configured to continuous recoding mode (full packet capture) which
+  requires much more system resources.
+</p>
+<p><img src="mermaid-images/83b3822007792e3961a5d41557d0aa94bf3ec4a9.png" /></p>

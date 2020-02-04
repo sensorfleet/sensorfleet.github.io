@@ -1,0 +1,18 @@
+{
+  "name": "Downloader",
+  "developer": "SensorFleet Oy",
+  "title": "Helper instrument to download resources for other instruments",
+  "categories": ["Internal"],
+  "description": "Downloader is helper Instrument providing other Instruments the ability to download resources outside the Sensor.",
+  "has_ui": false,
+  "data_retention_desc": "This instrument does not store the downloaded data itself. The downloaded items are transferred to instruments requesting them.",
+  "relations": [],
+  "required_interfaces": [
+    {
+      "type": "phy",
+      "capabilities": ["rx", "tx"],
+      "description": "Interface with access to the downloaded resource."
+    }
+  ],
+  "network_access_type": "active"
+}

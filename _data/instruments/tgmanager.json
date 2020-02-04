@@ -1,0 +1,20 @@
+{
+  "name": "TrafficGuard Management",
+  "developer": "F-Solutions Oy",
+  "title": "Management UI and rule logic for F-Solutions TrafficGuard",
+  "categories": ["Integrity Monitoring", "Asset Tracking"],
+  "description": "Traffic Guard Manager gathers the identities reported by TrafficGuard Probe and creates events based on identity changes.",
+  "has_ui": true,
+  "data_retention_desc": "Traffic Guard Manager keeps the collected information up to configured retention period",
+  "performance_dec": "Traffic Guard Manager does not require access to network",
+  "network_access_type": "none",
+  "relations": [
+    {
+      "description": "TrafficGuard Management can manage TrafficGuard Probe.",
+      "instrument_type": "tgprobed",
+      "instrument_name": "TrafficGuard Probe",
+      "required": false,
+      "permissions": []
+    }
+  ]
+}

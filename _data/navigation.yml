@@ -1,0 +1,20 @@
+- name: Home
+  link: /
+
+- name: Solution
+  link: /solution/
+
+- name: Instruments
+  link: /instruments/
+
+- name: About us
+  link: /about-us/
+
+- name: Blog
+  link: /blog/
+
+- name: Events
+  link: /events/
+
+- name: Contact us
+  link: /#contact

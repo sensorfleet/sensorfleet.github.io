@@ -1,0 +1,33 @@
+<!-- Fixed navbar -->
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
+  <div id="mobilelogo">
+    <a href="/"><img src="/img/sensorfleet-white2.png" alt="SensorFleet"/></a>
+  </div>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto w-100 justify-content-center">
+      <li class="nav-item active">
+        <a class="navbar-brand nav-link" href="/">
+          <img src="/img/sensorfleet-white2.png" alt="SensorFleet" />
+        </a>
+      </li>
+
+      {% for item in site.data.navigation %}
+      <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+        <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

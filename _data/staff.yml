@@ -1,14 +1,44 @@
-
 sami:
   name: Sami Petäjäsoja
   position: CEO
   linkedin: https://www.linkedin.com/in/petajasoja/
-  image: http://
-  blurb: Lorem ipsum
+  image: /img/staff/sami.jpg
+  phone: +358 40 5030745
 
-test:
-  name: Testi
-  position: testin
-  linked: n/a
-  image: n/a
-  blurb: n/a
+simo:
+  name: Simo Mäkipaja
+  position: Sales Director
+  linkedin: https://www.linkedin.com/in/simo-makipaja-5779a598/
+  image: /img/staff/simo.jpg
+
+keitsi:
+  name: Mikko Korkalo
+  position: Head of R&D
+  linkedin: https://www.linkedin.com/in/mikko-korkalo-695b915/
+  image: /img/staff/keitsi.jpg
+
+esa:
+  name: Esa Törmikoski
+  position: Developer
+  linkedin: https://www.linkedin.com/in/esa-t%C3%B6rmikoski-66a45171/
+  image: /img/staff/esa.jpg
+
+fellu:
+  name: Felix Ippolitov
+  position: Developer
+  linkedin: https://www.linkedin.com/in/fellu/
+  image: /img/staff/fellu.jpg
+  github: https://github.com/fellu
+  gitlab: https://gitlab.com/fellu
+
+jtt:
+  name: Jukka Taimisto
+  position: Developer
+  linkedin: https://www.linkedin.com/in/jukka-taimisto-b200b22
+  image: /img/staff/jtt.jpg
+
+dae:
+  name: Antti Tönkyrä
+  position: Developer
+  image: /img/staff/dae.jpg
+  github: https://github.com/atonkyra

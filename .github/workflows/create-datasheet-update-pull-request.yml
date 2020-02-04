@@ -2,7 +2,7 @@ name: Create pull request for updated datasheets
 on:
   push:
     branches:
-      - 'autoupdate-datasheets'
+      - "autoupdate-datasheets"
 
 jobs:
   build:
@@ -26,5 +26,5 @@ jobs:
                     "title": "Auto-update datasheets",
                     "body": "Created by GitHub Action",
                     "head": "autoupdate-datasheets",
-                    "base": "new"
+                    "base": "master"
                   }'

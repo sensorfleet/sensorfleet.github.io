@@ -1,0 +1,72 @@
+---
+layout: datasheet
+title: TrafficGuard Management Instrument
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  Traffic Guard Manager gathers the identities reported by TrafficGuard Probe
+  and creates events based on identity changes.
+</p>
+<p>
+  With TrafficGuard Manager UI it’s easy to view assets currently active on
+  monitored network and get events on new assets.
+</p>
+<h2 id="properties">Properties</h2>
+<table style="width:61%;">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>F-Solutions Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Integrity Monitoring, Asset Tracking</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>None</td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Related Instruments</td>
+      <td>TrafficGuard Probe</td>
+    </tr>
+    <tr class="odd">
+      <td>Data retention</td>
+      <td>
+        Traffic Guard Manager keeps the collected information up to configured
+        retention period
+      </td>
+    </tr>
+    <tr class="even">
+      <td>Management UI</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="example-use-case">Example use case</h2>
+<p>
+  TrafficGuard Probe Instrument is set to monitor a protected network which has
+  stable set of assets deployed. TrafficGuard Manager will gather all
+  information detected by the Probe Instrument.
+</p>
+<p>
+  First TrafficGuard Manager collects information on assets currently running on
+  the network. These assets can be marked as known and then it’s easy to
+  discover if new assets appear on the monitored network. This allows to quickly
+  react to rogue devices appearing on the protected network due to
+  misconfiguration or malicious activity.
+</p>

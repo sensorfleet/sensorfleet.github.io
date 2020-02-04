@@ -1,0 +1,74 @@
+---
+layout: datasheet
+title: PassiveDNS Instrument
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  PassiveDNS uses DNS events from suricata to store the DNS information. The
+  database of collected address and name mappings is then used to augment name
+  resolution information to Suricata IDS Instrument alerts. Whenever Suricata
+  alert is received, PassiveDNS will submit another event containing names, if
+  found, to IP addresses in Suricata alerts. This event might give forensic
+  information about the names an address has been associated with.
+</p>
+<h2 id="api">API</h2>
+<p>
+  PassiveDNS also provides simple HTTP API which allows users to query the
+  database that has been collected. The API provides methods for
+</p>
+<ul>
+  <li>Getting all names associated with given IP address</li>
+  <li>Getting all IP addresses associated with given name</li>
+</ul>
+<h2 id="properties">Properties</h2>
+<table style="width:61%;">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Traffic Analysis, Traffic Recording, DNS</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>None</td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>Suricata IDS</td>
+    </tr>
+    <tr class="even">
+      <td>Data retention</td>
+      <td>
+        PassiveDNS Instrument stores DNS information up to the configured
+        period.
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Management UI</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="example">Example</h2>
+<p>
+  Following sequence shows the operation of PassiveDNS with Suricata. Whenever
+  DNS response is seen, Suricata will send DNS event to internal message bus.
+  This Event is received by PassiveDNS, which stores the DNS records to its
+  database. Later, if Suricata alert is triggered, Suricata will create and
+  alert. PassiveDNS will receive this alert and queries database of stored DNS
+  records and then creates an augmentation Event containing this information.
+</p>
+<p><img src="mermaid-images/49540abf82f4f068d73b6e3a603026ddd8dc6624.png" /></p>

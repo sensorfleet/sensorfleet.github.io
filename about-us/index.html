@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<h1 class="mt-5">About us</h1>
+<p class="lead">
+  Our team has a long experience in developing cyber security sensor technology
+  for a national early warning system protecting the critical infrastructure in
+  Finland. At the inception of SensorFleet in 2018, we set out to re-imagine
+  cyber security monitoring.
+</p>
+<p></p>
+<p>
+  SensorFleet solution is an open sensor platform that can host detection-,
+  protection- and scanning tools - that we call Instruments - from 3rd parties,
+  whether commercial, open source or developed in-house. Solution reduces
+  complexity in managing cyber security capabilities and readily available
+  deployment platform improves response times for emerging threats.
+</p>
+
+<h3>Team</h3>
+
+<div class="row text-center team">
+  {% for person in site.data.staff %}
+  <div class="col-md-6 bio">
+    {% if person[1].image %}
+    <p>
+      <img src="{{ person[1].image }}" alt="{{ person[1].name }}" />
+    </p>
+    {% endif %}
+    <p>
+      {{ person[1].name }}, {{ person[1].position }}
+    </p>
+    <p>
+      {% if person[1].linkedin %}
+      <a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a
+      ><br />
+      {% endif %} {% if person[1].github %}
+      <a href="{{ person[1].github }}" target="_new">GitHub &raquo;</a><br />
+      {% endif %} {% if person[1].gitlab %}
+      <a href="{{ person[1].gitlab }}" target="_new">GitLab &raquo;</a><br />
+      {% endif %} {% if person[1].phone %} {{ person[1].phone }} {% endif %}
+    </p>
+  </div>
+
+  {% endfor %}
+</div>
+
+<h3>Funded by</h3>
+
+<div class="funded">
+  <img
+    src="/img/f-solutions.png"
+    alt="F-Solutions"
+    style="max-height: 60px; margin-right: 0px;"
+  />
+  <img src="/img/scan-abc.png" alt="Ääkköset Oy" style="margin-right: 6px;" />
+  <img
+    src="/img/leverage-eu-white.png"
+    alt="Leverage from the EU"
+    style="margin-right: 20px;"
+  />
+  <img src="/img/eu-white.png" alt="EU" />
+</div>
+<p>
+  <small>
+    <a href="/eu.html">Vesihiisi</a> project develops an open and scalable
+    platform, SensorFleet solution, for network level cyber security monitoring.
+    Platform enables emergence of an open ecosystem for development and
+    distribution of cyber security monitoring capabilities. SensorFleet solution
+    prototype will be further developed to production level maturity in this
+    project.
+  </small>
+</p>

@@ -1,0 +1,7 @@
+_site
+_data/instruments
+instruments/*/*
+**/*.png
+**/*.svg
+**/*.jpg
+.idea
