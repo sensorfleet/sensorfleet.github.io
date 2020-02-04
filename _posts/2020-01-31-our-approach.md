@@ -3,13 +3,13 @@ layout: post
 author: sami
 ---
 
-Our approach This blog is about building our next generation cyber sensor
-platform. First we must let you in on a little secret, our approach may be based
-on yours. We have a long experience in developing cyber security sensor
-technology for a national early warning system protecting the critical
-infrastructure and enterprises. At the inception of SensorFleet, we set out to
-re-imagine cyber security monitoring in order to solve the pain points from the
-field. Four key principles guided our work.
+This blog is about building our next generation cyber sensor platform. First we
+must let you in on a little secret, our approach may be based on yours. We have
+a long experience in developing cyber security sensor technology for a national
+early warning system protecting the critical infrastructure and enterprises. At
+the inception of SensorFleet, we set out to re-imagine cyber security monitoring
+in order to solve the pain points from the field. Four key principles guided our
+work.
 
 ## 1: Open platform
 
