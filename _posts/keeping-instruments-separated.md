@@ -3,7 +3,6 @@ layout: post
 author: jtt
 ---
 
-
 SensorFleet Sensor can contain multiple Instruments. One of the primary design
 goals for Sensor was to keep Instruments separated. This means that while
 allowing the Instruments to interconnect with each other when necessary,
