@@ -1,8 +1,8 @@
 - name: Home
   link: /
 
-- name: Solution description
-  link: /solution-description/
+- name: Solution
+  link: /solution/
 
 - name: Instruments
   link: /instruments/
