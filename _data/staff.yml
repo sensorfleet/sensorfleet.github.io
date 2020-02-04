@@ -37,9 +37,8 @@ jtt:
   linkedin: https://www.linkedin.com/in/jukka-taimisto-b200b22
   image: /img/staff/jtt.jpg
 
-daedalus:
+dae:
   name: Antti Tönkyrä
   position: Developer
-  #  linkedin: https://www.linkedin.com/in/petajasoja/
-  image: /img/staff/daedalus.jpg
+  image: /img/staff/dae.jpg
   github: https://github.com/atonkyra
