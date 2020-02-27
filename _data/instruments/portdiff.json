@@ -1,0 +1,19 @@
+{
+  "name": "PortDiff",
+  "developer": "SensorFleet Oy",
+  "title": "Automated network scanning and monitoring tool",
+  "categories": ["Integrity Monitoring"],
+  "description": "Monitors for open services on hosts and reports changes in the network as events.",
+  "has_ui": false,
+  "data_retention_desc": "Besides the current active network status, the instrument stores no data. All history will be stored in events on the sensor, not in the instrument.",
+  "relations": [],
+  "required_interfaces": [
+    {
+      "type": "any",
+      "capabilities": ["rx", "tx"],
+      "description": "Monitored network"
+    }
+  ],
+  "network_access_type": "Active",
+  "performance_desc": "Scanning will become incrementally slower when going for networks with over 256 hosts. Maximum recommended network size 5000 hosts."
+}
