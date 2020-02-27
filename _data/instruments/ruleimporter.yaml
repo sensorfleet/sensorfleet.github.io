@@ -9,7 +9,7 @@ categories:
 description: Tool for importing, generating and deploying Suricata rules from
   packaged rule sets and blacklisted addresses.
 
-has_ui: false
+has_ui: true
 data_retention_desc:
   Stores latest generated rule set to application RAM and a list
   of current Suricata IDS Instruments to persistent data. Does not store user specific
