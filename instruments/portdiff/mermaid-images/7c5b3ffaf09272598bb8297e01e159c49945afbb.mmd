@@ -1,0 +1,18 @@
+graph TB
+    server1(Server 1<br>10.10.0.10: SSH, File Server )
+    server2(Server 2<br>10.10.0.11: SSH, HTTP, HTTPS )
+    portdiff(PortDiff scanner)
+    subgraph Sensor
+    scanevent("Scan Event { ... }")
+    portdiff-- produce --> scanevent
+    subgraph PortDiff Instrument
+    physical(Dedicated ethernet interface<br>10.10.0.100)
+    physical---portdiff
+    end
+    end
+    portdiff -. scan -.- server1
+    portdiff -. scan -.- server2
+    subgraph Servers 10.10.0.0/24
+    server1
+    server2
+    end
