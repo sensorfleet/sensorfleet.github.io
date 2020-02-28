@@ -8,67 +8,25 @@ layout: default
   Meet us at events!
 </p>
 
-<p></p>
-
 <div class="row boxes">
+  {% for event in site.data.events.upcoming %}
   <div class="col-md-5 text-center">
-    <h3>14-15 February 2020 | Kaapelitehdas, Helsinki, Finland</h3>
+    <h3>{{ event[1].header }}</h3>
     <p>
       <img
-        src="../img/events/disobey.jpg"
+        src="../img/events/{{ event[1].image }}"
         class="img-fluid"
-        alt="Disobey 2020"
+        alt="{{ event[1].name }}"
       />
     </p>
     <p>
-      We're hacking! Come talk to us.
+      {{ event[1].description }}
     </p>
     <p>
-      <a href="https://disobey.fi/" target="_new" class="btn btn-secondary"
+      <a href="{{ event[1].url }}" target="_new" class="btn btn-secondary"
         >More &raquo;</a
       >
     </p>
   </div>
-  <div class="col-md-5 text-center">
-    <h3>17-18 March 2020 | Olympia London, UK</h3>
-    <p>
-      <img
-        src="../img/events/CSC-Global-2020-White.png"
-        class="img-fluid"
-        alt="Cyber Security & Cloud EXPO - Global 2020"
-      />
-    </p>
-    <p>
-      Meet us at stand #667!
-    </p>
-    <p>
-      <a
-        href="https://www.cybersecuritycloudexpo.com/global/"
-        target="_new"
-        class="btn btn-secondary"
-        >More &raquo;</a
-      >
-    </p>
-  </div>
-  <div class="col-md-5 text-center">
-    <h3>02-04 June 2020 | Olympia london, UK</h3>
-    <p>
-      <img
-        src="../img/events/infosecurityeurope.png"
-        class="img-fluid"
-        alt="Infosecurity Europe 2020"
-      />
-    </p>
-    <p>
-      Visit us at our booth X49!
-    </p>
-    <p>
-      <a
-        href="https://www.infosecurityeurope.com/"
-        target="_new"
-        class="btn btn-secondary"
-        >More &raquo;</a
-      >
-    </p>
-  </div>
+  {% endfor %}
 </div>
