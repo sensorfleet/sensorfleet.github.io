@@ -1,7 +1,7 @@
 disobey_2020:
   name: Disobey 2020
   header: 14-15 February 2020 | Kaapelitehdas, Helsinki, Finland
-  image: disobey.jpg
+  image: disobey-2020.jpg
   description: We're hacking! Come talk to us.
   url: https://disobey.fi/
   past: 2020-02-18
@@ -17,7 +17,7 @@ cyber_security_cloud_expo_2020:
 infosecurity_europe_2020:
   name: Infosecurity Europe 2020
   header: 02-04 June 2020 | Olympia london, UK
-  image: infosecurityeurope.png
+  image: infosecurityeurope-2020.png
   description: Visit us at our booth X49!
   url: https://www.infosecurityeurope.com/
   past: 2020-06-06
