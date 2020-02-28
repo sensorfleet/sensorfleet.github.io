@@ -1,21 +1,23 @@
-upcoming:
-  disobey_2020:
-    name: Disobey 2020
-    header: 14-15 February 2020 | Kaapelitehdas, Helsinki, Finland
-    image: disobey.jpg
-    description: We're hacking! Come talk to us.
-    url: https://disobey.fi/
+disobey_2020:
+  name: Disobey 2020
+  header: 14-15 February 2020 | Kaapelitehdas, Helsinki, Finland
+  image: disobey.jpg
+  description: We're hacking! Come talk to us.
+  url: https://disobey.fi/
+  past: 2020-02-18
 
-  cyber_security_cloud_expo_2020:
-    name: Cyber Security & Cloud EXPO - Global 2020
-    header: 17-18 March 2020 | Olympia London, UK
-    image: CSC-Global-2020-White.png
-    description: "Meet us at stand #667!"
-    url: https://www.cybersecuritycloudexpo.com/global/
+cyber_security_cloud_expo_2020:
+  name: Cyber Security & Cloud EXPO - Global 2020
+  header: 17-18 March 2020 | Olympia London, UK
+  image: CSC-Global-2020-White.png
+  description: "Meet us at stand #667!"
+  url: https://www.cybersecuritycloudexpo.com/global/
+  past: 2020-03-20
 
-  infosecurity_europe_2020:
-    name: Infosecurity Europe 2020
-    header: 02-04 June 2020 | Olympia london, UK
-    image: infosecurityeurope.png
-    description: Visit us at our booth X49!
-    url: https://www.infosecurityeurope.com/
+infosecurity_europe_2020:
+  name: Infosecurity Europe 2020
+  header: 02-04 June 2020 | Olympia london, UK
+  image: infosecurityeurope.png
+  description: Visit us at our booth X49!
+  url: https://www.infosecurityeurope.com/
+  past: 2020-06-06
