@@ -1,0 +1,74 @@
+---
+layout: datasheet
+title: Cowrie Instrument Instrument
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  Cowrie Instrument integrates
+  <a href="https://www.cowrie.org">Cowrie honeypot</a> into SensorFleet
+  platform. Cowrie honeypot is a medium interaction SSH/Telnet honeypot which
+  logs shell interaction and brute force login attempts from attacker.
+</p>
+<p>
+  The Instrument will send events for user interaction with the honeypot. This
+  allows to easily integrate honeypot activity into same security monitoring
+  with other Instruments running on SensorFleet platform. Running honeypot
+  within SensorFleet instrument adds a layer of protection as the honeypot
+  process is running inside isolated instrument container.
+</p>
+<p>
+  This Instrument needs active network access to run the honeypot, the network
+  access can be either dedicated physical interface or network access provided
+  by internal bridge interface.
+</p>
+<h2 id="api">API</h2>
+<p>
+  HTTP API provides endpoint for downloading files down/uploaded into the
+  honeypot by attacker.
+</p>
+<h1 id="properties">Properties</h1>
+<table style="width:61%;">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy (Open Source integration)</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Attack Detection, Honeypot</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>Active</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>
+        <ul>
+          <li>Network access to the honeypot</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Data retention</td>
+      <td>
+        Cowrie instrument stores logs and artifacts downloaded/upploaded to it
+        up the configured retention period
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Management UI</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
