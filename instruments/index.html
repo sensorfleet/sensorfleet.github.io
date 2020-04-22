@@ -2,24 +2,53 @@
 layout: default
 ---
 
-<h1>Instruments</h1>
+<h1>Utility Instruments</h1>
 
 <p class="lead">
-  More details of available instruments.
+  Workhorses for the various cyber security related tasks, like detection,
+  traffic capture, asset tracking and more.
 </p>
 
 <p></p>
 
 <div class="row boxes">
   {% for instrument in site.data.instruments %}
-  <div class="col-md-3 text-center">
-    <h3>{{ instrument[1].name }}</h3>
-    <p>
-      {{ instrument[1].description }}
-    </p>
-    <a href="{{ instrument[0] }}/" class="btn btn-secondary"
-      >Datasheet &raquo;</a
-    >
-  </div>
+    {% unless instrument[1].categories contains "Internal" %}
+      {% assign name = instrument[1].name %}
+      {% assign description = instrument[1].description %}
+      {% assign url = instrument[0] %}
+      {% include instrument-card.html
+          name=name
+          description=description 
+          url=url 
+      %}
+    {% endunless %} 
   {% endfor %}
+</div>
+
+<div>
+  <h2>Platform Instruments</h2>
+  <p class="lead">
+    Modules providing services for the other Instruments. With the exception of
+    core platform, we are using the Instrument architecture for platform 
+    services in order to maximise containment and isolation for different
+    functionalities.
+  </p>
+
+  <p></p>
+  
+  <div class="row boxes">
+    {% for instrument in site.data.instruments %}
+    {% if instrument[1].categories contains "Internal" %}
+      {% assign name = instrument[1].name %}
+      {% assign description = instrument[1].description %}
+      {% assign url= instrument[0] %}
+      {% include instrument-card.html
+          name=name
+          description=description 
+          url=url 
+      %}
+    {% endif %} 
+  {% endfor %}
+  </div>
 </div>
