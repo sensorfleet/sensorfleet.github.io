@@ -10,7 +10,7 @@ description:
   medium interaction mode (shell) it emulates a UNIX system.
 has_ui: true
 data_retention_desc:
-  Cowrie instrument stores logs and artifacts downloaded/upploaded to it up the
+  Cowrie instrument stores logs and artifacts downloaded/uploaded to it up the
   configured retention period
 network_access_type: active
 required_interfaces:
