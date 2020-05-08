@@ -16,14 +16,14 @@ SensorFleet software changelog
 - Feature: Sensor Orchestrator enforces rx/tx contracts filtering requirements
 - Feature: Instrument friendly name defaults to the one from metadata.json
 - Feature: Zeek events now have messages
-- Feature: Capture Engine binary is no longer configurable in config schema
 - Feature: Optimized Capture Engine CPU usage
 - Feature: Downloader now has support for custom HTTP headers (editable in the UI)
 - Feature: Sensor/FM UI can now edit instrument configurations (for instruments that have a JSON Schema and editable configuration).
   UI configurable instruments:
   Suricata, Zeek, Capture Engine, PortDiff, PassiveDNS, Cowrie
 - Feature: SensorFu beacon instrument (requires access to SensorFu Home)
-- Some Reliablity and API fixes
+- Change: Capture Engine binary is no longer configurable in config schema
+- Other reliablity fixes, internal API changes and features
 
 Upgrade notes:
 - A major upgrade. Proceed with caution on production Sensors.
