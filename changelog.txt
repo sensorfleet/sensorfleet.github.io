@@ -1,0 +1,30 @@
+SensorFleet software changelog
+
+1.2.0, staging 2020-05-08
+- Fixed an issue where LXD daemon would leak memory. High impact on sensors that have low RAM spec. Updated LXD to 4.0.
+- Fixed an issue where Sensor/FM UI performs slowly on a sensor with lot of instruments
+- Fixed an issue where Rule importer cannot receive >1MB blacklists via push method
+- Fixed an issue where Downloader does not start download job when started with existing configuration
+- Fixed an issue where FM/Sensor configuration goes out of sync (version conflict)
+- Fixed an issue where watchdog terminates Sensor Orchestrator when installing APT packages on a slow connection
+- Fixed an issue where pylxd would spam "Not Found" in Sensor Orchestrator logs
+- Fixed an issue where Zeek displays error status for a moment after starting
+- Fixed an issue where Zeek binary makes log files in the working directory
+- Fixed an issue where software upgrade UI stucks if error in getting packagelist
+- Fixed an issue where UI frontend script crashed: cannot handle null json
+- Fixed an issue where Software update UI would display "available version: null"
+- Feature: Sensor Orchestrator enforces rx/tx contracts filtering requirements
+- Feature: Instrument friendly name defaults to the one from metadata.json
+- Feature: Zeek events now have messages
+- Feature: Capture Engine binary is no longer configurable in config schema
+- Feature: Optimized Capture Engine CPU usage
+- Feature: Downloader now has support for custom HTTP headers (editable in the UI)
+- Feature: Sensor/FM UI can now edit instrument configurations (for instruments that have a JSON Schema and editable configuration).
+  UI configurable instruments:
+  Suricata, Zeek, Capture Engine, PortDiff, PassiveDNS, Cowrie
+- Feature: SensorFu beacon instrument (requires access to SensorFu Home)
+- Some Reliablity and API fixes
+
+Upgrade notes:
+- A major upgrade. Proceed with caution on production Sensors.
+- LXD will be upgraded using canonical Snap repackaged by SensorFleet in a debian package.
