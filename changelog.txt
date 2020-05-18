@@ -1,6 +1,6 @@
 SensorFleet software changelog
 
-1.2.0, staging 2020-05-08
+1.2.0, staging 2020-05-08, beta 2020-05-18
 - Fixed an issue where LXD daemon would leak memory. High impact on sensors that have low RAM spec. Updated LXD to 4.0.
 - Fixed an issue where Sensor/FM UI performs slowly on a sensor with lot of instruments
 - Fixed an issue where Rule importer cannot receive >1MB blacklists via push method
