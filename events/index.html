@@ -38,26 +38,32 @@ layout: default
 </p>
 
 <div class="row boxes">
-  {% for event in site.data.events %} {% capture nowunix %} {{'now' | date:
-  '%s'}} {% endcapture %} {% capture end_date %} {{event[1].past | date: '%s'}}
-  {% endcapture %} {% if end_date < nowunix %}
-  <div class="col-md-5 text-center">
-    <h3>{{ event[1].header }}</h3>
-    <p>
-      <img
-        src="../img/events/{{ event[1].image }}"
-        class="img-fluid"
-        alt="{{ event[1].name }}"
-      />
-    </p>
-    <p>
-      {{ event[1].description }}
-    </p>
-    <p>
-      <a href="{{ event[1].url }}" target="_new" class="btn btn-secondary"
-        >More &raquo;</a
-      >
-    </p>
-  </div>
-  {%endif%} {% endfor %}
+  {% for event in site.data.events %}
+    {% capture nowunix %}
+      {{'now' | date: '%s'}}
+    {% endcapture %}
+    {% capture end_date %}
+      {{event[1].past | date: '%s'}}
+    {% endcapture %}
+    {% if end_date < nowunix %}
+      <div class="col-md-5 text-center">
+        <h3>{{ event[1].header }}</h3>
+        <p>
+          <img
+            src="../img/events/{{ event[1].image }}"
+            class="img-fluid"
+            alt="{{ event[1].name }}"
+          />
+        </p>
+        <p>
+          {{ event[1].description }}
+        </p>
+        <p>
+          <a href="{{ event[1].url }}" target="_new" class="btn btn-secondary"
+            >More &raquo;</a
+          >
+        </p>
+      </div>
+    {%endif%}
+  {% endfor %}
 </div>

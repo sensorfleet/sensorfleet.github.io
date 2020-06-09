@@ -2,6 +2,7 @@ _site
 _data/instruments
 instruments/*/*
 instruments/index.html
+events/index.html
 **/*.png
 **/*.svg
 **/*.jpg
