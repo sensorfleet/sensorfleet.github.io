@@ -1,5 +1,22 @@
 SensorFleet software changelog
 
+1.2.1, Instrument bugfix release, staging 2020-06-17
+- Fixed an issue where PassiveDNS retention/age checks lead into TimeoutError
+- Fixed an issue where Suricata generates null interface name to config
+- Fixed an issue where hardware offloads might cause some traffic to not get mirrored for capture interfaces
+- Fixed an issue where Suricata fails to start with configuration related NoneType is not iterable exception
+- Fixes an issue where getting pcaps older than 1 hour from the recorder API was not possible
+- Feature: Suricata instrument now has AF-packet options configurable
+- Feature: Make capture-plugin delay configurable
+- Feature: Include exporter_id API endpoint for Event Exporter Instrument
+- Optimization: Add debug symbols to suricata instrument
+- Optimization: Enable SSSE3, SSE4.1, SSE4.2 for suricata instrument
+- Optimization: Recorder ruleset handling optimizations
+- Optimization: Raise default Capture Engine threads to 16 from 8
+- Optimization: Clear rules from /var/lib/suricata/rules
+- Optimization: Optimize Recorder Instrument capture-plugin filtering
+- Upgrade Suricata to 5.0.3
+
 1.2.0, staging 2020-05-08, beta 2020-05-18
 - Fixed an issue where LXD daemon would leak memory. High impact on sensors that have low RAM spec. Updated LXD to 4.0.
 - Fixed an issue where Sensor/FM UI performs slowly on a sensor with lot of instruments
