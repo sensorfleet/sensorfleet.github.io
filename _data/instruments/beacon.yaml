@@ -1,0 +1,19 @@
+name: Beacon
+developer: SensorFu Oy
+title: SensorFu Beacon integration to SensorFleet platform
+categories:
+  - Isolation testing
+  - Integrity monitoring
+description:
+  Integrates SensorFu Beacon as SensorFleet instrument. For more information see
+  https://www.sensorfu.com/
+has_ui: false
+data_retention_desc: Beacon Instrument does not store information
+performance_desc: N/A
+network_access_type: active
+required_interfaces:
+  - type: bridge
+    capabilities:
+      - rx
+      - tx
+    description: Interface for SensorFu Beacon to use
