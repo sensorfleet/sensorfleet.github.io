@@ -22,5 +22,15 @@ relations:
       It will manage all Fleet Suricata instances that are available.
     instrument_type: suricata
     instrument_name: Suricata IDS
-    permissions: []
+    permissions: ["find", "direct_message"]
     required: true
+produced_event_types:
+  - match: instruments.ruleimporter.adopted
+    type: exact
+    title: Adoption event
+  - match: instruments.ruleimporter.deadopted
+    type: exact
+    title: Deadoption event
+  - match: instruments.ruleimporter.suricata_ruleset_sent
+    type: exact
+    title: Ruleset was sent
