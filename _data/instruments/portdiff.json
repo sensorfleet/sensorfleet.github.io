@@ -14,6 +14,18 @@
       "description": "Monitored network"
     }
   ],
+  "produced_event_types": [
+    {
+      "match": "instruments.portdiff.first_scan",
+      "type": "exact",
+      "title": "First scan completed"
+    },
+    {
+      "match": "instruments.portdiff.changes",
+      "type": "exact",
+      "title": "Changes since last scan"
+    }
+  ],
   "network_access_type": "Active",
   "performance_desc": "Scanning will become incrementally slower when going for networks with over 256 hosts. Maximum recommended network size 5000 hosts."
 }
