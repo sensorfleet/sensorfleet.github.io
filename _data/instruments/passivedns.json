@@ -17,5 +17,22 @@
       "required": true,
       "permissions": []
     }
+  ],
+  "produced_event_types": [
+    {
+      "match": "instruments.passivedns.stats",
+      "type": "exact",
+      "title": "Statistics event"
+    },
+    {
+      "match": "instruments.passivedns.augmentation",
+      "type": "exact",
+      "title": "PassiveDNS augmentation event"
+    },
+    {
+      "match": "instrument.passivedns.aggregation",
+      "type": "exact",
+      "title": "PassiveDNS aggregation event"
+    }
   ]
 }
