@@ -20,7 +20,14 @@
       "instrument_type": "tgmanager",
       "instrument_name": "TrafficGuard Management",
       "required": true,
-      "permissions": []
+      "permissions": ["direct_message"]
+    }
+  ],
+  "produced_event_types": [
+    {
+      "match": "instruments.tgprobe.report",
+      "type": "exact",
+      "title": "Probe report"
     }
   ]
 }
