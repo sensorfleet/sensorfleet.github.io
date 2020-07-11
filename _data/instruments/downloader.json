@@ -14,5 +14,12 @@
       "description": "Interface with access to the downloaded resource."
     }
   ],
-  "network_access_type": "active"
+  "network_access_type": "active",
+  "produced_event_types": [
+    {
+      "match": "instruments.downloader.download_complete",
+      "type": "exact",
+      "title": "Download completed event"
+    }
+  ]
 }
