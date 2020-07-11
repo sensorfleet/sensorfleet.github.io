@@ -16,5 +16,17 @@
       "required": false,
       "permissions": []
     }
+  ],
+  "produced_event_types": [
+    {
+      "match": "instruments.tgmanager.identity_alert",
+      "type": "exact",
+      "title": "New identity found"
+    },
+    {
+      "match": "instruments.tgmanager.ruleset_refresh",
+      "type": "exact",
+      "title": "New ruleset available"
+    }
   ]
 }
