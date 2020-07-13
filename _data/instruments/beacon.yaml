@@ -17,3 +17,7 @@ required_interfaces:
       - rx
       - tx
     description: Interface for SensorFu Beacon to use
+produced_event_types:
+  - match: instrument.beacon.output
+    type: exact
+    title: Beacon output event

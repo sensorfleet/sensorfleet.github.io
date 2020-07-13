@@ -22,6 +22,23 @@
       "permissions": []
     }
   ],
+  "produced_event_types": [
+    {
+      "match": "instruments.suricata.ev.",
+      "type": "prefix",
+      "title": "IDS event"
+    },
+    {
+      "match": "instruments.suricata.warning",
+      "type": "exact",
+      "title": "A warning event"
+    },
+    {
+      "match": "instruments.suricata.update_ruleset",
+      "type": "exact",
+      "title": "Suricata ruleset was updated"
+    }
+  ],
   "required_interfaces": [
     {
       "type": "mirror-bridge",
