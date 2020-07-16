@@ -1,5 +1,10 @@
 SensorFleet software changelog
 
+Note: development branch is a non-tested ongoing automatically updated
+release that should not be used in production. However, if you know what you are doing,
+with caution and enough knowledge, you can use it to verify bugfixes before the actual release.
+Refer to User Manual how to choose a release for your software upgrade to use.
+
 2.1.0, development branch:
 - Fixed bugs
   [SF-735] - Data age check should try to refresh data age faster after a TimeoutError
