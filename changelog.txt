@@ -1,5 +1,80 @@
 SensorFleet software changelog
 
+2.1.0, development branch:
+- Fixed bugs
+  [SF-735] - Data age check should try to refresh data age faster after a TimeoutError
+  [SF-1457] - Instrument watchdog does not restart instruments on TimeoutError
+
+2.0.0, internal test release 2020-07-15:
+- Fixed bugs
+  [SF-220] - Sensor Orchestrator can lock up DPKG if DEB install fails
+  [SF-844] - Reformat "sensor1" to "Sensor 1" in event search view if there is no friendly name for sensor
+  [SF-1049] - sensormessagebroker needing a restart after upgrade
+  [SF-1115] - Ambiguous error when adding instrument not found from license.json
+  [SF-1339] - Edit/remove Zeek Script CSS broken in Rule Manager
+  [SF-1340] - Rule Manager sent ja3s script to zeek, but applying it required manual restart
+  [SF-1348] - Fix sensorfleet-lxd install failure
+  [SF-1352] - sensor-orchestrator runs get_pid every time health is asked
+  [SF-1371] - Rule importer imports same/partial ruleset multiple times
+  [SF-1398] - Beacon Instrument does not move downloaded file with suffix
+  [SF-1421] - FM UI fails to stop
+  [SF-1437] - Restart problems and timeouts in FM UI
+  [SF-1440] - Ruleimporter generated rules may lead into collisions
+  [SF-1472] - PassiveDNS: Fix data retention error when no DNS events in DB
+  [SF-1476] - Sensor Orchestrator might fail to configure DNS for Instruments
+  [SF-1478] - nginx fails to start on FM and Sensor
+  [SF-1480] - SensorMessageBroker sometimes gets stuck when shutting down
+  [SF-1482] - Suricata shutdown sometimes times out, suricataids does not account for this case
+  [SF-1483] - Sensor does not boot / boots slowly (before uninstalling cloud-init)
+  [SF-1484] - Snaps are updated outside of APT updates, breaking sensorfleet-lxd
+  [SF-1502] - Rule delivery timeout triggers infinite delivery loop even when ruleset is delivered
+  [SF-1503] - Nginx does not honor defined ciphers
+  [SF-1507] - Capco starts capture processes before output interface is ready -> segfault
+  [SF-1525] - Sensor-orchestrator crashes on start due to missing configuration key
+  [SF-1527] - Sensor UI sometimes does not ack or timeout HTTP PUT requests
+  [SF-1529] - fleetupgraded control sock too wide permissions
+  [SF-1532] - Fix Recorder regression where pcap data is not always returned when using API
+  [SF-1533] - fleetupgraded blocks shutdown in some cases
+  [SF-1540] - Custom config for suricata generates invalid configuration
+  [SF-1541] - Fix crash with missing homenets
+  [SF-1546] - Recorder moloch_overrides are not applied
+  [SF-1547] - Recorder component capture does not set BPF filters configured in moloch
+  [SF-1559] - Local tcp ports are too open (mongo, nginx)
+
+- Features and other improvements
+  [SF-1165] - Initial asset tracking support for Zeek
+  [SF-1175] - IPTables rules are pretty open in Demo sensor
+  [SF-1176] - FM-Sensor config write restrictions
+  [SF-1178] - Memory resource limits (customizable with fleet tool)
+  [SF-1180] - sshd hardening (ansible)
+  [SF-1181] - File system hardenings (ansible)
+  [SF-1182] - OS default CA-certificates are allowed
+  [SF-1183] - syslog remote logging encryption (documentation)
+  [SF-1186] - TLS 1.0 and TLS 1.1 allowed in NGINX server
+  [SF-1187] - Documentation on how the end user should configure HTTPS certificates
+  [SF-1188] - Document LUKS disk encryption usage
+  [SF-1288] - Rename "instrument" to "Instrument" in UI
+  [SF-1323] - Refactor: use raising HTTPError in error handling
+  [SF-1358] - UI now handles messaging timeouts as 504 error instead of 500
+  [SF-1379] - API and platform changes to allow Rule Manager manage it's downloads
+  [SF-1388] - Support for config monitor in fleet tool
+  [SF-1397] - Drop ZeroMQ in favor of TCP+TLS+MessagePack for FleetGram
+  [SF-1407] - Add nocase to imported DNS blacklist entries
+  [SF-1410] - Ensure that nginx/fleetgram uses accepted ST3 ciphers by default
+  [SF-1416] - TLS support for FleetGram
+  [SF-1420] - Fix DNS blacklist matches being too broad
+  [SF-1438] - Secure TLS by default for FM<->Sensor HTTP reverse proxy
+  [SF-1447] - General way to override metadata configs in sensorconfig
+  [SF-1449] - We should be able to filter encrypted traffic from Recorder (BPF filter)
+  [SF-1475] - Ansible support for fleetgram TLS
+  [SF-1479] - FleetGram should use TLS with proper ciphers
+  [SF-1491] - FM/Sensor UI socket permissions are too wide
+  [SF-1492] - Instrument UI/other socket permissions are too wide
+  [SF-1505] - Ansible should support setting GRUB password
+  [SF-1508] - Sensor does not shut down in a timely manner
+  [SF-1516] - Restrict fleetgram direct message and event produce permissions
+  [SF-1523] - OpenVPN is slow to reconnect after reboot
+
 1.2.1, Instrument bugfix release, staging 2020-06-17
 - Fixed an issue where PassiveDNS retention/age checks lead into TimeoutError
 - Fixed an issue where Suricata generates null interface name to config
