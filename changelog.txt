@@ -9,6 +9,7 @@ Refer to User Manual how to choose a release for your software upgrade to use.
 - Fixed bugs
   [SF-735] - Data age check should try to refresh data age faster after a TimeoutError
   [SF-1457] - Instrument watchdog does not restart instruments on TimeoutError
+  [SF-1561] - /etc/sensorfleet/ta.key is o+r
 
 2.0.0, internal test release 2020-07-15:
 - Fixed bugs
