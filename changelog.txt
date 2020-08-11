@@ -5,11 +5,31 @@ release that should not be used in production. However, if you know what you are
 with caution and enough knowledge, you can use it to verify bugfixes before the actual release.
 Refer to User Manual how to choose a release for your software upgrade to use.
 
-2.1.0, development branch:
+Changes marked with [ansible] mean that an ansible re-run with new playbook is required.
+
+2.1.0, staging 2020-08-11:
+Permanent snapshot name: staging-2.1.0-41103
 - Fixed bugs
   [SF-735] - Data age check should try to refresh data age faster after a TimeoutError
   [SF-1457] - Instrument watchdog does not restart instruments on TimeoutError
-  [SF-1561] - /etc/sensorfleet/ta.key is o+r
+  [SF-1561] - /etc/sensorfleet/ta.key is o+r [ansible]
+  [SF-1594] - Recorder filtering is slow due to debug flags
+  [SF-1587] - DNS blacklist rules remain active for the whole flow
+  [SF-1567] - PassiveDNS logic may throw an exception and cause silent failure of database writer
+  [SF-1489] - Fix PassiveDNS write performance regression
+
+- Features and other improvements:
+  [SF-1579] - Hyper-V Support for SensorFleet kernel
+  [SF-1577] - Do not remove serial console with ansible-sensor [ansible]
+  [SF-1576] - Default MongoDB to persistent data partition
+  [SF-1573] - Implement queuing mechanism to suricata component to absorb bursts
+  [SF-1568] - Suricata-instrument could tag context_uuid to eve-log events with same flowid as the ones that triggered alerts
+  [SF-1539] - Make blacklist SID offset configurable for rule importer
+  [SF-1463] - Produce event when sensor-orchestrator has moved a downloaded resource
+  [SF-1465] - Change Rule Importer to use the new download available event
+  [SF-1464] - Change beacon to use the new download available event
+  [SF-666] - Add config version check to UI HTTP API calls
+  [SF-1582] - upgrade lxd to 4.3
 
 2.0.0, internal test release 2020-07-15:
 - Fixed bugs
