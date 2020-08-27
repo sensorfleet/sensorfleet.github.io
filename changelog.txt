@@ -6,6 +6,28 @@ with caution and enough knowledge, you can use it to verify bugfixes before the 
 Refer to User Manual how to choose a release for your software upgrade to use.
 
 Changes marked with [ansible] mean that an ansible re-run with new playbook is required.
+Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
+any repository.
+
+2.1.2, devel 2020-08-31:
+- Fixed bugs
+  [SF-1621] - Sensor Orchestrator does not respect data retention timeout
+
+2.1.1, staging 2020-08-31:
+Permanent snapshot name: staging-2.1.1-42333
+- Fixed bugs
+  [SF-1615] - Sensor Orchestrator watchdog needlessly triggers restart too fast after reboot
+  [SF-1595] - PassiveDNS db optimization: data retention timeout in some environments
+  [SF-1596] - passivedns logging tweak: less spam from new suricata dns event format
+  [SF-1598] - SensorFleet TLS role cannot be run in check_mode [ansible]
+  [SF-1601] - Suricata does not batch events properly leading to excess resource usage
+  [SF-1602] - SMB & suricata & passivedns event performance is not enough for some use cases
+  [SF-1608] - Error handling: EventExporter slows down mongo excessively if queries are slow
+  [SF-1611] - HFWrapper does not have access to sensor config (added API for modifying homenets)
+
+- Features and other improvements:
+  [SF-1597] - Support for fleet-tool produce loops parameter
+  [SF-1603] - Capture Engine optimization: use in-kernel forwarding path
 
 2.1.0, staging 2020-08-11:
 Permanent snapshot name: staging-2.1.0-41103
