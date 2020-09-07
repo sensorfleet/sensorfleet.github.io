@@ -23,6 +23,8 @@
   <title>{{ page.title }} - SensorFleet</title>
   {% else %}
   <title>SensorFleet</title>
+  {% endif %} {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
   {% endif %}
 
   <!-- Bootstrap core CSS -->
