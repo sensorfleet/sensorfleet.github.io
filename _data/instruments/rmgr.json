@@ -6,6 +6,7 @@
   "description": "Advanced features to be used on top of IDS engines, such as automatic ruleset updating, event stream viewer, etc.",
   "data_retention_desc": "Rule manager stores edit history of Suricata rules and history of user actions (edit, delete creation)",
   "has_ui": true,
+  "allow_modify_downloads": "allow",
   "produced_event_types": [
     {
       "match": "instruments.rmgr.adopted",
