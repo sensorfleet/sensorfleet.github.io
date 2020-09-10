@@ -1,5 +1,5 @@
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (currentScrollPos < 30) {
     $(".navbar").css("background-color", "transparent");
