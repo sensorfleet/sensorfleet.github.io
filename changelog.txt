@@ -9,6 +9,13 @@ Changes marked with [ansible] mean that an ansible re-run with new playbook is r
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+
+2.1.2, staging 2020-09-07:
+Permanent snapshot name: staging-2.1.2-42774
+- Fixed bugs:
+  [SF-1611] - HFWrapper does not have access to Sensor configuration (hfwrapper update)
+  [SF-1618] - HFWrapper should use new homenet messages
+
 2.1.1, staging 2020-08-28:
 Permanent snapshot name: staging-2.1.1-42333
 - Fixed bugs
