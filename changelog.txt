@@ -26,11 +26,15 @@ any repository.
   [SF-1650] - Zeek instrument exits when reading invalid JSON from zeek
 
 * New features and other improvements:
-  IOC feed related features in Rule Manager (exact list will be added later)
+  [SF-1380] - Initial IOC feed support in Rule Manager.
+  [SF-1381] - Rule Manager can now manage it's downloads via API (if allowed by permissions). Single UI for configuring downloads.
   [SF-1575] - Improve sysctl defaults for production environment: socket limits for bursts [ansible]
   [SF-1626] - Zeek base scripts can be enabled/disabled from Instrument configuration UI
   [SF-1639] - Access MongoDB using more threads for better performance
   [SF-1647] - Sensor UI event search is slow with tens of millions of events
+  
+Release notes:
+  * After upgrade, modifying downloads in Rule Menager will erase all other Rule Manager's downloads (that are not set in the Rule Manager UI).
 
 
 2.1.2, staging 2020-09-07:
