@@ -32,6 +32,12 @@
   {% if page.url %}
   <meta content="{{ site.url }}{{ page.url }}" property="og:url">
   {% endif %}
+  {% if page.date %}
+  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+  {% endif %}
+  {% if page.author %}
+  <meta content="{{ site.data.staff[page.author].name }}" property="article:author">
+  {% endif %}
   {% if page.og_image %}
   <meta property="og:image" content="{{ site.url }}{{ page.og_image }}" />
   {% endif %}
