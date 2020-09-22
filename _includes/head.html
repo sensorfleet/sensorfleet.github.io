@@ -19,9 +19,27 @@
     name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
   />
+  {% if page.layout == "post" %}
+  <meta content="article" property="og:type">
+  {% else %}
+  <meta content="website" property="og:type">
+  {% endif %}
+  {% if page.description %}
+  <meta content="{{ page.description }}" property="og:description">
+  {% else %}
+  <meta content="{{ site.description }}" property="og:description">
+  {% endif %}
+  {% if page.url %}
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+  {% endif %}
+  {% if page.og_image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.og_image }}" />
+  {% endif %}
   {% if page.title %}
+  <meta property="og:title" content="{{ page.title }} - SensorFleet" />
   <title>{{ page.title }} - SensorFleet</title>
   {% else %}
+  <meta property="og:title" content="SensorFleet" />
   <title>SensorFleet</title>
   {% endif %} {% if page.description %}
   <meta name="description" content="{{ page.description }}" />
