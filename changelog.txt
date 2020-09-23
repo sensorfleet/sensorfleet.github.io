@@ -37,7 +37,7 @@ Release notes:
   * After upgrade, modifying downloads in Rule Menager will erase all other Rule Manager's downloads (that are not set in the Rule Manager UI).
 
 
-2.1.2, staging 2020-09-07:
+2.1.2, staging 2020-09-07, beta 2020-09-23:
 Permanent snapshot name: staging-2.1.2-42774
 - Fixed bugs:
   [SF-1611] - HFWrapper does not have access to Sensor configuration (hfwrapper update)
