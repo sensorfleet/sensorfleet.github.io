@@ -9,6 +9,33 @@ Changes marked with [ansible] mean that an ansible re-run with new playbook is r
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+2.2.0, devel 2020-09-18:
+- Ongoing release. New content will be added.
+- Bug fixes:
+  [SF-1528] - Zeek stays in "Instrument initializing" status when configuration is invalid
+  [SF-1617] - Downloader does not handle Invalid URL properly
+  [SF-1621] - Sensor Orchestrator does not respect data retention message timeout
+  [SF-1625] - Zeek Instrument does not work with IPv6 homenets
+  [SF-1628] - Sensor is configured to use i386 repositories as well by default [ansible]
+  [SF-1631] - ansible fails with missing /etc/default/motd-news [ansible]
+  [SF-1635] - Recorder JSON schema does not allow changing some values using the UI
+  [SF-1636] - Zeek process is not restarted on configuration change
+  [SF-1637] - PassiveDNS purge_data can slow down sensor
+  [SF-1638] - PassiveDNS should batch send aggregate answers
+  [SF-1649] - Zeek error reporting does not work for fatal errors
+  [SF-1650] - Zeek instrument exits when reading invalid JSON from zeek
+
+* New features and other improvements:
+  [SF-1380] - Initial IOC feed support in Rule Manager.
+  [SF-1381] - Rule Manager can now manage it's downloads via API (if allowed by permissions). Single UI for configuring downloads.
+  [SF-1575] - Improve sysctl defaults for production environment: socket limits for bursts [ansible]
+  [SF-1626] - Zeek base scripts can be enabled/disabled from Instrument configuration UI
+  [SF-1639] - Access MongoDB using more threads for better performance
+  [SF-1647] - Sensor UI event search is slow with tens of millions of events
+  
+Release notes:
+  * After upgrade, modifying downloads in Rule Menager will erase all other Rule Manager's downloads (that are not set in the Rule Manager UI).
+
 
 2.1.2, staging 2020-09-07:
 Permanent snapshot name: staging-2.1.2-42774
