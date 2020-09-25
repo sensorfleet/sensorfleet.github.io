@@ -1,0 +1,107 @@
+---
+layout: datasheet
+title: Zeek Instrument
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  <a href="https://zeek.org/">Zeek</a> (formerly Bro) is an open source network
+  security monitoring tool. Zeek has been integrated as a SensorFleet instrument
+  and is capable of stateful inspection of network traffic on a wide variety of
+  protocols. Zeek is configured with Zeek scripting language and utilizes the
+  <a href="https://sensorfleet.com/instruments/rmgr/"
+    >IDS Rule Manager Instrument</a
+  >
+  for scripts and blacklists.
+</p>
+<p>
+  When compared to the similar, but different,
+  <a href="https://sensorfleet.com/instruments/suricata/"
+    >Suricata IDS Instrument</a
+  >, the main difference is that Zeek supports a more complex scripting
+  language. For example, packet analyzer can perform complex database lookups
+  and complex conditional logic. Suricata is meant for analyzing higher amount
+  of traffic but not as deep level as Zeek.
+</p>
+<p>Two types of customizable rules are supported by the Zeek Instrument:</p>
+<ol type="1">
+  <li>
+    <p>
+      Zeek Scripts. For details, see
+      <a href="https://docs.zeek.org/en/current/examples/scripting/index.html"
+        >Zeek Scripting</a
+      >. Scripts can be configured by
+      <a href="https://sensorfleet.com/instruments/rmgr/"
+        >IDS Rule Manager Instrument</a
+      >.
+    </p>
+  </li>
+  <li>
+    <p>
+      Blacklists which utilize
+      <a href="https://docs.zeek.org/en/current/frameworks/intel.html"
+        >Zeek Intel Framework</a
+      >. Blacklists can be configured by
+      <a href="https://sensorfleet.com/instruments/rmgr/"
+        >IDS Rule Manager Instrument</a
+      >.
+    </p>
+  </li>
+</ol>
+<h2 id="loadable-module-and-log-suppression">
+  Loadable module and log suppression
+</h2>
+<p>
+  Zeek Instrument integrates functionality to selectively load modules and
+  suppress log output. For example, you can load the base/protocols/dns module
+  for other purposes but suppress all of it’s log output.
+</p>
+<h2 id="properties">Properties</h2>
+<table style="width:61%;">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy (Open Source integration)</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Attack Detection, Traffic Analysis, IDS</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>Passive</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>
+        <ul>
+          <li>Monitored network</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Related Instruments</td>
+      <td>Rule Manager, Rule Importer</td>
+    </tr>
+    <tr class="odd">
+      <td>Data retention</td>
+      <td>
+        The latest scripts and blacklists are stored in the instrument’s
+        persistent data.
+      </td>
+    </tr>
+    <tr class="even">
+      <td>Management UI</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
