@@ -131,11 +131,11 @@ lots of events, and handle them in SIEM accordingly.
   ```
   _:%s/^@load/#@load/g_
   ```
-- Then save and quit using
+- Then save and quit using:
   ```
   :wq
   ```
-- Restart Zeek
+- Restart Zeek:
   ```
   /etc/init.d/zeek restart
   ```
@@ -145,12 +145,12 @@ lots of events, and handle them in SIEM accordingly.
 ### SensorFleet environment
 
 - Navigate to Zeek Configuration menu (Zeek Instrument -> Configure -> Custom
-  configuration)
+  configuration).
 - Tick off some of the noisiest base modules and hit save.
 
   <img src="/img/posts/zeek_1_blog/06_zeek_noise_suppress.png" title="Suppress some events from Zeek" width=500>
 
-- Keep disabling zeek modules until you’ve reached the desired noise level in
+- Keep disabling Zeek modules until you’ve reached the desired noise level in
   your event log.
 
 - Prefer the dark, text only screen? No problem, you can use the excellent
@@ -170,7 +170,7 @@ lots of events, and handle them in SIEM accordingly.
   zkg install sensorfleet/anomalous-dns
   ```
 
-- Restart Zeek instance (command may depend on installation)
+- Restart Zeek instance: (command may depend on installation)
   ```
   /etc/init.d/zeek restart
   ```
@@ -213,7 +213,7 @@ similarly as you added [Zeek Instrument](https://sensorfleet.com/instruments/zee
 - Navigate to Zeek events list to see if it’s producing any events. Depending on
   the network and port mirroring configuration, you might see false positives in
   the event output. For SensorFleet environment, use the UI. For generic
-  environment, watch zeek’s _notice.log_.
+  environment, watch Zeek’s _notice.log_.
 
   <img src="/img/posts/zeek_1_blog/10_events.png" title="Zeek is generating lots of notice events" width=500>
 
@@ -291,10 +291,8 @@ a more aggressive whitelist.
 We now use the above detection method in monitoring of our own infrastructure.
 
 Hopefully this will help someone to realize how neat things you can do just by
-using open source tools such as Zeek.
-
-It gets even easier when using commercial products to round the rough edges a
-bit.
+using open source tools such as Zeek. And it gets even easier when using commercial
+products to round the rough edges a bit.
 
 Stay tuned for the part 2 of our Zeek guide: We’re going to add a "canary" file
 to an internal server to be used as a honeypot, and add the file hash to Zeek as
