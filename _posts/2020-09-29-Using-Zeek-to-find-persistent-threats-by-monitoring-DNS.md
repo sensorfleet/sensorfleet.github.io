@@ -129,7 +129,7 @@ lots of events, and handle them in SIEM accordingly.
 - If you wanted to disable all of them, you’d comment out the _@load_ lines with
   the following vim command:
   ```
-  _:%s/^@load/#@load/g_
+  :%s/^@load/#@load/g
   ```
 - Then save and quit using:
   ```
