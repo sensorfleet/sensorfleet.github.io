@@ -33,8 +33,7 @@ Many types of customizable rules are supported by Zeek, here's two:
 
 We’re going to try both of those to do something useful.
 
-- Part 1: Deploy a script with whitelisted DHCP servers to detect rogue DHCP
-  servers.
+- Part 1: Deploy a script to find persistent threats by monitoring DNS anomalies.
 - Part 2: Add a “canary” file to an internal server to be used as a honeypot,
   and add the file hash to Zeek as a blacklist.
 
@@ -45,7 +44,7 @@ Zeek will need a capture interface with mirrored IP traffic.
 Setting that up will be heavily environment specific.
 
 For our task, we will want the **internal** network traffic to be mirrored to
-our Sensor because we want to see DHCP traffic.
+our Sensor because we want to see DNS traffic with internal IP addresses.
 
 Setting up a mirror interface is out of scope of this guide, but for general
 guidelines:
