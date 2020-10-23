@@ -33,6 +33,11 @@
       "match": "instrument.passivedns.aggregation",
       "type": "exact",
       "title": "PassiveDNS aggregation event"
+    },
+    {
+      "match": "instruments.passivedns.cof",
+      "type": "exact",
+      "title": "PassiveDNS Common Output Format event"
     }
   ]
 }
