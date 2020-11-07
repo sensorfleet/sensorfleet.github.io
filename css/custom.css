@@ -168,6 +168,10 @@ div.boxes div {
   filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.2));
 }
 
+div.partner-logo {
+  background-color: #fff !important;
+}
+
 div.boxes div:nth-of-type(2n) {
   /*  background-color: #4b4f55; */
 }
