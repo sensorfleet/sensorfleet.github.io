@@ -9,10 +9,9 @@ Changes marked with [ansible] mean that an ansible re-run with new playbook is r
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
-2.2.0, devel 2020-09-18:
-- Ongoing release. New content will be added.
+2.2.0, staging 2020-11-11:
+Permanent snapshot name: staging-2.2.0-44368
 - Bug fixes:
-  [SF-1528] - Zeek stays in "Instrument initializing" status when configuration is invalid
   [SF-1617] - Downloader does not handle Invalid URL properly
   [SF-1621] - Sensor Orchestrator does not respect data retention message timeout
   [SF-1625] - Zeek Instrument does not work with IPv6 homenets
@@ -24,17 +23,69 @@ any repository.
   [SF-1638] - PassiveDNS should batch send aggregate answers
   [SF-1649] - Zeek error reporting does not work for fatal errors
   [SF-1650] - Zeek instrument exits when reading invalid JSON from zeek
+  [SF-1593] - Recorder takes a long time to start when many events are stored
+  [SF-1599] - messaging: msgid flush is not safe if multiple processes try to write the file
+  [SF-1600] - PassiveDNS: restart via init script is broken
+  [SF-1614] - Recorder instrument does not handle homenets being removed from sensor config properly
+  [SF-1634] - Instrument Config UI displays wrong values with sub-object with default values
+  [SF-1656] - Moloch-capture does not wait for elasticsearch to be ready
+  [SF-1657] - Capture Engine shutdown may cause kernel panic with pre 5.4 kernels
+  [SF-1663] - Opening Rule Manager Zeek blacklist editor loses previously set type field
+  [SF-1671] - Restart softflowd and log error on failure
+  [SF-1685] - SMB can rarely become stuck on FM (Queue full error)
+  [SF-1688] - PassiveDNS startup fails on timeout error if database needs to perform recovery
+  [SF-1689] - PassiveDNS automatic database maintenance does not work and causes performance to degrade
+  [SF-1692] - PassiveDNS configuration change does not apply without manual restart
+  [SF-1696] - Recorder python module uses unexpectedly high amount of memory
+  [SF-1699] - Rule Manager: data retention purge_data may hang up in some cases
+  [SF-1702] - Rule Manager: some rule functions points to wrong api endpoints
+  [SF-1711] - Rule Manager: comments in rule displays epoch time instead of date+time
+  [SF-1713] - Rule Manager: downgrading to an older version might fail
+  [SF-1714] - Rule Manager: Rule search "show more" is not working
+  [SF-1716] - Minify Rule Manager ui resources (js/css) using webpack
+  [SF-1717] - Force cache refresh in Rule Manager
+  [SF-1725] - PassiveDNS interprets querier/responder incorrectly from Suricata events
+  [SF-1731] - fleet tool does not print validation error when editing configuration
+  [SF-1732] - fleet-tool: event produce --interval is broken
+  [SF-1745] - Software upgrade may halt if snapd is upgraded along with instruments (also see SF-1729)
+  [SF-1748] - Rule Manager tries to send rules to deleted Zeek instrument
 
 * New features and other improvements:
-  [SF-1380] - Initial IOC feed support in Rule Manager.
+  [SF-1380] - Initial IOC feed support in Rule Manager
   [SF-1381] - Rule Manager can now manage it's downloads via API (if allowed by permissions). Single UI for configuring downloads.
   [SF-1575] - Improve sysctl defaults for production environment: socket limits for bursts [ansible]
   [SF-1626] - Zeek base scripts can be enabled/disabled from Instrument configuration UI
   [SF-1639] - Access MongoDB using more threads for better performance
   [SF-1647] - Sensor UI event search is slow with tens of millions of events
-  
+  [SF-931] - UI should strip invisible characters from lot of fields
+  [SF-1655] - Zeek should support configurable per-module event suppression
+  [SF-1667] - Sensor UI should get possible event types from instrument's metadata
+  [SF-1670] - Upgrade to 5.4 LTS series Linux kernel
+  [SF-1679] - Integrate tpacketv3 support to Recorder capture plugin
+  [SF-1687] - Improve PassiveDNS database performance on I/O limited scenarios
+  [SF-1707] - fleet-tool: support for send --count
+  [SF-1708] - PassiveDNS optimization: perform aggregation before inserting data
+  [SF-1709] - Sensormessagebroker does not discard events if DB writes are slow
+  [SF-1710] - Change sensormessagebroker DB write warn limit to 0.8
+  [SF-1719] - Sensor UI: Generate default names for bridges & interfaces
+  [SF-1721] - Move SensorConfig JSON schema to messaging package for better MockFleet
+  [SF-1730] - fleet tool: support for event produce wait_ack=False
+  [SF-1733] - fleet tool: don't print unnecessary messaging log spam without -v
+  [SF-1734] - Suricata 5.0.4 update, include hyperscan support
+  [SF-1735] - PassiveDNS common-output-format support for aggregate events
+  [SF-1737] - Allow Sensor Orchestrator to start even if config has extra fields in it
+  [SF-1760] - Remote logging improvements [ansible]
+  [SF-1729] - Custom built LXD package without snapd (snapd no longer required)
+  [SF-1762] - Upgrade lxd to 4.7
+  [SF-1759] - Update cowrie to version 2.1.0
+  [SF-1750] - Change Recorder Rule Hit event type to instruments.recorder.rule_hit_event
+  [SF-1749] - Recorder optimization: Use crossbeam-channel instead of Rust std channel on capture_plugin
+  [SF-1777] - Capture Engine optimization: User configurable capture threads
+
+
 Release notes:
   * After upgrade, modifying downloads in Rule Menager will erase all other Rule Manager's downloads (that are not set in the Rule Manager UI).
+  * Major upgrade, proceed with caution. Installations with pre-4.3 LXD should proceed with extra caution.
 
 
 2.1.2, staging 2020-09-07, beta 2020-09-23:
@@ -107,7 +158,7 @@ Permanent snapshot name: staging-2.1.0-41103
   [SF-1484] - Snaps are updated outside of APT updates, breaking sensorfleet-lxd
   [SF-1502] - Rule delivery timeout triggers infinite delivery loop even when ruleset is delivered
   [SF-1503] - Nginx does not honor defined ciphers
-  [SF-1507] - Capco starts capture processes before output interface is ready -> segfault
+  [SF-1507] - Capture Engine starts capture processes before output interface is ready -> segfault
   [SF-1525] - Sensor-orchestrator crashes on start due to missing configuration key
   [SF-1527] - Sensor UI sometimes does not ack or timeout HTTP PUT requests
   [SF-1529] - fleetupgraded control sock too wide permissions
