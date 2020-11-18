@@ -9,6 +9,16 @@ Changes marked with [ansible] mean that an ansible re-run with new playbook is r
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+2.2.1, staging 2020-11-17:
+Permanent snapshot name: staging-2.2.1-50846
+- Bug fixes:
+  [SF-1782] - Ansible sensor playbook might fail due to dpkg lock [ansible]
+  [SF-1784] - Sensor install: lxd storage creation might sometimes fail
+
+- New features and other improvements:
+  [SF-1806] - Downloader: Add size and SHA512 to download event
+  [SF-1793] - HFWrapper prometheus stats endpoint support for new recorder
+
 2.2.0, staging 2020-11-11:
 Permanent snapshot name: staging-2.2.0-44368
 - Bug fixes:
