@@ -9,6 +9,26 @@ Changes marked with [ansible] mean that an ansible re-run with new playbook is r
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+2.2.2, staging 2020-11-30:
+Permanent snapshot name: staging-2.2.2-53145
+- Bug fixes:
+  [SF-1797] - sensorfleet-lxd: UID-remap subuid/subgid entries are not always automatically created (existed only in staging release)
+  [SF-1795] - Orchestrator package may have old version of dep (existed only in staging release)
+  [SF-1796] - LXD needs to depend on xz-utils and lxcfs (existed only in staging release)
+  [SF-1808] - Manually reinstalling sensorfleet-lxd 4.7 or later can fail (existed only in staging release)
+  [SF-1800] - Allow to set byte limit for buffered bytes on capture_plugin
+  [SF-1586] - moloch-capture process gets oomkilled on some environments
+  [SF-1831] - PassiveDNS API endpoint does not properly parse limit as integer
+  [SF-1794] - Orchestrator handles any exception in config as "extra variable" (existed only in staging release)
+  [SF-1753] - Opening rmgr ui briefly shows a page without css (existed only in staging release)
+
+- New features and other improvements:
+  [SF-1830] - Messaging API: optimize config schema handling
+  [SF-1788] - Improve recorder capture_plugin performance by running consumers in their own threads
+  [SF-1827] - Recorder capture plugin should be able to show configuration errors to users
+  [SF-1829] - Messaging API: remove deprecated methods
+
+
 2.2.1, staging 2020-11-17:
 Permanent snapshot name: staging-2.2.1-50846
 - Bug fixes:
