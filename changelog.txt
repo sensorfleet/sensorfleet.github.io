@@ -9,6 +9,19 @@ Changes marked with [ansible] mean that an ansible re-run with new playbook is r
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+2.2.3, staging 2020-12-10:
+Permanent snapshot name: staging-2.2.3-54897
+- Bug fixes:
+  [SF-1849] - Add missing squashfs-tools dependency on sensorfleet-lxd
+  [SF-1848] - Performance regression using mirror-bridges with grsec kernels
+  [SF-1669] - Adding/removing rulesource in rmgr can result in empty ruleset
+
+- New features and other improvements:
+  [SF-1841] - Update kernel to 5.4.81
+  [SF-1840] - Update capture engine for new kernel version
+  [SF-1838] - Support for RealTek 8169 ethernet chip family
+  [SF-1833] - Messaging: Improve Instrument API and config helpers
+
 2.2.2, staging 2020-11-30:
 Permanent snapshot name: staging-2.2.2-53145
 - Bug fixes:
