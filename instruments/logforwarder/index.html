@@ -1,0 +1,97 @@
+---
+layout: datasheet
+title: Log Forwarder Instrument
+description: Log Forwarder is an instrument that integrates logstash open source log/event pipeline engine into the SensorFleet platform. You can use it to forward log and event data from an external source or SensorFleet event pipeline into an external destination. You can also use standard logstash functions to mutate data and receive/transmit in many different formats and protocols.
+Unlike the Event Exporter Instrument, Log Forwarder can also PUSH events to external systems, unlike the PULL model only supported by Event Exporter.
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<h2 id="overview">Overview</h2>
+<p>
+  Log Forwarder is an instrument that integrates
+  <a href="https://www.elastic.co/logstash">Logstash</a> open source<br />
+  log/event pipeline engine into the SensorFleet platform.<br />
+  You can use it to forward log and event data from an external source or
+  SensorFleet event pipeline into an external destination. You can also use
+  standard Logstash functions to mutate data and receive/transmit in many
+  different formats and protocols.
+</p>
+<p>
+  Unlike the Event Exporter Instrument, Log Forwarder can also PUSH events to
+  external systems.
+</p>
+<h2 id="use-cases">Use cases</h2>
+<p>
+  Log Forwarder is a multipurpose log and event forwarding tool. Here are some
+  useful examples.
+</p>
+<h3 id="log-collection-and-export-to-external-system">
+  Log Collection and export to external system
+</h3>
+<p>
+  You can make Log Forwarder act e.g. as a syslog target on the edge, collect
+  log data on your network devices, store them locally in case of connectivity
+  issues and forward them reliably into an external log destination such as
+  Azure Sentinel, ElasticSearch, another syslog or another Logstash.
+</p>
+<h3 id="event-export-from-sensorfleet-to-external-system">
+  Event Export from SensorFleet to external system
+</h3>
+<p>
+  You can use Log Forwarder to get SensorFleet events and forward them to
+  external systems, such as ElasticSearch, Azure Sentinel or another Logstash
+  using the Lumberjack output.
+</p>
+<p>
+  This works by using the Event Subscription feature built into the Log
+  Forwarder. You can use custom event search terms to get only wanted events and
+  push them into the Logstash HTTP input module for forwarding.
+</p>
+<h2 id="properties">Properties</h2>
+<table style="width: 61%">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>
+        Integrations, Logging, Log/Event Push, Log/Event Pull, Log/Event Import,
+        Log/Event Export
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>Active</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>
+        <ul>
+          <li>Interface for Log Forwarder to use</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Data retention</td>
+      <td>
+        Holds a temporary event buffer, not affected by the data retention
+        logic.,
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Management UI</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
