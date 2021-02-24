@@ -1,6 +1,8 @@
 ---
 name: Traffic Recorder
-description: Captures network traffic to disk and provides indexing and searching capabilities through Moloch software.
+description:
+  Captures network traffic to disk and provides indexing and searching
+  capabilities through Moloch software.
 developer: SensorFleet Oy
 has_ui: true
 config_defaults:
@@ -11,7 +13,9 @@ config_defaults:
     limits.kernel.nofile: "65536"
 network_access_type: passive
 relations:
-  - description: Suricata IDS generates alerts that can be used by Recorder for record filtering.
+  - description:
+      Suricata IDS generates alerts that can be used by Recorder for record
+      filtering.
     instrument_name: Suricata IDS
     instrument_type: suricata
     permissions: []
@@ -21,12 +25,18 @@ required_interfaces:
       - rx
     description: Monitored network
     type: mirror-bridge
-title: Instrument for recording network traffic triggered by e.g. Suricata IDS alerts.
+title: Instrument for recording network traffic triggered by e.g. Suricata IDS
+  alerts.
 categories:
   - Traffic Analysis
   - Traffic Recording
-performance_desc: Depends on hardware and instrument configuration. Please contact SensorFleet for more details.
-data_retention_desc: Recorder stores capture metadata (indexes) and raw captures for up to the configured data retention period. Temporary capture delay buffer is unaffected by data retention implementation.
+performance_desc:
+  Depends on hardware and instrument configuration. Please contact SensorFleet
+  for more details.
+data_retention_desc:
+  Recorder stores capture metadata (indexes) and raw captures for up to the
+  configured data retention period. Temporary capture delay buffer is unaffected
+  by data retention implementation.
 produced_event_types:
   - match: instruments.recorder.rule_hit_event
     type: exact
