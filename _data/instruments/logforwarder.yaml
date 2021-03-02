@@ -9,24 +9,16 @@ categories:
   - Log/Event Pull
   - Log/Event Import
   - Log/Event Export
-description: Log Forwarder is an instrument that integrates
-  logstash open source log/event pipeline engine into the SensorFleet platform.
-  You can use it to forward log and event data from an external source
-  or SensorFleet event pipeline into an external destination.
-  You can also use standard logstash functions to mutate data and
-  receive/transmit in many different formats and protocols.
-
-  Unlike the Event Exporter Instrument, Log Forwarder
-  can also PUSH events to external systems, unlike the PULL model
-  only supported by Event Exporter.
+description:
+  Log Forwarder Insturment collects and forwards log and event data by
+  integrating logstash open source log/event pipeline engine into the
+  SensorFleet platform.
 has_ui: false
 data_retention_desc: >
-  Holds a temporary event buffer, not affected
-  by the data retention logic.
+  Holds a temporary event buffer, not affected by the data retention logic.
 performance_desc: >
-  At least 512 MB RAM is recommended, 1-2 GB preferred.
-  By default, logstash uses 1 pipeline worker thread
-  per available CPU core.
+  At least 512 MB RAM is recommended, 1-2 GB preferred. By default, logstash
+  uses 1 pipeline worker thread per available CPU core.
 relations: []
 produced_event_types:
   - match: instruments.logforwarder.crash
