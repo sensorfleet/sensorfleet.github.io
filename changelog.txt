@@ -9,6 +9,101 @@ Changes marked with [ansible] mean that an ansible re-run with new playbook is r
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+2.3.0, devel 2021-03-29:
+
+Notes: more IoC related features coming for 2.3 release.
+
+- Bug fixes:
+  [SF-641] - UI: sensor-ui does not handle errors from get_physical_interfaces
+  [SF-784] - UI: physical interface edit is broken
+  [SF-795] - Sensor Orchestrator: Calling get_physical_interfaces at the wrong time can fail
+  [SF-899] - API, UI: get_my_id error if running task with messaging calls straight after startup
+  [SF-1011] - UI: Long event message causes horizontal scrollbar and hides event type
+  [SF-1039] - UI: RuntimeError raised in _get_interface_type() is not handled
+  [SF-1121] - Sensor Orchestrator, UI: Sensor UI crashes if metadata missing for an instrument
+  [SF-1333] - UI: Broken event causes stack trace in UI backend
+  [SF-1394] - UI: messaging produce_config does not handle bson special chars correctly in all cases
+  [SF-1530] - Recorder Instrument: Recorder data retention cleans too much data with low traffic amounts
+  [SF-1556] - Downloader Instrument: TypeError after updating downloads for instrument via messaging
+  [SF-1566] - Sensor Orchestrator: Orchestrator cannot restart instrument when socket bind-unmount fails
+  [SF-1606] - UI: FM UI cannot view events with binary data
+  [SF-1624] - UI: Ui tweak: Default selected interface type is second from the list
+  [SF-1646] - UI: UI does not display an error when event search times out
+  [SF-1659] - UI, Zeek Instrument: UI displays some extra fields with multi-level schemas
+  [SF-1690] - UI: /instruments gives 500 when sensor is unreachable
+  [SF-1746] - UI: Hide paginator if there's 25 or less events in search
+  [SF-1799] - Ansible, Downloader Instrument, Sensor Orchestrator: Download fails in new Sensor if Instrument is not yet running
+  [SF-1842] - Sensor Orchestrator: Failed unmounting of log bind mount can leave instrument logger device broken
+  [SF-1843] - UI: Stopping Sensor-UI backend is slow
+  [SF-1847] - UI: Fix order of sensors when using generated names
+  [SF-1852] - Ansible: Ansible allows configuring Sensor/FM with broken FQDN hostname [ansible]
+  [SF-1866] - Ansible: Fix broken sshd_additional_config in Ansible playbook [ansible]
+  [SF-1913] - Sensor Image: Fix fleetcert signing race condition [ansible]
+  [SF-1917] - UI: Sensor/FM UI breaks when Sensor configuration is missing
+  [SF-1920] - UI: Sensor/FM UI may never refresh available instruments due to race bug
+  [SF-1925] - API: configs.py makes wrong assumptions about instrument schema location
+  [SF-1939] - Fleet Tool: Fleet Tool: Handle config save errors properly
+  [SF-1953] - Recorder Instrument: Recorder: Fix health-check fail regression
+  [SF-1955] - Log Forwarder Instrument: Log Forwarder: Fix random logstash API not responding error
+  [SF-1970] - get_physical_interfaces on devprobe takes 18 seconds + ui fails to load interfaces
+  [SF-1974] - UI: Error saving FM's config using UI
+  [SF-1975] - Log Forwarder Instrument: LogForwarder says "Logstash has crashed" with default configuration
+  [SF-1981] - Log Forwarder Instrument: Force logstash shutdown (stalled plugins)
+  [SF-1983] - API: Data retention event deletes can delay event insert too much
+  [SF-2000] - UI: Events page vue crash if event types are missing
+  [SF-2004] - Fleet Tool: bash completion exception
+  [SF-2028] - UI: Same physical interface could be added to two different Instrument interfaces
+
+- New features and other improvements:
+  [SF-518] - UI: Validate sensorconfig before attempting to save
+  [SF-570] - UI: Data retention UI tweaks
+  [SF-889] - UI: Sensor health should display instrument names
+  [SF-930] - Downloader Instrument: Downloader can take a lot of time after reboot for first successful download
+  [SF-1471] - UI: UI does not display if connection to backend fails
+  [SF-1668] - IoC feeds, Rule Manager: IoC feed support for .tar.gz suricata rulelists
+  [SF-1681] - PortDiff Instrument: Integrate pscan to portdiff instrument
+  [SF-1738] - UI: UI should try to reload license when license limit is reached
+  [SF-1767] - UI: Matrix view for easier overall status check
+  [SF-1772] - UI: Support filtering sensors by name
+  [SF-1773] - UI: Display fleet overall health
+  [SF-1805] - Rule Manager: Preconfigured ioc feed support
+  [SF-1846] - Installer: Installer root password does not apply correctly
+  [SF-1850] - Customscan instrument: Implement Custom scan instrument
+  [SF-1862] - Downloader Instrument: Use a temporary file name in downloader
+  [SF-1863] - Rule Manager: Ioc feeds propagation to instruments
+  [SF-1864] - Downloader Instrument: Make download failures warnings instead of errors
+  [SF-1865] - Downloader Instrument: Downloader should require an interface
+  [SF-1869] - Ansible: restart fm-ui after modifying fleetgram config
+  [SF-1870] - Ansible: support for additional SSH listen ports
+  [SF-1872] - Sensor Orchestrator: Sort worst health messages to first
+  [SF-1873] - API, Sensor Orchestrator: Sortable HealthStatus to Instrument lib
+  [SF-1875] - Recorder Instrument: Maintenance worker for recorder
+  [SF-1876] - Customscan instrument: Add support for gpg signed binaries for custom scan instrument
+  [SF-1879] - Cowrie Instrument: Update Cowrie, remove version restrictions from Sensorfleet requirements
+  [SF-1886] - Customscan instrument: Refactor custom scanning running a bit
+  [SF-1894] - Log Forwarder Instrument: Implement EventForwader instrument v1
+  [SF-1907] - Customscan instrument: Fix handling of portdiff full events in customscan instrument
+  [SF-1908] - Customscan instrument: Add retention for downloaded artefacts in customscan
+  [SF-1910] - Rule Manager: UI for instruments propagation status
+  [SF-1911] - Rule Manager: Generate suricata rules from ioc feeds
+  [SF-1912] - Rule Manager: UI / Backend for preconfigured feeds
+  [SF-1921] - PortDiff Instrument: Restart port scanning if instrument configuration is changed
+  [SF-1922] - Recorder Instrument: Reduce excessive logging for recorder retention-related operations
+  [SF-1923] - Sensor Orchestrator, UI: Prevent editing downloads directly for instruments with allow_modify_downloads:true
+  [SF-1924] - Log Forwarder Instrument: Write unit tests for EventForwarder
+  [SF-1926] - Ansible: External VPN certificate functionality
+  [SF-1937] - Kernel: Add common USB ethernet devices to supported devices
+  [SF-1943] - PortDiff Instrument: Update portdiff autoconfiguration to use pyroute2 NDB
+  [SF-1944] - Suricata instrument: Suricata: Instrument name instead of GID in rule receiver / saving
+  [SF-1945] - Log Forwarder Instrument: Implement logstash process and pipeline monitoring for EventForwarder
+  [SF-1951] - PortDiff Instrument: Add triggered mode for portdiff
+  [SF-1961] - Ansible: Support buffering syslog messages during outages
+  [SF-1964] - Rule Importer: Rule Importer: GID migration
+  [SF-1966] - Fleet Tool: fleet-tool config read, show, edit: use human friendly YAML formatting
+  [SF-1968] - UI: get event types using message instead of file read
+  [SF-1984] - Log Forwarder Instrument: Allow binding syslog port
+  [SF-2005] - Suricata instrument: Migration to remove old rules (dynamic_([0-9]+).rules)
+
 2.2.3, staging 2020-12-10:
 Permanent snapshot name: staging-2.2.3-54897
 - Bug fixes:
