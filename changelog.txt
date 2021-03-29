@@ -5,7 +5,7 @@ release that should not be used in production. However, if you know what you are
 with caution and enough knowledge, you can use it to verify bugfixes before the actual release.
 Refer to User Manual how to choose a release for your software upgrade to use.
 
-Changes marked with [ansible] mean that an ansible re-run with new playbook is required.
+Changes marked with ansible mean that an ansible re-run with new playbook is required.
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
