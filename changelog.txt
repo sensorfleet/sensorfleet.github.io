@@ -45,7 +45,7 @@ Notes: more IoC related features coming for 2.3 release.
   [SF-1939] - Fleet Tool: Fleet Tool: Handle config save errors properly
   [SF-1953] - Recorder Instrument: Recorder: Fix health-check fail regression
   [SF-1955] - Log Forwarder Instrument: Log Forwarder: Fix random logstash API not responding error
-  [SF-1970] - get_physical_interfaces on devprobe takes 18 seconds + ui fails to load interfaces
+  [SF-1970] - UI: Listing physical interfaces can take a long time
   [SF-1974] - UI: Error saving FM's config using UI
   [SF-1975] - Log Forwarder Instrument: LogForwarder says "Logstash has crashed" with default configuration
   [SF-1981] - Log Forwarder Instrument: Force logstash shutdown (stalled plugins)
