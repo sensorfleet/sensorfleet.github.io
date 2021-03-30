@@ -45,7 +45,6 @@ for row in reader:
             else:
                 raise ValueError(f"Unknown key {col}")
             n += 1
-            pass
         if not components:
 
             print(f"  [{key}] - {title}")
