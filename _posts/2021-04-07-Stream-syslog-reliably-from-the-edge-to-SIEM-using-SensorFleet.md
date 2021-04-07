@@ -80,7 +80,7 @@ Then, add a Log Forwarder Instrument by clicking the “Add Instrument” button
 
 **Step 2: Configure Networking for Log Forwarder**
 
-Let’s add an Interface with connectivity to your upstream SIEM system and OT
+Let’s add an interface with connectivity to your upstream SIEM system and OT
 devices.
 
 In our case, we have a dedicated physical interface that’s connected to the
@@ -90,7 +90,7 @@ Choose Configure from the Log Forwarder Instrument dropdown menu.
 
   <img src="/img/posts/logforwarder_1/img_4.png" title="" width=500>
 
-Add an Interface. If using static IP configuration, remember to add a default
+Add an interface. If using static IP configuration, remember to add a default
 route and DNS.
 
   <img src="/img/posts/logforwarder_1/img_5.png" title="" width=500>
