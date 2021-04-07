@@ -13,8 +13,8 @@ excerpt:
 
 ### Stream syslog reliably from the edge to SIEM using SensorFleet
 
-*This blog post will show you step-by-step how to configure Logstash on top of
-SensorFleet Sensor as a reliable syslog buffer on your edge network.*
+_This blog post will show you step-by-step how to configure Logstash on top of
+SensorFleet Sensor as a reliable syslog buffer on your edge network._
 
 **Forewords**
 
@@ -34,17 +34,17 @@ But sending syslog over the VPN directly to your central systems can be very
 unreliable and inefficient. Internet goes down for 3 hours. The OT network might
 keep functioning, but log messages sent during that time are lost, unless all
 your syslog implementations support some reliable transport (e.g. something like
-syslog-ng’s [disk-buffer
-feature](https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.16/administration-guide/disk-buffer)).
+syslog-ng’s
+[disk-buffer feature](https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.16/administration-guide/disk-buffer)).
 
 Many times that will not be the case, thus your log collection will rely on the
 reliability of the Internet connection at your remote factory.
 
 You may also want to run some kind of sensoring on your OT network. This is
 where SensorFleet Sensor comes in. The same sensor can run IDS, traffic
-recording, maybe asset monitoring and port scanning, and now a *reliable syslog
-buffer*, thanks to our new [Log Forwarder Instrument (note: 404 for
-now)](https://sensorfleet.com/instruments/logforwarder).
+recording, maybe asset monitoring and port scanning, and now a _reliable syslog
+buffer_, thanks to our new
+[Log Forwarder Instrument](https://sensorfleet.com/instruments/logforwarder).
 
 Log Forwarder Instrument integrates the open source
 [Logstash](https://www.elastic.co/logstash) component into the Sensor platform.
@@ -78,7 +78,6 @@ Then, add a Log Forwarder Instrument by clicking the “Add Instrument” button
 
   <img src="/img/posts/logforwarder_1/img_3.png" title="" width=500>
 
-
 **Step 2: Configure Networking for Log Forwarder**
 
 Let’s add an Interface with connectivity to your upstream SIEM system and OT
@@ -91,12 +90,10 @@ Choose Configure from the Log Forwarder Instrument dropdown menu.
 
   <img src="/img/posts/logforwarder_1/img_4.png" title="" width=500>
 
-
 Add an Interface. If using static IP configuration, remember to add a default
 route and DNS.
 
   <img src="/img/posts/logforwarder_1/img_5.png" title="" width=500>
-
 
 Make sure to choose capabilities RX, TX.
 
@@ -105,7 +102,6 @@ Make sure to choose capabilities RX, TX.
 Choose the Custom Configuration tab under the Instrument Configuration menu.
 
   <img src="/img/posts/logforwarder_1/img_6.png" title="" width=500>
-
 
 Add the following to Logstash pipelines.yml configuration:
 
@@ -129,16 +125,16 @@ Add the following to Logstash pipelines.yml configuration:
           }
         }
 
-* Queue type persisted means that events can be saved on disk temporarily.
-* syslog input plugin is the receiver for syslog events.
-* HTTP output plugin is the sender that will deliver events to external SIEM.
-* In this example, we’re using TLS client certificates for authentication. For
-non-production testing purposes, you may change the protocol to http:// for
-plain HTTP without the hassle with TLS certificates.
+- Queue type persisted means that events can be saved on disk temporarily.
+- syslog input plugin is the receiver for syslog events.
+- HTTP output plugin is the sender that will deliver events to external SIEM.
+- In this example, we’re using TLS client certificates for authentication. For
+  non-production testing purposes, you may change the protocol to http:// for
+  plain HTTP without the hassle with TLS certificates.
 
 To generate TLS certificates to be used for Logstash client authentication, I’ve
-prepared a [helper
-script](https://raw.githubusercontent.com/sensorfleet/sensorfleet.github.io/master/misc/openssl_ca.sh)
+prepared a
+[helper script](https://raw.githubusercontent.com/sensorfleet/sensorfleet.github.io/master/misc/openssl_ca.sh)
 to do just that. Just change the server hostname to match whatever is in your
 https URL and run the script on a modern Linux or macOS shell. Note that the use
 of EC keys might not be supported in your Logstash instance, which is why the
@@ -150,9 +146,9 @@ If you decided to skip TLS in the previous step, you can skip this step.
 
 You need 3 files:
 
-* logstash_client.crt
-* logstash_client.key
-* ca.crt
+- logstash_client.crt
+- logstash_client.key
+- ca.crt
 
 The TLS helper script provided in the previous step provides these files.
 
@@ -211,7 +207,6 @@ similar, depending on your Logstash installation.
       stdout {}
     }
 
-
 **Step 6: Test event pipeline**
 
 Finally, it is time to see if your setup is working correctly.
@@ -239,8 +234,7 @@ The log event should also be indexed by ElasticSearch.
 
   <img src="/img/posts/logforwarder_1/img_7.png" title="Log event indexed by ElasticSearch should look like this" width=500>
 
-
 **Final words**
 
 You should now have a simplified log collection architecture and way to deliver
-syslog from the edge *reliably* to your log destination.
+syslog from the edge _reliably_ to your log destination.
