@@ -10,14 +10,14 @@ categories:
   - Log/Event Import
   - Log/Event Export
 description:
-  Log Forwarder Insturment collects and forwards log and event data by
-  integrating logstash open source log/event pipeline engine into the
+  Log Forwarder Instrument collects and forwards log and event data by
+  integrating Logstash open source log/event pipeline engine into the
   SensorFleet platform.
 has_ui: false
 data_retention_desc: Holds a temporary event buffer, not affected by the data retention logic.
 performance_desc:
   At least 512 MB RAM is required for light workload, 4 GB recommended for production.
-  By default, logstash uses 1 pipeline worker thread per available CPU core.
+  By default, Logstash uses 1 pipeline worker thread per available CPU core.
 relations: []
 produced_event_types:
   - match: instruments.logforwarder.crash
