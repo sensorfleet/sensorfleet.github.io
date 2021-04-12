@@ -5,7 +5,7 @@ description:
   This blog post will show you step-by-step how to configure Logstash on top of
   SensorFleet Sensor as a reliable syslog buffer on your edge network.
 title: Stream syslog reliably from the edge to SIEM using SensorFleet
-og_image: /img/posts/zeek-sensorfleet.png
+og_image: /img/posts/logstash_sensorfleet.png
 excerpt:
   This blog post will show you step-by-step how to configure Logstash on top of
   SensorFleet Sensor as a reliable syslog buffer on your edge network.
