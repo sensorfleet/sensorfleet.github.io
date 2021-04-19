@@ -58,7 +58,7 @@ Notes: more IoC related features coming for 2.3 release.
   [SF-2044] - Cowrie Instrument: Fix low port number binding (e.g. 22 for ssh)
   [SF-1867] - Fleet Tool: fleet-tool does not return error code on validation error
   [SF-1817] - Instrument resolv.conf contains some development settings by default
-  [SF-1811] - Ansible: sshd is missing usedns no
+  [SF-1811] - Ansible: sshd is missing 'UseDNS no'
   [SF-1810] - Ansible: PasswordAuthentication setting (default unchanged)
 
 - New features and other improvements:
