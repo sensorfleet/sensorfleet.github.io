@@ -9,7 +9,9 @@ Changes marked with ansible mean that an ansible re-run with new playbook is req
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
-2.3.0, devel 2021-03-29:
+2.3.0, devel 2021-03-29, staging 2021-04-19:
+
+Permanent snapshot name: staging-2.3.0-56771
 
 Notes: more IoC related features coming for 2.3 release.
 
@@ -53,6 +55,11 @@ Notes: more IoC related features coming for 2.3 release.
   [SF-2000] - UI: Events page vue crash if event types are missing
   [SF-2004] - Fleet Tool: bash completion exception
   [SF-2028] - UI: Same physical interface could be added to two different Instrument interfaces
+  [SF-2044] - Cowrie Instrument: Fix low port number binding (e.g. 22 for ssh)
+  [SF-1867] - Fleet Tool: fleet-tool does not return error code on validation error
+  [SF-1817] - Instrument resolv.conf contains some development settings by default
+  [SF-1811] - Ansible: sshd is missing usedns no
+  [SF-1810] - Ansible: PasswordAuthentication setting (default unchanged)
 
 - New features and other improvements:
   [SF-518] - UI: Validate sensorconfig before attempting to save
@@ -103,8 +110,21 @@ Notes: more IoC related features coming for 2.3 release.
   [SF-1968] - UI: get event types using message instead of file read
   [SF-1984] - Log Forwarder Instrument: Allow binding syslog port
   [SF-2005] - Suricata instrument: Migration to remove old rules (dynamic_([0-9]+).rules)
+  [SF-2046] - Fleet Tool: Implement --traceback option
+  [SF-2043] - PortDiff Instrument: Implement "whitelist all ports" functionality for triggered scan whitelist
+  [SF-2041] - Cowrie Instrument: Cowrie ssh+telnet ports should be customizable
+  [SF-2036] - Log Forwarder Instrument: Logstash jvm options should be configurable
+  [SF-2034] - Badrap instrument: Handle configuration changes in the middle of ongoing scanning.
+  [SF-2033] - Badrap instrument: Handle portdiff instrument being removed (and readded)
+  [SF-2032] - Badrap instrument, PortDiff Instrument: Add whitelist support for badrap & portdiff instruments
+  [SF-2015] - UI: Sensor UI should warn user when unsaved settings and leaving page without saving
+  [SF-2012] - Ansible: Bash fleet command completion should work out of the box in installed Sensors
+  [SF-1982] - PortDiff Instrument: Scan parameters should be delivered through configuration file to pscan
+  [SF-1960] - PortDiff Instrument: Improve data retention on Portdiff
+  [SF-1768] - UI: Grouping and/or hiding system Instruments
 
-2.2.3, staging 2020-12-10:
+
+2.2.3, staging 2020-12-10, stable 2021-04-19:
 Permanent snapshot name: staging-2.2.3-54897
 - Bug fixes:
   [SF-1849] - Add missing squashfs-tools dependency on sensorfleet-lxd
