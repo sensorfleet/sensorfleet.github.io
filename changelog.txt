@@ -115,7 +115,7 @@ Notes: more IoC related features coming for 2.3 release.
   [SF-2041] - Cowrie Instrument: Cowrie ssh+telnet ports should be customizable
   [SF-2036] - Log Forwarder Instrument: Logstash jvm options should be configurable
   [SF-2034] - Badrap instrument: Handle configuration changes in the middle of ongoing scanning.
-  [SF-2033] - Badrap instrument: Handle portdiff instrument being removed (and readded)
+  [SF-2033] - Badrap instrument: Handle portdiff instrument being removed (and read)
   [SF-2032] - Badrap instrument, PortDiff Instrument: Add whitelist support for badrap & portdiff instruments
   [SF-2015] - UI: Sensor UI should warn user when unsaved settings and leaving page without saving
   [SF-2012] - Ansible: Bash fleet command completion should work out of the box in installed Sensors
