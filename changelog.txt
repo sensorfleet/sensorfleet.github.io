@@ -9,6 +9,16 @@ Changes marked with ansible mean that an ansible re-run with new playbook is req
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+2.3.1, staging 2021-04-21:
+
+Permanent snapshot name: staging-2.3.1-64012
+
+- Bug fixes:
+  [SF-2030] - Capture Engine: crash with "NoneType object has no attribute items" error with broken network config
+
+- New features and other improvements:
+  [SF-2029] - Recorder Instrument: Update to Arkime: Elastic 7.12.0, Arkime 2.7.1
+
 2.3.0, devel 2021-03-29, staging 2021-04-19:
 
 Permanent snapshot name: staging-2.3.0-56771
