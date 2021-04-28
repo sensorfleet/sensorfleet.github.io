@@ -2,6 +2,7 @@
 layout: post
 author: sami
 title: Quick start for network security monitoring
+og_image: /img/posts/quick-start-for-monitoring/quickstart.png
 description:
   "Starting a network security monitoring project from scratch, or augmenting
   the existing solutions, can be a daunting task. Common questions include
