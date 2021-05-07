@@ -1,0 +1,40 @@
+---
+name: Zeek
+developer: SensorFleet Oy (Open Source integration)
+title: Zeek network analysis framework
+categories:
+  - Attack Detection
+  - Traffic Analysis
+  - IDS
+description:
+  The Zeek instrument integrates Zeek, an open source network analysis
+  framework.
+has_ui: false
+data_retention_desc:
+  The latest scripts and blacklists are stored in the instrument's persistent
+  data.
+relations:
+  - description: Rule Manager Instrument can manage Zeek scripts and blacklists.
+    instrument_type: rmgr
+    instrument_name: Rule Manager
+    required: false
+    permissions: []
+  - description: Rule Importer Instrument can manage Zeek scripts and blacklists.
+    instrument_type: ruleimporter
+    instrument_name: Rule Importer
+    required: false
+    permissions: []
+required_interfaces:
+  - type: mirror-bridge
+    capabilities:
+      - rx
+    description: Monitored network
+produced_event_types:
+  - match: instruments.zeek.ev.
+    type: prefix
+    title: IDS event
+  - match: instruments.zeek.restarted
+    type: exact
+    title: Zeek restart event
+network_access_type: passive
+performance_desc: ""
