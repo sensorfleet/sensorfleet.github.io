@@ -1,0 +1,21 @@
+---
+name: Netflow Instrument
+developer: SensorFleet Oy
+title: Store network traffic flows in Cisco NetFlow format
+categories:
+  - Traffic Analysis
+  - Traffic Recording
+description:
+  Netflow passively listens for network traffic and stores the traffic flows in
+  Cisco NetFlow format.
+has_ui: true
+data_retention_desc: Netflow stores the NetFlow records up to the configured data retention period.
+performance_desc:
+  Netflow instrument is able to handle gigabbit/sec traffic with standard
+  F-probe hardware.
+network_access_type: passive
+required_interfaces:
+  - type: mirror-bridge
+    capabilities:
+      - rx
+    description: Monitored network
