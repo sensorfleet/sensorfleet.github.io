@@ -1,0 +1,35 @@
+---
+name: PortDiff
+developer: SensorFleet Oy
+title: Automated network scanning and monitoring tool
+categories:
+  - Integrity Monitoring
+description: Monitor open services on hosts and report network changes as events.
+has_ui: false
+data_retention_desc:
+  Besides the current active network status, the instrument stores no data. All
+  history will be stored in events on the sensor, not in the instrument.
+performance_desc:
+  Scanning will become incrementally slower when going for networks with over
+  256 hosts. Maximum recommended network size 5000 hosts."
+relations: []
+produced_event_types:
+  - match: instruments.portdiff.first_scan
+    type: exact
+    title: First scan completed
+  - match: instruments.portdiff.changes
+    type: exact
+    title: Changes since last scan
+  - match: instruments.portdiff.full
+    type: exact
+    title: Full scan results
+  - match: instruments.portdiff.triggered_scan
+    type: exact
+    title: Results from scan triggered by another instrument
+required_interfaces:
+  - type: any
+    capabilities:
+      - rx
+      - tx
+    description: Monitored network
+network_access_type: Active
