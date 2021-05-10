@@ -1,0 +1,52 @@
+---
+name: SensorFleet IDS Rule Manager
+developer: SensorFleet Oy
+title: Management UI for Suricata IDS engine and Zeek security monitoring tool
+categories:
+  - Attack Detection
+  - Traffic Analysis
+  - IDS
+description:
+  Advanced features to be used on top of IDS engines, such as automatic ruleset
+  updating, event stream viewer, etc.
+data_retention_desc:
+  Rule manager stores edit history of Suricata rules and history of user actions
+  (edit, delete creation)
+has_ui: true
+allow_modify_downloads: allow
+produced_event_types:
+  - match: instruments.rmgr.adopted
+    type: exact
+    title: Adoption event
+  - match: instruments.rmgr.deadopted
+    type: exact
+    title: Deadoption event
+  - match: instruments.rmgr.ruleset_fetch
+    type: exact
+    title: Ruleset was fetched
+  - match: instruments.rmgr.zeek_scripts_sent
+    type: exact
+    title: New Zeek scripts were sent
+  - match: instruments.rmgr.zeek_blacklists_sent
+    type: exact
+    title: New Zeek blacklists were sent
+  - match: instruments.rmgr.suricata_ruleset_sent
+    type: exact
+    title: New Suricata ruleset was sent
+relations:
+  - description:
+      Rule Manager needs at least one Suricata IDS instrument to function. It
+      will manage the Suricata instances that are available.
+    instrument_name: Suricata IDS
+    instrument_type: suricata
+    permissions:
+      - find
+      - direct_message
+    required: true
+  - description: Rule manager will manage the Zeek instances that are available.
+    instrument_name: Zeek
+    instrument_type: zeek
+    permissions:
+      - find
+      - direct_message
+    required: false
