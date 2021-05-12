@@ -9,6 +9,76 @@ Changes marked with ansible mean that an ansible re-run with new playbook is req
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+2.3.2, devel 2021-05-12:
+
+- Bug fixes:
+  [SF-2100] - Log Forwarder Instrument: Logstash does not always give enough stacktrace from Logstash crash
+  [SF-2098] - Rule Manager: IoC feed "Enabled" checkbox is broken
+  [SF-2092] - Rule Manager: Fix PostgreSQL database autovacuum
+  [SF-2090] - Rule Manager: rmgr does not cleanup downloads
+  [SF-2087] - Rule Manager, Suricata instrument: IoC feed: rules are duplicated
+  [SF-2086] - Rule Manager: IoC feed: deleting does not trigger page/list reload
+  [SF-2085] - IoC feeds, Rule Manager: Rule Manager does not indicate that it's loading IoC feeds and it may take long
+  [SF-2074] - UI: Event paginator hidden when there are events if going past the last page
+  [SF-2073] - Rule Manager: Typo in Rule Manager UI (entires)
+  [SF-2072] - UI: Sensor UI: Rename 'Show all Instruments' in Overview
+  [SF-2068] - Rule Manager: Adding a file:// rulesource does not work
+  [SF-2066] - Rule Manager: Clicking Commit difficult when disabling/enabling a large ruleset
+  [SF-2064] - Rule Manager: Rule Manager does not process IoCs rules to Suricata
+  [SF-2042] - Ansible: Fix ansible-playbook regression caused by SF-1976
+  [SF-2018] - Rule Manager: Rule Manager UI can sometimes timeout (use background processing)
+  [SF-1996] - UI: Instrument interface list shows IP even if DHCP is in use
+  [SF-1855] - Sensor Orchestrator: Instrument Upgrade stops containers uncleanly
+  [SF-1752] - Rule Manager: rmgr says "Unknown download type"
+  [SF-1740] - UI: Removing custom HTTP header not possible
+  [SF-1623] - UI: UI tweak: Add interface says Create
+  [SF-1613] - Capco: Fix memory exhaustion caused by capco upgrade/stop/start
+  [SF-1294] - UI: Manually checking version does not update UI
+  [SF-994] - Rule Manager: Some Rule manager rule links does not work
+  [SF-940] - Rule Manager: Rule manager throws stack trace if suricata is not running
+  [SF-867] - UI: Events do not work if sensor is offline
+  [SF-747] - Rule Manager: Rule Manager suricata import tab displays "host test"
+  [SF-738] - Rule Manager: rmgr does not report startup errors
+
+- New features and other improvements:
+  [SF-2107] - Rule Manager: Celery+redis should use unix sockets instead of TCP
+  [SF-2104] - Rule Manager: Rule manager should show summary of changes instead of full diff by default
+  [SF-2103] - Suricata instrument: Update Suricata to 6.0.2
+  [SF-2101] - Log Forwarder Instrument: Logstash offline installable module support
+  [SF-2099] - Log Forwarder Instrument: Enable syslog output module by default
+  [SF-2095] - Ansible: Support global defaults for variables which are used in multiple roles
+  [SF-2093] - Ansible: Also reload EB domain on custom ferm rules change
+  [SF-2082] - Rule Manager: Rule Manager UI tweaks
+  [SF-2077] - Ansible: Support VPN-pushed routes
+  [SF-2069] - Rule Manager: Rule Manager should have a "local rulesource file" type instead of external + file://...
+  [SF-2067] - Rule Manager: rmgr's suricata_ruleset_sent event should include the number of rules
+  [SF-2065] - Rule Manager: When creating rulelist/rules in Rule Manager, good default options should be set
+  [SF-2061] - Rule Manager: Rule Manager depends on Suricata instrument
+  [SF-2060] - UI: Sensor-UI: Move "Upgrade" to System page from Settings
+  [SF-2059] - Replay Instrument: Initial version of replay instrument
+  [SF-2053] - Badrap App: Prometheus exporter for Badrap-app stats
+  [SF-2050] - UI: Do not require clicking Add button when adding new static routes or DNS servers
+  [SF-2048] - Badrap App: Badrap App: Allow list with Google's addresses
+  [SF-2047] - Rule Manager: MISP feed input support (suricata export from MISP)
+  [SF-2046] - Fleet Tool: Implement --traceback option
+  [SF-2043] - PortDiff Instrument: Implement "whitelist all ports" functionality for triggered scan whitelist
+  [SF-2041] - Cowrie Instrument: Cowrie ssh+telnet ports should be customizable
+  [SF-2036] - Log Forwarder Instrument: Logstash jvm options should be configurable
+  [SF-2032] - Badrap instrument, PortDiff Instrument: Add whitelist support for badrap & portdiff instruments
+  [SF-2015] - UI: Sensor UI should warn user when unsaved settings and leaving page without saving
+  [SF-2014] - UI: Homenet configuration in Sensor UI is confusing
+  [SF-2012] - Ansible: Bash fleet command completion should work out of the box in installed Sensors
+  [SF-1993] - Log Forwarder Instrument: Support for microsoft-logstash-output-azure-loganalytics output plugin (aka. Sentinel support)
+  [SF-1982] - PortDiff Instrument: Scan parameters should be delivered through configuration file to pscan
+  [SF-1976] - Ansible: Support CA-provided keys when using external VPN certificate
+  [SF-1960] - PortDiff Instrument: Improve data retention on Portdiff
+  [SF-1940] - UI: Support markdown in instrument schema description
+  [SF-1768] - UI: Grouping and/or hiding system Instruments
+  [SF-1741] - UI: HTTP header is not saved unless you click Add and no warning
+  [SF-1382] - Rule Manager: Rmgr frontend support for adding IOC feeds from a preset
+  [SF-1088] - Sensor Orchestrator: When instrument is removed, instrument config should be removed as well
+  [SF-1030] - Rule Manager: Rule Manager should detect downloads automatically
+
 2.3.1, staging 2021-04-21:
 
 Permanent snapshot name: staging-2.3.1-64012
