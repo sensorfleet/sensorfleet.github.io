@@ -13,10 +13,10 @@ any repository.
 
 - Bug fixes:
   [SF-2100] - Log Forwarder Instrument: Logstash does not always give enough stacktrace from Logstash crash
-  [SF-2098] - Rule Manager: IoC feed "Enabled" checkbox is broken
+  [SF-2098] - Rule Manager: IoC feed Enabled checkbox is broken
   [SF-2092] - Rule Manager: Fix PostgreSQL database autovacuum
   [SF-2090] - Rule Manager: rmgr does not cleanup downloads
-  [SF-2087] - Rule Manager, Suricata instrument: IoC feed: rules are duplicated
+  [SF-2087] - Rule Manager: IoC feed: rules are duplicated
   [SF-2086] - Rule Manager: IoC feed: deleting does not trigger page/list reload
   [SF-2085] - IoC feeds, Rule Manager: Rule Manager does not indicate that it's loading IoC feeds and it may take long
   [SF-2074] - UI: Event paginator hidden when there are events if going past the last page
@@ -56,15 +56,13 @@ any repository.
   [SF-2061] - Rule Manager: Rule Manager depends on Suricata instrument
   [SF-2060] - UI: Sensor-UI: Move "Upgrade" to System page from Settings
   [SF-2059] - Replay Instrument: Initial version of replay instrument
-  [SF-2053] - Badrap App: Prometheus exporter for Badrap-app stats
   [SF-2050] - UI: Do not require clicking Add button when adding new static routes or DNS servers
-  [SF-2048] - Badrap App: Badrap App: Allow list with Google's addresses
   [SF-2047] - Rule Manager: MISP feed input support (suricata export from MISP)
   [SF-2046] - Fleet Tool: Implement --traceback option
   [SF-2043] - PortDiff Instrument: Implement "whitelist all ports" functionality for triggered scan whitelist
   [SF-2041] - Cowrie Instrument: Cowrie ssh+telnet ports should be customizable
   [SF-2036] - Log Forwarder Instrument: Logstash jvm options should be configurable
-  [SF-2032] - Badrap instrument, PortDiff Instrument: Add whitelist support for badrap & portdiff instruments
+  [SF-2032] - PortDiff Instrument: Add whitelist support for portdiff instruments
   [SF-2015] - UI: Sensor UI should warn user when unsaved settings and leaving page without saving
   [SF-2014] - UI: Homenet configuration in Sensor UI is confusing
   [SF-2012] - Ansible: Bash fleet command completion should work out of the box in installed Sensors
@@ -194,9 +192,6 @@ Notes: more IoC related features coming for 2.3 release.
   [SF-2043] - PortDiff Instrument: Implement "whitelist all ports" functionality for triggered scan whitelist
   [SF-2041] - Cowrie Instrument: Cowrie ssh+telnet ports should be customizable
   [SF-2036] - Log Forwarder Instrument: Logstash jvm options should be configurable
-  [SF-2034] - Badrap instrument: Handle configuration changes in the middle of ongoing scanning.
-  [SF-2033] - Badrap instrument: Handle portdiff instrument being removed (and read)
-  [SF-2032] - Badrap instrument, PortDiff Instrument: Add whitelist support for badrap & portdiff instruments
   [SF-2015] - UI: Sensor UI should warn user when unsaved settings and leaving page without saving
   [SF-2012] - Ansible: Bash fleet command completion should work out of the box in installed Sensors
   [SF-1982] - PortDiff Instrument: Scan parameters should be delivered through configuration file to pscan
