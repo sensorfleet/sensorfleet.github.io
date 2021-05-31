@@ -10,6 +10,18 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
+2.3.4, staging 2021-05-31:
+Permanent snapshot name: staging-2.3.4-66091
+
+- Bug fixes:
+  [SF-2140] - Increase priority for sensorfleet-base package to prevent uninstall of SF packages
+
+2.1.4, backported 2021-05-31:
+Permanent snapshot name: sf2140_backport
+
+- Bug fixes:
+  [SF-2140] - Increase priority for sensorfleet-base package to prevent uninstall of SF packages
+
 2.3.3, staging 2021-05-28:
 Permanent snapshot name: staging-2.3.3-66046
 
@@ -18,7 +30,6 @@ Permanent snapshot name: staging-2.3.3-66046
 
 
 2.1.3, backported 2021-05-28:
-Permanent snapshot name: sf2140_backport
 
 - Bug fixes:
   [SF-2140] - Workaround an EFI boot issue caused by Ubuntu update
