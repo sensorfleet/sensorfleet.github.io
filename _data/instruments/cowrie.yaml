@@ -20,6 +20,6 @@ required_interfaces:
       - tx
     description: Network access to the honeypot
 produced_event_types:
-  - match: instruments.cowrie.session_event
-    type: exact
-    title: Honeypot event
+  - match: instruments.cowrie.
+    type: prefix
+    title: Honeypot session event
