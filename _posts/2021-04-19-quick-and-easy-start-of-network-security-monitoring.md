@@ -62,10 +62,10 @@ similar environments where the network assets are relatively fixed. Sensor
 requires only a regular access port for the monitored network. Included
 Instruments:
 
-- **[Honeypot](/instruments/cowrie/)** - Detect lateral movement and unexpected SSH/Telnet login
-  attempts.
-- **[PortDiff](/instruments/portdiff/)** - Periodic and automated port scanning to detect unexpected
-  services, such as IRC, SSH, Telnet etc.
+- **[Honeypot](/instruments/cowrie/)** - Detect lateral movement and unexpected
+  SSH/Telnet login attempts.
+- **[PortDiff](/instruments/portdiff/)** - Periodic and automated port scanning
+  to detect unexpected services, such as IRC, SSH, Telnet etc.
 
 ### Package 2 - Industrial Internet integrity
 
@@ -73,9 +73,10 @@ Passive sensor configuration suitable for the Industrial Internet / Operational
 Technology networks. Traffic mirroring to sensor is recommended for the optimal
 detection accuracy, but regular access port can also be used. Capabilities:
 
-- **[Traffic Guard](/instruments/tgmanager/)** - Automated inventory of the network's assets and alerting
-  about the unexpected assets entering the network. Connections inventory and
-  alerting also available for the restricted networks.
+- **[Traffic Guard](/instruments/tgmanager/)** - Automated inventory of the
+  network's assets and alerting about the unexpected assets entering the
+  network. Connections inventory and alerting also available for the restricted
+  networks.
 
 ### Package 3 - Network Based Attack Detection
 
@@ -83,11 +84,11 @@ Passive sensor configuration suitable for any type of network. Attack detection
 is based on the IDS technology and curated IoC’s for low noise on the alerts.
 Traffic mirroring to sensor is required. Capabilities:
 
-- **[Suricata IDS](/instruments/suricata/)** - Widely used IDS engine with curated IoC feed for detecting
-  the malicious activity, such as Command and Control connections, in the
-  network.
-- **[NetFlow](/instruments/netflow/)** - Collection of the NetFlow data for the further investigation of
-  the alerts.
+- **[Suricata IDS](/instruments/suricata/)** - Widely used IDS engine with
+  curated IoC feed for detecting the malicious activity, such as Command and
+  Control connections, in the network.
+- **[NetFlow](/instruments/netflow/)** - Collection of the NetFlow data for the
+  further investigation of the alerts.
 
 ## After the quick-start service
 

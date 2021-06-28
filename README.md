@@ -15,9 +15,7 @@ or
 
 Formatting with Prettier:
 
-`prettier --write "**/*"`
-
-## References
+`prettier --write "**/*.html" "**/*.md" "**/*.yml" "**/*.yaml"`
 
 ## Graphics
 
