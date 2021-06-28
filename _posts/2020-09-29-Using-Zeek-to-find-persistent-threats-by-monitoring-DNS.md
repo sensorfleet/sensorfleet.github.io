@@ -33,7 +33,8 @@ Many types of customizable rules are supported by Zeek, here's two:
 
 We’re going to try both of those to do something useful.
 
-- Part 1: Deploy a script to find persistent threats by monitoring DNS anomalies.
+- Part 1: Deploy a script to find persistent threats by monitoring DNS
+  anomalies.
 - Part 2: Add a “canary” file to an internal server to be used as a honeypot,
   and add the file hash to Zeek as a blacklist.
 
@@ -178,9 +179,10 @@ lots of events, and handle them in SIEM accordingly.
 
 - Install IDS Rule Manager Instrument.
 
-For managing the custom Zeek scripts, we’re using the [IDS Rule Manager
-Instrument](https://sensorfleet.com/instruments/rmgr/). If you don’t have it installed yet, just add it using the UI
-similarly as you added [Zeek Instrument](https://sensorfleet.com/instruments/zeek/).
+For managing the custom Zeek scripts, we’re using the
+[IDS Rule Manager Instrument](https://sensorfleet.com/instruments/rmgr/). If you
+don’t have it installed yet, just add it using the UI similarly as you added
+[Zeek Instrument](https://sensorfleet.com/instruments/zeek/).
 
 - Add DNS anomaly detection script. I created a
   [single-file version](http://sensorfleet.com/misc/anomalous_dns_bundle.zeek)
@@ -290,8 +292,8 @@ a more aggressive whitelist.
 We now use the above detection method in monitoring of our own infrastructure.
 
 Hopefully this will help someone to realize how neat things you can do just by
-using open source tools such as Zeek. And it gets even easier when using commercial
-products to round the rough edges a bit.
+using open source tools such as Zeek. And it gets even easier when using
+commercial products to round the rough edges a bit.
 
 Stay tuned for the part 2 of our Zeek guide: We’re going to add a "canary" file
 to an internal server to be used as a honeypot, and add the file hash to Zeek as
