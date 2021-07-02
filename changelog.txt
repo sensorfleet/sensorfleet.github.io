@@ -10,17 +10,65 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
+2.3.5, staging 2021-07-XX:
+Permanent snapshot name: TODO
+
+Breaking changes:
+- Cowrie event type
+- Log Forwarder configuration
+
+- Bug fixes:
+  [SF-2195] - Zeek Instrument: Zeek stdout parser fails when too much data
+  [SF-2184] - Replay Instrument: replay instrument creates adoptions directory
+  [SF-2183] - Fleet Tool: Fix --bundle-expand fleet tool argument
+  [SF-2180] - API: Bundled events do not have some fields present
+  [SF-2170] - Recorder Instrument: Moloch overrides are not set from config
+  [SF-2165] - Sensor Orchestrator: Long-running event deletes cause MongoDB connection starvation
+  [SF-2159] - API: instrument config version not bumped in first save
+  [SF-2157] - UI: Any offline sensor seems to block installation of instruments (to different sensor)
+  [SF-2156] - Log Forwarder Instrument: Logforwarder does not convert "bson compatible" dots back to actual dots
+  [SF-2153] - Customscan instrument: Customscan instrument should support physical interfaces
+  [SF-2135] - Zeek Instrument: Zeek stays in "Instrument initializing" status when configuration is invalid
+  [SF-2129] - Recorder Instrument: Changing interface configuration will not restart moloch-capture
+  [SF-2128] - Recorder Instrument: Misconfiguring elastic search RAM options will cause instrument to become non-configurable
+  [SF-2111] - Fleet Tool: fleet tool should report errors to stderr instead of stdout
+  [SF-2083] - Rule Manager: IoC feed import does not report errors
+  [SF-2075] - Recorder Instrument: New recorder (Arkime) python process eats a lot of RAM when doing startup
+  [SF-1651] - Rule Manager: rmgr should ping zeek first before attempting validation
+
+- New features and other improvements:
+  [SF-2198] - API: Implement congestion control for bundled events
+  [SF-2196] - Zeek Instrument: zeek instrument logic should have a process name
+  [SF-2167] - Recorder Instrument: Recorder capture-plugin should write packets to moloch from consumer thread
+  [SF-2164] - Cowrie Instrument: Improve cowrie error reporting
+  [SF-2163] - Cowrie Instrument: Implement overridable cowrie settings
+  [SF-2154] - UI: Display Platform instruments (2) even if they are hidden
+  [SF-2150] - Cowrie Instrument: Same cowrie session should have the same context_uuid
+  [SF-2127] - Replay Instrument: Replay instrument support for Mbps/PPS PCAP rate limiting
+  [SF-2126] - Replay Instrument: Replay instrument should start loop pcaps automatically
+  [SF-2124] - Replay Instrument: Flood of INFO log messages from inotify
+  [SF-2117] - Log Forwarder Instrument: Typo in config schema (JVM RAM)
+  [SF-2114] - Fleet Tool: config show: support for --missing-ok flag
+  [SF-2113] - Fleet Tool: config edit should allow retrying if validation fails
+  [SF-2112] - Fleet Tool: fleet config read/show should show default values if possible
+  [SF-2110] - Log Forwarder Instrument: Optimize Log Forwarder event pipeline
+  [SF-2109] - Zeek Instrument: Optimize zeek event pipeline for connection log usage (fastpath support)
+  [SF-2105] - Log Forwarder User Manual
+  [SF-2094] - Cowrie Instrument: Change cowrie event type to contain more information
+  [SF-1918] - Fleet Tool: glob match for fleet sensor health command
+  [SF-1466] - UI: Handle offline sensors better
+
 2.3.4, staging 2021-05-31:
 Permanent snapshot name: staging-2.3.4-66091
 
 - Bug fixes:
-  [SF-2140] - Increase priority for sensorfleet-base package to prevent uninstall of SF packages
+  [SF-2142] - Increase priority for sensorfleet-base package to prevent uninstall of SF packages
 
 2.1.4, backported 2021-05-31:
 Permanent snapshot name: sf2140_backport
 
 - Bug fixes:
-  [SF-2140] - Increase priority for sensorfleet-base package to prevent uninstall of SF packages
+  [SF-2142] - Increase priority for sensorfleet-base package to prevent uninstall of SF packages
 
 2.3.3, staging 2021-05-28:
 Permanent snapshot name: staging-2.3.3-66046
