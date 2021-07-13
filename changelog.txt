@@ -10,12 +10,12 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
-2.3.5, staging 2021-07-XX:
-Permanent snapshot name: TODO
+2.3.5, staging 2021-07-13:
+Permanent snapshot name: staging-2.3.5-69834
 
-Breaking changes:
-- Cowrie event type
-- Log Forwarder configuration
+NOTE: Release has some breaking changes:
+- Cowrie event type changed (instruments.cowrie.session_event -> e.g. instruments.cowrie.login.success)
+- Log Forwarder configuration needs editing, if a previous version was used.
 
 - Bug fixes:
   [SF-2195] - Zeek Instrument: Zeek stdout parser fails when too much data
@@ -35,6 +35,9 @@ Breaking changes:
   [SF-2083] - Rule Manager: IoC feed import does not report errors
   [SF-2075] - Recorder Instrument: New recorder (Arkime) python process eats a lot of RAM when doing startup
   [SF-1651] - Rule Manager: rmgr should ping zeek first before attempting validation
+  [SF-2208] - Installer: Installer does not support 24-disk wide raid10
+  [SF-2211] - UI: Greyed buttons are not really disabled
+  [SF-2210] - UI: Long Sensor name overflows to other elements in Overview page
 
 - New features and other improvements:
   [SF-2198] - API: Implement congestion control for bundled events
