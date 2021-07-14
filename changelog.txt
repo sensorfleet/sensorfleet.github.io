@@ -10,6 +10,20 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
+2.3.6, staging 2021-07-14:
+Permanent snapshot name: staging-2.3.6-70223
+
+NOTE: Release has some breaking changes:
+- Sensor UI API path has changed. Affects only if you have integrated the
+  UI backend API, e.g. for sensor health monitoring.
+
+- Bug fixes:
+  [SF-2217] - Fleet Tool: CLI breaks when used from the fleet shell and a command times out
+  [SF-2219] - SensorMessageBroker: Broken debug logging
+
+- New features and other improvements:
+  [SF-1542] - Sensor UI: Add versioning to Sensor UI API
+
 2.3.5, staging 2021-07-13:
 Permanent snapshot name: staging-2.3.5-69834
 
@@ -201,6 +215,7 @@ Notes: more IoC related features coming for 2.3 release.
   [SF-1939] - Fleet Tool: Fleet Tool: Handle config save errors properly
   [SF-1953] - Recorder Instrument: Recorder: Fix health-check fail regression
   [SF-1955] - Log Forwarder Instrument: Log Forwarder: Fix random logstash API not responding error
+  [SF-1967] - Fleet Tool: All fleet-tool commands should have proper error handlers
   [SF-1970] - UI: Listing physical interfaces can take a long time
   [SF-1974] - UI: Error saving FM's config using UI
   [SF-1975] - Log Forwarder Instrument: LogForwarder says "Logstash has crashed" with default configuration
