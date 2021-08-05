@@ -11,35 +11,35 @@ excerpt:
   SensorFleet Sensor for streaming events to your SIEM.
 ---
 
-**Forewords**
+**Introduction**
 
 _This blog post will show you step-by-step how to configure Logstash on top of
 SensorFleet Sensor for streaming events to your SIEM._
 
 Up until recently, the go-to method for integrating SensorFleet event pipeline
-to SIEM has been the [Event Exporter
-Instrument](https://sensorfleet.com/instruments/eventexporter). It’s simple and
-lightweight, but you will be required to run a custom integration script to feed
-the events from our API to your SIEM.
+to SIEM has been the
+[Event Exporter Instrument](https://sensorfleet.com/instruments/eventexporter).
+It’s simple and lightweight, but it has required you to run a custom integration
+script to feed the events from our API to your SIEM.
 
-Now you also have another choice: the Log Forwarder Instrument. It integrates
-Logstash into the SensorFleet Event Pipeline, so you have standard Logstash
-features available for the integration. In this guide, we will be configuring a
-standard http event delivery from SensorFleet to another Logtash instance,
-running on the edge of your SIEM.
-
+Now you have a new option available: the
+[Log Forwarder Instrument](https://sensorfleet.com/instruments/logforwarder). It
+integrates Logstash into the SensorFleet Event Pipeline, so you have standard
+Logstash features available for the integration. In this guide, we will be
+configuring a standard HTTPS based event delivery from SensorFleet to your SIEM.
 In this case, we will be using Elastic Stack as the SIEM, but you could run
 anything that’s capable of accepting JSON events from Logstash.
 
-  <img src="/img/posts/logforwarder_2/img_2.png" title="" width=500>
+In this case, we will be using Elastic Stack as the SIEM, but you could run
+anything that’s capable of accepting JSON events from Logstash. There's also a
+configuration sample for Azure Sentinel.
 
-<span class="figcaption_hack">The configuration will look like this</span>
+  <img src="/img/posts/logforwarder_2/img_2.png" title="The configuration will look like this" width=500>
 
 **Requirements**
 
 We assume you already have a Sensor deployed, along with a working Fleet
-Management and a SIEM setup that runs either logstash or Microsoft Sentinel to
-collect log data and events from your sensors.
+Management and a SIEM setup that accepts events delivered by Logstash.
 
 Required SensorFleet version: 2.3.6 or later
 
@@ -51,31 +51,24 @@ Open the dropdown menu from your Sensor and choose Add Instrument.
 
   <img src="/img/posts/logforwarder_2/img_3.png" title="" width=500>
 
-
 Then, add a Log Forwarder Instrument by clicking the “Add Instrument” button.
 
   <img src="/img/posts/logforwarder_2/img_4.png" title="" width=500>
 
-
 **Step 2: Configure networking for Log Forwarder Instrument**
 
-Let’s add an Interface with connectivity to your upstream SIEM system.
-
-In our case, we have a dedicated physical interface that’s connected to the
-Internet.
-
+Let’s add an Interface with connectivity to your upstream SIEM system. In our
+case, we have a dedicated physical interface that’s connected towards the SIEM.
 We configure that interface to our Instrument.
 
 Choose Configure from the Log Forwarder Instrument dropdown menu.
 
   <img src="/img/posts/logforwarder_2/img_5.png" title="" width=500>
 
-
 Add an Interface. If using static IP configuration, remember to add a default
-route and DNS. Make sure to choose capabilities RX and TX.
+route and DNS. Make sure to choose RX (receiver) and TX (transmit) capabilities.
 
   <img src="/img/posts/logforwarder_2/img_6.png" title="" width=500>
-
 
 **Step 3: Configure Fleet Event Pipeline**
 
@@ -83,9 +76,8 @@ Next up, choose the Custom Configuration tab.
 
   <img src="/img/posts/logforwarder_2/img_7.png" title="" width=500>
 
-
 The SensorFleet event subscription pipeline is a configuration to feed
-SensorFleet events from the Sensor to **local** Logstash instance. In other
+SensorFleet events from the Sensor to the **local** Logstash instance. In other
 words, these events will be fed to the Logstash instance running inside the Log
 Forwarder Instrument.
 
@@ -98,17 +90,17 @@ textbox.
       logstash_proto: beats
       unique_id: test
 
-* mongodb_terms: Search terms for the event subscription. Only events matching
-these search terms will be delivered. In this example, we get all events by
-using an empty filter ‘{}’.
-* get_history: false means that no event history before this moment will be
-fetched. Only events from now on. Be warned, setting this to true can cause a
-lot of events to be delivered at once.
-* logstash_port: To which local port will the events be delivered. This should
-match the port in your Logstash pipeline configuration (done in next step).
-* logstash_proto: Use beats for best performance. “http” is also supported.
-* unique_id: Set this to some descriptive short string. It will be used by
-pipeline stats loggers, for example.
+- mongodb_terms: Search terms for the event subscription. Only events matching
+  these search terms will be delivered. In this example, we get all events by
+  using an empty filter ‘{}’.
+- get_history: false means that no event history before this moment will be
+  fetched. Only events from now on. Be warned, setting this to true can cause a
+  lot of events to be delivered at once.
+- logstash_port: To which local port will the events be delivered. This should
+  match the port in your Logstash pipeline configuration (done in next step).
+- logstash_proto: Use beats for best performance. “http” is also supported.
+- unique_id: Set this to some descriptive short string. It will be used by
+  pipeline stats loggers, for example.
 
 **Step 4: Configure Logstash pipeline**
 
@@ -144,40 +136,35 @@ configuration box.
           #stdout {}
         }
 
-* *queue.type: persisted* means that events can be saved on disk temporarily.
-* *beats* input plugin is the receiver for SensorFleet events. HTTP is also
-supported, but use of it is discouraged due to worse performance.
-* *queue.max_events* is a small number. That’s by purpose, because we want to
-quickly see if the pipeline is not working. This configuration will cause
-*backpressure* in the HTTP input plugin after the queue of 5 events is full,
-which in turn causes the Fleet Pipeline to display the error.
-* *http* output plugin is the sender that will deliver events to external SIEM.
-* In this example, we’re using TLS client certificates for authentication. For
-non-production testing purposes, you may change the protocol to http:// for
-plain HTTP without the hassle with TLS certificates.
+- _queue.type: persisted_ means that events can be saved on disk temporarily.
+- _beats_ input plugin is the receiver for SensorFleet events. HTTP is also
+  supported, but use of it is discouraged due to worse performance.
+- _queue.max_events_ is a small number. That’s by purpose, because we want to
+  quickly see if the pipeline is not working. This configuration will cause
+  _backpressure_ in the HTTP input plugin after the queue of 5 events is full,
+  which in turn causes the Fleet Pipeline to display the error.
+- _http_ output plugin is the sender that will deliver events to external SIEM.
+- In this example, we’re using TLS client certificates for authentication. For
+  non-production testing purposes, you may change the protocol to http:// for
+  plain HTTP without the hassle with TLS certificates.
 
-To generate TLS certificates to be used for Logstash client authentication, I’ve
-prepared a [helper
-script](https://raw.githubusercontent.com/sensorfleet/sensorfleet.github.io/master/misc/openssl_ca.sh)
-to do just that. Just change the server hostname to match whatever is in your
-https URL. Note that the use of EC keys might not be supported in your Logstash
-instance, depending on the used Java version, which is why the script defaults
-to the aging RSA algorithm.
+I have prepared a
+[helper script](https://raw.githubusercontent.com/sensorfleet/sensorfleet.github.io/master/misc/openssl_ca.sh)
+to to generate TLS certificates to be used for Logstash client authentication,
+just change the server hostname to match whatever is in your https URL. Note
+that the use of EC keys might not be supported in your Logstash instance.
 
 **Step 5: Configure TLS certificates for https output (optional)**
 
-If you decided to skip TLS in the previous step, you can skip this step.
+You will need 3 files:
 
-You need 3 files:
+- logstash_client.crt
+- logstash_client.key
+- ca.crt
 
-* logstash_client.crt
-* logstash_client.key
-* ca.crt
-
-The TLS helper script provided in the previous step provides these files.
-
-You need to open the generated files, and copy-paste into the configuration UI
-in the following format:
+The TLS helper script provided in the previous step creates these files. You
+need to open the generated files, and copy-paste their content into the
+configuration UI in the following format:
 
     - file_name: logstash_client.crt
       file_text: |
@@ -205,10 +192,9 @@ writing this blog.
 Next we will configure your SIEM HTTP input. This part assumes that you run a
 Logstash instance next to ElasticSearch for receiving the events.
 
-The relevant part for your receiver Logstash configuration.
-
-This configuration will typically go to /etc/logstash/conf.d/something.conf, or
-similar, depending on your Logstash installation and Linux distribution used.
+The relevant part for your receiver Logstash configuration. This configuration
+will typically go to /etc/logstash/conf.d/something.conf, actual filename
+depending on your Logstash installation.
 
     input {
       http {
@@ -233,45 +219,37 @@ similar, depending on your Logstash installation and Linux distribution used.
       stdout {}
     }
 
-* If you decided to go without TLS, you can change the ssl variable to false.
-* If you have TLS enabled, copy the generated server side keys and certs from
-**Step 4** to correct paths.
-* You may also need to configure your Logstash receiver firewall to accept
-connections to TCP port 8899.
-* Make sure to configure the correct ElasticSearch url and credentials.
+- Copy the generated server side keys and certs from Step 4 to correct paths.
+- You may also need to configure your Logstash host’s firewall to accept
+  connections to TCP port 8899.
+- Make sure to configure the correct ElasticSearch url and credentials.
 
 **Step 6: Test event pipeline**
 
 Finally, time to see if your setup is working correctly.
 
-First of all, check if your Log Forwarder Instrument is not in error status. It
+First of all, check if your Log Forwarder Instrument is not in error state. It
 should look like this.
 
   <img src="/img/posts/logforwarder_2/img_8.png" title="" width=500>
 
-
-If your configuration shows yellow warning , it means the connection to upstream
-Logstash is not working. That could be due to many reasons — for example
-firewall and TLS certificate misconfiguration.
+If your configuration shows a yellow warning, it means the connection to
+upstream Logstash is not working. That could be due to many reasons - for
+example firewall blocking the traffic or TLS certificate misconfiguration.
 
   <img src="/img/posts/logforwarder_2/img_9.png" title="" width=500>
 
-
-Next, we need to make sure that Log Forwarder Instrument has some events to
-forward. Log Forwarder instance is producing statistics events, so you don’t
-need an event generator for testing purposes. You should at least see events
-like this in the Fleet Management event view:
+Next, we need to make sure that the Log Forwarder Instrument has some events to
+forward. Log Forwarder instance is periodically producing statistics events, so
+you don’t need an event generator for testing purposes. You should at least see
+events like this in the Fleet Management event view:
 
   <img src="/img/posts/logforwarder_2/img_10.png" title="" width=500>
 
-
-If your error counters are not increasing and the instrument stays in OK status,
-you should see the events in your receiving Logstash instance.
-
-If your error counters are not increasing and the instrument stays in OK status,
-you should see the events in your receiving Logstash instance.<br> Check your
-Logstash receiver logs: if you enabled the stdout output module, you should see
-something like this in logs:
+If your error counters are not increasing and the instrument stays has OK
+status, you should see the events in your receiving Logstash instance. Check
+your Logstash receiver logs: if you enabled the stdout output module, you should
+see something like this in logs:
 
     root@sf-elk-demo:~# journalctl -f -u logstash
     {
@@ -285,16 +263,15 @@ This means that the pipeline from your Sensor to external Logstash is working.
 
 **Step 7: Configure event format**
 
-By default, the event format for exported events is SensorFleet specific.
+By default, the event format for exported events is SensorFleet specific. For
+example, the timestamp field is not compatible with the default format expected
+by ElasticSearch. We’re going to take the SensorFleet event header, and put them
+inside _\_sensorfleet_event_ key, and actual event data goes to top level.
 
-For example, the timestamp field is not compatible with the default format
-expected by ElasticSearch. We’re going to take the SensorFleet event header, and
-put them inside *_sensorfleet_event* key, and actual event data goes to top
-level.
-
-That way many of the compatible event formats (such as Suricata and Zeek events)
-can be recognized by event parsers, such as Filebeat ECS conversion routines or
-Azure Sentinel’s log parser.
+That way many of the compatible event formats forwarded by the SensorFleet
+sensor, such as Suricata and Zeek events, can be recognized by further event
+parsers, such as Filebeat ECS conversion routines or Azure Sentinel’s log
+parser.
 
 Add this part to your Logstash event pipeline configuration, after the HTTP
 input plugin:
@@ -312,7 +289,7 @@ input plugin:
                     event.remove(k)
                 end
             }
-            
+
             # Copy fields from SensorFleet event data to root level (if any)
             data = event.get("[_sensorfleet_event][data]")
             unless data.nil?
@@ -326,7 +303,7 @@ input plugin:
         # Optional: remove [_sensorfleet_event][data] if you want to avoid
         # duplicating the data.
         remove_field => "[_sensorfleet_event][data]"
-        
+
       }
 
       mutate {
@@ -334,9 +311,8 @@ input plugin:
       }
     }
 
-
-You can do this in the Log Forwarder’s Logstash instance, or in the receiving
-Logstash instance. It doesn’t really matter.
+You can do this either in the Log Forwarder’s Logstash instance, or in the
+receiving Logstash instance. It doesn’t really matter.
 
 After applying the configuration, you should see events like this in the
 receiving Logtash instance:
@@ -350,20 +326,18 @@ receiving Logtash instance:
             "source_instrument" => "logforwarder_0@testsensor",
                          "type" => "instruments.logforwarder.pipeline_stats",
 
-
 Checking the Elastic Stack, we can see events being properly indexed by
 ElasticSearch:
 
   <img src="/img/posts/logforwarder_2/img_11.png" title="" width=500>
 
-
 ### Other SIEM systems
 
 Logstash supports many other output plugins. For example, The SensorFleet
-integration includes a Microsoft Sentinel (Azure Loganalytics) plugin by
-default. Example output plugin configuration for that:
+integration includes a Azure Sentinel (Loganalytics) plugin by default. Here is
+an example output plugin configuration for that:
 
-    # Example for Microsoft Sentinel
+    # Example for Azure Sentinel
     microsoft-logstash-output-azure-loganalytics {
       workspace_id => "your-uuid-here"
       workspace_key => "your-key-here"
@@ -371,18 +345,19 @@ default. Example output plugin configuration for that:
     }
 
 For integration to work, you need to obtain workspace ID and workspace key from
-your Azure Loganalytics adminstrator. That’s all there is to it, add the correct
-output configuration and events will go into specified table in Loganalytics.
-For more information, see Use Logstash to connect data sources to Azure
-Sentinel.
+your Azure Loganalytics administrator. That’s all there is to it, add the
+correct output configuration and events will go into the specified table in
+Loganalytics. For more information, see
+[Use Logstash to connect data sources to Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/connect-logstash).
 
 ### Final Words
 
-After completing this guide, you have a basic Event Pipeline working from
-SensorFleet to your SIEM. More advanced event formatting might be required,
-depending on your deployment. For some pointers, if you want Suricata events in
-your Elastic Stack in a format that’s supported by the standard tools, you
-should be using ECS formatting. That can be achieved by using Logstash along
-with Filebeat on the receiving side. Filebeat will do the ECS formatting for
-your, and your Elastic Stack will understand the format better.
-
+After completing this guide, you have an Event Pipeline working from SensorFleet
+to your SIEM. More advanced event formatting is possible to match your
+deployment. For some pointers, if you want Suricata events in your Elastic Stack
+in a format that is supported by the standard tools, you should be using ECS
+formatting. That can be achieved by using Logstash along with Filebeat on the
+receiving side. Filebeat will do the ECS formatting for you, and your Elastic
+Stack will be more context aware. Completing this guide helps you collect more
+events and integrate more sources into your Logstash compatible SIEM or Azure
+Sentinel setup with off-the-shelf SensorFleet solution.
