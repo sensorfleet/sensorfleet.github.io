@@ -10,7 +10,7 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
-2.3.6, staging 2021-07-14:
+2.3.6, staging 2021-07-14, beta 2021-08-09:
 Permanent snapshot name: staging-2.3.6-70223
 
 NOTE: Release has some breaking changes:
