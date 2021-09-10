@@ -10,17 +10,14 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
-2.3.8: published 2021-09-07
+2.3.8: published 2021-09-09
 Permanent snapshot name: release-2.3.8
 
 - Bug fixes:
   [SF-2259] - LogForwarder: Some fields are missing in bundled transient events
   [SF-2260] - SensorMessageBroker: Complex event subscription term fails with fleet tool
 
-- Other changes:
-  [SF-2169] - User management backend support: Add user_management option in SensorConfig
-
-2.3.7: published 2021-08-23
+2.3.7: published 2021-08-23, channels release-2.3
 Permanent snapshot name: release-2.3.7
 
 - Bug fixes:
