@@ -240,6 +240,13 @@ img.dropshadow {
   );
 }
 
+.below {
+  margin-top: 70px;
+  padding-left: 70px;
+  padding-right: 70px;
+  width: auto;
+}
+
 .bg-img {
   min-height: 100vh;
   text-align: center;
@@ -341,16 +348,25 @@ bg-dark2 h1,
     min-height: 75vh;
     padding-top: 20vh;
   }
+
   .header h1 {
     font-size: 28pt;
   }
+
   .box {
     width: 85vw;
     margin-top: -30vh;
   }
+
+  .below {
+    margin-top: 70px;
+    width: auto;
+  }
+
   .team .bio:nth-of-type(3n) {
     border-right: none;
   }
+
   .team .bio:nth-of-type(2n) {
     border-right: none;
   }
@@ -399,6 +415,12 @@ bg-dark2 h1,
     width: 90vw;
     margin-top: -48vh;
     padding: 10px;
+  }
+
+  .below {
+    margin-top: 70px;
+    width: auto;
+    padding: 30px;
   }
 
   div#mobilelogo {
