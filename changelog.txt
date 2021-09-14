@@ -10,6 +10,12 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
+2.3.9: published 2021-09-14
+Permanent snapshot name: release-2.3.9
+
+- Bug fixes:
+  [SF-2271] - UI: Zeek Custom Configuration made from UI is invalid
+
 2.3.8: published 2021-09-09
 Permanent snapshot name: release-2.3.8
 
