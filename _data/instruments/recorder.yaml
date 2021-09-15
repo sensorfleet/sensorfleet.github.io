@@ -41,3 +41,5 @@ produced_event_types:
   - match: instruments.recorder.rule_hit_event
     type: exact
     title: Recorder recorded data matching a rule
+provided_capabilities:
+  - record
