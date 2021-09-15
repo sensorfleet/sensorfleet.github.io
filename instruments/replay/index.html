@@ -1,0 +1,60 @@
+---
+layout: datasheet
+title: Replay Instrument
+description: Replay Instrument can be used to replay traffic captured to pcap file. Using Replay Instrument allows to use instruments like Suricata or Zeek IDS, Passive DNS, Netflow or Recorder to analyze contents of captured traffic instead of live traffic.
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  Replay Instrument can be used to replay packets from <code>pcap</code> -file
+  to mirror-bridge interface on Sensor. Replay Instrument can replay the data
+  from <code>pcap</code> -file as-is or with configurable custom speed. With
+  Replay Instrument the sensor can be used to analyze data captured into
+  <code>pcap</code> -file using any available passive Instruments (Zeek or
+  Suricata IDS, Traffic Recorder, Netflow, etc.). Replay Instrument can also be
+  used to verify IDS rulesets using previously recorded traffic to verify that
+  loaded rulesets raise relevant alerts. The recorded traffic can be replayed
+  once, or looped multiple times.
+</p>
+<h2 id="properties">Properties</h2>
+<table style="width: 61%">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Traffic Analysis, Testing</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>Active</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>
+        <ul>
+          <li>Interface where to replay data</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Data retention</td>
+      <td>Does not store data</td>
+    </tr>
+    <tr class="odd">
+      <td>Management UI</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>

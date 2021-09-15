@@ -1,0 +1,28 @@
+---
+name: Replay
+developer: SensorFleet Oy
+title: Instrument for replaying pcap data
+categories: ["Traffic Analysis", "Testing"]
+description:
+  Replay Instrument can be used to replay traffic captured to pcap file. Using
+  Replay Instrument allows to use instruments like Suricata or Zeek IDS, Passive
+  DNS, Netflow or Recorder to analyze contents of captured traffic instead of
+  live traffic.
+
+has_ui: false
+data_retention_desc: Does not store data
+performance_desc: Does not generate significant CPU or IO load
+required_interfaces:
+  - type: mirror-bridge
+    capabilities:
+      - tx
+    description: Interface where to replay data
+network_access_type: active
+relations: []
+produced_event_types:
+  - match: instruments.replay.pcap.started
+    type: exact
+    title: Pcap replay started
+  - match: instruments.replay.pcap.completed
+    type: exact
+    title: Pcap replay completed
