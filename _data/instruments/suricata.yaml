@@ -42,3 +42,5 @@ network_access_type: passive
 performance_desc:
   Suricata Instrument easily handles several gigabits per second of traffic on a
   F-Probe hardware on a typical traffic profile.
+used_capabilities:
+  - record
