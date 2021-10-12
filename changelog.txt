@@ -10,6 +10,12 @@ Contact SensorFleet to obtain new version of the ansible playbook, it's not yet 
 any repository.
 
 
+2.3.10: published 2021-10-12
+Permanent snapshot name: release-2.3.10
+
+- Bug fixes:
+  [SF-2291] - Rule Manager: Upgrading to release-2.3 may require re-adding Rule Manager (database migration error)
+
 2.3.9: published 2021-09-14
 Permanent snapshot name: release-2.3.9
 
