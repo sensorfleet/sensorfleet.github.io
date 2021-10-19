@@ -1,0 +1,15 @@
+.more-hidden {
+	display: none;
+}
+
+.more-visible {
+	display: initial;
+}
+
+.no-js .more-hidden {
+	display: initial;
+}
+
+.no-js .showhide-control {
+	display: none;
+}

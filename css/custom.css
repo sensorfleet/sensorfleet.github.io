@@ -74,6 +74,10 @@ h6 {
   margin-top: 0.5rem;
 }
 
+li {
+  margin-bottom: 0.5rem;
+}
+
 .navbar {
   background: transparent;
   background-color: none;
