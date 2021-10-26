@@ -1,16 +1,20 @@
 SensorFleet software changelog
 
-Note: development branch is a non-tested ongoing automatically updated
-release that should not be used in production. However, if you know what you are doing,
-with caution and enough knowledge, you can use it to verify bugfixes before the actual release.
-Refer to User Manual how to choose a release for your software upgrade to use.
-
 Changes marked with ansible mean that an ansible re-run with new playbook is required.
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+See User Manual for details on release channels and their usage.
 
-2.3.10: published 2021-10-12
+Release specific channels:
+* release-2.3: version 2.3.10 (beta 2021-10-26)
+
+Old-style release channel:
+* staging: version 2.3.10
+* beta: version 2.3.10
+* stable: version 2.2.3
+
+2.3.10: published 2021-10-12, beta 2021-10-26
 Permanent snapshot name: release-2.3.10
 
 - Bug fixes:
