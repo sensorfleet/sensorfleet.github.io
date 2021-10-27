@@ -190,6 +190,31 @@ div.boxes a.btn {
   margin-left: -100px;
 }
 
+.phasecols {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+div.phasecols  div {
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+div.phasecols div:nth-child(1) {background: #81898F}
+div.phasecols div:nth-child(2) {background: #6C757D}
+div.phasecols div:nth-child(3) {background: #5B6069}
+div.phasecols div:nth-child(4) {background: #4B5055}
+
+div.phasecols img {
+  max-height: 100px;
+  width: auto;
+  margin: 1.3em;
+  filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.2));
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bio {
   margin: 40px 20px 40px 0;
   padding-left: 20px;
