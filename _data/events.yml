@@ -1,3 +1,11 @@
+slush_2021:
+    name: Slush 2021
+    header: 1-2 December 2021 | Helsinki, Finland
+    image: slush-2021.png
+    description: "Ping us in Brella!"
+    url: https://www.slush.org/events/helsinki/
+    past: 2021-12-4
+
 cyber_security_cloud_expo_2020:
   name: Cyber Security & Cloud EXPO - Global 2020
   header: 17-18 March 2020 | Olympia London, UK
