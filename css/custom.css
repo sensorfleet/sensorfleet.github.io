@@ -74,6 +74,10 @@ h6 {
   margin-top: 0.5rem;
 }
 
+li {
+  margin-bottom: 0.5rem;
+}
+
 .navbar {
   background: transparent;
   background-color: none;
@@ -184,6 +188,32 @@ div.boxes a.btn {
   bottom: 10px;
   left: 50%;
   margin-left: -100px;
+}
+
+.phasecols {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+div.phasecols  div {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+div.phasecols div:nth-child(1) {background: #81898F}
+div.phasecols div:nth-child(2) {background: #6C757D}
+div.phasecols div:nth-child(3) {background: #5B6069}
+div.phasecols div:nth-child(4) {background: #4B5055}
+
+div.phasecols img {
+  max-height: 100px;
+  width: auto;
+  margin: 1.3em;
+  filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.2));
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bio {
