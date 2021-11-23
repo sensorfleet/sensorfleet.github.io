@@ -17,9 +17,12 @@ produced_event_types:
   - match: instruments.portdiff.first_scan
     type: exact
     title: First scan completed
-  - match: instruments.portdiff.changes
+  - match: instruments.portdiff.changes.ports
     type: exact
     title: Changes since last scan
+  - match: instruments.portdiff.changes.banners
+    type: exact
+    title: Changes in banners since last scan
   - match: instruments.portdiff.full
     type: exact
     title: Full scan results
