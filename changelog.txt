@@ -7,12 +7,24 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.3: version 2.3.11 (stable 2021-12-14)
+* release-2.3: version 2.3.12 (stable 2021-12-17)
 
 Old-style release channel:
-* staging: version 2.3.11
-* beta: version 2.3.11
-* stable: version 2.3.11
+* staging: version 2.3.12
+* beta: version 2.3.12
+* stable: version 2.3.12
+
+2.3.12: stable 2021-12-17
+
+Notes on log4shell patches:
+  According to Elastic's updated Security Advisory, Logstash is not affected by the newer CVE-2021-45046.
+  Just to be sure, we decided to remove the potentially flawed Java class anyway. Hence, SF-2406.
+  Also it is not known if Arkime (a main component of Recorder) was affected, but because it contains a vulnerable
+  ElasticSearch component we're patching it anyway.
+
+- Bug fixes:
+  [SF-2406] - Log Forwarder: a further CVE-2021-45046 log4shell mitigation (patched Logstash log4j jar to remove affected class)
+  [SF-2401] - Recorder: CVE-2021-44228 & CVE-2021-45046 log4shell fix (patched ElasticSearch log4j jar to remove affected class)
 
 2.3.11: stable 2021-12-14
 
