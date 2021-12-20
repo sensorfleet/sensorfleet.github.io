@@ -29,6 +29,9 @@ produced_event_types:
   - match: instruments.portdiff.triggered_scan
     type: exact
     title: Results from scan triggered by another instrument
+  - match: instruments.portdiff.alert.open_port.tcp
+    type: exact
+    title: Opnen port not allowed by baseline detected
 required_interfaces:
   - type: any
     capabilities:
