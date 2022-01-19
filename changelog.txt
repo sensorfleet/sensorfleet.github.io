@@ -14,6 +14,127 @@ Old-style release channel:
 * beta: version 2.3.12
 * stable: version 2.3.12
 
+Unstable development rolling releases:
+* devel: version 2.4.0
+
+2.4.0: devel
+
+Highlights:
+* Major 3rd party software updates (e.g. updated Alpine, Arkime, Zeek, Suricata, lot of libraries)
+* User Management support
+* PassiveDNS search UI
+* PortDiff improvements (e.g. baseline, banners)
+* Major performance improvements (TrafficGuard, PassiveDNS)
+
+- Bug fixes:
+  [SF-2435] - Suricata instrument: Suricata classification config is overwritten
+  [SF-2428] - Suricata instrument: Suricata tries to create trigger message from event with no context_uuid and fails
+  [SF-2427] - API: Time-critical transient event deliveries can be delayed in certain scenarios
+  [SF-2421] - Sensor Orchestrator, UI: get_physical_interfaces does not update "user" field immediately
+  [SF-2418] - UI: Fix instrument download editing
+  [SF-2417] - API: Fix download validation in SensorConfig schema
+  [SF-2412] - PortDiff Instrument: PortDiff: Exposed services descriptions have trailing spaces
+  [SF-2405] - UI: Sensor/FM UI caches a failed configuration change
+  [SF-2400] - SensorFu Beacon: SensorFu Beacon output events do not work
+  [SF-2398] - TrafficGuard Manager: Fix autovacuum and autoanalyze for tgmanager
+  [SF-2395] - FleetCert: python3.8 missing from sensor in some installations
+  [SF-2394] - PortDiff Instrument: Banner diff event does not contain all removed banners
+  [SF-2375] - Sensor Orchestrator: Sensor orchestrator network thread crash while upgrading
+  [SF-2360] - UI: Instrument custom config UI boolean values are wrong
+  [SF-2353] - API: Subscription worker is not cancelled properly on all cases
+  [SF-2348] - SensorFu Beacon: Beacon instrument does not handle restarting (or failure to stop) non-running beacon binary
+  [SF-2339] - Sensor Orchestrator: Orchestrator should disable unneeded features to bridged veth legs
+  [SF-2335] - Log Forwarder Instrument: Force a timeout for beats connection
+  [SF-2334] - Log Forwarder Instrument: logstash force kill is broken
+  [SF-2327] - PortDiff Instrument: PortDiff does not handle shutdown when scan is running
+  [SF-2317] - Rule Importer: Rule Importer Instrument refuses to start
+  [SF-2307] - Sensor Orchestrator: Invalid network configuration breaks Sensor Orchestrator logic
+  [SF-2306] - Replay Instrument, UI: Replay Instrument displays duplicate errors
+  [SF-2300] - API: Mock sensor's add_event() does not handle dots in keys
+  [SF-2291] - Rule Manager: Upgrading from 2.1.4/2.2.3 to 2.3.X may result in unusable database
+  [SF-2290] - UI: Sensor UI: Create users config if it's missing
+  [SF-2282] - UI: DHCP checkbox disappears from UI and never comes back
+  [SF-2281] - Replay Instrument: Replay instrument refuses to start task with the same filename
+  [SF-2279] - Base Packages, Sensor Image: Apt may refuse to install sensorfleet packages when grub-efi-amd64-signed is installed
+  [SF-2277] - Rule Manager: Implement proper error handling and/or restarting of download poller task
+  [SF-2270] - UI: Cannot view events from another sensor
+  [SF-2255] - PassiveDNS: PassiveDNS database slowdown due to missing periodic autoanalyze
+  [SF-2235] - UI: FM UI takes a long time to restart/stop
+  [SF-2227] - Rule Manager: Rule Manager import regex is insufficient for some rule sources
+  [SF-2221] - Recorder Instrument: Recorder fetch PCAP API does not return all packets with the requested filter
+  [SF-2197] - Instruments should be started on 'default' runlevel
+  [SF-2145] - UI: UI error after mis-selecting bridge
+  [SF-1747] - Sensor Orchestrator: sensor-orchestrator removes default route
+  [SF-1122] - Recorder Instrument: moloch-capture does not stop without kill -9
+  [SF-1008] - UI: Automatic IP assignment for bridges is broken
+  [SF-978] - UI: Version query fails after update
+  [SF-515] - UI: New context menu should close others
+
+- New features and other improvements:
+  [SF-2419] - UI: Improve Sensor config validation before save
+  [SF-2413] - UI: Simple UI: API endpoint to display original Portdiff event
+  [SF-2411] - PortDiff Instrument: Set loopback interface up on instrument container
+  [SF-2404] - Fleet Tool: Fleet Tool: Export configs for Ansible
+  [SF-2403] - Fleet Tool: Fleet Tool: Allow empty and instrument-only config IDs
+  [SF-2399] - SensorFu Beacon: SensorFu beacon changed output from stderr to stdout
+  [SF-2393] - PortDiff Instrument: Add support for alerting about open ports to portdiff
+  [SF-2392] - PortDiff Instrument: Add information about port groups to portdiff events
+  [SF-2389] - Zeek Instrument: Upgrade zeek to fix build / alpine 3.14 compat
+  [SF-2388] - Recorder Instrument: Upgrade recorder to fix build/alpine 3.14 compat
+  [SF-2386] - UI: Simple UI for portdiff needs to be updated to new portdiff event format
+  [SF-2383] - TrafficGuard Manager: Backport tgmanager to use PostgreSQL 12
+  [SF-2382] - Rule Manager: Backport rmgr to use PostgreSQL 12
+  [SF-2380] - PortDiff Instrument: Alternative output format for portdiff
+  [SF-2379] - PassiveDNS: Backport PassiveDNS to use postgresql 12 instead of Alpine's 13.5
+  [SF-2378] - Suricata instrument: Attach direction, source/destination and protocol information as event metadata
+  [SF-2377] - API: Allow instruments to attach metadata to events
+  [SF-2376] - PortDiff Instrument: Add support for port groups from exposed-services repository
+  [SF-2371] - UI: User management: update user's own information
+  [SF-2369] - UI: User management: auth check for Instrument UIs
+  [SF-2359] - PassiveDNS: Implement Search UI
+  [SF-2358] - Log Forwarder Instrument: Fix unstable logforwarder build (add gpg keys to git)
+  [SF-2354] - Sensor Orchestrator: Allow instruments to change health check status faster
+  [SF-2346] - Sensor Orchestrator: Implement instrument/sensor restart events
+  [SF-2340] - Sensor Orchestrator: Implement Sensor reboot/shutdown backend
+  [SF-2337] - PassiveDNS: PassiveDNS proper mock mode for UI development
+  [SF-2329] - PortDiff Instrument: Add support for reading banners from listening ports
+  [SF-2328] - PortDiff Instrument: Update portdiff to use new version of pscan
+  [SF-2321] - PortDiff Instrument: Pscan updates
+  [SF-2308] - PassiveDNS: Implement error reporting for Suricata augmentation handler
+  [SF-2305] - Cowrie Instrument: Add unit tests to cowrie instrument
+  [SF-2303] - PassiveDNS: Support turning off PassiveDNS augmentation events
+  [SF-2302] - Fleet Tool: Fleet Tool: Enable/disable user management
+  [SF-2301] - PortDiff Instrument: PortDiff: Add scanned hosts and ports counts to event
+  [SF-2294] - Replay Instrument: Update datasheet
+  [SF-2293] - UI: Sensor-UI: Events backend for Simple UI
+  [SF-2289] - Replay Instrument: Update tcpreplay to version 4.3.4
+  [SF-2288] - UI: Sensor UI: User management
+  [SF-2283] - Kernel: Mellanox mlx4/mlx5 support for kernel
+  [SF-2274] - UI: Sensor UI: API tokens should not need version header
+  [SF-2273] - API: Update pymongo to latest version and fix API usage
+  [SF-2268] - UI: Sensor-UI: Disable user
+  [SF-2267] - Suricata instrument: Allow suricata eve-log base settings to be overridden
+  [SF-2266] - Capco: Update to newest PF_RING library version
+  [SF-2265] - Kernel: Update kernel to 5.4.143
+  [SF-2256] - API, Sensor Orchestrator: Users config for sensor & FM
+  [SF-2253] - Suricata instrument: Update suricata to version 6.0.3
+  [SF-2239] - Recorder Instrument: Remove unnecessary configuration options for context recording
+  [SF-2233] - API: Add permission checks for multicast messages
+  [SF-2232] - Suricata instrument: Send capability_use messages for alerts etc. requiring recording
+  [SF-2231] - Recorder Instrument: Implement recording data according to capability_use message
+  [SF-2230] - API: Handle capability_use message
+  [SF-2222] - UI: API token support for Sensor-UI backend
+  [SF-2209] - Rule Manager: Support classification.config in rule manager
+  [SF-2182] - Ansible: mongodb_wiredtiger_cache_size_gb should have some default value
+  [SF-2169] - UI: User management support
+  [SF-2146] - UI: Instrument interface selector rewrite
+  [SF-2123] - UI: Sensor-UI should indicate the used software release branch in Sensor UI System page
+  [SF-1834] - Instruments: Update to Alpine 3.14, rewrite build tooling, venv path changes etc
+  [SF-1723] - API, Sensor Orchestrator: Support for Instrument restarting
+  [SF-939] - API, Sensor Orchestrator: get_related_instruments is not mocked
+  [SF-677] - UI: UI doesn't display an error when configuring a sensor that is timeouting
+  [SF-504] - UI: Password change frontend & backend
+
 2.3.12: stable 2021-12-17
 
 Notes on log4shell patches:
