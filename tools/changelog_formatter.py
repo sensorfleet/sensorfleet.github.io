@@ -43,7 +43,8 @@ for row in reader:
             elif col == "Summary":
                 title = val
             else:
-                raise ValueError(f"Unknown key {col}")
+                #raise ValueError(f"Unknown key {col}")
+                continue
             n += 1
         if not components:
 
