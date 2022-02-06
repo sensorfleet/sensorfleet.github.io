@@ -1,6 +1,8 @@
 ---
 layout: post
 author: sami
+og_image: /img/posts/our-approach/our-approach.png
+tag: Blog post
 ---
 
 This blog is about building our next generation cyber sensor platform. First we

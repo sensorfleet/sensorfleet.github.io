@@ -6,6 +6,7 @@ description:
   a honeypot-like canary file on a file server.
 title: Using Zeek to find persistent threats by using a canary file (part 2)
 og_image: /img/posts/zeek-sensorfleet.png
+tag: Blog post
 excerpt:
   A blog on how to use Zeek IDS on SensorFleet platform to plant a honeypot-like
   canary file on a file server. Just by using network monitoring.

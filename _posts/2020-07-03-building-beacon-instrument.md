@@ -1,6 +1,8 @@
 ---
 layout: post
 author: jtt
+og_image: /img/posts/building-beacon-instrument/building-beacon-instrument.png
+tag: Blog post
 excerpt:
   Across the hall from SensorFleet office is another cyber security startup,
   SensorFu, and they have an awesome product called Beacon. Beacon is deployed

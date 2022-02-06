@@ -7,6 +7,7 @@ description:
 title:
   Using Zeek to find persistent threats by monitoring DNS anomalies (part 1)
 og_image: /img/posts/zeek-sensorfleet.png
+tag: Blog post
 excerpt:
   This is a blog on how to detect persistent DNS connections using SensorFleet
   and the Zeek IDS. Some persistent threats may use DNS functionality to get
