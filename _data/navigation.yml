@@ -7,17 +7,17 @@
 - name: Instruments
   link: /instruments/
 
-- name: Partners
-  link: /partners/
+- name: Latest
+  link: /latest/
 
 - name: About us
   link: /about-us/
 
-- name: Blog
-  link: /blog/
+#- name: Events
+#  link: /events/
 
-- name: Events
-  link: /events/
+- name: Partners
+  link: /partners/
 
 - name: Contact us
   link: /#contact

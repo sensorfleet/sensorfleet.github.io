@@ -1,6 +1,8 @@
 ---
 layout: post
 author: jtt
+og_image: /img/posts/sensorfleet.png
+tag: Blog post
 excerpt:
   Security tools and appliances typically run with high privileges, have access
   to sensitive traffic and their security has to be taken at face value. Luckily

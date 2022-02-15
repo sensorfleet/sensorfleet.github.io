@@ -6,6 +6,7 @@ description:
   SensorFleet Sensor for streaming events to your SIEM.
 title: Streaming events from SensorFleet to Elastic Stack or Azure Sentinel
 og_image: /img/posts/logstash_sensorfleet.png
+tag: Blog post
 excerpt:
   This blog post will show you step-by-step how to configure Logstash on top of
   SensorFleet Sensor for streaming events to your SIEM.
