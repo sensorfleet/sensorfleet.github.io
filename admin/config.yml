@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: sensorfleet/sensorfleet.github.io
+  branch: master # Branch to update (optional; defaults to master)
+#  api_root: https://api.github.com
+#  auth_endpoint: auth
+#  site_domain: cms.netlify.com
+#  cms_label_prefix:	netlify-cms/
+publish_mode: editorial_workflow
+media_folder: "img/uploads"
+collections:
+  - name: "latest" # Used in routes, e.g., /admin/collections/blog
+    label: "Latest" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Author", name: "author", widget: "string" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Description", name: "description", widget: "string"}
+      - {label: "OG Image", name: "og_image", widget: "image"}
+      - {label: "Tag", name: "tag", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
