@@ -9,7 +9,7 @@ description:
   networks. I hope this blog will give the reader an insider view of what it is
   actually like to patch and detect those vulnerabilities.
 title:
-  Log4Shell Vulnerability - the day when Security industry was working overtime
+  Log4Shell Vulnerability - the day when security industry was working overtime
 excerpt:
   This blog is about the series of Log4Shell vulnerabilities, how they affected
   our software development and how we helped our customer to validate their
