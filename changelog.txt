@@ -23,6 +23,7 @@ Highlights:
 * Major 3rd party software updates (e.g. updated Alpine, Arkime, Zeek, Suricata, lot of libraries)
 * User Management support
 * PassiveDNS search UI
+* Simple UI for PortDiff
 * PortDiff improvements (e.g. baseline, banners)
 * Major performance improvements (TrafficGuard, PassiveDNS)
 
