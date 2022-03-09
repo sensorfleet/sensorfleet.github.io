@@ -89,8 +89,6 @@ Highlights:
   [SF-2378] - Suricata instrument: Attach direction, source/destination and protocol information as event metadata
   [SF-2377] - API: Allow instruments to attach metadata to events
   [SF-2376] - PortDiff Instrument: Add support for port groups from exposed-services repository
-  [SF-2371] - UI: User management: update user's own information
-  [SF-2369] - UI: User management: auth check for Instrument UIs
   [SF-2359] - PassiveDNS: Implement Search UI
   [SF-2358] - Log Forwarder Instrument: Fix unstable logforwarder build (add gpg keys to git)
   [SF-2354] - Sensor Orchestrator: Allow instruments to change health check status faster
@@ -108,7 +106,6 @@ Highlights:
   [SF-2294] - Replay Instrument: Update datasheet
   [SF-2293] - UI: Sensor-UI: Events backend for Simple UI
   [SF-2289] - Replay Instrument: Update tcpreplay to version 4.3.4
-  [SF-2288] - UI: Sensor UI: User management
   [SF-2283] - Kernel: Mellanox mlx4/mlx5 support for kernel
   [SF-2274] - UI: Sensor UI: API tokens should not need version header
   [SF-2273] - API: Update pymongo to latest version and fix API usage
