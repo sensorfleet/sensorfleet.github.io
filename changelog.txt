@@ -53,7 +53,6 @@ Highlights:
   [SF-2306] - Replay Instrument, UI: Replay Instrument displays duplicate errors
   [SF-2300] - API: Mock sensor's add_event() does not handle dots in keys
   [SF-2291] - Rule Manager: Upgrading from 2.1.4/2.2.3 to 2.3.X may result in unusable database
-  [SF-2290] - UI: Sensor UI: Create users config if it's missing
   [SF-2282] - UI: DHCP checkbox disappears from UI and never comes back
   [SF-2281] - Replay Instrument: Replay instrument refuses to start task with the same filename
   [SF-2279] - Base Packages, Sensor Image: Apt may refuse to install sensorfleet packages when grub-efi-amd64-signed is installed
@@ -108,9 +107,7 @@ Highlights:
   [SF-2293] - UI: Sensor-UI: Events backend for Simple UI
   [SF-2289] - Replay Instrument: Update tcpreplay to version 4.3.4
   [SF-2283] - Kernel: Mellanox mlx4/mlx5 support for kernel
-  [SF-2274] - UI: Sensor UI: API tokens should not need version header
   [SF-2273] - API: Update pymongo to latest version and fix API usage
-  [SF-2268] - UI: Sensor-UI: Disable user
   [SF-2267] - Suricata instrument: Allow suricata eve-log base settings to be overridden
   [SF-2266] - Capco: Update to newest PF_RING library version
   [SF-2265] - Kernel: Update kernel to 5.4.143
@@ -121,7 +118,6 @@ Highlights:
   [SF-2232] - Suricata instrument: Send capability_use messages for alerts etc. requiring recording
   [SF-2231] - Recorder Instrument: Implement recording data according to capability_use message
   [SF-2230] - API: Handle capability_use message
-  [SF-2222] - UI: API token support for Sensor-UI backend
   [SF-2209] - Rule Manager: Support classification.config in rule manager
   [SF-2182] - Ansible: mongodb_wiredtiger_cache_size_gb should have some default value
   [SF-2169] - UI: User management support
@@ -131,7 +127,6 @@ Highlights:
   [SF-1723] - API, Sensor Orchestrator: Support for Instrument restarting
   [SF-939] - API, Sensor Orchestrator: get_related_instruments is not mocked
   [SF-677] - UI: UI doesn't display an error when configuring a sensor that is timeouting
-  [SF-504] - UI: Password change frontend & backend
 
 2.3.12: stable 2021-12-17
 
