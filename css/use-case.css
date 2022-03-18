@@ -1,7 +1,10 @@
+html {
+  font-size: 16px;
+}
 body {
   background-color: #18181b;
   color: #f4f4f5;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   position: relative;
 }
@@ -12,6 +15,16 @@ h4,
 h5,
 h6 {
   color: #e9ae4a;
+  margin-bottom: 0.6em;
+}
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.2em;
 }
 a {
   color: #e9ae4a;
@@ -19,6 +32,9 @@ a {
 a:hover {
   color: #e9ae4a;
   text-decoration: underline;
+}
+figure {
+  margin-bottom: 1.5rem;
 }
 .container {
   padding-left: 1.5rem;
@@ -73,8 +89,13 @@ a:hover {
 .nav .dropdown-item:hover {
   background-color: #3f3f46;
 }
+.page-title > small {
+  color: #a1a1aa;
+  display: block;
+  font-size: 0.7em;
+}
 .block {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .quote {
   background: #27272a;
@@ -150,7 +171,6 @@ a:hover {
   border: 2px solid #525252;
   border-width: 2px 0;
   display: flex;
-  gap: 2rem;
   padding: 1.5rem;
   position: relative;
 }
@@ -173,34 +193,23 @@ a:hover {
 .prev-next-link-next {
   margin: -2px 0 0;
 }
-.contact {
-  padding: 3rem 0 6rem;
+.prev-next-link-prev .prev-next-arrow,
+.prev-next-link-next .prev-next-arrow {
+  margin: 0 1.5rem 0 0;
 }
-
-@media screen and (max-width: 767.98px) {
-  .block [class*="col-"] > :first-child {
-    margin-top: 0;
-  }
-  .block [class*="col-"] + [class*="col-"] {
-    margin-top: 1em;
-  }
-  .block [class*="col-"] > :last-child {
-    margin-bottom: 0;
-  }
-  .contact [class*="col-"] > :first-child {
-    margin-top: 0;
-  }
-  .contact [class*="col-"] + [class*="col-"] {
-    margin-top: 2em;
-  }
-  .contact [class*="col-"] > :last-child {
-    margin-bottom: 0;
-  }
+.contact {
+  padding: 3rem 0 4rem;
 }
 
 @media screen and (min-width: 768px) {
   body {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1em;
   }
   .nav {
     margin-bottom: 2rem;
@@ -208,6 +217,9 @@ a:hover {
   }
   .nav .dropdown-toggle {
     font-size: 1.2rem;
+  }
+  .page-title {
+    text-align: center;
   }
   .quote {
     padding: 2rem 2rem calc(2rem + 4px);
@@ -218,8 +230,8 @@ a:hover {
   .block {
     border: 2px solid #525252;
     margin-bottom: 0;
-    padding-bottom: 4rem;
-    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
     position: relative;
   }
   .block::before {
@@ -275,7 +287,7 @@ a:hover {
     margin-top: -2px;
   }
   .contact {
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
 }
 
@@ -299,30 +311,34 @@ a:hover {
     margin: 0 -1px 0 0;
     text-align: right;
   }
+  .prev-next-link-prev .prev-next-arrow {
+    margin: 0 2rem 0 0;
+  }
   .prev-next-link-next {
     border-width: 2px 0 2px 2px;
     margin: 0 0 0 -1px;
   }
   .prev-next-link-next .prev-next-arrow {
+    margin: 0 0 0 2rem;
     order: 1;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .block {
-    padding-bottom: 6rem;
-    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
   }
   .block:nth-child(odd) {
-    margin-left: 6rem;
-    padding-right: 6rem;
+    margin-left: 5rem;
+    padding-right: 5rem;
   }
   .block:nth-child(even) {
-    margin-right: 6rem;
-    padding-left: 6rem;
+    margin-right: 5rem;
+    padding-left: 5rem;
   }
   .block:last-child {
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
   }
   .prev-next-link {
     padding: 3rem 4rem;
