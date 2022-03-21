@@ -35,6 +35,7 @@ a:hover {
 }
 figure {
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 .container {
   padding-left: 1.5rem;
@@ -59,6 +60,7 @@ figure {
 }
 .nav {
   background: linear-gradient(to bottom, #18181bff 50%, #18181b00);
+  margin-bottom: 1rem;
   padding: 1rem 0;
 }
 .nav .logo {
@@ -96,6 +98,17 @@ figure {
 }
 .block {
   margin-bottom: 2rem;
+}
+.block > :first-child,
+.block [class*=col-] > :first-child {
+  margin-top: 0;
+}
+.block > :last-child,
+.block [class*=col-] > :last-child {
+  margin-bottom: 0;
+}
+.block [class*=col-] + [class*=col-] {
+  margin-top: 1rem;
 }
 .quote {
   background: #27272a;
@@ -212,7 +225,6 @@ figure {
     margin-bottom: 1em;
   }
   .nav {
-    margin-bottom: 2rem;
     padding: 2rem 0;
   }
   .nav .dropdown-toggle {
@@ -231,7 +243,7 @@ figure {
     border: 2px solid #525252;
     margin-bottom: 0;
     padding-bottom: 3rem;
-    padding-top: 1rem;
+    padding-top: 3rem;
     position: relative;
   }
   .block::before {
@@ -283,6 +295,9 @@ figure {
     bottom: 0;
     display: block;
   }
+  .block [class*=col-] + [class*=col-] {
+    margin-top: 0;
+  }
   .block + .block {
     margin-top: -2px;
   }
@@ -325,21 +340,6 @@ figure {
 }
 
 @media screen and (min-width: 1200px) {
-  .block {
-    padding-bottom: 4rem;
-    padding-top: 2rem;
-  }
-  .block:nth-child(odd) {
-    margin-left: 5rem;
-    padding-right: 5rem;
-  }
-  .block:nth-child(even) {
-    margin-right: 5rem;
-    padding-left: 5rem;
-  }
-  .block:last-child {
-    padding-bottom: 5rem;
-  }
   .prev-next-link {
     padding: 3rem 4rem;
   }
