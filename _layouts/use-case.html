@@ -62,47 +62,47 @@
           class="prev-next-link prev-next-link-prev"
           href="{{ prev_page.url }}"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="prev-next-arrow"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          <span>
-            <span class="prev-next-label">Previous use case</span>
-            <span class="prev-next-title">{{ prev_page.title }}</span></span
-          >
+          <span class="prev-next-label">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="prev-next-arrow"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            <span>Previous use case</span>
+          </span>
+          <span class="prev-next-title">{{ prev_page.title }}</span>
         </a>
         <a
           class="prev-next-link prev-next-link-next"
           href="{{ next_page.url }}"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="prev-next-arrow"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            />
-          </svg>
-          <span>
-            <span class="prev-next-label">Next use case</span>
-            <span class="prev-next-title">{{ next_page.title }}</span></span
-          >
+          <span class="prev-next-label">
+            <span>Next use case</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="prev-next-arrow"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </span>
+          <span class="prev-next-title">{{ next_page.title }}</span>
         </a>
       </div>
       <div class="contact">
