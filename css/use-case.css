@@ -91,7 +91,7 @@ figure {
 .page-title > small {
   color: #a1a1aa;
   display: block;
-  font-size: 0.7em;
+  font-size: 1.4rem;
 }
 .block {
   margin-bottom: 2rem;
@@ -207,7 +207,7 @@ figure {
     padding: 2rem 0;
   }
   .page-title {
-    text-align: center;
+    font-size: 2.6rem;
   }
   .quote {
     padding: 2rem 2rem calc(2rem + 4px);
