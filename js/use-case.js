@@ -3,15 +3,15 @@
 
   function onLoad() {
     document.addEventListener("click", function (event) {
-      if (event.target.closest("#use-cases-button")) {
-        useCasesMenu().classList.toggle("show");
+      if (event.target.closest("#menu-button")) {
+        menu().classList.toggle("show");
       } else {
-        useCasesMenu().classList.remove("show");
+        menu().classList.remove("show");
       }
     });
   }
 
-  function useCasesMenu() {
-    return document.querySelector("#use-cases-menu");
+  function menu() {
+    return document.querySelector("#menu");
   }
 })();
