@@ -17,6 +17,9 @@ h6 {
   color: #e9ae4a;
   margin-bottom: 0.6em;
 }
+h3 {
+  font-size: 1.5rem;
+}
 a {
   color: #e9ae4a;
 }
@@ -38,9 +41,12 @@ figure {
 .lead {
   font-size: 1.1rem;
 }
+.btn {
+  white-space: nowrap;
+}
 .btn.btn-secondary {
   align-items: center;
-  background: #27272a;
+  background-color: #27272a;
   border-color: transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 2px 6px rgba(0, 0, 0, 0.2);
@@ -101,7 +107,7 @@ figure {
   text-transform: uppercase;
 }
 .nav .dropdown-divider {
-  border-color: #404040;
+  border-color: #525252;
 }
 .nav .dropdown-item {
   color: #f4f4f5;
@@ -113,12 +119,23 @@ figure {
   background-color: #3f3f46;
 }
 .page-title > small {
-  color: #a1a1aa;
+  color: #d4d4d4;
   display: block;
   font-size: 1.4rem;
+  margin-top: 0.25rem;
 }
 .block {
   margin-bottom: 2rem;
+}
+.block h3,
+.block h4,
+.block h5,
+.block h6 {
+  margin: 2.5rem 0 1rem;  
+}
+.block hr {
+  background-color: #525252;
+  margin: 3rem 0;
 }
 .block > :first-child,
 .block [class*="col-"] > :first-child {
@@ -132,7 +149,7 @@ figure {
   margin-top: 1rem;
 }
 .quote {
-  background: #27272a;
+  background-color: #27272a;
   border-radius: 1.2rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 6px 36px rgba(0, 0, 0, 0.5);
@@ -170,7 +187,7 @@ figure {
 }
 .screenshot {
   background-color: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #525252;
   border-radius: 1rem;
   padding: 0.5rem;
 }
@@ -178,31 +195,43 @@ figure {
   border-radius: 0.5rem;
   max-width: 100%;
 }
-.use-case-cards {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  margin: 1.5rem 0;
+.use-cases-title {
+  margin: 2rem 0 1rem;
+}
+.use-cases {
+  border: 1px solid #525252;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
   overflow: hidden;
 }
-.use-case-cards > .use-case-card:not(:first-of-type) {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.use-cases > .use-case + .use-case {
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-width: 1px 0 0;
+  margin-top: -1px;
 }
-.use-case-card {
+.use-case {
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.02);
   color: inherit;
-  display: block;
-  padding: 1.25rem;
+  display: flex;
+  padding: 0.75rem 1rem;
 }
-.use-case-card h3 {
-  font-size: 1.25rem;
-  margin: 0 0 0.8rem;
+.use-case > h4 {
+  color: #d4d4d4;
+  flex: 1;
+  font-size: 1rem;
+  margin: 0 1rem 0 0;
 }
-.use-case-card:hover {
+.use-case > .btn {
+  font-size: 0.9rem;
+}
+.use-case:hover {
   background-color: rgba(0, 0, 0, 0.2);
-  border-color: #737373;
   color: inherit;
   text-decoration: none;
+}
+.use-case:hover > h4 {
+  color: #e9ae4a;
 }
 .content {
   margin-bottom: 3rem;
@@ -224,6 +253,7 @@ figure {
 }
 .prev-next-label {
   align-items: center;
+  color: #d4d4d4;
   display: inline-flex;
   text-transform: uppercase;
 }
@@ -274,12 +304,6 @@ figure {
   .page-title {
     font-size: 2.6rem;
   }
-  .quote {
-    padding: 2rem 2rem calc(2rem + 4px);
-  }
-  .screenshot {
-    padding: 1rem;
-  }
   .content {
     margin-bottom: 6rem;
   }
@@ -291,7 +315,7 @@ figure {
     position: relative;
   }
   .block::before {
-    background: #18181b;
+    background-color: #18181b;
     border: 2px solid #525252;
     content: "";
     display: none;
@@ -345,6 +369,12 @@ figure {
   .block + .block {
     margin-top: -2px;
   }
+  .quote {
+    padding: 2rem 2rem calc(2rem + 4px);
+  }
+  .screenshot {
+    padding: 1rem;
+  }
   .prev-next {
     flex-direction: row;
   }
@@ -368,24 +398,5 @@ figure {
   }
   .contact {
     padding: 4rem 0;
-  }
-
-  @media screen and (min-width: 992px) {
-    .use-case-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    .use-case-cards > .use-case-card:not(:first-of-type) {
-      border-width: 0 0 0 1px;
-    }
-    .use-case-card {
-      display: flex;
-      flex-direction: column;
-      padding: 1.5rem;
-    }
-    .use-case-card-header,
-    .use-case-card-body {
-      flex: 1;
-    }
   }
 }

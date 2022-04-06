@@ -1,25 +1,35 @@
 <!-- prettier-ignore -->
-{% assign is_front_page = page.name == 'index.html' %}
+{% assign is_front_page = false %}
+{% if page.name == 'index.html' %}
+  {% assign is_front_page = true %}
+{% endif %}
+
 {% assign use_case_pages = '' | split: '' %}
-{% assign pages = site.html_pages | where: "layout", "use-case" | sort: "title" %}
+{% assign pages = site.html_pages | where: 'layout', 'use-case' | sort: 'title' %}
 {% for page in pages %}
   {% unless page.name == 'index.html' %}
     {% assign use_case_pages = use_case_pages | push: page %}
   {% endunless %}
 {% endfor %}
-{% for use_case_page in use_case_pages %}
-  {% if use_case_page == page %}
+
+{% assign attack_detection_pages = use_case_pages | where: 'category', 'attack-detection' %}
+{% assign forensic_data_pages = use_case_pages | where: 'category', 'forensic-data' %}
+{% assign integrity_monitoring_pages = use_case_pages | where: 'category', 'integrity-monitoring' %}
+{% assign grouped_use_case_pages = attack_detection_pages | concat: forensic_data_pages | concat: integrity_monitoring_pages %}
+
+{% for use_case_page in grouped_use_case_pages %}
+  {% if use_case_page.url == page.url %}
     {% assign current_index = forloop.index0 %}
     {% assign prev_index = current_index | minus: 1 %}
     {% assign next_index = current_index | plus: 1 %}
-    {% assign prev_page = use_case_pages[prev_index] %}
-    {% assign next_page = use_case_pages[next_index] %}
+    {% assign prev_page = grouped_use_case_pages[prev_index] %}
+    {% assign next_page = grouped_use_case_pages[next_index] %}
   {% endif %}
   {% unless prev_page %}
-    {% assign prev_page = use_case_pages | last %}
+    {% assign prev_page = grouped_use_case_pages | last %}
   {% endunless %}
   {% unless next_page %}
-    {% assign next_page = use_case_pages | first %}
+    {% assign next_page = grouped_use_case_pages | first %}
   {% endunless %}
 {% endfor %}
 
@@ -91,11 +101,25 @@
                     >Cyber Capability Fabric</a
                   >
                   <div class="dropdown-divider d-md-none"></div>
-                  <div class="dropdown-header d-md-none">Use cases</div>
-                  {% for page in use_case_pages %}
-                  <a class="dropdown-item" href="{{ page.url }}"
-                    >{{ page.title }}</a
-                  >
+                  <div class="dropdown-header">Attack detection</div>
+                  {% for page in attack_detection_pages %}
+                    <a class="dropdown-item" href="{{ page.url }}"
+                      >{{ page.title }}</a
+                    >
+                  {% endfor %}
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-header">Forensic data</div>
+                  {% for page in forensic_data_pages %}
+                    <a class="dropdown-item" href="{{ page.url }}"
+                      >{{ page.title }}</a
+                    >
+                  {% endfor %}
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-header">Integrity monitoring</div>
+                  {% for page in integrity_monitoring_pages %}
+                    <a class="dropdown-item" href="{{ page.url }}"
+                      >{{ page.title }}</a
+                    >
                   {% endfor %}
                 </div>
               </div>
