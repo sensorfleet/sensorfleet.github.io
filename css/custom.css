@@ -493,6 +493,20 @@ bg-dark2 h1,
     background: #202529;
     padding: 10px;
   }
+  .navbar-nav .dropdown-menu {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-nav .dropdown-item {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1.5rem;
+  }
+  .navbar-nav .dropdown-item:hover {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+  }
   .footer img,
   .funded img {
     max-height: 36px;

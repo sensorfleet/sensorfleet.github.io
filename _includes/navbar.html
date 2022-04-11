@@ -24,9 +24,19 @@
       </li>
 
       {% for item in site.data.navigation %}
-      <li class="nav-item {% if page.url == item.link %}active{% endif %}">
-        <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
-      </li>
+        {% if item.link == '/solution/' %}
+          <li class="nav-item dropdown {% if page.url == item.link %}active{% endif %}">
+            <a id="solutionDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">{{ item.name }}</a>
+            <div class="dropdown-menu" aria-labelledby="solutionDropdown">
+              <a class="dropdown-item" href="/solution/">Overview</a>
+              <a class="dropdown-item" href="/use-cases/">Use cases</a>
+            </div>
+          </li>
+        {% else %}
+          <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+            <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
     {% include linkedin.html %}
