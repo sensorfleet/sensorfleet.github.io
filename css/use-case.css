@@ -121,7 +121,7 @@ figure {
 .page-title > small {
   color: #d4d4d4;
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   margin-top: 0.25rem;
 }
 .block {
@@ -236,6 +236,24 @@ figure {
 .content {
   margin-bottom: 3rem;
 }
+.go-back {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.go-back-link {
+  align-items: center;
+  font-size: 1.1rem;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+.go-back-link,
+.go-back-link:hover {
+  color: #d4d4d4;
+}
+.go-back-link > svg {
+  margin-right: 0.5rem;
+}
 .prev-next {
   display: flex;
   flex-direction: column;
@@ -279,7 +297,7 @@ figure {
   padding: 3rem 0 4rem;
 }
 .contact h3 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   margin: 0.8rem 0;
 }
 
@@ -375,12 +393,16 @@ figure {
   .screenshot {
     padding: 1rem;
   }
+  .go-back {
+    margin-bottom: -1.85rem;
+    text-align: center;
+  }
   .prev-next {
     flex-direction: row;
   }
   .prev-next-title {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
   .prev-next-link {
     flex: 1;
