@@ -11,10 +11,13 @@ main a:visited {
   color: #fff;
   border-bottom: 1px solid #d48500;
 }
-
 main a:hover {
   text-decoration: none;
   border-bottom: 1px solid #fff;
+}
+main > .container-fluid > .container:not(.box) {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 h3 a,
@@ -25,10 +28,6 @@ h3 a:visited {
 
 pre {
   color: #69665e;
-}
-
-div#mobilelogo {
-  display: none;
 }
 
 p.lead {
@@ -78,30 +77,68 @@ li {
   margin-bottom: 0.5rem;
 }
 
-.navbar {
-  background: transparent;
-  background-color: none;
-  top: 0;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
+.btn {
+  white-space: nowrap;
 }
-.navbar img {
-  margin-top: -5px;
+.btn.btn-secondary {
+  align-items: center;
+  background-color: #545b62;
+  border-color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.2);
+  color: #f4f4f5;
+  display: inline-flex;
+  font-family: inherit;
+  padding: 0.4em 1em;
+}
+.btn-icon {
+  margin: 0 0.4em;
+  width: 1em;
+}
+.btn-icon:first-child {
+  margin-left: 0;
+}
+.btn-icon:last-child {
+  margin-right: 0;
+}
+
+.main-nav {
+  transition-property: background-color, filter;
+  transition-duration: 0.25s;
+}
+.main-nav.is-expanded,
+.main-nav.is-sticky {
+  background-color: #202529;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.main-nav .linkedin {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar-brand img {
   max-height: 36px;
 }
+.navbar-nav .nav-item {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
 .navbar-nav .dropdown-menu {
-  background: #464d54;
+  background: #4b4f55;
+  border: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 .navbar-nav .dropdown-item {
   color: rgba(255, 255, 255, 0.75);
+  padding: 0.5rem 1rem;
 }
-.navbar-nav .dropdown-item:hover {
-  background: rgba(0, 0, 0, 0.2);
+.navbar-nav .dropdown-item:active,
+.navbar-nav .dropdown-item:focus,
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item.active {
+  background: rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 1);
-}
-.navbar-nav .dropdown-item:active {
-  background: #6c757d;
 }
 
 .post-content {
@@ -183,10 +220,6 @@ div.boxes div {
 
 div.partner-logo {
   background-color: #fff !important;
-}
-
-div.boxes div:nth-of-type(2n) {
-  /*  background-color: #4b4f55; */
 }
 
 div.boxes h3 {
@@ -398,7 +431,17 @@ bg-dark2 h1,
   font-weight: bold;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) {  
+  .main-nav .linkedin {
+    display: none;
+  }
+  .navbar-nav .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    margin-top: 0;
+  }
+  
   .header {
     min-height: 75vh;
     padding-top: 20vh;
@@ -478,47 +521,6 @@ bg-dark2 h1,
     padding: 30px;
   }
 
-  div#mobilelogo {
-    position: absolute;
-    top: 30px;
-    left: 75px;
-    width: calc(100% - 100px);
-    display: block;
-    border: 0;
-    text-align: center;
-    background-color: none;
-    background: transparent;
-    margin: 0;
-    margin-right: -80px;
-    padding: 0;
-  }
-  div#mobilelogo img {
-    max-height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  a.navbar-brand {
-    display: none;
-  }
-  .navbar-nav {
-    background: #202529;
-    padding: 10px;
-  }
-  .navbar-nav .dropdown-menu {
-    background: rgba(0, 0, 0, 0.1);
-    border: 0;
-    margin: 0 -10px;
-    padding: 0;
-  }
-  .navbar-nav .dropdown-item {
-    color: rgba(255, 255, 255, 0.5);
-    padding: 0.5rem 1.5rem;
-  }
-  .navbar-nav .dropdown-item:hover {
-    background: transparent;
-    color: rgba(255, 255, 255, 0.75);
-  }
   .footer img,
   .funded img {
     max-height: 36px;

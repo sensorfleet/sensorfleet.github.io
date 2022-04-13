@@ -1,44 +1,35 @@
-<!-- Fixed navbar -->
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
-  <div id="mobilelogo">
-    <a href="/"><img src="/img/sensorfleet-white2.png" alt="SensorFleet" /></a>
-  </div>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarCollapse"
-    aria-controls="navbarCollapse"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto w-100 justify-content-center">
-      <li class="nav-item active">
-        <a class="navbar-brand nav-link" href="/">
-          <img src="/img/sensorfleet-white2.png" alt="SensorFleet" />
-        </a>
-      </li>
-
-      {% for item in site.data.navigation %}
-        {% if item.link == '/solution/' %}
-          <li class="nav-item dropdown {% if page.url == item.link %}active{% endif %}">
-            <a id="solutionDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">{{ item.name }}</a>
-            <div class="dropdown-menu" aria-labelledby="solutionDropdown">
-              <a class="dropdown-item" href="/solution/">Overview</a>
-              <a class="dropdown-item" href="/use-cases/">Use cases</a>
-            </div>
-          </li>
-        {% else %}
-          <li class="nav-item {% if page.url == item.link %}active{% endif %}">
-            <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-    {% include linkedin.html %}
-  </div>
-</nav>
+<div class="d-md-flex justify-content-md-center">
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand" href="/"><img src="/img/sensorfleet-white2.png" alt="SensorFleet" /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-controls="navbar-collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="navbar-nav">
+        {% for item in site.data.navigation %}
+          {% if item.link == '/solution/' %}
+            <li class="nav-item dropdown">
+              <a id="solution-dropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="{% if solution_dropdown %}true{% else %}false{% endif %}">{{ item.name }}</a>
+              <div class="dropdown-menu" aria-labelledby="solution-dropdown">
+                <a class="dropdown-item" href="/solution/">Overview</a>
+                <a class="dropdown-item" href="/use-cases/">Use cases</a>
+              </div>
+            </li>
+          {% else %}
+            <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+              <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</div>
