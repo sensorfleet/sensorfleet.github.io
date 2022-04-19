@@ -3,6 +3,7 @@ layout: use-case
 title: Use cases
 ---
 
+<!-- prettier-ignore -->
 {% assign use_case_pages = '' | split: '' %}
 {% assign pages = site.html_pages | where: "layout", "use-case" | sort: "title" %}
 {% for page in pages %}
@@ -18,9 +19,7 @@ title: Use cases
 <div class="content">
   <div class="container">
     <div class="block">
-      <h1 class="page-title text-lg-center">
-        Cyber Capability Fabric
-      </h1>
+      <h1 class="page-title text-lg-center">Cyber Capability Fabric</h1>
     </div>
     <div class="block">
       <h2>Unified platform</h2>
@@ -41,86 +40,99 @@ title: Use cases
       <p>
         SensorFleet use case series takes a look on how to apply currently
         available instruments to cover essential cyber security monitoring
-        requirements. On a high level, use cases cover:
+        requirements. Despite the progressing map-detect-response sequence,
+        SensorFleet solution can be equally well used for implementing
+        individual cases to fill the gaps.
       </p>
-      <ul>
-        <li>Attack detection</li>
-        <li>Forensic data collection and threat hunting</li>
-        <li>Integrity monitoring for network assets and services</li>
-      </ul>
-      <h3>Attack detection</h3>
-      <div class="use-cases">
-        {% for page in attack_detection_pages %}
-          <a class="use-case" href="{{ page.url }}" title="{{ page.title }}">
-            <h4>{{ page.title }}</h4>
-            <span class="btn btn-secondary">
-              <span>Read more</span>
-              <svg
-                class="btn-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </span>
-          </a>
-        {% endfor %}
-      </div>
-      <h3>Forensic data collection and threat hunting</h3>
-      <div class="use-cases">
-        {% for page in forensic_data_pages %}
-          <a class="use-case" href="{{ page.url }}" title="{{ page.title }}">
-            <h4>{{ page.title }}</h4>
-            <span class="btn btn-secondary">
-              <span>Read more</span>
-              <svg
-                class="btn-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </span>
-          </a>
-        {% endfor %}
-      </div>
-      <h3>Integrity monitoring for network assets and services</h3>
+      <h3>Map your exposure</h3>
+      <p>
+        A first step in comprehensive cyber security is to know what to defend
+        and harden the configurations. Besides initial exposure mapping, all of
+        our tools feature continuous monitoring to ensure visibility on the
+        latest status and alerts on changes.
+      </p>
       <div class="use-cases">
         {% for page in integrity_monitoring_pages %}
-          <a class="use-case" href="{{ page.url }}" title="{{ page.title }}">
-            <h4>{{ page.title }}</h4>
-            <span class="btn btn-secondary">
-              <span>Read more</span>
-              <svg
-                class="btn-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </span>
-          </a>
+        <a class="use-case" href="{{ page.url }}" title="{{ page.title }}">
+          <h4>{{ page.title }}</h4>
+          <span class="btn btn-secondary">
+            <span>Read more</span>
+            <svg
+              class="btn-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </span>
+        </a>
+        {% endfor %}
+      </div>
+      <h3>Detect attacks</h3>
+      <p>
+        On top of good cyber hygiene, real-time detection of the attacks
+        increases resilience. Distributed detection provides comprehensive
+        visibility and enables timely response to malicious activity.
+      </p>
+      <div class="use-cases">
+        {% for page in attack_detection_pages %}
+        <a class="use-case" href="{{ page.url }}" title="{{ page.title }}">
+          <h4>{{ page.title }}</h4>
+          <span class="btn btn-secondary">
+            <span>Read more</span>
+            <svg
+              class="btn-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </span>
+        </a>
+        {% endfor %}
+      </div>
+      <h3>Investigate and respond</h3>
+      <p>
+        Once an attack has been detected, the investigation phase begins.
+        Integrated and automated forensic data collection speeds up the process
+        from detection to response.
+      </p>
+      <div class="use-cases">
+        {% for page in forensic_data_pages %}
+        <a class="use-case" href="{{ page.url }}" title="{{ page.title }}">
+          <h4>{{ page.title }}</h4>
+          <span class="btn btn-secondary">
+            <span>Read more</span>
+            <svg
+              class="btn-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </span>
+        </a>
         {% endfor %}
       </div>
     </div>
