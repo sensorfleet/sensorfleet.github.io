@@ -7,15 +7,53 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
+* release-2.4: version 2.4.1 (staging 2022-04-20)
 * release-2.3: version 2.3.12 (stable 2021-12-17)
 
 Old-style release channel:
-* staging: version 2.3.12
+* staging: version 2.4.1
 * beta: version 2.3.12
 * stable: version 2.3.12
 
 Unstable development rolling releases:
-* devel: version 2.4.0
+* devel: version 2.4.2
+
+2.4.1: staging 2022-04-20
+
+Permanent snapshot name: release-2.4.1
+
+- Bug fixes:
+  [SF-2547] - UI: Interface saving not possible without IP address
+  [SF-2530] - TrafficGuard Manager: tgmanager build does not copy /etc/network/interfaces file in place
+  [SF-2529] - UI: Password change was not enforced
+  [SF-2528] - PortDiff Instrument: Portdiff repeats the same error in health status
+  [SF-2522] - Recorder Instrument: Fix Arkime retetion logic bug introduced in 2.4.0
+  [SF-2514] - API: Some events may be missing context_uuid
+  [SF-2513] - Sensor Orchestrator: /mnt/persistent-data/ins directory not created on new Azure deployments
+  [SF-2497] - UI: Any authenticated user can change it's username introduced in 2.4.0 [security]
+  [SF-2496] - UI: Any authenticated user can modify it's permissions to admin:write introduced in 2.4.0 [security]
+  [SF-2484] - Ansible: Do not replace running sensor configuration if fleet tool fails for some reason within fleetgram playbook
+  [SF-2460] - Rule Manager: Deleted rules are not cleaned in some cases
+  [SF-2456] - UI: Sensor-UI: DHCP was enabled for mirror-bridge
+  [SF-2422] - UI: Fix race condition when deleting instrument
+  [SF-2290] - UI: Sensor UI: Create users config if it's missing
+
+- New features and other improvements:
+  [SF-701]  - UI: Feature to restart Instrument manually
+  [SF-2025] - UI: Feature to restart Sensor manually
+  [SF-2559] - Autobuilds and repositories: Instruments: Update Alpine to 3.14.6
+  [SF-2541] - Suricata instrument: Update Suricata to 6.0.4
+  [SF-2520] - Fleet Tool: Allow setting force_change flag on password
+  [SF-2519] - Fleet Tool: Allow reading password from file
+  [SF-2504] - Netflow: Add API to netflow to get flow information for given time range
+  [SF-2466] - Ansible: Add initial UI admin user to a new deployment with Ansible
+  [SF-2465] - Ansible, Fleet Tool: Fleet Tool & Ansible: Create new users with generated passwords
+  [SF-2462] - Fleet Tool: Various user management improvements
+  [SF-2458] - UI: Sensor-UI: Argon2-cffi's default parameters changed to respect RFC 9106
+  [SF-2450] - UI: Sensor-UI: Pre-generate readable passwords
+  [SF-2371] - UI: Sensor-UI: update user's own information
+  [SF-1321] - API, Sensor Orchestrator: Events should have an instrument_type field
+  [SF-1052] - Make LXD container names human readable and based on instrument type (e.g. ins-recorder-0)
 
 2.4.0: devel
 
