@@ -7,16 +7,38 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.1 (staging 2022-04-20)
+* release-2.4: version 2.4.4 (staging 2022-04-20)
 * release-2.3: version 2.3.12 (stable 2021-12-17)
 
 Old-style release channel:
-* staging: version 2.4.1
+* staging: version 2.4.4
 * beta: version 2.3.12
 * stable: version 2.3.12
 
 Unstable development rolling releases:
 * devel: version 2.4.2
+
+2.4.4: staging 2022-05-27
+
+- New features and other improvements:
+  [SF-2592] - UI: Do not crash with invalid licenses/metadata yaml
+  [SF-2567] - Netflow: Add mock backend for netflow UI development
+  [SF-2566] - PortDiff Instrument: Add latest baseline alerts also to full event
+  [SF-2552] - UI: Fixes for Simple UI and SaaS
+  [SF-2548] - Recorder Instrument: Update capture-plugin to latest rust edition
+  [SF-2498] - UI: Simple tab is always displayed
+  [SF-2228] - Rule Manager, Suricata instrument: Support for overriding Suricata address groups and port groups
+
+- Bug fixes:
+  [SF-2599] - UI: Cannot save bridge interface without IP enabled
+  [SF-2583] - PortDiff Instrument: PortDiff displays "No successful scan results" warning after enabling scan
+  [SF-2580] - Rule Manager: Rule Manager does not send ruleset to newly adopted suricata
+  [SF-2572] - UI: Clicking sensorfleet logo redirects user to non working simple UI
+  [SF-2545] - SensorFleet LXD: Update LXD to 5.0 and lock all build dependencies
+  [SF-2516] - Suricata instrument: Refactor commit_config to support classification and variables configs from rmgr
+  [SF-2459] - Rule Manager: "No rulesource with id X" after clearing rmgr data
+
+2.4.2, 2.4.3: internal test releases
 
 2.4.1: staging 2022-04-20
 
