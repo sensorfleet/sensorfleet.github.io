@@ -7,7 +7,7 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.4 (staging 2022-04-20)
+* release-2.4: version 2.4.4 (staging 2022-05-27)
 * release-2.3: version 2.3.12 (stable 2021-12-17)
 
 Old-style release channel:
@@ -26,7 +26,7 @@ Unstable development rolling releases:
   [SF-2566] - PortDiff Instrument: Add latest baseline alerts also to full event
   [SF-2552] - UI: Fixes for Simple UI and SaaS
   [SF-2548] - Recorder Instrument: Update capture-plugin to latest rust edition
-  [SF-2498] - UI: Simple tab is always displayed
+  [SF-2498] - UI: Hide Simple tab when it's not required
   [SF-2228] - Rule Manager, Suricata instrument: Support for overriding Suricata address groups and port groups
 
 - Bug fixes:
