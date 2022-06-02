@@ -7,16 +7,16 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.4 (staging 2022-05-27)
+* release-2.4: version 2.4.4 (staging 2022-05-27, beta 2022-06-02)
 * release-2.3: version 2.3.12 (stable 2021-12-17)
 
 Old-style release channel:
 * staging: version 2.4.4
-* beta: version 2.3.12
+* beta: version 2.4.4
 * stable: version 2.3.12
 
 Unstable development rolling releases:
-* devel: version 2.4.2
+* devel: version 2.4.5
 
 2.4.4: staging 2022-05-27
 
