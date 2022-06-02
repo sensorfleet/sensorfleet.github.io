@@ -7,16 +7,37 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.1 (staging 2022-04-20)
+* release-2.4: version 2.4.4 (staging 2022-05-27)
 * release-2.3: version 2.3.12 (stable 2021-12-17)
 
 Old-style release channel:
-* staging: version 2.4.1
+* staging: version 2.4.4
 * beta: version 2.3.12
 * stable: version 2.3.12
 
 Unstable development rolling releases:
 * devel: version 2.4.2
+
+2.4.4: staging 2022-05-27
+
+- New features and other improvements:
+  [SF-2592] - UI: Do not crash with invalid licenses/metadata yaml
+  [SF-2566] - PortDiff Instrument: Add latest baseline alerts also to full event
+  [SF-2552] - UI: Fixes for Simple UI and SaaS
+  [SF-2548] - Recorder Instrument: Update capture-plugin to latest rust edition
+  [SF-2498] - UI: Hide Simple tab when it's not required
+  [SF-2228] - Rule Manager, Suricata instrument: Support for overriding Suricata address groups and port groups
+  [SF-2545] - SensorFleet LXD: Update LXD to 5.0 and lock all build dependencies
+
+- Bug fixes:
+  [SF-2599] - UI: Cannot save bridge interface without IP enabled
+  [SF-2583] - PortDiff Instrument: PortDiff displays "No successful scan results" warning after enabling scan
+  [SF-2580] - Rule Manager: Rule Manager does not send ruleset to newly adopted suricata
+  [SF-2572] - UI: Clicking sensorfleet logo redirects user to non working simple UI
+  [SF-2516] - Suricata instrument: Refactor commit_config to support classification and variables configs from rmgr
+  [SF-2459] - Rule Manager: "No rulesource with id X" after clearing rmgr data
+
+2.4.2, 2.4.3: internal test releases
 
 2.4.1: staging 2022-04-20
 
@@ -89,7 +110,6 @@ Highlights:
   [SF-2317] - Rule Importer: Rule Importer Instrument refuses to start
   [SF-2307] - Sensor Orchestrator: Invalid network configuration breaks Sensor Orchestrator logic
   [SF-2306] - Replay Instrument, UI: Replay Instrument displays duplicate errors
-  [SF-2300] - API: Mock sensor's add_event() does not handle dots in keys
   [SF-2291] - Rule Manager: Upgrading from 2.1.4/2.2.3 to 2.3.X may result in unusable database
   [SF-2282] - UI: DHCP checkbox disappears from UI and never comes back
   [SF-2281] - Replay Instrument: Replay instrument refuses to start task with the same filename
@@ -132,7 +152,6 @@ Highlights:
   [SF-2354] - Sensor Orchestrator: Allow instruments to change health check status faster
   [SF-2346] - Sensor Orchestrator: Implement instrument/sensor restart events
   [SF-2340] - Sensor Orchestrator: Implement Sensor reboot/shutdown backend
-  [SF-2337] - PassiveDNS: PassiveDNS proper mock mode for UI development
   [SF-2329] - PortDiff Instrument: Add support for reading banners from listening ports
   [SF-2328] - PortDiff Instrument: Update portdiff to use new version of pscan
   [SF-2321] - PortDiff Instrument: Pscan updates
@@ -163,7 +182,6 @@ Highlights:
   [SF-2123] - UI: Sensor-UI should indicate the used software release branch in Sensor UI System page
   [SF-1834] - Instruments: Update to Alpine 3.14, rewrite build tooling, venv path changes etc
   [SF-1723] - API, Sensor Orchestrator: Support for Instrument restarting
-  [SF-939] - API, Sensor Orchestrator: get_related_instruments is not mocked
   [SF-677] - UI: UI doesn't display an error when configuring a sensor that is timeouting
 
 2.3.12: stable 2021-12-17
@@ -590,7 +608,6 @@ Permanent snapshot name: staging-2.2.0-44368
   [SF-1709] - Sensormessagebroker does not discard events if DB writes are slow
   [SF-1710] - Change sensormessagebroker DB write warn limit to 0.8
   [SF-1719] - Sensor UI: Generate default names for bridges & interfaces
-  [SF-1721] - Move SensorConfig JSON schema to messaging package for better MockFleet
   [SF-1730] - fleet tool: support for event produce wait_ack=False
   [SF-1733] - fleet tool: don't print unnecessary messaging log spam without -v
   [SF-1734] - Suricata 5.0.4 update, include hyperscan support
