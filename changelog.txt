@@ -11,12 +11,25 @@ Release specific channels:
 * release-2.3: version 2.3.12 (stable 2021-12-17)
 
 Old-style release channel:
-* staging: version 2.4.4
-* beta: version 2.4.4
+* staging: version 2.4.5
+* beta: version 2.4.5
 * stable: version 2.3.12
 
 Unstable development rolling releases:
 * devel: version 2.4.5
+
+2.4.5: beta 2022-06-13
+
+- New features and other improvements:
+  [SF-2550] - UI: Send an event when user logs in/out
+  [SF-2573] - PortDiff Instrument: baseline support for Simple UI
+
+- Bug fixes:
+  [SF-2625] - UI: Sensor name formatter does not work with non-numeric serial numbers
+  [SF-2622] - Recorder Instrument: cannot access old pcaps after upgrade to release-2.4
+  [SF-2618] - UI: Exception when trying to use open Simple UI (without events)
+  [SF-2617] - UI: Updating instrument list via UI is unreliable
+  [SF-2570] - UI: "License limit exceeded" error message is not displayed
 
 2.4.4: staging 2022-05-27
 
