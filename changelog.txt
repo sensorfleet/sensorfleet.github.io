@@ -7,16 +7,22 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.4 (staging 2022-05-27, beta 2022-06-02)
-* release-2.3: version 2.3.12 (stable 2021-12-17)
+* release-2.4: version 2.4.6
+* release-2.3: version 2.3.12
 
 Old-style release channel:
-* staging: version 2.4.5
-* beta: version 2.4.5
+* staging: version 2.4.6
+* beta: version 2.4.6
 * stable: version 2.3.12
 
-Unstable development rolling releases:
-* devel: version 2.4.5
+2.4.6: beta 2022-06-28
+
+- New features and other improvements:
+- [SF-2633] - Alphabetical sort order of Sensors for Fleet Management UI
+- [SF-2630] - Add instrument layout broken
+
+- Bug fixes:
+  [SF-2644] - UI fails to render some instrument YAML configurations
 
 2.4.5: beta 2022-06-13
 
