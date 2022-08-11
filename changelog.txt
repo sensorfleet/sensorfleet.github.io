@@ -7,19 +7,32 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.6
+* release-2.4: version 2.4.7
 * release-2.3: version 2.3.12
 
 Old-style release channel:
 * staging: version 2.4.6
-* beta: version 2.4.6
+* beta: version 2.4.7
 * stable: version 2.3.12
+
+2.4.7: beta 2022-08-17
+
+- New features and other improvements:
+  [SF-2659] - Kernel: Updated Kernel with new grsecurity, add CDC-ethernet module, update Capture Engine
+
+- Bug fixes:
+  [SF-2632] - Rule Manager: Fix ruleset update timeout and race condition
+  [SF-2661] - Suricata Instrument: Sometimes stops producing events after a configuration change
+  [SF-2668] - UI: failure to add bridge interface without an IP
+  [SF-2662] - Sensor Orchestrator: Sensor Orchestrator fails to get physical interfaces and returns error
+  [SF-2620] - Rule Manager: Rule Manager can send an empty rulelist to Suricata
+  [SF-2568] - UI: FM UI displays FM version instead of Sensor version
 
 2.4.6: beta 2022-06-28
 
 - New features and other improvements:
-- [SF-2633] - Alphabetical sort order of Sensors for Fleet Management UI
-- [SF-2630] - Add instrument layout broken
+  [SF-2633] - UI: Alphabetical sort order of Sensors for Fleet Management UI
+  [SF-2630] - UI: Add instrument layout broken
 
 - Bug fixes:
   [SF-2644] - UI fails to render some instrument YAML configurations
