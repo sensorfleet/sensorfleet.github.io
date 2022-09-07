@@ -7,15 +7,20 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.7
+* release-2.4: version 2.4.6
 * release-2.3: version 2.3.12
 
 Old-style release channel:
-* staging: version 2.4.6
-* beta: version 2.4.7
+* staging: version 2.4.8
+* beta: version 2.4.6
 * stable: version 2.3.12
 
-2.4.7: beta 2022-08-17
+2.4.8: staging 2022-09-07
+
+- Bug fixes:
+  [SF-2708] - Sensor Orchestrator: Fix mirror-bridge traffic not being forwarded to instruments in some cases, introduced in 2.4.7
+
+2.4.7: staging 2022-08-17
 
 - New features and other improvements:
   [SF-2659] - Kernel: Updated Kernel with new grsecurity, add CDC-ethernet module, update Capture Engine
