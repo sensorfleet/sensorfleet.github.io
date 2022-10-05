@@ -5,53 +5,71 @@ description:
   traffic capture, asset tracking and more.
 ---
 
-<h1>Utility Instruments</h1>
+<h1>Instruments</h1>
 
 <p class="lead">
   Workhorses for the various cyber security related tasks, like detection,
   traffic capture, asset tracking and more.
 </p>
 
-<p></p>
+{% for group in site.data.instruments.groups %}
+  {% if group.group == "exposure_monitoring" %}
+    <h2>Exposure Monitoring</h2>
+    <div class="row boxes">
+      {% for instrument in group.instruments %}
+        {% assign name = site.data.instruments[instrument].name %}
+        {% assign description = site.data.instruments[instrument].description %}
+        {% include instrument-card.html
+            name=name
+            description=description
+            url=instrument
+        %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
-<div class="row boxes">
-  {% for instrument in site.data.instruments %}
-    {% unless instrument[1].categories contains "Internal" %}
-      {% assign name = instrument[1].name %}
-      {% assign description = instrument[1].description %}
-      {% assign url = instrument[0] %}
-      {% include instrument-card.html
-          name=name
-          description=description 
-          url=url 
-      %}
-    {% endunless %} 
-  {% endfor %}
-</div>
+  {% if group.group == "attack_and_lateral_movement_detection" %}
+    <h2>Attack And Lateral Movement Detection</h2>
+    <div class="row boxes">
+      {% for instrument in group.instruments %}
+        {% assign name = site.data.instruments[instrument].name %}
+        {% assign description = site.data.instruments[instrument].description %}
+        {% include instrument-card.html
+            name=name
+            description=description
+            url=instrument
+        %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
-<div>
-  <h2>Platform Instruments</h2>
-  <p class="lead">
-    Modules providing services for the other Instruments. With the exception of
-    core platform, we are using the Instrument architecture for platform 
-    services in order to maximise containment and isolation for different
-    functionalities.
-  </p>
+  {% if group.group == "forensics_and_threat_hunting" %}
+    <h2>Forensics And Threat Hunting</h2>
+    <div class="row boxes">
+      {% for instrument in group.instruments %}
+        {% assign name = site.data.instruments[instrument].name %}
+        {% assign description = site.data.instruments[instrument].description %}
+        {% include instrument-card.html
+            name=name
+            description=description
+            url=instrument
+        %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
-  <p></p>
-  
-  <div class="row boxes">
-    {% for instrument in site.data.instruments %}
-    {% if instrument[1].categories contains "Internal" %}
-      {% assign name = instrument[1].name %}
-      {% assign description = instrument[1].description %}
-      {% assign url= instrument[0] %}
-      {% include instrument-card.html
-          name=name
-          description=description 
-          url=url 
-      %}
-    {% endif %} 
-  {% endfor %}
-  </div>
-</div>
+  {% if group.group == "special_purpose" %}
+    <h2>Special Purpose</h2>
+    <div class="row boxes">
+      {% for instrument in group.instruments %}
+        {% assign name = site.data.instruments[instrument].name %}
+        {% assign description = site.data.instruments[instrument].description %}
+        {% include instrument-card.html
+            name=name
+            description=description
+            url=instrument
+        %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}

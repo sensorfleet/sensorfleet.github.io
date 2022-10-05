@@ -1,0 +1,20 @@
+- group: exposure_monitoring
+  instruments:
+    - portdiff
+    - tgmanager
+- group: attack_and_lateral_movement_detection
+  instruments:
+    - cowrie
+    - suricata
+    - zeek
+- group: forensics_and_threat_hunting
+  instruments:
+    - recorder
+    - netflow
+    - passivedns
+    - replay
+- group: special_purpose
+  instruments:
+    - beacon
+    - logforwarder
+    - rmgr
