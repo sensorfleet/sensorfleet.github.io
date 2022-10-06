@@ -1,8 +1,8 @@
 ---
 name: Traffic Recorder
 description:
-  Captures network traffic to disk and provides indexing and searching
-  capabilities through Moloch software.
+  Captures and stores traffic for forensic analysis. Supports both full traffic
+  recording and alert based capture.
 developer: SensorFleet Oy
 has_ui: true
 config_defaults:
