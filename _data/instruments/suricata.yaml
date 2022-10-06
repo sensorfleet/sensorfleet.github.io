@@ -7,9 +7,8 @@ categories:
   - Traffic Analysis
   - IDS
 description:
-  Suricata IDS is a network threat detection engine. The integration to
-  SensorFleet solution allows easily deployable and manageable intrusion
-  detection.
+  Widely used IDS engine with curated IoC feed for detecting the malicious
+  activity, such as Command and Control connections, in the network.
 has_ui: false
 data_retention_desc: The latest rule lists are stored in Suricata IDS's persistent data.
 relations:
