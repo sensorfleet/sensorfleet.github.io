@@ -7,8 +7,8 @@ categories:
   - Traffic Recording
   - DNS
 description:
-  PassiveDNS can be used to store information from DNS requests and uses that
-  stored information to augment other events.
+  Builds a database of DNS queries and replies. Can be searched for threat
+  hunting and automatically augments other events, such as IDS alerts.
 has_ui: true
 data_retention_desc: PassiveDNS Instrument stores DNS information up to the configured period.
 performance_desc: PassiveDNS Instrument can handle thousands of DNS requests per second(??)
