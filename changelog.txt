@@ -11,9 +11,17 @@ Release specific channels:
 * release-2.3: version 2.3.12
 
 Old-style release channel:
-* staging: version 2.4.8
+* staging: version 2.4.9
 * beta: version 2.4.6
 * stable: version 2.3.12
+
+2.4.9: staging 2022-10-06
+
+- Bug fixes:
+  [SF-2739] - SensorFleet LXD: LXD upgrade to 5.0 does not wait for storage to be deleted
+
+- New features and other improvements:
+  [SF-2703] - SensorFleet LXD: Update to LXD version 5.0.1
 
 2.4.8: staging 2022-09-07
 
