@@ -1,13 +1,13 @@
 ---
-name: TrafficGuard Management
+name: Traffic Guard
 developer: F-Solutions Oy
 title: Management UI and rule logic for F-Solutions TrafficGuard
 categories:
   - Integrity Monitoring
   - Asset Tracking
 description:
-  Traffic Guard Manager gathers the identities reported by TrafficGuard Probe
-  and creates events based on identity changes.
+  Automated inventory of the network's assets and alerting about the unexpected
+  assets entering the network.
 has_ui: true
 data_retention_desc:
   Traffic Guard Manager keeps the collected information up to configured
