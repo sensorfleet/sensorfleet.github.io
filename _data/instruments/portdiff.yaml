@@ -4,7 +4,9 @@ developer: SensorFleet Oy
 title: Automated network scanning and monitoring tool
 categories:
   - Integrity Monitoring
-description: Monitor open services on hosts and report network changes as events.
+description:
+  Periodic and automated port scanning to detect exposed services, such as file
+  shares, databases, remote management etc.
 has_ui: false
 data_retention_desc:
   Besides the current active network status, the instrument stores no data. All
