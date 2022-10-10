@@ -4,17 +4,11 @@
 - name: Solution
   link: /solution/
 
-- name: Instruments
-  link: /instruments/
-
 - name: Latest
   link: /latest/
 
 - name: About us
   link: /about-us/
-
-#- name: Events
-#  link: /events/
 
 - name: Partners
   link: /partners/

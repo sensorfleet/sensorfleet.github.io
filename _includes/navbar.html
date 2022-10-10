@@ -1,6 +1,8 @@
 <div class="d-md-flex justify-content-md-center">
   <nav class="navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand" href="/"><img src="/img/sensorfleet-white2.png" alt="SensorFleet" /></a>
+    <a class="navbar-brand" href="/">
+      <img src="/img/sensorfleet-white2.png" alt="SensorFleet" />
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -12,15 +14,24 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- prettier-ignore -->
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="navbar-nav">
         {% for item in site.data.navigation %}
           {% if item.link == '/solution/' %}
             <li class="nav-item dropdown">
-              <a id="solution-dropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="{% if solution_dropdown %}true{% else %}false{% endif %}">{{ item.name }}</a>
+              <a 
+                id="solution-dropdown" 
+                class="nav-link dropdown-toggle"
+                href="#" 
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="{% if solution_dropdown %}true{% else %}false{% endif %}"
+                >{{ item.name }}</a>
               <div class="dropdown-menu" aria-labelledby="solution-dropdown">
                 <a class="dropdown-item" href="/solution/">Overview</a>
                 <a class="dropdown-item" href="/use-cases/">Use cases</a>
+                <a class="dropdown-item" href="/instruments/">Instruments</a>
               </div>
             </li>
           {% else %}
