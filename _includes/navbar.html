@@ -1,5 +1,5 @@
-<div class="d-md-flex justify-content-md-center">
-  <nav class="navbar navbar-expand-md navbar-dark">
+<div class="container-md">
+  <nav class="navbar navbar-expand-lg navbar-dark px-0">
     <a class="navbar-brand" href="/">
       <img src="/img/sensorfleet-white2.png" alt="SensorFleet" />
     </a>
@@ -16,14 +16,14 @@
     </button>
     <!-- prettier-ignore -->
     <div class="collapse navbar-collapse" id="navbar-collapse">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         {% for item in site.data.navigation %}
           {% if item.link == '/solution/' %}
             <li class="nav-item dropdown">
-              <a 
-                id="solution-dropdown" 
+              <a
+                id="solution-dropdown"
                 class="nav-link dropdown-toggle"
-                href="#" 
+                href="#"
                 role="button"
                 data-toggle="dropdown"
                 aria-expanded="{% if solution_dropdown %}true{% else %}false{% endif %}"

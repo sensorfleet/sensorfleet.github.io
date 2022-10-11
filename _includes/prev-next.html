@@ -1,7 +1,7 @@
 <div class="prev-next">
   <a
     class="prev-next-link prev-next-link-prev"
-    href="{{ include.prev_page.url }}"
+    href="{{ include.prev_page_url }}"
   >
     <span class="prev-next-label">
       <svg
@@ -20,11 +20,11 @@
       </svg>
       <span>{{ include.prev_page_label }}</span>
     </span>
-    <span class="prev-next-title">{{ include.prev_page.title }}</span>
+    <span class="prev-next-title">{{ include.prev_page_title }}</span>
   </a>
   <a
     class="prev-next-link prev-next-link-next"
-    href="{{ include.next_page.url }}"
+    href="{{ include.next_page_url }}"
   >
     <span class="prev-next-label">
       <span>{{ include.next_page_label }}</span>
@@ -43,6 +43,6 @@
         />
       </svg>
     </span>
-    <span class="prev-next-title">{{ include.next_page.title }}</span>
+    <span class="prev-next-title">{{ include.next_page_title }}</span>
   </a>
 </div>

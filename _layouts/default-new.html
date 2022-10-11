@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="d-flex flex-column no-js">
-    <!-- Remove no-js when JS is enabled -->
-    <script>
-      document.body.classList.remove('no-js');
-    </script>
-    <header class="main-nav fixed-top">
-      {% include navbar.html %}
-      <div class="linkedin">
-        {% include linkedin.html %}
+  <body class="layout-default-new layout-{{ page.layout }}">
+    <div class="page">
+      <div class="main-nav fixed-top">
+        {% include navbar.html %}
+        <div class="linkedin d-none d-xl-block">
+          {% include linkedin.html %}
+        </div>
       </div>
-    </header>
-
-    <!-- Begin page content -->
-    <main role="main" class="flex-shrink-0">
       {{ content }}
-    </main>
+      <div class="contact py-3">
+        <div class="container-md">
+          {% include contact.html %}
+        </div>
+      </div>
+    </div>
     {% include scripts.html %}
   </body>
 </html>

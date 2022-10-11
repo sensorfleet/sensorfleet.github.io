@@ -2,28 +2,69 @@
 layout: default-new
 ---
 
-{% assign prev_page = site.pages | where: "path", "use-cases/index.html" | first %}
-{% assign next_page = site.pages | where: "path", "solution/index.html" | first %}
+{% assign instruments = '' | split: '' %}
+{% for group in site.data.instruments.groups %}
+  {% for instrument in group.instruments %}
+    {% assign instrument_url = "/instruments/" | append: instrument | append: "/" %}
+    {% assign instrument_item = instrument_url | append: ',' | append: site.data.instruments[instrument].name | split: ',' %}
+    {% assign instruments = instruments | push: instrument_item %}
+  {% endfor %}
+{% endfor %}
 
-<div class="container-fluid bg-dark header2"></div>
-<div
-  class="bg-dark2 slanted2"
-  style="margin-top: 30px; padding-top: 40px; position: relative; z-index: 1;"
->
-  <div class="container">
-    {% if page.path != "instruments/index.html" %}
-      <p class="mt-4 mb-n4"><a href="../">&laquo; Back to instruments</a></p>
+{% assign prev_page = site.pages | where: "path", "use-cases/index.html" | first %}
+{% assign prev_page_label = "Read more" %}
+{% assign prev_page_title = prev_page.title %}
+{% assign prev_page_url = prev_page.url %}
+{% assign next_page = site.pages | where: "path", "solution/index.html" | first %}
+{% assign next_page_label = "Read more" %}
+{% assign next_page_title = next_page.title %}
+{% assign next_page_url = next_page.url %}
+
+{% if page.path != "instruments/index.html" %}
+  {% assign prev_page_label = "Previous instrument" %}
+  {% assign next_page_label = "Next instrument" %}
+  {% assign prev_instrument = false %}
+  {% assign next_instrument = false %}
+  {% for instrument in instruments %}
+    {% if instrument[0] == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      {% assign prev_page_title = instruments[prev_index][1] %}
+      {% assign prev_page_url = instruments[prev_index][0] %}
+      {% assign next_page_title = instruments[next_index][1] %}
+      {% assign next_page_url = instruments[next_index][0] %}
     {% endif %}
-    {{ content }}
+    {% unless prev_page_url %}
+      {% assign prev_instrument = instruments | last %}
+      {% assign prev_page_title = prev_instrument[1] %}
+      {% assign prev_page_url = prev_instrument[0] %}
+    {% endunless %}
+    {% unless next_page_url %}
+      {% assign next_instrument = instruments | first %}
+      {% assign next_page_title = next_instrument[1] %}
+      {% assign next_page_url = next_instrument[0] %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
+<div class="main">
+  <div class="container-md">
+    {% if page.path != 'instruments/index.html' %}
+      <div class="mb-3">
+        {% include back-link.html url="/instruments" text="Back to instruments" %}
+      </div>
+    {% endif %}
+    <div class="content">
+      {{ content }}
+    </div>
   </div>
 </div>
-<div class="prev-next-wrapper">
-  {% include prev-next.html
-    prev_page=prev_page
-    prev_page_label="Read more"
-    next_page=next_page
-    next_page_label="Read more"
-  %}
-</div>
-{% include footer.html slanted=false %}
-
+{% include prev-next.html
+  prev_page_label=prev_page_label
+  prev_page_title=prev_page_title
+  prev_page_url=prev_page_url
+  next_page_label=next_page_label
+  next_page_title=next_page_title
+  next_page_url=next_page_url
+%}

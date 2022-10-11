@@ -1,5 +1,21 @@
-<div class="col-md-3 text-center">
+<a class="box p-4" href="{{ include.url }}/">
   <h3>{{ include.name }}</h3>
   <p>{{ include.description }}</p>
-  <a href="{{ include.url }}/" class="btn btn-secondary">Datasheet &raquo;</a>
-</div>
+  <span class="btn btn-secondary">
+    <span>Datasheet</span>
+    <svg
+      class="btn-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
+      />
+    </svg>
+  </span>
+</a>
