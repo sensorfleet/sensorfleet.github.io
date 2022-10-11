@@ -16,12 +16,14 @@ layout: default-new
     {% endif %}
     {{ content }}
   </div>
-  <div class="prev-next-wrapper">
-    {% include prev-next.html
-      prev_page=prev_page
-      prev_page_label="Read more"
-      next_page=next_page
-      next_page_label="Read more"
-    %}
-  </div>
 </div>
+<div class="prev-next-wrapper">
+  {% include prev-next.html
+    prev_page=prev_page
+    prev_page_label="Read more"
+    next_page=next_page
+    next_page_label="Read more"
+  %}
+</div>
+{% include footer.html slanted=false %}
+
