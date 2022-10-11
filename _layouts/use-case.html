@@ -17,21 +17,26 @@
 {% assign integrity_monitoring_pages = use_case_pages | where: 'category', 'integrity-monitoring' %}
 {% assign grouped_use_case_pages = attack_detection_pages | concat: forensic_data_pages | concat: integrity_monitoring_pages %}
 
-{% for use_case_page in grouped_use_case_pages %}
-  {% if use_case_page.url == page.url %}
-    {% assign current_index = forloop.index0 %}
-    {% assign prev_index = current_index | minus: 1 %}
-    {% assign next_index = current_index | plus: 1 %}
-    {% assign prev_page = grouped_use_case_pages[prev_index] %}
-    {% assign next_page = grouped_use_case_pages[next_index] %}
-  {% endif %}
-  {% unless prev_page %}
-    {% assign prev_page = grouped_use_case_pages | last %}
-  {% endunless %}
-  {% unless next_page %}
-    {% assign next_page = grouped_use_case_pages | first %}
-  {% endunless %}
-{% endfor %}
+{% assign prev_page = site.pages | where: "path", "solution/index.html" | first %}
+{% assign next_page = site.pages | where: "path", "instruments/index.html" | first %}
+
+{% if page.name != "index.html" %}
+  {% for use_case_page in grouped_use_case_pages %}
+    {% if use_case_page.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      {% assign prev_page = grouped_use_case_pages[prev_index] %}
+      {% assign next_page = grouped_use_case_pages[next_index] %}
+    {% endif %}
+    {% unless prev_page %}
+      {% assign prev_page = grouped_use_case_pages | last %}
+    {% endunless %}
+    {% unless next_page %}
+      {% assign next_page = grouped_use_case_pages | first %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,60 +73,12 @@
         </div>
       {% endif %}
       {{ content }}
-      <div class="prev-next">
-        <a
-          class="prev-next-link prev-next-link-prev"
-          href="{{ prev_page.url }}"
-        >
-          <span class="prev-next-label">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="prev-next-arrow"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            <span
-              >{% if is_front_page %}Read more{% else %}Previous use case{%
-              endif %}</span
-            >
-          </span>
-          <span class="prev-next-title">{{ prev_page.title }}</span>
-        </a>
-        <a
-          class="prev-next-link prev-next-link-next"
-          href="{{ next_page.url }}"
-        >
-          <span class="prev-next-label">
-            <span
-              >{% if is_front_page %}Read more{% else %}Next use case{% endif
-              %}</span
-            >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="prev-next-arrow"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </span>
-          <span class="prev-next-title">{{ next_page.title }}</span>
-        </a>
-      </div>
+      {% include prev-next.html
+        prev_page=prev_page
+        prev_page_label="Read more"
+        next_page=next_page
+        next_page_label="Read more"
+      %}
       <div class="contact">
         <div class="container">
           <div class="row">
@@ -139,8 +96,7 @@
               <h3>Oulu</h3>
               <p>
                 SensorFleet Oy<br />
-                c/o Kielo Growth Oy<br />
-                Teknologiantie 18<br />
+                Teknologiantie 11<br />
                 90590 Oulu<br />
                 Finland
               </p>

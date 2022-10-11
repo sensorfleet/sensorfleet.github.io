@@ -186,51 +186,21 @@ figure {
 .go-back-link > svg {
   margin-right: 0.5rem;
 }
-.prev-next {
-  display: flex;
-  flex-direction: column;
-}
-.prev-next-link {
-  align-items: center;
-  border: 2px solid #4b4f55;
-  border-width: 2px 0;
-  padding: 1.5rem;
-  position: relative;
-}
-.prev-next-link:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-}
-.prev-next-label {
-  align-items: center;
-  color: #d4d4d4;
-  display: inline-flex;
-  text-transform: uppercase;
-}
-.prev-next-title {
-  display: block;
-  font-size: 1.2rem;
-}
-.prev-next-arrow {
-  flex-shrink: 0;
-  height: 1em;
-  width: 1em;
-}
-.prev-next-link-next {
-  margin: -2px 0 0;
-}
-.prev-next-link-prev .prev-next-arrow {
-  margin: 0 0.5rem 0 0;
-}
-.prev-next-link-next .prev-next-arrow {
-  margin: 0 0 0 0.5rem;
-}
 .contact {
   padding: 3rem 0 4rem;
 }
 .contact h3 {
   font-size: 1.35rem;
   margin: 0.8rem 0;
+}
+.prev-next {
+  margin: 0;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.prev-next-link {
+  color: #e9ae4a !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -325,27 +295,6 @@ figure {
   .go-back {
     margin-bottom: -1.75rem;
     text-align: center;
-  }
-  .prev-next {
-    flex-direction: row;
-  }
-  .prev-next-title {
-    display: block;
-    font-size: 1.35rem;
-  }
-  .prev-next-link {
-    flex: 1;
-    padding: 2rem 3rem;
-  }
-  .prev-next-link-prev {
-    border-width: 2px 2px 2px 0;
-    justify-content: flex-end;
-    margin: 0 -1px 0 0;
-    text-align: right;
-  }
-  .prev-next-link-next {
-    border-width: 2px 0 2px 2px;
-    margin: 0 0 0 -1px;
   }
   .contact {
     padding: 4rem 0;

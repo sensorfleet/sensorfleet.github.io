@@ -1,0 +1,27 @@
+---
+layout: default-new
+---
+
+{% assign prev_page = site.pages | where: "path", "instruments/index.html" | first %}
+{% assign next_page = site.pages | where: "path", "use-cases/index.html" | first %}
+
+<div class="container-fluid bg-dark header2"></div>
+<div
+  class="bg-dark2 slanted2"
+  style="margin-top: 30px; padding-top: 40px; position: relative; z-index: 1;"
+>
+  <div class="container">
+    {% if page.path != "instruments/index.html" %}
+      <p class="mt-4 mb-n4"><a href="../">&laquo; Back to solution</a></p>
+    {% endif %}
+    {{ content }}
+  </div>
+  <div class="prev-next-wrapper">
+    {% include prev-next.html
+      prev_page=prev_page
+      prev_page_label="Read more"
+      next_page=next_page
+      next_page_label="Read more"
+    %}
+  </div>
+</div>
