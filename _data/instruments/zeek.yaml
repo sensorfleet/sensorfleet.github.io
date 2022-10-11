@@ -7,8 +7,8 @@ categories:
   - Traffic Analysis
   - IDS
 description:
-  The Zeek instrument integrates Zeek, an open source network analysis
-  framework.
+  Versatile network security monitoring engine that creates analyst friendly
+  activity logs.
 has_ui: false
 data_retention_desc:
   The latest scripts and blacklists are stored in the instrument's persistent
