@@ -1,3 +1,7 @@
+---
+layout: default-new
+---
+
 <!-- prettier-ignore -->
 {% assign is_front_page = false %}
 {% if page.name == 'index.html' %}
@@ -18,9 +22,13 @@
 {% assign grouped_use_case_pages = attack_detection_pages | concat: forensic_data_pages | concat: integrity_monitoring_pages %}
 
 {% assign prev_page = site.pages | where: "path", "solution/index.html" | first %}
+{% assign prev_page_label = "Read more" %}
 {% assign next_page = site.pages | where: "path", "instruments/index.html" | first %}
+{% assign next_page_label = "Read more" %}
 
 {% if page.name != "index.html" %}
+  {% assign prev_page_label = "Previous use case" %}
+  {% assign next_page_label = "Next use case" %}
   {% for use_case_page in grouped_use_case_pages %}
     {% if use_case_page.url == page.url %}
       {% assign current_index = forloop.index0 %}
@@ -38,91 +46,23 @@
   {% endfor %}
 {% endif %}
 
-<!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
-  <body>
-    <div class="page">
-      <div class="main-nav fixed-top">
-        {% include navbar.html %}
-        <div class="linkedin">
-          {% include linkedin.html %}
-        </div>
+<div class="main">
+  <div class="container-md">
+    {% if page.name != 'index.html' %}
+      <div class="mb-2 mb-md-n2 text-lg-center">
+        {% include back-link.html url="/use-cases" text="Back to use cases" %}
       </div>
-      {% if page.name != 'index.html' %}
-        <div class="go-back">
-          <div class="container">
-            <a class="go-back-link" href="/use-cases/#catalog">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="btn-icon"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                />
-              </svg>
-              <span>Back to use cases</span>
-            </a>
-          </div>
-        </div>
-      {% endif %}
+    {% endif %}
+    <div class="content">
       {{ content }}
-      {% include prev-next.html
-        prev_page=prev_page
-        prev_page_label="Read more"
-        next_page=next_page
-        next_page_label="Read more"
-      %}
-      <div class="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <h3>Contact us</h3>
-              <p>contact@sensorfleet.com</p>
-              <p><a href="/privacy-policy">Privacy policy &raquo;</a></p>
-              <p>
-                &copy; SensorFleet Oy<br />
-                Business ID: 2884312-2
-              </p>
-              <div class="mb-3">{% include linkedin.html %}</div>
-            </div>
-            <div class="col-lg-4">
-              <h3>Oulu</h3>
-              <p>
-                SensorFleet Oy<br />
-                Teknologiantie 11<br />
-                90590 Oulu<br />
-                Finland
-              </p>
-              <p>
-                Sami Petäjäsoja<br />
-                +358 40 5030745
-              </p>
-            </div>
-            <div class="col-lg-4">
-              <h3>Helsinki</h3>
-              <p>
-                SensorFleet Oy<br />
-                Lapinlahdenkatu 16<br />
-                Building 15<br />
-                00180 Helsinki<br />
-                Finland
-              </p>
-              <p>
-                Simo Mäkipaja <br />
-                +358 40 583 3999
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    {% include scripts.html %}
-  </body>
-</html>
+  </div>
+</div>
+{% include prev-next.html
+  prev_page_label=prev_page_label
+  prev_page_title=prev_page.title
+  prev_page_url=prev_page.url
+  next_page_label=next_page_label
+  next_page_title=next_page.title
+  next_page_url=next_page.url
+%}

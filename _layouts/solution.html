@@ -2,27 +2,87 @@
 layout: default-new
 ---
 
-{% assign prev_page = site.pages | where: "path", "instruments/index.html" | first %}
-{% assign next_page = site.pages | where: "path", "use-cases/index.html" | first %}
+{% assign solution_pages = '' | split: '' %}
+{% assign pages = site.html_pages | where: 'layout', 'solution' | sort: 'title' %}
+{% for other in pages %}
+  {% if other.name != 'index.html' %}
+    {% assign solution_pages = solution_pages | push: other %}
+  {% endif %}
+{% endfor %}
 
-<div class="container-fluid bg-dark header2"></div>
-<div
-  class="bg-dark2 slanted2"
-  style="margin-top: 30px; padding-top: 40px; position: relative; z-index: 1;"
->
-  <div class="container">
-    {% if page.path != "solution/index.html" %}
-      <p class="mt-4 mb-n4"><a href="../">&laquo; Back to solution</a></p>
+{% assign prev_page = site.pages | where: "path", "instruments/index.html" | first %}
+{% assign prev_page_label = "Read more" %}
+{% assign next_page = site.pages | where: "path", "use-cases/index.html" | first %}
+{% assign next_page_label = "Read more" %}
+
+{% if page.path != "solution/index.html" %}
+  {% assign prev_page_label = "Previous environment" %}
+  {% assign next_page_label = "Next environment" %}
+  {% for solution_page in solution_pages %}
+    {% if solution_page.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      {% assign prev_page = solution_pages[prev_index] %}
+      {% assign next_page = solution_pages[next_index] %}
     {% endif %}
-    {{ content }}
+    {% unless prev_page %}
+      {% assign prev_page = solution_pages | last %}
+    {% endunless %}
+    {% unless next_page %}
+      {% assign next_page = solution_pages | first %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
+<div class="main">
+  <div class="container-md">
+    {% if page.path != 'solution/index.html' %}
+      <div class="mb-2 mb-md-n2">
+        {% include back-link.html url="/solution" text="Back to overview" %}
+      </div>
+    {% endif %}
+    <div class="content">
+      {{ content }}
+      {% if page.name != 'index.html' %}
+        <div class="block">
+          <h2>Other operational environments</h2>
+          <div class="nav-list">
+            {% for solution_page in solution_pages %}
+              {% if solution_page.url != page.url %}
+                <a class="nav-list-item" href="{{ solution_page.url }}" title="{{ solution_page.title }}">
+                  <h3 class="nav-list-item-title">{{ solution_page.title }}</h3>
+                  <span class="btn btn-secondary">
+                    <span>Read more</span>
+                    <svg
+                      class="btn-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
-<div class="prev-next-wrapper">
-  {% include prev-next.html
-    prev_page=prev_page
-    prev_page_label="Read more"
-    next_page=next_page
-    next_page_label="Read more"
-  %}
-</div>
-{% include footer.html slanted=false %}
+{% include prev-next.html
+  prev_page_label=prev_page_label
+  prev_page_title=prev_page.title
+  prev_page_url=prev_page.url
+  next_page_label=next_page_label
+  next_page_title=next_page.title
+  next_page_url=next_page.url
+%}

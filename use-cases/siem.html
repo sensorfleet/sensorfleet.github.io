@@ -8,79 +8,75 @@ description:
   operators.
 ---
 
-<div class="content">
-  <div class="container">
-    <div class="block clearfix">
-      <h1 class="page-title text-lg-center">{{ page.title }}</h1>
-    </div>
-    <div class="block clearfix">
-      <h2>Why it matters</h2>
-      <p class="lead">
-        SIEM solutions have been around for over a decade and are becoming a
-        standard tool for security operations. Despite this, there are several
-        challenges that may prevent users from getting a full value out of the
-        SIEM. The most prominent among them:
-      </p>
+<div class="block clearfix">
+  <h1 class="text-lg-center">{{ page.title }}</h1>
+</div>
+<div class="block clearfix">
+  <h2>Why it matters</h2>
+  <p class="lead">
+    SIEM solutions have been around for over a decade and are becoming a
+    standard tool for security operations. Despite this, there are several
+    challenges that may prevent users from getting a full value out of the
+    SIEM. The most prominent among them:
+  </p>
+  <ul>
+    <li>How to get a comprehensive coverage of the data sources</li>
+    <li>
+      Volume of the events leads to alert exhaustion and operating cost
+      increase
+    </li>
+    <li>
+      Alert is just the first step. Investigating the alerts remains largely
+      manual work
+    </li>
+  </ul>
+</div>
+<div class="block clearfix">
+  <div class="align-items-center row mx-n4">
+    <div class="col-lg-8 px-4">
+      <h2>How we can help</h2>
+      <p>SensorFleet solution can help on multiple fronts:</p>
       <ul>
-        <li>How to get a comprehensive coverage of the data sources</li>
         <li>
-          Volume of the events leads to alert exhaustion and operating cost
-          increase
+          A core Instrument on the Sensor platform for adding value to SIEM
+          is Log Forwarder. This local log target can ingest logs from
+          multiple sources and pass them to SIEM using SensorFleet native
+          services, making it easy to gain coverage. Furthermore, Log
+          Forwarder can perform pre-filtering and buffering of the logs,
+          helping with the data volume.
         </li>
         <li>
-          Alert is just the first step. Investigating the alerts remains largely
-          manual work
+          Once the Sensor has been deployed, new detection Instruments can
+          be added dynamically. How does adding new data sources help with
+          the volume? Several SensorFleet Instruments provide discrete and
+          actionable alerts, such as new network assets or services
+          discovered, optimizing quality over quantity.
+        </li>
+        <li>
+          After a high priority alert, the hard work of investigation
+          begins. SensorFleet platform supports a range of forensic data
+          collection Instruments, such as Traffic Recorder, Netflow and
+          PassiveDNS. When used together with LogForwarder or detection
+          Instruments, wealth of data related to alerts will be right at the
+          fingertips of the responder.
         </li>
       </ul>
     </div>
-    <div class="block clearfix">
-      <div class="align-items-center row mx-n4">
-        <div class="col-lg-8 px-4">
-          <h2>How we can help</h2>
-          <p>SensorFleet solution can help on multiple fronts:</p>
-          <ul>
-            <li>
-              A core Instrument on the Sensor platform for adding value to SIEM
-              is Log Forwarder. This local log target can ingest logs from
-              multiple sources and pass them to SIEM using SensorFleet native
-              services, making it easy to gain coverage. Furthermore, Log
-              Forwarder can perform pre-filtering and buffering of the logs,
-              helping with the data volume.
-            </li>
-            <li>
-              Once the Sensor has been deployed, new detection Instruments can
-              be added dynamically. How does adding new data sources help with
-              the volume? Several SensorFleet Instruments provide discrete and
-              actionable alerts, such as new network assets or services
-              discovered, optimizing quality over quantity.
-            </li>
-            <li>
-              After a high priority alert, the hard work of investigation
-              begins. SensorFleet platform supports a range of forensic data
-              collection Instruments, such as Traffic Recorder, Netflow and
-              PassiveDNS. When used together with LogForwarder or detection
-              Instruments, wealth of data related to alerts will be right at the
-              fingertips of the responder.
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-4 px-4">
-          <figure>
-            <img class="img-fluid" src="/img/use-cases/siem.png" alt="Siem" />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div class="block clearfix">
-      <h2>Bigger picture</h2>
-      <p>
-        Decoupling the data collection layer from analytics will be beneficial
-        for longer term development of an organization’s cybersecurity
-        capabilities, providing the freedom to change SIEM or SOC operator
-        solutions and services. Data collection layer itself, when implemented
-        with SensorFleet cyber capability fabric, can be independently augmented
-        with the new capabilities.
-      </p>
+    <div class="col-lg-4 px-4">
+      <figure>
+        <img class="img-fluid" src="/img/use-cases/siem.png" alt="Siem" />
+      </figure>
     </div>
   </div>
+</div>
+<div class="block clearfix">
+  <h2>Bigger picture</h2>
+  <p>
+    Decoupling the data collection layer from analytics will be beneficial
+    for longer term development of an organization’s cybersecurity
+    capabilities, providing the freedom to change SIEM or SOC operator
+    solutions and services. Data collection layer itself, when implemented
+    with SensorFleet cyber capability fabric, can be independently augmented
+    with the new capabilities.
+  </p>
 </div>

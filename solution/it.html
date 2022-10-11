@@ -9,24 +9,24 @@ description:
   networks.
 ---
 
-<h1>IT Security</h1>
+<div class="block">
+  <h1>IT Security</h1>
+  <p class="lead">
+    SensorFleet NDR comes exactly in the shape and size you’ll need. What’s more,
+    you can dynamically grow your capability fabric, expanding security monitoring
+    into the domains like OT, or adding new capabilities for IT infrastructure
+    monitoring. We have put together a few example Sensor configurations for IT
+    networks.
+  </p>
+</div>
 
-<p class="lead">
-  SensorFleet NDR comes exactly in the shape and size you’ll need. What’s more,
-  you can dynamically grow your capability fabric, expanding security monitoring
-  into the domains like OT, or adding new capabilities for IT infrastructure
-  monitoring. We have put together a few example Sensor configurations for IT
-  networks.
-</p>
-
-<div class="box below">
-  <h3>Integrity monitoring</h3>
+<div class="block">
+  <h2>Integrity monitoring</h2>
   <p>
     Understanding what is in your network and pruning out the unnecessary assets
     and services will make it difficult for an attacker to gain a foothold. We
     have a set of Instruments to do just that:
   </p>
-
   <ul>
     <li>
       <a href="../instruments/tgmanager/">Traffic Guard</a>
@@ -42,7 +42,6 @@ description:
       also detecting suspicious ports, such as IRC.
     </li>
   </ul>
-
   <p>
     Integrity monitoring is best suited for server networks, data centers, DMZ
     and similar, relatively static networks. This low noise configuration
@@ -50,9 +49,8 @@ description:
   </p>
 </div>
 
-<div class="box below">
-  <h3>Attack detection</h3>
-
+<div class="block">
+  <h2>Attack detection</h2>
   <!--Kommentti auki docsissa-->
   <p>
     IDS-based real-time network traffic monitoring for attacks is a tried and
@@ -62,7 +60,6 @@ description:
     multiple networks. Drop in the Instruments for forensics, and you’ll have an
     attack detection powerhouse:
   </p>
-
   <ul>
     <li>
       <a href="../instruments/suricata/">Suricata</a>
@@ -81,14 +78,13 @@ description:
   </ul>
 </div>
 
-<div class="box below">
-  <h3>Lateral movement detection</h3>
+<div class="block">
+  <h2>Lateral movement detection</h2>
   <p>
     When an attacker gains a foothold in the network, they typically do
     reconnaissance to map the terrain with a goal to grab valuable information
     from an organization. Trap them with:
   </p>
-
   <ul>
     <li>
       <a href="../instruments/cowrie/">Honeypots</a>. SensorFleet platform makes
@@ -102,30 +98,10 @@ description:
       to detect when someone grabs them
     </li>
   </ul>
-
   <p>
     Lateral movement detection is a low noise configuration, typically producing
     high priority alerts. The Instruments used for detection provide not only
     the alerts, but also associated forensic data to help with the
     investigation.
   </p>
-</div>
-
-<h2>Other operational environments</h2>
-
-<div class="row boxes">
-  <div class="col-md-3 text-center">
-    <h3>OT security</h3>
-    <a href="ot.html" class="btn btn-secondary">Read more &raquo;</a>
-  </div>
-
-  <div class="col-md-3 text-center">
-    <h3>SOC service providers</h3>
-    <a href="soc.html" class="btn btn-secondary">Read more &raquo;</a>
-  </div>
-
-  <div class="col-md-3 text-center">
-    <h3>Industrial equipment integration</h3>
-    <a href="industrial.html" class="btn btn-secondary">Read more &raquo;</a>
-  </div>
 </div>
