@@ -11,9 +11,19 @@ Release specific channels:
 * release-2.3: version 2.3.12
 
 Old-style release channel:
-* staging: version 2.4.9
+* staging: version 2.4.10
 * beta: version 2.4.9
 * stable: version 2.3.12
+
+2.4.10: staging 2022-10-14
+
+- Bug fixes:
+  [SF-2740] - Rule Manager: Zeek related purge might fail after upgrade to 2.4.X
+
+- New features and other improvements:
+  [SF-2698] - Netflow Instrument: Add netflow search UI, move API to /api
+  [SF-2600] - Rule Manager: Rule classification should display value as enum instead of number
+  [SF-2601] - Rule Manager: UI cleanup (Oink revision => Revision)
 
 2.4.9: staging 2022-10-06, beta 2022-10-14
 
