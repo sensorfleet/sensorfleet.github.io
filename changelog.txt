@@ -7,15 +7,15 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.6
+* release-2.4: version 2.4.9
 * release-2.3: version 2.3.12
 
 Old-style release channel:
 * staging: version 2.4.9
-* beta: version 2.4.6
+* beta: version 2.4.9
 * stable: version 2.3.12
 
-2.4.9: staging 2022-10-06
+2.4.9: staging 2022-10-06, beta 2022-10-14
 
 - Bug fixes:
   [SF-2739] - SensorFleet LXD: LXD upgrade to 5.0 does not wait for storage to be deleted
