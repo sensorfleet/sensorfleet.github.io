@@ -51,6 +51,12 @@ ol,
 ul {
   padding-left: 1rem;
 }
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0.25em;
+}
 ol li,
 ul li {
   margin-bottom: 0.25em;
