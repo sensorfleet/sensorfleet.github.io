@@ -440,8 +440,8 @@ code {
   .block {
     border: 2px solid #4b4f55;
     margin-bottom: 0;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-bottom: 3vw;
+    padding-top: 3vw;
     position: relative;
   }
   .block::before {
@@ -456,20 +456,20 @@ code {
   }
   .block:nth-child(odd) {
     border-color: #4b4f55 #4b4f55 #4b4f55 transparent;
-    border-bottom-right-radius: 3rem;
-    border-top-right-radius: 3rem;
-    margin-right: -4rem;
-    padding-right: 4rem;
+    border-bottom-right-radius: 3.2vw;
+    border-top-right-radius: 3.2vw;
+    margin-right: -3.2vw;
+    padding-right: 3.2vw;
   }
   .block:nth-child(odd)::before {
     left: calc(100% - 1.5rem + 1px);
   }
   .block:nth-child(even) {
     border-color: #4b4f55 transparent #4b4f55 #4b4f55;
-    border-bottom-left-radius: 3rem;
-    border-top-left-radius: 3rem;
-    margin-left: -4rem;
-    padding-left: 4rem;
+    border-bottom-left-radius: 3.2vw;
+    border-top-left-radius: 3.2vw;
+    margin-left: -3.2vw;
+    padding-left: 3.2vw;
   }
   .block:nth-child(even)::before {
     right: calc(100% - 1.5rem + 1px);
@@ -536,5 +536,22 @@ code {
     position: fixed;
     right: 1rem;
     top: 1rem;
+  }
+
+  .block {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+  .block:nth-child(odd) {
+    border-bottom-right-radius: 3rem;
+    border-top-right-radius: 3rem;
+    margin-right: -4rem;
+    padding-right: 4rem;
+  }
+  .block:nth-child(even) {
+    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 3rem;
+    margin-left: -4rem;
+    padding-left: 4rem;
   }
 }
