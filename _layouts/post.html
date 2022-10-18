@@ -1,34 +1,47 @@
 ---
-layout: default
+layout: default-new
 ---
 
-<h1>{{ page.title }}</h1>
+{% assign prev_page = page.previous %}
+{% assign next_page = page.next %}
 
-<div class="post-content">{{ content }}</div>
+{% unless prev_page %}
+  {% assign prev_page = site.posts | first %}
+{% endunless %}
 
-<div class="bio">
-  {% assign author = site.data.staff[page.author] %}
-  <p>
-    {% if author.image %}
-    <img src="{{ author.image }}" alt="{{ author.name }}" />
-    {% endif %} {{ author.name }}, {{ author.position }} {% if author.linkedin
-    %} | <a href="{{ author.linkedin }}" target="_new">LinkedIn &raquo;</a>
-    {% endif %}
-  </p>
+{% unless next_page %}
+  {% assign next_page = site.posts | last %}
+{% endunless %}
+
+<div class="main">
+  <div class="container-md">
+    <div class="mb-3">
+      {% include back-link.html url="/latest" text="Back to latest" %}
+    </div>
+    <div class="content">
+      <h1>{{ page.title }}</h1>
+      <p>Posted {{ page.date | date:"%d %b %Y" }}</p>
+      {{ content }}
+      <div class="align-items-center d-flex mt-4">
+        {% assign author = site.data.staff[page.author] %}
+        <img class="rounded-sm" style="max-width: 6rem;" src="{{ author.image }}" alt="{{ author.name }}" />
+        <div class="ml-3 text-nowrap">
+          {{ author.name }}, {{ author.position }}
+          {% if author.linkedin%}
+            <div>
+              <a href="{{ author.linkedin }}" target="_new">LinkedIn &raquo;</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div class="blog-pagination">
-  {% if page.previous %}
-  <p>
-    <a href="{{ site.baseurl }}{{page.previous.url}}"
-      >&laquo; {{page.previous.title}}</a
-    >
-  </p>
-  {% endif %} {% if page.next %}
-  <p>
-    <a href="{{ site.baseurl }}{{page.next.url}}"
-      >&raquo; {{page.next.title}}</a
-    >
-  </p>
-  {% endif %}
-</div>
+{% include prev-next.html
+  prev_page_label="Previous post"
+  prev_page_title=prev_page.title
+  prev_page_url=prev_page.url
+  next_page_label="Next post"
+  next_page_title=next_page.title
+  next_page_url=next_page.url
+%}
