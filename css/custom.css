@@ -111,12 +111,6 @@ li {
   background-color: #202529;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
-.main-nav .linkedin {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
 .navbar-brand img {
   max-height: 36px;
 }
@@ -508,9 +502,6 @@ bg-dark2 h1,
 }
 
 @media (max-width: 992px) {
-  .main-nav .linkedin {
-    display: none;
-  }
   .navbar-nav .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -640,5 +631,13 @@ bg-dark2 h1,
   .prev-next-link-next {
     border-width: 2px 0 2px 2px;
     margin: 0 0 0 -1px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-nav .linkedin {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
   }
 }
