@@ -66,6 +66,14 @@ code {
   color: #e9ae4a;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
 .main-nav {
   font-size: 1.1rem;
   transition-property: background-color, filter;
@@ -164,14 +172,14 @@ code {
 }
 .prev-next-link {
   align-items: center;
-  border-color: #4b4f55 !important;
+  border-color: #4b4f55;
   border-style: solid;
-  border-width: 2px 0 !important;
+  border-width: 2px 0;
   padding: 1.5rem 15px;
   position: relative;
 }
 .prev-next-link + .prev-next-link {
-  border-left-width: 0 !important;
+  border-left-width: 0;
 }
 .prev-next-link:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -269,6 +277,9 @@ code {
 .main {
   padding: 6rem 0 4rem;
 }
+.main + .contact {
+  border-top: 2px solid #4b4f55;
+}
 
 .content > :first-child {
   margin-top: 0;
@@ -287,9 +298,6 @@ code {
 .block > :last-child,
 .block [class*="col-"] > :last-child {
   margin-bottom: 0;
-}
-.block [class*="col-"] + [class*="col-"] {
-  margin-top: 1rem;
 }
 
 .nav-list {
@@ -360,6 +368,17 @@ code {
 .quote figcaption {
   color: #a1a1aa;
   font-size: 0.8em;
+}
+
+.img-funder {
+  height: 100px;
+  object-fit: contain;
+  width: 100%;
+}
+.img-partner {
+  height: 8rem;
+  object-fit: contain;
+  width: 100%;
 }
 
 .layout-datasheet table {
@@ -493,9 +512,6 @@ code {
   .block:last-child::before {
     bottom: 0;
     display: block;
-  }
-  .block [class*="col-"] + [class*="col-"] {
-    margin-top: 0;
   }
   .block + .block {
     margin-top: -2px;
