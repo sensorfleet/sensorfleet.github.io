@@ -1,70 +1,90 @@
 ---
-layout: default
+layout: default-new
+title: About us
 ---
 
-<h1 class="mt-5">About us</h1>
-<p class="lead">
-  Our team has a long experience in developing cyber security sensor technology
-  for a national early warning system protecting the critical infrastructure in
-  Finland. At the inception of SensorFleet in 2018, we set out to re-imagine
-  cyber security monitoring.
-</p>
-<p></p>
-<p>
-  SensorFleet solution is an open sensor platform that can host detection-,
-  protection- and scanning tools - that we call Instruments - from 3rd parties,
-  whether commercial, open source or developed in-house. Solution reduces
-  complexity in managing cyber security capabilities and readily available
-  deployment platform improves response times for emerging threats.
-</p>
+<div class="main">
+  <div class="container-md">
+    <div class="content">
+      <div class="block">
+        <h1>About us</h1>
+        <p class="lead">
+          Our team has a long experience in developing cyber security sensor technology
+          for a national early warning system protecting the critical infrastructure in
+          Finland. At the inception of SensorFleet in 2018, we set out to re-imagine
+          cyber security monitoring.
+        </p>
+        <p>
+          SensorFleet solution is an open sensor platform that can host detection-,
+          protection- and scanning tools - that we call Instruments - from 3rd parties,
+          whether commercial, open source or developed in-house. Solution reduces
+          complexity in managing cyber security capabilities and readily available
+          deployment platform improves response times for emerging threats.
+        </p>
+      </div>
+      <div class="block">
+        <h2>Team</h2>
+        <div class="row mx-n2 my-n2">
+          {% for person in site.data.staff %}
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2 py-2">
+              <div class="box h-full p-2">
+                {% if person[1].image %}
+                  <img class="img-fluid rounded" src="{{ person[1].image }}" alt="{{ person[1].name }}" />
+                {% endif %}
+                  <div class="text-center">
+                    <p class="mb-0">{{ person[1].name }},<br>{{ person[1].position }}</p>
+                    <ul class="list-style-none mt-2 pl-0">
+                      {% if person[1].linkedin %}
+                        <li><a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a></li>
+                      {% endif %}
+                      {% if person[1].github %}
+                        <li><a href="{{ person[1].github }}" target="_new">GitHub &raquo;</a></li>
+                      {% endif %}
+                      {% if person[1].gitlab %}
+                        <li><a href="{{ person[1].gitlab }}" target="_new">GitLab &raquo;</a></li>
+                      {% endif %}
+                      {% if person[1].phone %}
+                        <li><a href="tel:{{ person[1].phone }}">{{ person[1].phone }}</a></li>
+                      {% endif %}
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
 
-<h3>Team</h3>
-
-<div class="row text-center team">
-  {% for person in site.data.staff %}
-  <div class="col-md-6 bio">
-    {% if person[1].image %}
-    <p>
-      <img src="{{ person[1].image }}" alt="{{ person[1].name }}" />
-    </p>
-    {% endif %}
-    <p>{{ person[1].name }}, {{ person[1].position }}</p>
-    <p>
-      {% if person[1].linkedin %}
-      <a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a
-      ><br />
-      {% endif %} {% if person[1].github %}
-      <a href="{{ person[1].github }}" target="_new">GitHub &raquo;</a><br />
-      {% endif %} {% if person[1].gitlab %}
-      <a href="{{ person[1].gitlab }}" target="_new">GitLab &raquo;</a><br />
-      {% endif %} {% if person[1].phone %} {{ person[1].phone }} {% endif %}
-    </p>
+      <div class="block">
+        <h2>Funded by</h2>
+        <div class="row mx-n2 my-n2">
+          <div class="col-6 col-md-3 px-2 py-2">
+            <div class="box">
+              <img class="img-funder py-2 rounded" src="/img/f-solutions.png" alt="F-Solutions" />
+            </div>
+          </div>
+          <div class="col-6 col-md-3 px-2 py-2">
+            <div class="box">
+              <img class="img-funder py-2 rounded" src="/img/scan-abc.png" alt="Ääkköset Oy" />
+            </div>
+          </div>
+          <div class="col-6 col-md-3 px-2 py-2">
+            <div class="box">
+              <img class="img-funder py-2 rounded" src="/img/leverage-eu-white.png" alt="Leverage from the EU" />
+            </div>
+          </div>
+          <div class="col-6 col-md-3 px-2 py-2">
+            <div class="box">
+              <img class="img-funder py-2 rounded" src="/img/eu-white.png" alt="EU" />
+            </div>
+          </div>
+        </div>
+        <p>
+          <a href="/eu.html">Saukko</a> project develops a SaaS extension for the
+          SensorFleet security monitoring platform. Extension enables users to adopt
+          and consume applicable parts of the SensorFleet solution with a service
+          model.
+        </p>
+      </div>
+    </div>
   </div>
-
-  {% endfor %}
 </div>
-
-<h3>Funded by</h3>
-
-<div class="funded">
-  <img
-    src="/img/f-solutions.png"
-    alt="F-Solutions"
-    style="max-height: 60px; margin-right: 0px"
-  />
-  <img src="/img/scan-abc.png" alt="Ääkköset Oy" style="margin-right: 6px" />
-  <img
-    src="/img/leverage-eu-white.png"
-    alt="Leverage from the EU"
-    style="margin-right: 20px"
-  />
-  <img src="/img/eu-white.png" alt="EU" />
-</div>
-<p>
-  <small>
-    <a href="/eu.html">Saukko</a> project develops a SaaS extension for the
-    SensorFleet security monitoring platform. Extension enables users to adopt
-    and consume applicable parts of the SensorFleet solution with a service
-    model.
-  </small>
-</p>
