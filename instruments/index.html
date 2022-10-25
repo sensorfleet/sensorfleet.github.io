@@ -21,11 +21,14 @@ description:
       {% for instrument in group.instruments %}
         {% assign name = site.data.instruments[instrument].name %}
         {% assign description = site.data.instruments[instrument].description %}
-        {% include instrument-card.html
-          name=name
-          description=description
-          url=instrument
-        %}
+        <a class="box p-4" href="{{ instrument }}/">
+          <h3>{{ name }}</h3>
+          <p>{{ description }}</p>
+          <span class="btn btn-secondary">
+            <span>Read more</span>
+            <span class="btn-icon">{% include icon-arrow-right.html %}</span>
+          </span>
+        </a>
       {% endfor %}
     </div>
   {% endfor %}
