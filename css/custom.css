@@ -72,20 +72,16 @@ iframe {
 .h-full {
   height: 100%;
 }
-
 .object-contain {
   object-fit: contain;
 }
-
 .list-style-none {
   list-style: none;
 }
-
 .video-embed {
   aspect-ratio: 16/9;
   width: 100%;
 }
-
 .container-narrow {
   margin: 0 auto;
   max-width: 800px;
@@ -271,9 +267,6 @@ a.box:hover {
   border-radius: 0;
   border-width: 0 0 1px;
   display: block;
-}
-.box-grid .box:hover {
-  background: rgba(0, 0, 0, 0.2);
 }
 .box-grid .box:last-child {
   border-width: 0;
