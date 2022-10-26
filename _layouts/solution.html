@@ -1,5 +1,5 @@
 ---
-layout: default-new
+layout: default
 ---
 
 {% assign solution_pages = '' | split: '' %}
@@ -52,22 +52,9 @@ layout: default-new
               {% if solution_page.url != page.url %}
                 <a class="nav-list-item" href="{{ solution_page.url }}" title="{{ solution_page.title }}">
                   <h3 class="nav-list-item-title">{{ solution_page.title }}</h3>
-                  <span class="btn btn-secondary">
+                  <span class="btn btn-secondary" href="{{ solution_page.url }}">
                     <span>Read more</span>
-                    <svg
-                      class="btn-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
+                    <span class="btn-icon">{% include icon-arrow-right.html %}</span>
                   </span>
                 </a>
               {% endif %}

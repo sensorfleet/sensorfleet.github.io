@@ -1,189 +1,154 @@
 ---
-layout: frontpage
+layout: default
 ---
 
-<div
-  class="container-fluid bg-dark header"
-  style="background-image: url('/img/bg.jpg')"
->
-  <div class="container">
-    <h1 class="uppercase">Cyber Capability Fabric</h1>
-    <h3>Easy to scale, simple to deploy</h3>
-  </div>
-</div>
-
-<div class="container-fluid bg-dark2 slanted2">
-  <div class="container text-center box">
-    <h3>Solution</h3>
-    <p>
-      SensorFleet solution is an open platform for deploying a fabric of
-      detection, protection and scanning capabilities. Need to run IDS at scale?
-      Asset tracking for OT networks? Bring clarity to fragmented cyber security
-      tools landscape and orchestrate capabilities as SensorFleet Instruments.
-    </p>
-    <div class="video-iframe">
-      <div>
-        <iframe
-          src="https://www.youtube.com/embed/kV6b3riR9dk?enablejsapi=1"
-          title="Cyber security made easy – SensorFleet Cyber Capability fabric described in a video"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+<div class="main">
+  <div class="container-md">
+    <div class="content">
+      <div class="block text-center">
+        <h1>Cyber Capability Fabric</h1>
+        <p class="lead">Easy to scale, simple to deploy</p>
       </div>
-    </div>
-    <p>
-      <a class="btn btn-secondary" href="/solution/" role="button"
-        >Read more &raquo;</a
-      >
-    </p>
-  </div>
-
-  <div class="container">
-    <div class="row highlights">
-      <div class="col-md-4 text-center">
-        <h3>Instruments</h3>
-        <img src="img/instruments.svg" alt="Instruments" />
-        <p>Components dedicated to specific cyber security tasks</p>
-      </div>
-
-      <div class="col-md-4 text-center">
-        <h3>Sensor</h3>
-        <img src="img/sensor.svg" alt="Sensor" />
-        <p>Platform for deploying and running the Instruments</p>
-      </div>
-
-      <div class="col-md-4 text-center">
-        <h3>Fleet Management</h3>
-        <img src="img/fm.svg" alt="Fleet Management" />
-        <p>Enables you to manage Sensors in diverse network environments</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid slanted2 bg-light">
-  <div class="container">
-    <h1 class="mt-5">Open platform</h1>
-    <p class="lead">
-      Cyber security tools landscape is fragmented. Each commercial tool comes
-      with an unique deployment model. Open source offers great tools, but
-      deployment and maintenance at scale is a challenge. New issues requiring
-      quick reactions and innovative assessment tools emerge in accelerating
-      pace. SensorFleet offers a platform for keeping your toolchest in order.
-    </p>
-
-    <div class="row">
-      <div class="col-md-2 text-center">
-        <img
-          src="img/ecosystem.svg"
-          alt="Sensor"
-          class="dropshadow"
-          style="height: 100px; margin-top: 2em"
-        />
-      </div>
-      <div class="col-md-8">
-        <h3>Embrace the ecosystem</h3>
-        <p>
-          SensorFleet solution has been designed as an open platform for 3rd
-          party Instruments. Utilize most suitable solutions, both from open
-          source domain and commercial vendors.
+      <div class="block">
+        <h2>Solution</h2>
+        <p class="lead">
+          SensorFleet solution is an open platform for deploying a fabric of
+          detection, protection and scanning capabilities. Need to run IDS at scale?
+          Asset tracking for OT networks? Bring clarity to fragmented cyber security
+          tools landscape and orchestrate capabilities as SensorFleet Instruments.
         </p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-2 text-center">
-        <img
-          src="img/instrument.svg"
-          alt="Sensor"
-          class="dropshadow"
-          style="height: 100px; margin-top: 2em"
-        />
-      </div>
-      <div class="col-md-8">
-        <h3>Bring your own instruments</h3>
         <p>
-          Sometimes Instruments you need aren't available from the market.
-          SensorFleet solution enables customers to integrate their own tools.
+          <a class="btn btn-secondary" href="/solution/">
+            <span>Read more</span>
+            <span class="btn-icon">{% include icon-arrow-right.html %}</span>
+          </a>
         </p>
+        <div class="graphics mt-4">
+          <iframe
+            class="video-embed"
+            src="https://www.youtube.com/embed/kV6b3riR9dk?enablejsapi=1"
+            title="Cyber security made easy – SensorFleet Cyber Capability fabric described in a video"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="box-grid box-grid-3-cols mt-4">
+          <div class="box px-4 py-3 text-center">
+            <h3>Instruments</h3>
+            <img class="object-contain" style="height: 80px;" src="img/instruments.svg" alt="Instruments" />
+            <p>Components dedicated to specific cyber security tasks</p>
+          </div>
+          <div class="box px-4 py-3 text-center">
+            <h3>Sensor</h3>
+            <img class="object-contain" style="height: 80px;" src="img/sensor.svg" alt="Sensor" />
+            <p>Platform for deploying and running the Instruments</p>
+          </div>
+          <div class="box px-4 py-3 text-center">
+            <h3>Fleet Management</h3>
+            <img class="object-contain" style="height: 80px;" src="img/fm.svg" alt="Fleet Management" />
+            <p>Enables you to manage Sensors in diverse network environments</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-2 text-center">
-        <img
-          src="img/reaction-time.svg"
-          alt="Sensor"
-          class="dropshadow"
-          style="height: 100px; margin-top: 2em"
-        />
-      </div>
-      <div class="col-md-8">
-        <h3>Improve reaction time</h3>
-        <p>
-          Emerging threats call for new capabilities. With an open platform, end
-          users can easily adopt and deploy new solutions.
+      <div class="block">
+        <h2>Open platform</h2>
+        <p class="lead">
+          Cyber security tools landscape is fragmented. Each commercial tool comes
+          with an unique deployment model. Open source offers great tools, but
+          deployment and maintenance at scale is a challenge. New issues requiring
+          quick reactions and innovative assessment tools emerge in accelerating
+          pace. SensorFleet offers a platform for keeping your toolchest in order.
         </p>
+        <div class="mt-4">
+          <div class="align-items-center d-flex mb-3">
+            <img class="object-contain" style="max-width: 100px;" src="img/ecosystem.svg" alt="Sensor" />
+            <div class="ml-4 ml-lg-5">
+              <h3 class="mt-0">Embrace the ecosystem</h3>
+              <p>
+                SensorFleet solution has been designed as an open platform for 3rd
+                party Instruments. Utilize most suitable solutions, both from open
+                source domain and commercial vendors.
+              </p>
+            </div>
+          </div>
+          <div class="align-items-center d-flex mb-3">
+            <img class="object-contain" style="max-width: 100px;" src="img/instrument.svg" alt="Sensor" />
+            <div class="ml-4 ml-lg-5">
+              <h3 class="mt-0">Bring your own instruments</h3>
+              <p>
+                Sometimes Instruments you need aren't available from the market.
+                SensorFleet solution enables customers to integrate their own tools.
+              </p>
+            </div>
+          </div>
+          <div class="align-items-center d-flex">
+            <img class="object-contain" style="max-width: 100px;" src="img/reaction-time.svg" alt="Sensor" />
+            <div class="ml-4 ml-lg-5">
+              <h3 class="mt-0">Improve reaction time</h3>
+              <p>
+                Emerging threats call for new capabilities. With an open platform, end
+                users can easily adopt and deploy new solutions.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<a name="in-action"></a>
-<a name="datasheets"></a>
-
-<div class="container-fluid bg-dark slanted2">
-  <div class="container">
-    <div class="row highlights">
-      <div class="col-md-12 text-center">
+      <div class="block">
         <h2>Instruments</h2>
-        <p>More details of available Instruments.</p>
-
-        <p></p>
-        {% for instrument in site.data.instruments %}
-        <a href="instruments/{{ instrument[0] }}/" class="btn btn-secondary"
-          >{{ instrument[1].name }} &raquo;</a
-        >
-        {% endfor %}
+        <p class="lead">More details of available Instruments.</p>
+        <div class="row mb-n4 mt-4">
+          {% for group in site.data.instruments.groups %}
+            <div class="col-md-12 col-lg-6 d-flex flex-column mb-4">
+              <h3>{{ group.name }}</h3>
+              <div class="nav-list flex-grow-1">
+                {% for instrument in group.instruments %}
+                  {% assign name = site.data.instruments[instrument].name %}
+                  {% assign url = site.data.instruments[instrument].url %}
+                  <a class="nav-list-item" href="instruments/{{ url }}/">
+                    <h4 class="nav-list-item-title">{{ name }}</h4>
+                    <span class="btn btn-outline-light">Read more</span>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid bg-dark2 slanted2">
-  <div class="container">
-    <h1>About us</h1>
-    <div class="row">
-      <div class="col-md-6 text-left">
-        <p>
-          Our team has a long experience in developing cyber security sensor
-          technology for a national early warning system protecting the critical
-          infrastructure in Finland. At the inception of SensorFleet in 2018, we
-          set out to re-imagine cyber security monitoring.
-        </p>
-
-        <p>
-          <a href="/about-us/" class="btn btn-secondary">Read more &raquo;</a>
-        </p>
-
+      <div class="block">
+        <div class="align-items-center row">
+          <div class="col-lg-7 text-left">
+            <h2>About us</h2>
+            <p class="lead">
+              Our team has a long experience in developing cyber security sensor
+              technology for a national early warning system protecting the critical
+              infrastructure in Finland. At the inception of SensorFleet in 2018, we
+              set out to re-imagine cyber security monitoring.
+            </p>
+            <p>
+              <a class="btn btn-secondary" href="/about-us/">
+                <span>Read more</span>
+                <span class="btn-icon">{% include icon-arrow-right.html %}</span>
+              </a>
+            </p>
+          </div>
+          <div class="col-lg-5 text-left">
+            <img class="img-fluid mt-4 mt-lg-0 rounded" src="img/staff/sensorfleet-team.jpg" alt="SensorFleet team" />
+          </div>
+        </div>
         <h3>Latest blog posts</h3>
-        <ul>
-          {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url }}"
-              >{{ post.title }} - {{ post.date | date:"%d %b %Y" }} - {{
-              site.data.staff[post.author].name }}</a
-            >
-            {% endfor %}
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-6 text-left">
-        <img
-          src="img/staff/sensorfleet-team.jpg"
-          alt="SensorFleet team"
-          style="max-height: 400px"
-        />
+        <div class="nav-list">
+          {% for post in site.posts limit: 5 %}
+            <a class="nav-list-item" href="{{ post.url }}">
+              <div>
+                <h3 class="nav-list-item-title">{{ post.title }}</h3>
+                <div class="nav-list-item-meta mt-1">
+                  {{ post.date | date:"%d %b %Y" }} by {{ site.data.staff[post.author].name }}
+                </div>
+              </div>
+              <span class="btn btn-outline-light">Read more</span>
+            </a>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>

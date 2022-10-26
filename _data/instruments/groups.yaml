@@ -1,19 +1,23 @@
 - group: exposure_monitoring
+  name: Exposure monitoring
   instruments:
     - portdiff
     - tgmanager
 - group: attack_and_lateral_movement_detection
+  name: Attack and lateral movement detection
   instruments:
     - cowrie
     - suricata
     - zeek
 - group: forensics_and_threat_hunting
+  name: Forensics and threat hunting
   instruments:
     - recorder
     - netflow
     - passivedns
     - replay
 - group: special_purpose
+  name: Special purpose
   instruments:
     - beacon
     - logforwarder

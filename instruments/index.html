@@ -16,64 +16,20 @@ description:
 
 <div class="block">
   {% for group in site.data.instruments.groups %}
-    {% if group.group == "exposure_monitoring" %}
-      <h2>Exposure monitoring</h2>
-      <div class="box-grid">
-        {% for instrument in group.instruments %}
-          {% assign name = site.data.instruments[instrument].name %}
-          {% assign description = site.data.instruments[instrument].description %}
-          {% include instrument-card.html
-            name=name
-            description=description
-            url=instrument
-          %}
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if group.group == "attack_and_lateral_movement_detection" %}
-      <h2>Attack and lateral movement detection</h2>
-      <div class="box-grid">
-        {% for instrument in group.instruments %}
-          {% assign name = site.data.instruments[instrument].name %}
-          {% assign description = site.data.instruments[instrument].description %}
-          {% include instrument-card.html
-            name=name
-            description=description
-            url=instrument
-          %}
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if group.group == "forensics_and_threat_hunting" %}
-      <h2>Forensics and threat hunting</h2>
-      <div class="box-grid">
-        {% for instrument in group.instruments %}
-          {% assign name = site.data.instruments[instrument].name %}
-          {% assign description = site.data.instruments[instrument].description %}
-          {% include instrument-card.html
-            name=name
-            description=description
-            url=instrument
-          %}
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if group.group == "special_purpose" %}
-      <h2>Special purpose</h2>
-      <div class="box-grid">
-        {% for instrument in group.instruments %}
-          {% assign name = site.data.instruments[instrument].name %}
-          {% assign description = site.data.instruments[instrument].description %}
-          {% include instrument-card.html
-            name=name
-            description=description
-            url=instrument
-          %}
-        {% endfor %}
-      </div>
-    {% endif %}
+    <h2>{{ group.name }}</h2>
+    <div class="box-grid">
+      {% for instrument in group.instruments %}
+        {% assign name = site.data.instruments[instrument].name %}
+        {% assign description = site.data.instruments[instrument].description %}
+        <a class="box p-4" href="{{ instrument }}/">
+          <h3>{{ name }}</h3>
+          <p>{{ description }}</p>
+          <span class="btn btn-secondary">
+            <span>Read more</span>
+            <span class="btn-icon">{% include icon-arrow-right.html %}</span>
+          </span>
+        </a>
+      {% endfor %}
+    </div>
   {% endfor %}
 </div>
