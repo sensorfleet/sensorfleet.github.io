@@ -94,47 +94,6 @@ layout: default
         </div>
       </div>
       <div class="block">
-        <h2>Instruments</h2>
-        <p class="lead">More details of available Instruments.</p>
-        <div class="row mb-n4 mt-4">
-          {% for group in site.data.instruments.groups %}
-            <div class="col-md-12 col-lg-6 d-flex flex-column mb-4">
-              <h3>{{ group.name }}</h3>
-              <div class="nav-list flex-grow-1">
-                {% for instrument in group.instruments %}
-                  {% assign name = site.data.instruments[instrument].name %}
-                  {% assign url = site.data.instruments[instrument].url %}
-                  <a class="nav-list-item" href="instruments/{{ url }}/">
-                    <h4 class="nav-list-item-title">{{ name }}</h4>
-                    <span class="btn btn-outline-light">Read more</span>
-                  </a>
-                {% endfor %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="block">
-        <div class="align-items-center row">
-          <div class="col-lg-7 text-left">
-            <h2>About us</h2>
-            <p class="lead">
-              Our team has a long experience in developing cyber security sensor
-              technology for a national early warning system protecting the critical
-              infrastructure in Finland. At the inception of SensorFleet in 2018, we
-              set out to re-imagine cyber security monitoring.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="/about-us/">
-                <span>Read more</span>
-                <span class="btn-icon">{% include icon-arrow-right.html %}</span>
-              </a>
-            </p>
-          </div>
-          <div class="col-lg-5 text-left">
-            <img class="img-fluid mt-4 mt-lg-0 rounded" src="img/staff/sensorfleet-team.jpg" alt="SensorFleet team" />
-          </div>
-        </div>
         <h3>Latest blog posts</h3>
         <div class="nav-list">
           {% for post in site.posts limit: 5 %}
