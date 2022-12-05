@@ -7,15 +7,15 @@ any repository.
 See User Manual for details on release channels and their usage.
 
 Release specific channels:
-* release-2.4: version 2.4.9
+* release-2.4: version 2.4.10
 * release-2.3: version 2.3.12
 
 Old-style release channel:
 * staging: version 2.4.10
-* beta: version 2.4.9
+* beta: version 2.4.10
 * stable: version 2.3.12
 
-2.4.10: staging 2022-10-14
+2.4.10: staging 2022-10-14, beta 2022-12-05
 
 - Bug fixes:
   [SF-2740] - Rule Manager: Zeek related purge might fail after upgrade to 2.4.X
