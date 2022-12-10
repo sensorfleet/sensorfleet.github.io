@@ -11,9 +11,16 @@ Release specific channels:
 * release-2.3: version 2.3.12
 
 Old-style release channel:
-* staging: version 2.4.10
+* staging: version 2.4.11
 * beta: version 2.4.10
 * stable: version 2.3.12
+
+2.4.11: staging 2022-12-11
+
+- Bug fixes:
+  [SF-2807] - Rule Manager: Fix Health Check timeout error when processing big rulesources on a slow I/O sensor
+  [SF-2836] - Rule Manager: Fix diff generation failing under some circumstances
+  [SF-2833] - Rule Manager: Fix Data Retention error on foreign key constraint check
 
 2.4.10: staging 2022-10-14, beta 2022-12-05
 
