@@ -9,7 +9,7 @@ excerpt:
   SensorFleet Network Detection and Response (NDR) solution was deployed on the
   HAVARO ecosystem in the second half of 2020. HAVARO is a national monitoring
   and early warning system provided by the NCSC-FI for critical infrastructure
-  providers and government organizations. 
+  providers and government organizations.
 ---
 
 SensorFleet Network Detection and Response (NDR) solution was deployed on the
