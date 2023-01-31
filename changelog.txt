@@ -6,14 +6,71 @@ any repository.
 
 See User Manual for details on release channels and their usage.
 
-Release specific channels:
-* release-2.4: version 2.4.10
+*** CHANNELS ***
+
+Current version:
+* release-2.4: version 2.4.12
+* release-2.4-beta: version 2.4.12
+* release-2.4-staging: version 2.4.12
+
+Upcoming release (for testing purposes):
+* release-2.5: version 2.5.0
+* release-2.5-beta: version 2.5.0
+* release-2.5-staging: version 2.5.0
+
+Old stable (not recommended):
 * release-2.3: version 2.3.12
 
-Old-style release channel:
-* staging: version 2.4.11
-* beta: version 2.4.10
-* stable: version 2.3.12
+Do not use older non-release specific "stable", "staging" or "beta" repositories. They will be removed.
+
+
+*** CHANGELOG ***
+
+2.5.0: release-2.5 2022-02-12
+
+See User Manual for upgrade procedure due to Ubuntu 22.04 requirement.
+
+- Release highlights:
+  [SF-2689] - Zeek Instrument: Clustering/multithreading support
+  [SF-2686] - Update to Ubuntu 22.04 LTS
+  [SF-2141] - Support overriding homenets for individual instruments
+
+- New features and other improvements:
+  [SF-2930] - Recorder Instrument: Update arkime to 3.4.2 and openjdk to v17
+  [SF-2929] - SensorFleet LXD: Update lxd to 5.0.2, dqlite to 1.14.0, raft to 0.17.1
+  [SF-2927] - PassiveDNS, Rule Manager, TrafficGuard Manager: Update postgresql to 12.13
+  [SF-2863] - Suricata instrument: Allow EXTERNAL_NET to match when HOME_NET 0.0.0.0/0 or ::0/0 is used
+  [SF-2845] - UI: Standardize UI behavior and buttons for adding items to list
+  [SF-2817] - UI: Sensor-UI: Fix confusing "Add range" in homenets editor
+  [SF-2771] - Sensor Orchestrator: Add metadata from download configuration to download.available event
+  [SF-2769] - Support transmission on IPv6 for FM-Sensor tunnels
+  [SF-2760] - Update python requirements of all instruments
+  [SF-2755] - Replay Instrument: Add downloader support for replay
+  [SF-2754] - Replay Instrument: Update tcpreplay to 4.4.2
+  [SF-2725] - PortDiff Instrument: Update to pscan 0.2.0 release
+  [SF-2720] - Fleet Tool: Preliminary Adoption VPN server support
+  [SF-2700] - Cowrie Instrument: Refactor cowrie configuration handling
+  [SF-2699] - Cowrie Instrument: Update Cowrie to 2.4.0
+
+- Bug fixes:
+  [SF-2892] - SensorFleet LXD: Unable start containers (Health check timeout) when conflicting SubUID/SubGID mapping
+  [SF-2701] - Suricata instrument: Suricata does not update the produced event configuration properly
+  [SF-2668] - UI: UI fails to add bridge interface without an IP
+  [SF-2658] - Installer: Fix installer error when management interfaces are not present in install phase
+  [SF-2638] - PortDiff Instrument: Scanning large networks might deadlock the scanner
+  [SF-2632] - Rule Manager: Fix timeout with a big rulelist
+  [SF-2594] - PortDiff Instrument: Portdiff: Invalid baseline config passing validation
+
+
+2.4.12: release-2.4 2022-02-12
+
+See latest User Manual for information on upgrade from 2.4.12 to 2.5+.
+
+- Bug fixes:
+  [SF-2892] - SensorFleet LXD: Unable start containers (Health check timeout) when conflicting SubUID/SubGID mapping
+
+- New features and other improvements:
+  [SF-2873] - Upgrade Script to automate Ubuntu upgrade from 18.04 to 22.04
 
 2.4.11: staging 2022-12-11
 
@@ -29,6 +86,7 @@ Old-style release channel:
 
 - New features and other improvements:
   [SF-2698] - Netflow Instrument: Add netflow search UI, move API to /api
+  [SF-2642] - Rule Manager: Improve rule view for smaller resolutions
   [SF-2600] - Rule Manager: Rule classification should display value as enum instead of number
   [SF-2601] - Rule Manager: UI cleanup (Oink revision => Revision)
 
