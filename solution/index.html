@@ -174,7 +174,7 @@ description:
   <h2>Operational environments</h2>
   <div class="box-grid">
     {% for page in solution_pages %}
-      <a class="box p-4" href="ot.html">
+      <a class="box p-4" href="{{ page.url }}">
         <h3>{{ page.title }}</h3>
         <p>{{ page.description }}</p>
         <span class="btn btn-secondary">
