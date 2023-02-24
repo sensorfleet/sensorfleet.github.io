@@ -26,7 +26,7 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
 
 *** CHANGELOG ***
 
-2.5.0: release-2.5 2022-02-12
+2.5.0: release-2.5 2023-02-12
 
 See User Manual for upgrade procedure due to Ubuntu 22.04 requirement.
 
@@ -62,7 +62,7 @@ See User Manual for upgrade procedure due to Ubuntu 22.04 requirement.
   [SF-2594] - PortDiff Instrument: Portdiff: Invalid baseline config passing validation
 
 
-2.4.12: release-2.4 2022-02-12
+2.4.12: release-2.4 2023-02-12
 
 See latest User Manual for information on upgrade from 2.4.12 to 2.5+.
 
