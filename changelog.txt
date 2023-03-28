@@ -26,6 +26,25 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
 
 *** CHANGELOG ***
 
+2.5.1: release-2.5 2023-03-27
+
+- New features and other improvements:
+  [SF-2992] - Update all instruments to Alpine 3.17.2
+  [SF-2969] - Fleet Tool: Do not include defaults when saving sensor config
+  [SF-2995] - Sensor Installer: Add updates/security-repos default apt.sources
+  [SF-2996] - Ansible: Override system repositories by default to avoid configuration errors
+  [SF-2967] - Recorder Instrument: Update to Arkime 4.2.0
+  [SF-2974] - Recorder Instrument: Add simpleCompression as a configurable setting
+  [SF-2976] - Recorder Instrument: Backport db.pl from Arkime 3.3.0 to allow direct upgrade to 4.2.0
+  [SF-2975] - Ansible: Default APT protocol to https
+
+- Bug fixes:
+  [SF-2972] - Rule Manager Instrument: Fix broken Address groups / Port groups editing
+  [SF-2965] - Fix release-2.5 FM fresh install failure
+  [SF-2848] - Recorder Instrument: Configurable ES shards (allows >42d retention times)
+  [SF-2966] - Fleet Tool: Allow adoption vpn client import work on non-installed Sensor
+  [SF-2709] - Rule Manager Instrument: Invalid Zeek script passes validation
+
 2.5.0: release-2.5 2023-02-12
 
 See User Manual for upgrade procedure due to Ubuntu 22.04 requirement.
