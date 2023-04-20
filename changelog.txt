@@ -37,6 +37,7 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
   [SF-2974] - Recorder Instrument: Add simpleCompression as a configurable setting
   [SF-2976] - Recorder Instrument: Backport db.pl from Arkime 3.3.0 to allow direct upgrade to 4.2.0
   [SF-2975] - Ansible: Default APT protocol to https
+  [SF-2931] - Suricata Instrument: Update Suricata to 6.0.10
 
 - Bug fixes:
   [SF-2972] - Rule Manager Instrument: Fix broken Address groups / Port groups editing
