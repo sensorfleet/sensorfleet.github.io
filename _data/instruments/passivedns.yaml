@@ -10,6 +10,7 @@ description:
   Builds a database of DNS queries and replies. Can be searched for threat
   hunting and automatically augments other events, such as IDS alerts.
 has_ui: true
+public: true
 data_retention_desc: PassiveDNS Instrument stores DNS information up to the configured period.
 performance_desc: PassiveDNS Instrument can handle thousands of DNS requests per second(??)
 network_access_type: None
