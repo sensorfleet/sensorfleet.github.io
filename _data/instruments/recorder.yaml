@@ -5,6 +5,7 @@ description:
   recording and alert based capture.
 developer: SensorFleet Oy
 has_ui: true
+public: true
 config_defaults:
   global_sysctl:
     vm.max_map_count: 262144
