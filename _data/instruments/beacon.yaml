@@ -8,6 +8,7 @@ description:
   SensorFu Beacon tries to escape from restricted networks and reports any leaks
   to SensorFu Home.
 has_ui: false
+public: true
 data_retention_desc: Beacon Instrument does not store information
 performance_desc: N/A
 network_access_type: active
