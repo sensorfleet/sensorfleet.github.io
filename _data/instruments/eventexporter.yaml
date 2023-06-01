@@ -9,3 +9,4 @@ categories:
 description: A simple HTTP API for exporting events to external systems.
 data_retention_desc: No data is stored by the instrument.
 has_ui: true
+public: true
