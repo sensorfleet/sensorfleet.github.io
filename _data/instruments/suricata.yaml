@@ -10,6 +10,7 @@ description:
   Widely used IDS engine with curated IoC feed for detecting the malicious
   activity, such as Command and Control connections, in the network.
 has_ui: false
+public: true
 data_retention_desc: The latest rule lists are stored in Suricata IDS's persistent data.
 relations:
   - description: Rule Manager Instrument can manage Suricata Rule lists.
