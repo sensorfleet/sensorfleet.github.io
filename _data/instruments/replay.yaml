@@ -11,6 +11,7 @@ description:
   or Traffic Recorder to analyze contents of captured traffic instead of live
   traffic.
 has_ui: false
+public: true
 data_retention_desc: Does not store data
 performance_desc: Does not generate significant CPU or IO load
 required_interfaces:
