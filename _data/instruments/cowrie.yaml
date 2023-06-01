@@ -8,6 +8,7 @@ description:
   Detects lateral movement such as unexpected SSH/Telnet login attempts and file
   transfers.
 has_ui: true
+public: true
 data_retention_desc:
   Cowrie instrument stores logs and artifacts downloaded/uploaded to it up the
   configured retention period
