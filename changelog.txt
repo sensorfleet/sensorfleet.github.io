@@ -11,7 +11,7 @@ See User Manual for details on release channels and their usage.
 Current version:
 * release-2.4: version 2.4.12
 * release-2.4-beta: version 2.4.12
-* release-2.4-staging: version 2.4.12
+* release-2.4-staging: version 2.4.13
 
 Upcoming release (for testing purposes):
 * release-2.5: version 2.5.0
@@ -25,6 +25,53 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
 
 
 *** CHANGELOG ***
+
+2.6.0: release-2.6 2023-06-XX
+
+Highlights:
+* Rule Manager: assign rulelists per Suricata instrument using the new "Tags" feature
+* SFConfig: Securely configure Sensor management interface IP/authentication/adoption VPN using external media
+* Adoption of Sensors over Adoption VPN (call-home vpn, configurable via sfconfig or manually using fleet tool)
+* Major 3rd party component upgrades (Arkime, Suricata, etc)
+* Bug fixes
+
+See Manual for details the new SFConfig/Adoption VPN feature.
+
+- Bug fixes:
+  [SF-3042] - Sensor Installer: Sensors are installed with non-standard EFI mountpoint
+  [SF-3029] - Fleet Tool: Fix adoption VPN client revocation
+  [SF-2995] - Sensor Installer: Add -updates/-security repos to sensor-installer
+  [SF-2960] - Netflow: Fix netflow invalid timestamp milliseconds
+
+- New features and other improvements:
+  [SF-3096] - Ansible: Disable sfconfig auth/vpn import by default when adopting Sensors
+  [SF-3091] - Recorder Instrument: Update arkime to 4.3.1
+  [SF-3089] - PortDiff Instrument: Update to pscan 0.3.0
+  [SF-3085] - Zeek Instrument: Update Zeek to 5.0.9
+  [SF-3080] - Update suricata to 6.0.12, hyperscan to 5.4.2, libhtp to 0.5.43
+  [SF-3056] - Fleet Tool: Support for generating SSH config
+  [SF-3055] - HelloWorld Instrument: Convert Helloworld-instrument to Python 3.10
+  [SF-3052] - Rule Importer: RuleImporter asynchronous rulelist delivery to multiple sensors simultaneously
+  [SF-3051] - Sensor Installer: Remove default generated fleetbase ssh key from image
+  [SF-3049] - Sensor Installer: Enable ttyS0 serial console for installed sensor
+  [SF-3046] - UI: UI: Tweak health popups
+  [SF-3039] - Fleet Tool: Fleet tool: Read newest events
+  [SF-3028] - Fleet Tool: Allow Sensor to be installed over adoption VPN
+  [SF-3023] - UI: FM UI spams "Sensor offline" when using the UI
+  [SF-3021] - Kernel: Enable some missing kernel modules for Intel drivers
+  [SF-3019] - Hauki Instrument: Add support for filtering incoming flows for hauki
+  [SF-3012] - Autobuilds and repositories: Alpine 3.17.3 update
+  [SF-2976] - Recorder Instrument: Backport db.pl from Arkime 3.3.0 to allow direct upgrade to 4.2.0
+  [SF-2961] - Recorder Instrument: Use nodejs v16, update some arkime dependencies
+  [SF-2959] - Netflow: Update netflow to 1.6.24
+  [SF-2951] - PortDiff Instrument: Update pscan dependencies and move to tokio async runtime
+  [SF-2926] - UI: Hide internal instruments in FM/Sensor UI
+  [SF-2847] - UI: Show advanced event search UI by default
+  [SF-2718] - Sensor Installer: support sfconfig by default
+
+2.4.13: release-2.4 2023-06-XX:
+- New features and other improvements:
+  [SF-2944] - Release Upgrade: Implement free space check for fleet-release-upgrade
 
 2.5.1: release-2.5 2023-03-27
 
