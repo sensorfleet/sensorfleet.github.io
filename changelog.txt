@@ -33,6 +33,7 @@ Highlights:
 * SFConfig: Securely configure Sensor management interface IP/authentication/adoption VPN using external media
 * Adoption of Sensors over Adoption VPN (call-home vpn, configurable via sfconfig or manually using fleet tool)
 * Major 3rd party component upgrades (Arkime, Suricata, etc)
+* New Instrument: AssetGuard Manager & Probe Instruments (beta, replaces TrafficGuard)
 * Bug fixes
 
 See Manual for details the new SFConfig/Adoption VPN feature.
