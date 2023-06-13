@@ -30,8 +30,10 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
 
 Highlights:
 * Rule Manager: assign rulelists per Suricata instrument using the new "Tags" feature
-* SFConfig: Securely configure Sensor management interface IP/authentication/adoption VPN using external media
-* Adoption of Sensors over Adoption VPN (call-home vpn, configurable via sfconfig or manually using fleet tool)
+* Experimental feature: sfconfig-importer, securely configure Sensor management interface
+                         IP/authentication/adoption VPN using external media
+* Experimental feature: Adoption of Sensors over Adoption VPN
+  (call-home vpn, configurable via sfconfig or manually using fleet tool)
 * Major 3rd party component upgrades (Arkime, Suricata, etc)
 * New Instrument: AssetGuard Manager & Probe Instruments (beta, replaces TrafficGuard)
 * Bug fixes
