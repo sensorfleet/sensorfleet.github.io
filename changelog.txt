@@ -9,16 +9,19 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Current version:
+* release-2.5: version 2.5.1
+* release-2.5-beta: version 2.5.1
+* release-2.5-staging: version 2.5.1
+
+Upcoming release (for testing purposes):
+* release-2.6: version 2.6.0
+* release-2.6-beta: version 2.6.0
+* release-2.6-staging: version 2.6.0
+
+Old releases (upgrade to 2.5+ highly recommended, these are EOL):
 * release-2.4: version 2.4.12
 * release-2.4-beta: version 2.4.12
 * release-2.4-staging: version 2.4.13
-
-Upcoming release (for testing purposes):
-* release-2.5: version 2.5.0
-* release-2.5-beta: version 2.5.0
-* release-2.5-staging: version 2.5.0
-
-Old stable (not recommended):
 * release-2.3: version 2.3.12
 
 Do not use older non-release specific "stable", "staging" or "beta" repositories. They will be removed.
@@ -26,7 +29,7 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
 
 *** CHANGELOG ***
 
-2.6.0: release-2.6 2023-06-XX
+2.6.0: release-2.6 2023-06-15
 
 Highlights:
 * Rule Manager: assign rulelists per Suricata instrument using the new "Tags" feature
