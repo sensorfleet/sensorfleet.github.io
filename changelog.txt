@@ -1,4 +1,4 @@
-SensorFleet software changelog
+'SensorFleet software changelog
 
 Changes marked with ansible mean that an ansible re-run with new playbook is required.
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
@@ -32,12 +32,12 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
 2.6.0: release-2.6 2023-06-15
 
 Highlights:
-* Rule Manager: assign rulelists per Suricata instrument using the new "Tags" feature
+* Rule Manager: assign rule lists per Suricata instrument using the new "Tags" feature
 * Experimental feature: sfconfig-importer, securely configure Sensor management interface
                          IP/authentication/adoption VPN using external media
 * Experimental feature: Adoption of Sensors over Adoption VPN
   (call-home vpn, configurable via sfconfig or manually using fleet tool)
-* Major 3rd party component upgrades (Arkime, Suricata, etc)
+* Major 3rd party component upgrades (Arkime, Suricata, Zeek, etc)
 * New Instrument: AssetGuard Manager & Probe Instruments (beta, replaces TrafficGuard)
 * Bug fixes
 
@@ -56,16 +56,14 @@ See Manual for details the new SFConfig/Adoption VPN feature.
   [SF-3085] - Zeek Instrument: Update Zeek to 5.0.9
   [SF-3080] - Update suricata to 6.0.12, hyperscan to 5.4.2, libhtp to 0.5.43
   [SF-3056] - Fleet Tool: Support for generating SSH config
-  [SF-3055] - HelloWorld Instrument: Convert Helloworld-instrument to Python 3.10
-  [SF-3052] - Rule Importer: RuleImporter asynchronous rulelist delivery to multiple sensors simultaneously
+  [SF-3052] - Rule Importer: Asynchronous rule list delivery to multiple sensors simultaneously
   [SF-3051] - Sensor Installer: Remove default generated fleetbase ssh key from image
   [SF-3049] - Sensor Installer: Enable ttyS0 serial console for installed sensor
-  [SF-3046] - UI: UI: Tweak health popups
-  [SF-3039] - Fleet Tool: Fleet tool: Read newest events
+  [SF-3046] - UI: Tweak health popups
+  [SF-3039] - Fleet Tool: Add option to read newest events
   [SF-3028] - Fleet Tool: Allow Sensor to be installed over adoption VPN
-  [SF-3023] - UI: FM UI spams "Sensor offline" when using the UI
+  [SF-3023] - UI: FM UI spams "Sensor offline"
   [SF-3021] - Kernel: Enable some missing kernel modules for Intel drivers
-  [SF-3019] - Hauki Instrument: Add support for filtering incoming flows for hauki
   [SF-3012] - Autobuilds and repositories: Alpine 3.17.3 update
   [SF-2976] - Recorder Instrument: Backport db.pl from Arkime 3.3.0 to allow direct upgrade to 4.2.0
   [SF-2961] - Recorder Instrument: Use nodejs v16, update some arkime dependencies
