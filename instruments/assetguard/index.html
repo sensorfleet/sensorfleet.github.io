@@ -1,0 +1,69 @@
+---
+layout: datasheet
+title: AssetGuard Instrument
+description: Automated inventory of the network's assets and alerting about the unexpected assets entering the network.
+---
+
+<!-- File is generated automatically, do not edit directly. -->
+
+<p>
+  Asset Guard provides visibility to the network assets by monitoring network
+  traffic and gathering identities from it. It provides tools for detecting and
+  naming new assets in the specified networks, sending alerts for suspicious
+  assets and exporting all network assets with various observations collected
+  from them.
+</p>
+<h2 id="components">Components</h2>
+<p>
+  Asset Guard consists from two main components: Manager and Probe. Probes
+  listen to the mirrored network traffic and reports its findings to the
+  Manager. It won’t send anything making it ideal for the OT networks as well.
+  Monitoring multiple networks and physical locations is easy just by deploying
+  multiple probes. Manager then collects the results to the central location and
+  allows reviewing new assets, naming them and for example examining their MAC
+  and IP addresses, manufacturers and traffic amounts.
+</p>
+<h2 id="properties">Properties</h2>
+<table style="width: 61%">
+  <colgroup>
+    <col style="width: 30%" />
+    <col style="width: 30%" />
+  </colgroup>
+  <tbody>
+    <tr class="odd">
+      <td>Developer</td>
+      <td>SensorFleet Oy</td>
+    </tr>
+    <tr class="even">
+      <td>Categories</td>
+      <td>Integrity Monitoring, Asset Tracking</td>
+    </tr>
+    <tr class="odd">
+      <td>Network access type</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Required interfaces</td>
+      <td>None</td>
+    </tr>
+    <tr class="odd">
+      <td>Dependencies</td>
+      <td>None</td>
+    </tr>
+    <tr class="even">
+      <td>Related Instruments</td>
+      <td>AssetProbe</td>
+    </tr>
+    <tr class="odd">
+      <td>Data retention</td>
+      <td>
+        AssetGuard Instrument keeps the collected information up to configured
+        retention period
+      </td>
+    </tr>
+    <tr class="even">
+      <td>Management UI</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
