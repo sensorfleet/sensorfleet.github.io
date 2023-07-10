@@ -8,6 +8,7 @@ description:
   Periodic and automated port scanning to detect exposed services, such as file
   shares, databases, remote management etc.
 has_ui: false
+public: true
 data_retention_desc:
   Besides the current active network status, the instrument stores no data. All
   history will be stored in events on the sensor, not in the instrument.

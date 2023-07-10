@@ -14,6 +14,7 @@ description:
   integrating Logstash open source log/event pipeline engine into the
   SensorFleet platform.
 has_ui: false
+public: true
 data_retention_desc: Holds a temporary event buffer, not affected by the data retention logic.
 performance_desc:
   At least 512 MB RAM is required for light workload, 4 GB recommended for

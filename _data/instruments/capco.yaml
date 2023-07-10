@@ -8,6 +8,7 @@ description:
   Capture Engine redistributes packets from physical interface to mirror-bridge
   interface(s).
 has_ui: false
+public: true
 data_retention_desc: Capture Engine does not store information.
 required_interfaces:
   - type: phy

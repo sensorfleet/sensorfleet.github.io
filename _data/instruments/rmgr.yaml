@@ -13,6 +13,7 @@ data_retention_desc:
   Rule manager stores edit history of Suricata rules and history of user actions
   (edit, delete creation)
 has_ui: true
+public: true
 allow_modify_downloads: allow
 produced_event_types:
   - match: instruments.rmgr.adopted
