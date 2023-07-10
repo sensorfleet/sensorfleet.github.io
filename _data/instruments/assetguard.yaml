@@ -1,0 +1,35 @@
+---
+name: AssetGuard
+developer: SensorFleet Oy
+title: AssetGuard Instrument
+categories:
+  - Integrity Monitoring
+  - Asset Tracking
+description:
+  Automated inventory of the network's assets and alerting about the unexpected
+  assets entering the network.
+has_ui: true
+public: true
+data_retention_desc:
+  AssetGuard Instrument keeps the collected information up to configured
+  retention period
+performance_desc: Does not generate significant CPU or IO load
+relations:
+  - description:
+      AssetGuard needs to find AssetProbe Instruments to be able to receive
+      their events
+    instrument_name: AssetProbe
+    instrument_type: assetprobe
+    permissions:
+      - find
+
+produced_event_types:
+  - match: instruments.assetguard.asset.new
+    type: exact
+    title: New asset
+  - match: instruments.assetguard.asset.reappeared
+    type: exact
+    title: Asset archived alert
+  - match: instruments.assetguard.asset.moved
+    type: exact
+    title: Asset moved alert
