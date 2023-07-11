@@ -1,28 +1,33 @@
 ---
-name: AssetGuard
+name: Asset Guard
 developer: SensorFleet Oy
-title: AssetGuard Instrument
+title: Asset Guard Instrument
 categories:
   - Integrity Monitoring
   - Asset Tracking
 description:
-  Automated inventory of the network's assets and alerting about the unexpected
-  assets entering the network.
+  Automated inventory of the network's assets and alerts about unexpected assets
+  entering the network.
 has_ui: true
 public: true
 data_retention_desc:
-  AssetGuard Instrument keeps the collected information up to configured
-  retention period
+  The Asset Guard Instrument retains the collected information until the
+  Instrument is removed.
 performance_desc: Does not generate significant CPU or IO load
+network_access_type: passive
+required_interfaces:
+  - description: Mirrored traffic from the monitored network
+    capabilities:
+      - rx
+    type: mirror-bridge
 relations:
   - description:
-      AssetGuard needs to find AssetProbe Instruments to be able to receive
-      their events
+      Asset Guard needs to find AssetProbe Instruments in order to receive their
+      events
     instrument_name: AssetProbe
     instrument_type: assetprobe
     permissions:
       - find
-
 produced_event_types:
   - match: instruments.assetguard.asset.new
     type: exact

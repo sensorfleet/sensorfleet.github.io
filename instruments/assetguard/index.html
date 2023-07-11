@@ -1,27 +1,27 @@
 ---
 layout: datasheet
-title: AssetGuard Instrument
-description: Automated inventory of the network's assets and alerting about the unexpected assets entering the network.
+title: Asset Guard Instrument
+description: Automated inventory of the network's assets and alerts about unexpected assets entering the network.
 ---
 
 <!-- File is generated automatically, do not edit directly. -->
 
 <p>
-  Asset Guard provides visibility to the network assets by monitoring network
-  traffic and gathering identities from it. It provides tools for detecting and
-  naming new assets in the specified networks, sending alerts for suspicious
-  assets and exporting all network assets with various observations collected
-  from them.
+  Asset Guard provides network asset visibility by monitoring network traffic
+  and extracting identities from it. It offers various tools for detecting and
+  identifying new assets within specified networks, issuing alerts for
+  suspicious assets, and exporting comprehensive information collected from the
+  assets.
 </p>
 <h2 id="components">Components</h2>
 <p>
-  Asset Guard consists from two main components: Manager and Probe. Probes
-  listen to the mirrored network traffic and reports its findings to the
-  Manager. It won’t send anything making it ideal for the OT networks as well.
-  Monitoring multiple networks and physical locations is easy just by deploying
-  multiple probes. Manager then collects the results to the central location and
-  allows reviewing new assets, naming them and for example examining their MAC
-  and IP addresses, manufacturers and traffic amounts.
+  Asset Guard comprises two main components: Manager and Probe. Probes listen to
+  mirrored network traffic and report their findings to the Manager. They
+  operate in a non-intrusive manner, making them suitable for OT networks as
+  well. Multiple probes can be deployed to monitor multiple networks and
+  physical locations. The Manager collects the results in a central location,
+  allowing users to review new assets, assign names to them, and examine their
+  MAC and IP addresses, manufacturers, and traffic usage.
 </p>
 <h2 id="properties">Properties</h2>
 <table style="width: 61%">
@@ -40,11 +40,15 @@ description: Automated inventory of the network's assets and alerting about the 
     </tr>
     <tr class="odd">
       <td>Network access type</td>
-      <td>None</td>
+      <td>Passive</td>
     </tr>
     <tr class="even">
       <td>Required interfaces</td>
-      <td>None</td>
+      <td>
+        <ul>
+          <li>Mirrored traffic from the monitored network</li>
+        </ul>
+      </td>
     </tr>
     <tr class="odd">
       <td>Dependencies</td>
@@ -57,8 +61,8 @@ description: Automated inventory of the network's assets and alerting about the 
     <tr class="odd">
       <td>Data retention</td>
       <td>
-        AssetGuard Instrument keeps the collected information up to configured
-        retention period
+        The Asset Guard Instrument retains the collected information until the
+        Instrument is removed.
       </td>
     </tr>
     <tr class="even">
