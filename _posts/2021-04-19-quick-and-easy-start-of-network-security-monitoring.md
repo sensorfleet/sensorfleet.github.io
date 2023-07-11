@@ -74,7 +74,7 @@ Passive sensor configuration suitable for the Industrial Internet / Operational
 Technology networks. Traffic mirroring to sensor is recommended for the optimal
 detection accuracy, but regular access port can also be used. Capabilities:
 
-- **[Traffic Guard](/instruments/tgmanager/)** - Automated inventory of the
+- **[Asset Guard](/instruments/assetguard/)** - Automated inventory of the
   network's assets and alerting about the unexpected assets entering the
   network. Connections inventory and alerting also available for the restricted
   networks.
