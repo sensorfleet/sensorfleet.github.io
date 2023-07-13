@@ -2,7 +2,7 @@
   name: Exposure monitoring
   instruments:
     - portdiff
-    - tgmanager
+    - assetguard
 - group: attack_and_lateral_movement_detection
   name: Attack and lateral movement detection
   instruments:
