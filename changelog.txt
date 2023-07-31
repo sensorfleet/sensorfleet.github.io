@@ -19,8 +19,8 @@ Upcoming release (for testing purposes):
 * release-2.6-staging: version 2.6.0
 
 Old releases (upgrade to 2.5+ highly recommended, these are EOL):
-* release-2.4: version 2.4.12
-* release-2.4-beta: version 2.4.12
+* release-2.4: version 2.4.13
+* release-2.4-beta: version 2.4.13
 * release-2.4-staging: version 2.4.13
 * release-2.3: version 2.3.12
 
@@ -73,9 +73,13 @@ See Manual for details the new SFConfig/Adoption VPN feature.
   [SF-2847] - UI: Show advanced event search UI by default
   [SF-2718] - Sensor Installer: support sfconfig by default
 
-2.4.13: release-2.4 2023-06-13:
+2.4.13: release-2.4-staging 2023-06-13, release-2.4 2023-07-31:
+
 - New features and other improvements:
   [SF-2944] - Release Upgrade: Implement free space check for fleet-release-upgrade
+
+- Bug fixes:
+  [SF-3042] - Fix non-standard EFI mountpoint during upgrade
 
 2.5.1: release-2.5 2023-03-27
 
