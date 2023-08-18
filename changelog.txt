@@ -29,17 +29,16 @@ Do not use older non-release specific "stable", "staging" or "beta" repositories
 
 *** CHANGELOG ***
 
-2.6.1: release-2.6 2023-08-xx
+2.6.1: release-2.6 2023-08-18
 
 - New features and other improvements:
-  [SF-3153] - Ensure old encryption keys are not used when reinstalling a sensor with different keysource
-  [SF-3150] - Create larger EFI partition by default
+  [SF-3153] - Sensor Installer: Ensure old encryption keys are not used when reinstalling a sensor with different keysource
+  [SF-3150] - Sensor Installer: Create larger EFI partition by default
 
 - Bug fixes:
   [SF-3152] - Sensor Installer: Package Type 2 installer in addition to Type 1 installer
 
-
-2.5.2: release-2.5 2023-08-xx
+2.5.2: release-2.5 2023-08-18
 
 - New features and other improvements:
   [SF-3153] - Sensor Installer: Ensure old encryption keys are not used when reinstalling a sensor with different keysource
