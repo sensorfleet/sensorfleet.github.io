@@ -9,14 +9,14 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Current version:
-* release-2.5: version 2.5.1
-* release-2.5-beta: version 2.5.1
-* release-2.5-staging: version 2.5.1
+* release-2.5: version 2.5.2
+* release-2.5-beta: version 2.5.2
+* release-2.5-staging: version 2.5.2
 
 Upcoming release (for testing purposes):
-* release-2.6: version 2.6.0
-* release-2.6-beta: version 2.6.0
-* release-2.6-staging: version 2.6.0
+* release-2.6: version 2.6.1
+* release-2.6-beta: version 2.6.1
+* release-2.6-staging: version 2.6.1
 
 Old releases (upgrade to 2.5+ highly recommended, these are EOL):
 * release-2.4: version 2.4.13
