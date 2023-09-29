@@ -20,3 +20,7 @@ required_interfaces:
     capabilities:
       - rx
     description: Monitored network
+produced_event_types:
+  - match: instruments.netflow.stats
+    type: exact
+    title: Statistics
