@@ -25,9 +25,9 @@ produced_event_types:
   - match: instruments.logforwarder.crash
     type: exact
     title: Process crash event
-  - match: instruments.logforwarder.pipeline_stats
+  - match: instruments.logforwarder.stats
     type: exact
-    title: Pipeline statistic event
+    title: Logforwarder statistics event
 network_access_type: active
 required_interfaces:
   - type: any
