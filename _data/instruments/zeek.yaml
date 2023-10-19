@@ -31,6 +31,9 @@ required_interfaces:
       - rx
     description: Monitored network
 produced_event_types:
+  - match: instruments.zeek.stats
+    type: exact
+    title: Zeek stats event
   - match: instruments.zeek.ev.
     type: prefix
     title: IDS event
