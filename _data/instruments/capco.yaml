@@ -23,3 +23,7 @@ network_access_type: passive
 performance_desc:
   Capture Engine is able to mirror gigabits/sec of traffic with F-Probe
   hardware.
+produced_event_types:
+  - match: instruments.capco.stats
+    type: exact
+    title: Capco statistics
