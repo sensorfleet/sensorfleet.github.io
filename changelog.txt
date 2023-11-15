@@ -1,4 +1,4 @@
-'SensorFleet software changelog
+SensorFleet software changelog
 
 Changes marked with ansible mean that an ansible re-run with new playbook is required.
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
@@ -8,12 +8,12 @@ See User Manual for details on release channels and their usage.
 
 *** CHANNELS ***
 
-Current version:
-* release-2.6: version 2.6.2
-* release-2.6-beta: version 2.6.2
-* release-2.6-staging: version 2.6.2
+Supported current releases:
+* release-2.6: version 2.6.3
+* release-2.6-beta: version 2.6.3
+* release-2.6-staging: version 2.6.3
 
-Old releases:
+Unsupported old releases:
 * release-2.5: version 2.5.2
 * release-2.5-beta: version 2.5.2
 * release-2.5-staging: version 2.5.2
@@ -23,6 +23,14 @@ Old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.6.3: release-2.6 2023-11-13
+
+- Bug fixes:
+  [SF-3238] - Recorder Instrument: Recorder buffer limit is incorrectly calculated leading to potential out-of-memory conditions (oomkiller)
+
+- New features and other improvements:
+  [SF-3271] - Update Alpine Linux to 3.17.5 for all instruments
 
 2.6.2: release-2.6 2023-10-13
 
