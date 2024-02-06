@@ -27,9 +27,9 @@ Unsupported old releases:
 2.6.5: release-2.6-staging 2024-02-06
 
 - New features and other improvements:
-  [SF-3277] - Support having minimum required disk space in bytes in addition to % (disk_min_free_mib)
-  [SF-3275] - Recorder should emit health warnings when elastic has an issue
-  [SF-3274] - Rewrite PCAP retention logic to be more reliable and not trust the Arkime index so much
+  [SF-3277] - Recorder Instrument: Support having minimum required disk space in bytes in addition to % (disk_min_free_mib)
+  [SF-3275] - Recorder Instrument: Recorder should emit health warnings when elastic has an issue
+  [SF-3274] - Recorder Instrument: Rewrite PCAP retention logic to be more reliable and not trust the Arkime index so much
 
 2.6.3: release-2.6 2023-11-13
 
