@@ -1,6 +1,7 @@
 _site
 _data/instruments
 _includes/head.html
+_layouts
 instruments/*/*
 instruments/index.html
 events/index.html

@@ -390,6 +390,11 @@ a.box:hover {
   font-size: 0.8em;
 }
 
+.img-caption {
+  font-size: 1.2em;
+  text-align: center;
+}
+
 .img-funder {
   height: 100px;
   object-fit: contain;

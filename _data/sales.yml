@@ -1,0 +1,13 @@
+sami:
+  name: Sami Petäjäsoja
+  position: CEO
+  linkedin: https://www.linkedin.com/in/petajasoja/
+  image: /img/staff/sami.jpg
+  phone: +358 40 503 0745
+
+simo:
+  name: Simo Mäkipaja
+  position: Sales Director
+  linkedin: https://www.linkedin.com/in/simo-makipaja-5779a598/
+  image: /img/staff/simo.jpg
+  phone: +358 40 583 3999

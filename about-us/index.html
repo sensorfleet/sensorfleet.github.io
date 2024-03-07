@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About us
+title: Our core principles
 ---
 
 <div class="main">
@@ -9,47 +9,104 @@ title: About us
       <div class="block">
         <h1>About us</h1>
         <p class="lead">
-          Our team has a long experience in developing cyber security sensor technology
-          for a national early warning system protecting the critical infrastructure in
-          Finland. At the inception of SensorFleet in 2018, we set out to re-imagine
-          cyber security monitoring.
-        </p>
-        <p>
-          SensorFleet solution is an open sensor platform that can host detection-,
-          protection- and scanning tools - that we call Instruments - from 3rd parties,
-          whether commercial, open source or developed in-house. Solution reduces
-          complexity in managing cyber security capabilities and readily available
-          deployment platform improves response times for emerging threats.
+          Our team has a long experience in developing cyber security sensor
+          technology for the national early warning system protecting the
+          critical infrastructure in Finland. At the inception of SensorFleet in
+          2018, we set out to re-imagine cyber security monitoring.
         </p>
       </div>
       <div class="block">
-        <h2>Team</h2>
-        <div class="row mx-n2 my-n2">
-          {% for person in site.data.staff %}
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2 py-2">
-              <div class="box h-full p-2">
-                {% if person[1].image %}
-                  <img class="img-fluid rounded" src="{{ person[1].image }}" alt="{{ person[1].name }}" />
-                {% endif %}
-                  <div class="text-center">
-                    <p class="mb-0">{{ person[1].name }},<br>{{ person[1].position }}</p>
-                    <ul class="list-style-none mt-2 pl-0">
-                      {% if person[1].linkedin %}
-                        <li><a href="{{ person[1].linkedin }}" target="_new">LinkedIn &raquo;</a></li>
-                      {% endif %}
-                      {% if person[1].github %}
-                        <li><a href="{{ person[1].github }}" target="_new">GitHub &raquo;</a></li>
-                      {% endif %}
-                      {% if person[1].gitlab %}
-                        <li><a href="{{ person[1].gitlab }}" target="_new">GitLab &raquo;</a></li>
-                      {% endif %}
-                      {% if person[1].phone %}
-                        <li><a href="tel:{{ person[1].phone }}">{{ person[1].phone }}</a></li>
-                      {% endif %}
-                    </ul>
-                  </div>
+        <h2>Our core principles</h2>
+        <p class="lead">
+          We remain committed to continuous improvement and evolution of our
+          solution's features.
+        </p>
+        <div class="box-grid">
+          <div class="box px-4 py-3">
+            <div class="justify-content-center">
+              <figure>
+                <img
+                  src="../img/staff/sensorfleet-team.jpg"
+                  alt="Founding team"
+                  class="img-fluid mt-4 mt-lg-0"
+                />
+                <figcaption class="img-caption">Founding team</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="box px-4 py-3">
+            <div class="row">
+              <div class="">
+                <h3>Data privacy</h3>
+                <p>
+                  End users will always have full control of the data Sensors
+                  collect and the solution is deployable fully on premise. No
+                  data or metadata will be shared with us without the explicit
+                  arrangement where SensorFleet hosts the solution, or parts of
+                  it.
+                </p>
+              </div>
+              <div class="">
+                <h3>Security of our own solution</h3>
+                <p>
+                  Coming from the security testing background, security of our
+                  solution is a priority for us. Layered architecture, least
+                  privileges principle, controlled network access, data
+                  encryption both in rest and transit and configurable data
+                  retention are among the controls we use.
+                </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h2>Contact us</h2>
+        <div class="row mx-n2 my-n2">
+          {% for person in site.data.sales %}
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2 py-2 mx-2">
+            <div class="box h-full p-2">
+              {% if person[1].image %}
+              <img
+                class="img-fluid rounded"
+                src="{{ person[1].image }}"
+                alt="{{ person[1].name }}"
+              />
+              {% endif %}
+              <div class="text-center">
+                <p class="mb-0">
+                  {{ person[1].name }},<br />{{ person[1].position }}
+                </p>
+                <ul class="list-style-none mt-2 pl-0">
+                  {% if person[1].linkedin %}
+                  <li>
+                    <a href="{{ person[1].linkedin }}" target="_new"
+                      >LinkedIn &raquo;</a
+                    >
+                  </li>
+                  {% endif %} {% if person[1].github %}
+                  <li>
+                    <a href="{{ person[1].github }}" target="_new"
+                      >GitHub &raquo;</a
+                    >
+                  </li>
+                  {% endif %} {% if person[1].gitlab %}
+                  <li>
+                    <a href="{{ person[1].gitlab }}" target="_new"
+                      >GitLab &raquo;</a
+                    >
+                  </li>
+                  {% endif %} {% if person[1].phone %}
+                  <li>
+                    <a href="tel:{{ person[1].phone }}"
+                      >{{ person[1].phone }}</a
+                    >
+                  </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          </div>
           {% endfor %}
         </div>
       </div>
@@ -58,31 +115,41 @@ title: About us
         <div class="row mx-n2 my-n2">
           <div class="col-6 col-md-3 px-2 py-2">
             <div class="box">
-              <img class="img-funder py-2 rounded" src="/img/f-solutions.png" alt="F-Solutions" />
+              <img
+                class="img-funder py-2 rounded"
+                src="/img/f-solutions.png"
+                alt="F-Solutions"
+              />
             </div>
           </div>
           <div class="col-6 col-md-3 px-2 py-2">
             <div class="box">
-              <img class="img-funder py-2 rounded" src="/img/scan-abc.png" alt="Ääkköset Oy" />
+              <img
+                class="img-funder py-2 rounded"
+                src="/img/scan-abc.png"
+                alt="Ääkköset Oy"
+              />
             </div>
           </div>
           <div class="col-6 col-md-3 px-2 py-2">
             <div class="box">
-              <img class="img-funder py-2 rounded" src="/img/leverage-eu-white.png" alt="Leverage from the EU" />
+              <img
+                class="img-funder py-2 rounded"
+                src="/img/leverage-eu-white.png"
+                alt="Leverage from the EU"
+              />
             </div>
           </div>
           <div class="col-6 col-md-3 px-2 py-2">
             <div class="box">
-              <img class="img-funder py-2 rounded" src="/img/eu-white.png" alt="EU" />
+              <img
+                class="img-funder py-2 rounded"
+                src="/img/eu-white.png"
+                alt="EU"
+              />
             </div>
           </div>
         </div>
-        <p>
-          <a href="/eu.html">Saukko</a> project develops a SaaS extension for the
-          SensorFleet security monitoring platform. Extension enables users to adopt
-          and consume applicable parts of the SensorFleet solution with a service
-          model.
-        </p>
       </div>
     </div>
   </div>
