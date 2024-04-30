@@ -8,6 +8,11 @@ See User Manual for details on release channels and their usage.
 
 *** CHANNELS ***
 
+Upcoming releases:
+* release-2.7: version 2.7.0
+* release-2.7-beta: version 2.7.0
+* release-2.7-staging: version 2.7.0
+
 Supported current releases:
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
@@ -23,6 +28,67 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.7.0: release-2.7 2024-04-30
+
+Bug fixes:
+  [SEN-517] - AssetGuard Instrument: Fix overlapping vendor mac addresses
+  [SF-3249] - kernel-grsec: Fix detection of grub being present after EFI migration
+  [SEN-534] - Recorder Instrument: Fix incorrect parameter being sent to index cleanup logic
+  [SEN-599] - Kernel: Fix latest tag in build and grep in build.sh
+  [SF-3249] - Kernel: Fix detection of grub being present after EFI migration
+  [SEN-783] - Sensor UI: Re-emit instrument deleted event, fixes SEN-783
+  [SEN-619] - Sensor UI: fixed instrument custom config yaml editor value sync
+  [SF-3172] - Sensor UI: Fix friendly name save
+  [SEN-222] - Sensor Orchestrator: Fix a theoretical directory traversal attack
+  [SEN-550] - Messaging: Fix crash when set was modified while iterating
+
+- New features and other improvements:
+  [SF-3221] - Instruments: update alpine to 3.17.5
+  [SF-3217] - AssetGuard Instrument: Ensure interface is up before accepting configuration
+  [SF-3173] - AssetGuard Instrument: Make assetprobe visible in UI
+  [SF-3119] - SFConfig Importer: ignore special interface when missing hwconfig
+  [SF-3202] - Zeek Instrument: Stats events for zeek
+  [SF-2636] - Portdiff Instrument: SF-2636: Change file save to use flush
+  [SEN-76] - Portdiff Instrument: SEN-76 Update to pscan 0.3.1
+  [SEN-74] - Fleet Tool: Add stats:read privilege to admin user
+  [SF-3170] - Fleet Tool: Add --sensor and --json options to subscribe
+  [SF-3020] - Fleet Tool: Fix config editor editing wrong Sensor's configuration
+  [SF-3147] - Fleet Tool: Check for root permissions check when running
+  [SF-3052] - Rule importer instrument: Send rulesets in parallel
+  [SEN-385] - Netflow Instrument: Show first and last seen using UTC in main view
+  [SF-3198] - Netflow Instrument: Add stats event
+  [SF-3247] - Kernel: Update kernel and PF_RING to latest stable
+  [SF-3171] - kernel: Add boot manager dependency and generate initramfs on BIOS systems
+  [SF-3145] - kernel: Prepare for SensorFleet-EFI boot
+  [SEN-731] - Rule Manager Instrument: Proper error handling when unable to update zeek blacklists
+  [SF-3099] - Rule Manager Instrument: Data retention: purge may fail after retention time rotation
+  [SF-3145] - SensorFleet EFI: Add SensorFleet-EFI package to replace Grub2 and for future SecureBoot support
+  [SEN-758] - SensorFleet EFI: Add support for SensorFleet-EFI and ESP on NVMe drives
+  [SEN-668] - SensorFleet EFI: Regard any newlines in the kernel commandline files as spaces
+  [SEN-642] - SensorFleet EFI: Default to PCR7 on TPM2 SecureBoot Bindings
+  [SEN-567] - SensorFleet EFI: Add dependency for LVM2 package
+  [SEN-537] - SensorFleet EFI: Rework TPM2 Key Tool RootFS LUKS partition checking to more dynamic
+  [SEN-537] - SensorFleet EFI: Rework RootFS LUKS partition checking to more dynamic
+  [SEN-647] - Suricata Instrument: Update to suricata to v7.0.3
+  [SEN-700] - Suricata Instrument: save config in transient-data instead of /etc
+  [SEN-379] - Sensor UI: redirect HTTP 80 to 443 by default
+  [SEN-290] - Sensor UI: Improve Custom Configuration editing
+  [SEN-727] - Sensor UI: Rename Info health label in Overview
+  [SEN-510] - Sensor UI: Add 10min timeout to sensor websockets
+  [SEN-549] - Sensor UI: disable upgrade modal top close button during upgrade
+  [SF-3250] - Sensor UI: Add stats:read permission
+  [SF-3187] - Sensor UI: Always write upgrade header
+  [SF-3182] - Passivedns Instrument: Send statistics events
+  [SEN-444] - Capture Engine: monitor sfp/qsfp module statistics
+  [SF-3199] - Capture Engine: Added stats event
+  [SF-3247] - Capture Engine: Update for PF_RING 8.6.1
+  [SEN-574] - CI: Automatic vulnerability scans on releases
+  [SEN-605] - Sensor Orchestrator: Do not try to force apply config right after restart
+  [SEN-46] - Sensor Orchestrator: Set status age at startup to avoid an error
+  [SF-3181] - Sensor Orchestrator: Addstats event
+  [SEN-658] - SensorMessageBroker: Use 521-bit curve for the initial key exchange
+  [SF-3185] - SensorMessageBroker: Implement stats events
 
 2.6.5: release-2.6-staging 2024-02-06
 
