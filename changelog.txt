@@ -31,9 +31,14 @@ Unsupported old releases:
 
 2.7.0: release-2.7 2024-04-30
 
+Release highlights:
+- Security improvements (some required by CIS, plus others) (new ansible playbook required)
+- Preparation for Secure Boot support with the SensorFleet EFI bootloader
+- Lots of OS & 3rd party component updates
+- Statistics events support with sensorfleet-statistics package
+
 Bug fixes:
   [SEN-517] - AssetGuard Instrument: Fix overlapping vendor mac addresses
-  [SF-3249] - kernel-grsec: Fix detection of grub being present after EFI migration
   [SEN-534] - Recorder Instrument: Fix incorrect parameter being sent to index cleanup logic
   [SEN-599] - Kernel: Fix latest tag in build and grep in build.sh
   [SF-3249] - Kernel: Fix detection of grub being present after EFI migration
@@ -74,8 +79,8 @@ Bug fixes:
   [SEN-385] - Netflow Instrument: Show first and last seen using UTC in main view
   [SF-3198] - Netflow Instrument: Add stats event
   [SF-3247] - Kernel: Update kernel and PF_RING to latest stable
-  [SF-3171] - kernel: Add boot manager dependency and generate initramfs on BIOS systems
-  [SF-3145] - kernel: Prepare for SensorFleet-EFI boot
+  [SF-3171] - Kernel: Add boot manager dependency and generate initramfs on BIOS systems
+  [SF-3145] - Kernel: Prepare for SensorFleet-EFI boot
   [SEN-731] - Rule Manager Instrument: Proper error handling when unable to update zeek blacklists
   [SF-3099] - Rule Manager Instrument: Data retention: purge may fail after retention time rotation
   [SF-3145] - SensorFleet EFI: Add SensorFleet-EFI package to replace Grub2 and for future SecureBoot support
