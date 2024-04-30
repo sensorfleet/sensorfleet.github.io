@@ -42,12 +42,27 @@ Bug fixes:
   [SF-3172] - Sensor UI: Fix friendly name save
   [SEN-222] - Sensor Orchestrator: Fix a theoretical directory traversal attack
   [SEN-550] - Messaging: Fix crash when set was modified while iterating
+  [SEN-739] - Ansible: Fix OpenVpn service startup in rare instances
 
 - New features and other improvements:
+  [SEN-702] - Ansible: add logrotate dependency
+  [SEN-591] - Ansible: Security: Enable auditd for default installs
+  [SEN-590] - Ansible: Security: Ensure Sudo Logfile Exists
+  [SEN-584] - Ansible: Security: Set Interactive Session Timeout
+  [SEN-717] - Ansible: Add option to install extra packages
+  [SEN-701] - Ansible: allow v6 icmp in ferm
+  [SEN-660] - Ansible: Security: Default to Finnish TL3 compatible ciphers on sshd
+  [SEN-588] - Ansible: Security: enforce better logfile permissions
+  [SEN-589] - Ansible: Security: Disable some kernel modules
+  [SEN-575] - Ansible: Security: Implement some SSH hardening options
+  [SEN-390] - Ansible: Security: Drop OpenVPN user privileges
+  [SEN-393] - Ansible: Security: Change default OpenVPN cipher from AES-256-OFB to AES-256-CBC (see User Manual)
+  [SEN-393] - Ansible: Security: Reject port 41337 by default on FM
   [SF-3221] - Instruments: update alpine to 3.17.5
   [SF-3217] - AssetGuard Instrument: Ensure interface is up before accepting configuration
   [SF-3173] - AssetGuard Instrument: Make assetprobe visible in UI
   [SF-3119] - SFConfig Importer: ignore special interface when missing hwconfig
+  [SEN-655] - Zeek Instrument: Update to Zeek 6.0.3
   [SF-3202] - Zeek Instrument: Stats events for zeek
   [SF-2636] - Portdiff Instrument: SF-2636: Change file save to use flush
   [SEN-76] - Portdiff Instrument: SEN-76 Update to pscan 0.3.1
