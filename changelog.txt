@@ -8,12 +8,10 @@ See User Manual for details on release channels and their usage.
 
 *** CHANNELS ***
 
-Upcoming releases:
+Supported current releases:
 * release-2.7: version 2.7.0
 * release-2.7-beta: version 2.7.0
 * release-2.7-staging: version 2.7.0
-
-Supported current releases:
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
 * release-2.6-staging: version 2.6.5
