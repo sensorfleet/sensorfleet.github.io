@@ -62,7 +62,6 @@ Bug fixes:
   [SF-3217] - AssetGuard Instrument: Ensure interface is up before accepting configuration
   [SF-3173] - AssetGuard Instrument: Make assetprobe visible in UI
   [SF-3119] - SFConfig Importer: ignore special interface when missing hwconfig
-  [SEN-655] - Zeek Instrument: Update to Zeek 6.0.3
   [SF-3202] - Zeek Instrument: Stats events for zeek
   [SF-2636] - Portdiff Instrument: SF-2636: Change file save to use flush
   [SEN-76] - Portdiff Instrument: SEN-76 Update to pscan 0.3.1
@@ -89,9 +88,7 @@ Bug fixes:
   [SEN-700] - Suricata Instrument: save config in transient-data instead of /etc
   [SEN-379] - Sensor UI: redirect HTTP 80 to 443 by default
   [SEN-290] - Sensor UI: Improve Custom Configuration editing
-  [SEN-727] - Sensor UI: Rename Info health label in Overview
-  [SEN-510] - Sensor UI: Add 10min timeout to sensor websockets
-  [SEN-549] - Sensor UI: disable upgrade modal top close button during upgrade
+  [SEN-510] - Sensor UI: Fix timeouting sensor websockets
   [SF-3250] - Sensor UI: Add stats:read permission
   [SF-3187] - Sensor UI: Always write upgrade header
   [SF-3182] - Passivedns Instrument: Send statistics events
@@ -101,7 +98,7 @@ Bug fixes:
   [SEN-574] - CI: Automatic vulnerability scans on releases
   [SEN-605] - Sensor Orchestrator: Do not try to force apply config right after restart
   [SEN-46] - Sensor Orchestrator: Set status age at startup to avoid an error
-  [SF-3181] - Sensor Orchestrator: Addstats event
+  [SF-3181] - Sensor Orchestrator: Add stats event
   [SEN-658] - SensorMessageBroker: Use 521-bit curve for the initial key exchange
   [SF-3185] - SensorMessageBroker: Implement stats events
 
