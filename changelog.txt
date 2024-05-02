@@ -32,9 +32,9 @@ Unsupported old releases:
 2.7.0: release-2.7 2024-04-30
 
 Release highlights:
-- Security improvements (some required by CIS, plus others) (new ansible playbook required)
+- Security improvements (some required by CIS, plus others, new ansible playbook required)
 - Preparation for Secure Boot support with the SensorFleet EFI bootloader
-- Lots of OS & 3rd party component updates
+- Lots of OS & 3rd party component updates, including Vue 2 -> Vue 3 migration
 - Statistics events support with sensorfleet-statistics package
 
 Bug fixes:
@@ -42,8 +42,6 @@ Bug fixes:
   [SEN-534] - Recorder Instrument: Fix incorrect parameter being sent to index cleanup logic
   [SEN-599] - Kernel: Fix latest tag in build and grep in build.sh
   [SF-3249] - Kernel: Fix detection of grub being present after EFI migration
-  [SEN-783] - Sensor UI: Re-emit instrument deleted event, fixes SEN-783
-  [SEN-619] - Sensor UI: fixed instrument custom config yaml editor value sync
   [SF-3172] - Sensor UI: Fix friendly name save
   [SEN-222] - Sensor Orchestrator: Fix a theoretical directory traversal attack
   [SEN-550] - Messaging: Fix crash when set was modified while iterating
@@ -63,7 +61,6 @@ Bug fixes:
   [SEN-390] - Ansible: Security: Drop OpenVPN user privileges
   [SEN-393] - Ansible: Security: Change default OpenVPN cipher from AES-256-OFB to AES-256-CBC (see User Manual)
   [SEN-393] - Ansible: Security: Reject port 41337 by default on FM
-  [SF-3221] - Instruments: update alpine to 3.17.5
   [SF-3217] - AssetGuard Instrument: Ensure interface is up before accepting configuration
   [SF-3173] - AssetGuard Instrument: Make assetprobe visible in UI
   [SF-3119] - SFConfig Importer: ignore special interface when missing hwconfig
