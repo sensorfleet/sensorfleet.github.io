@@ -9,7 +9,6 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.7: version 2.7.0
 * release-2.7-beta: version 2.7.0
 * release-2.7-staging: version 2.7.0
 * release-2.6: version 2.6.3
@@ -28,6 +27,9 @@ Unsupported old releases:
 *** CHANGELOG ***
 
 2.7.0: release-2.7 2024-04-30
+
+Warning: serious memory leaking has been reported in some cases where Capture Engine is used.
+Will be fixed in 2.7.1.
 
 Release highlights:
 - Security improvements (some required by CIS, plus others, new ansible playbook required)
