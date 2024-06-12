@@ -9,8 +9,9 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.7-beta: version 2.7.0
-* release-2.7-staging: version 2.7.0
+* release-2.7: version 2.7.1
+* release-2.7-beta: version 2.7.1
+* release-2.7-staging: version 2.7.1
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
 * release-2.6-staging: version 2.6.5
@@ -25,6 +26,21 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.7.1: release-2.7 2024-06-12
+
+Bug fixes:
+  [SEN-839] - Capture Engine: Fix erroring out on missing optical info on SFP transceiver
+  [SEN-864] - Capture Engine: Fix ethtool usage when reading interface statistics, causing a memory leak
+  [SEN-817] - Kernel: Depend on initramfs-tools or sensorfleet-efi, fixing Ansible run on non-installer installed Sensors
+  [SEN-804] - VPN: Fix OpenVPN startup issue with Adoption VPN for hardened OpenVPN installs
+  [SEN-856] - Firewall, Sensor Orchestrator: Ensure ferm startup to avoid situation where Sensor may boot without firewall in an error situation
+  [SEN-810] - SensorFleet EFI: Fix initial SecureBoot key insertion
+  [SEN-815] - SensorFleet EFI: Use udevadm instead of readlink to query actual device from /dev/mapper
+  [SEN-884] - Log Forwarder Instrument: Fix permission error after configuration change
+
+- New features and other improvements:
+  [SEN-816] - Capture Engine: SEN-816: add support for QSFP28 transceivers statistics
 
 2.7.0: release-2.7 2024-04-30
 
