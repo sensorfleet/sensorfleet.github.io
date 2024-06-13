@@ -27,7 +27,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.7.1: release-2.7 2024-06-12
+2.7.1: release-2.7 2024-06-13
 
 Bug fixes:
   [SEN-839] - Capture Engine: Fix erroring out on missing optical info on SFP transceiver
@@ -38,14 +38,12 @@ Bug fixes:
   [SEN-810] - SensorFleet EFI: Fix initial SecureBoot key insertion
   [SEN-815] - SensorFleet EFI: Use udevadm instead of readlink to query actual device from /dev/mapper
   [SEN-884] - Log Forwarder Instrument: Fix permission error after configuration change
+  [SEN-885] - UI: Fix type error in console when editing YAML fields
 
 - New features and other improvements:
   [SEN-816] - Capture Engine: SEN-816: add support for QSFP28 transceivers statistics
 
 2.7.0: release-2.7 2024-04-30
-
-Warning: serious memory leaking has been reported in some cases where Capture Engine is used.
-Will be fixed in 2.7.1.
 
 Release highlights:
 - Security improvements (some required by CIS, plus others, new ansible playbook required)
