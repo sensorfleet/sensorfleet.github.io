@@ -11,7 +11,7 @@ See User Manual for details on release channels and their usage.
 Supported current releases:
 * release-2.7: version 2.7.1
 * release-2.7-beta: version 2.7.1
-* release-2.7-staging: version 2.7.1
+* release-2.7-staging: version 2.7.2
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
 * release-2.6-staging: version 2.6.5
@@ -26,6 +26,11 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.7.2: release-2.7-staging 2024-07-02
+
+Bug fixes:
+  [SEN-875] - Capture Engine: fix pipe leak on pyroute2.IPRoute usage causing continuous memory usage increase
 
 2.7.1: release-2.7 2024-06-13
 
