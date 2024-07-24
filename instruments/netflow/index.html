@@ -7,15 +7,17 @@ description: Collects traffic flow information in storage optimized fashion for 
 <!-- File is generated automatically, do not edit directly. -->
 
 <p>
-  Netflow can be used to collect NetFlow information from network traffic. For
-  introduction to NetFlow, see
+  Netflow is used to create NetFlow information from listened network traffic.
+  For introduction to NetFlow, see
   <a href="https://en.wikipedia.org/wiki/NetFlow">Wikipedia</a>.
 </p>
 <p>
-  The Instrument will listen traffic on mirror-bridge interface and store the
-  traffic flows (as identified by source and destination IP addresses and
-  protocol -specific ports) in NetFlow records. These NetFlow records can then
-  be downloaded from the Instrument using the provided HTTP API.
+  The Instrument will listen captured traffic on mirror-bridge interface and
+  store information about observed traffic flows (as identified by source and
+  destination IP addresses and protocol -specific ports) in NetFlow records.
+  These NetFlow records can then be downloaded from the Instrument using the
+  provided HTTP API. The Instrument also provides UI which can be used to view
+  stored NetFlow records.
 </p>
 <p>
   NetFlow records are stored in NetFlow format version 9 and they are stored in
