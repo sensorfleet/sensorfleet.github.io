@@ -9,8 +9,8 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.7: version 2.7.1
-* release-2.7-beta: version 2.7.1
+* release-2.7: version 2.7.3
+* release-2.7-beta: version 2.7.3
 * release-2.7-staging: version 2.7.3
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
@@ -27,7 +27,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.7.3: release-2.7-staging 2024-07-24
+2.7.3: release-2.7-staging 2024-07-24, release-2.7 2024-07-26
 
 Bug fixes:
   [SEN-928] - Recorder Instrument: Instrument configuration changes cause invalid stats event to be generated
