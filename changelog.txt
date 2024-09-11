@@ -9,9 +9,9 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.7: version 2.7.3
-* release-2.7-beta: version 2.7.3
-* release-2.7-staging: version 2.7.3
+* release-2.7: version 2.7.4
+* release-2.7-beta: version 2.7.4
+* release-2.7-staging: version 2.7.4
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
 * release-2.6-staging: version 2.6.5
@@ -26,6 +26,11 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.7.4: release-2.7 2024-09-11
+
+Bug fixes:
+  [SEN-1006] - Rule Manager: Suricata rule validation does not consider custom variables
 
 2.7.3: release-2.7-staging 2024-07-24, release-2.7 2024-07-26
 
