@@ -40,6 +40,7 @@ Release highlights:
 - Log Forwarder Instrument: Easier to implement FM event pipeline (multi Sensor subscribe from FM)
 - Suricata Instrument: Suricata 7.0.7
 - PassiveDNS, Rule Manager, AssetGuard PostgreSQL 12 to 16 upgrade (automatic migration)
+- Netflow Instrument: New nfdump version with new data format. Note that old version nfdump cannot read this format.
 - Some other bug fixes
 
 Bug fixes:
@@ -66,6 +67,7 @@ Bug fixes:
   [SEN-872] - Ansible: grub-pc unattended install fix
 
 - New features and other improvements:
+  [SEN-1090] - Netflow Instrument: New nfdump version (1.7.5+)
   [SEN-849] - Ansible: Grub installs: Set default grub password in sample configuration
   [SEN-1040] - Ansible: set kernel.panic to 10 by default (makes Sensor reboot on kernel crash)
   [SEN-526] - All Instruments: update Alpine Linux to 3.20.2
@@ -170,6 +172,7 @@ Bug fixes:
   [SF-3052] - Rule importer instrument: Send rulesets in parallel
   [SEN-385] - Netflow Instrument: Show first and last seen using UTC in main view
   [SF-3198] - Netflow Instrument: Add stats event
+  
   [SF-3247] - Kernel: Update kernel and PF_RING to latest stable
   [SF-3171] - Kernel: Add boot manager dependency and generate initramfs on BIOS systems
   [SF-3145] - Kernel: Prepare for SensorFleet-EFI boot
