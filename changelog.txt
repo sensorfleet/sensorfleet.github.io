@@ -9,6 +9,9 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
+* release-2.8: version 2.8.0
+* release-2.8-beta: version 2.8.0
+* release-2.8-staging: version 2.8.0
 * release-2.7: version 2.7.4
 * release-2.7-beta: version 2.7.4
 * release-2.7-staging: version 2.7.4
@@ -26,6 +29,70 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.8.0: release-2.8 2024-12-05
+
+Release highlights:
+- BETA: New Installer available with support for Secure Boot
+- Maintenance: lots of library updates and Alpine Linux 3.20
+- Recorder Instrument: Arkime 5.5.0, ElasticSearch 8.16
+- Recorder Instrument: Huge optimizations to packet handling speed
+- Log Forwarder Instrument: Easier to implement FM event pipeline (multi Sensor subscribe from FM)
+- Suricata Instrument: Suricata 7.0.7
+- PassiveDNS, Rule Manager, AssetGuard PostgreSQL 12 to 16 upgrade (automatic migration)
+- Netflow Instrument: New nfdump version with new data format. Note that old version nfdump cannot read this format.
+- Some other bug fixes
+
+Bug fixes:
+  [SEN-1045] - AssetGuard Instrument: Fix event subscription with multiple AssetProbes
+  [SEN-1019] - Log Forwarder Instrument: fix permissions issue after 2.6 -> 2.7 upgrade
+  [SEN-1028] - Log Forwarder Instrument: fix situation where no event history was found and history=false
+  [SEN-1020] - Log Forwarder Instrument: fix some timeout warnings
+  [SEN-1019] - Log Forwarder Instrument: fix permissions issue after 2.6 -> 2.7 upgrade
+  [SEN-1089] - Netflow Instrument: fix netflow search api error 500
+  [SEN-920] - Rule Manager Instrument: fix handling of None in suricata version
+  [SEN-906] - Sensor UI: fix Token modal close
+  [SEN-858] - Sensor UI: Fix FM overview rendering on safari
+  [SEN-886] - Sensor UI: Fix SfTooltip overflowing on narrow screens
+  [SEN-880] - Sensor UI: Fix scrolling to selected Sensor
+  [SEN-937] - Capture Engine: fix regression that breaks capco optics statistics
+  [SEN-875] - Capture Engine: Fix pipe leak on pyroute2.IPRoute usage
+  [SEN-856] - Sensor Orchestrator: Fix orchestrator restart issue
+  [SEN-1056] - Netflow Instrument: Don't show validation errors for old form data
+  [SEN-403] - Rule Nanager Instrument: Reliable offline sensor handling
+  [SEN-1081] - Sensor UI: add missing sudo dependency
+  [SEN-967] - Suricata Instrument: If files event type is configured, allow fileinfo events
+  [SEN-965] - Suricata Instrument: Allow configuring additional outputs for suricata
+  [SEN-955] - Ansible: make shell variable TMOUT readonly & exported (CIS audit)
+  [SEN-872] - Ansible: grub-pc unattended install fix
+
+- New features and other improvements:
+  [SEN-1090] - Netflow Instrument: New nfdump version (1.7.5+)
+  [SEN-849] - Ansible: Grub installs: Set default grub password in sample configuration
+  [SEN-1040] - Ansible: set kernel.panic to 10 by default (makes Sensor reboot on kernel crash)
+  [SEN-526] - All Instruments: update Alpine Linux to 3.20.2
+  [SEN-1061] - Recorder Instrument: update Arkime to 5.5.0
+  [SEN-1071] - Recorder Instrument: update Elasticsearch to 8.16
+  [SEN-1002] - Recorder Instrument: Use mimalloc allocator and other performance improvements
+  [SEN-900] - Zeek Instrument: update to Zeek 7.0.3
+  [SEN-1047] - Suricata Instrument: upgrade suricata to 7.0.7, libhtp to 0.5.49
+  [SEN-889] - Statistics Collector: Context rule hits and directions support
+  [SEN-899] - AssetGuard Instrument: Update PostgreSQL to v16
+  [SEN-1005] - PassiveDNS Instrument: PostgreSQL 12 to 16 upgrade
+  [SEN-1014] - Log Forwarder Instrument: Support for multi sensor subscribe when running on FM
+  [SEN-1014] - Log Forwarder Instrument: use OpenMetrics style stats
+  [SEN-1021] - Log Forwarder Instrument: support for new logstash pipeline settings
+  [SEN-968] - Log Forwarder Instrument: sample configuration: change codec to plain
+  [SEN-874] - Fleet Tool: list sensors and filter by online status
+  [SEN-860] - Sensor UI: Implement container options ui
+  [SEN-869] - Configuration: display known LXD defaults
+  [SEN-411] - Sensor UI: Implement compact mode for Overview tab
+  [SEN-825] - Sensor UI: Ask webcrawlers not to index Sensor and FM UI
+  [SEN-972] - Capture Engine: Be more lenient on capture process operation durations
+  [SEN-972] - Capture Engine: Add logging for commands that take 1s or over to process
+  [SEN-915] - Capture Engine: Support for accelerated packet capture
+  [SEN-914] - Sensor Orchestrator: Orchestrator support for accelerated packet capture pipeline
+  [SEN-1014] - SensorMessageBroker: allow instruments on FM to read sensors@ config
 
 2.7.4: release-2.7 2024-09-11
 
@@ -105,6 +172,7 @@ Bug fixes:
   [SF-3052] - Rule importer instrument: Send rulesets in parallel
   [SEN-385] - Netflow Instrument: Show first and last seen using UTC in main view
   [SF-3198] - Netflow Instrument: Add stats event
+  
   [SF-3247] - Kernel: Update kernel and PF_RING to latest stable
   [SF-3171] - Kernel: Add boot manager dependency and generate initramfs on BIOS systems
   [SF-3145] - Kernel: Prepare for SensorFleet-EFI boot
