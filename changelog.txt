@@ -11,7 +11,7 @@ See User Manual for details on release channels and their usage.
 Supported current releases:
 * release-2.8: version 2.8.0
 * release-2.8-beta: version 2.8.0
-* release-2.8-staging: version 2.8.0
+* release-2.8-staging: version 2.8.1
 * release-2.7: version 2.7.4
 * release-2.7-beta: version 2.7.4
 * release-2.7-staging: version 2.7.4
@@ -29,6 +29,19 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.8.1: release-2.8-staging 2025-01-08
+
+Bug fixes:
+  [SEN-1121] - AssetGuard Instrument: remove illegal characters from (dhcp or other originated) hostnames
+  [SEN-1124] - Update Alpine Linux to 3.20.4 for all Instruments (CVE fixes)
+  [SEN-1114] - sfconfig-importer: add missing alias scripts
+  [SEN-1104] - sfconfig-importer: fix netplan configuration detection, support for nonstandard filenames
+  [SEN-1103] - Fleet Tool: fix adoption ccd file permissions
+  [SEN-1115] - Suricata Instrument: update Suricata to 7.0.8 (CVE fixes)
+
+- New features and other improvements:
+    SEN-1010: Enable JA3, JA4 fingerprints by default in app layer engine
 
 2.8.0: release-2.8 2024-12-05
 
