@@ -30,7 +30,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.8.1: release-2.8-staging 2025-01-08
+2.8.1: release-2.8-staging 2025-01-13
 
 Bug fixes:
   [SEN-1121] - AssetGuard Instrument: remove illegal characters from (dhcp or other originated) hostnames
