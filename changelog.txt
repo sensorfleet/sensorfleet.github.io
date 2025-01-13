@@ -33,15 +33,21 @@ Unsupported old releases:
 2.8.1: release-2.8-staging 2025-01-13
 
 Bug fixes:
+  [SEN-1119] - Ansible: remove kernel after packages are configured (fixes firewall module issue with some cloud VM installs)
+  [SEN-1112] - Ansible: modified apt auth.conf to support sending basic auth over http
   [SEN-1121] - AssetGuard Instrument: remove illegal characters from (dhcp or other originated) hostnames
   [SEN-1124] - Update Alpine Linux to 3.20.4 for all Instruments (CVE fixes)
   [SEN-1114] - sfconfig-importer: add missing alias scripts
   [SEN-1104] - sfconfig-importer: fix netplan configuration detection, support for nonstandard filenames
   [SEN-1103] - Fleet Tool: fix adoption ccd file permissions
   [SEN-1115] - Suricata Instrument: update Suricata to 7.0.8 (CVE fixes)
+  [SEN-1102] - Sensor Installer v2: install sfconfig-importer to allow sfconfig settings import
 
 - New features and other improvements:
-    SEN-1010: Enable JA3, JA4 fingerprints by default in app layer engine
+  [SEN-1109] - Sensor Installer v1+v2: rename installer images to be more logical
+  [SEN-1067] - Sensor Installer v2: do not ask for installer credentials (root autologin)
+  [SEN-1072] - Sensor Installer v2: format netplan config as yaml, no json
+  [SEN-1010] - Enable JA3, JA4 fingerprints by default in app layer engine
 
 2.8.0: release-2.8 2024-12-05
 
