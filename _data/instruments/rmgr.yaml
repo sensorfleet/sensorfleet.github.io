@@ -34,6 +34,9 @@ produced_event_types:
   - match: instruments.rmgr.suricata_ruleset_sent
     type: exact
     title: New Suricata ruleset was sent
+  - match: instruments.rmgr.download_processing_status
+    type: exact
+    title: Ruleset or IOC processing status update
 relations:
   - description:
       Rule Manager needs at least one Suricata IDS instrument to function. It
@@ -51,3 +54,11 @@ relations:
       - find
       - direct_message
     required: false
+  - description:
+      A Downloader instrument must be present for external rulesources and ioc
+      feeds to be updated. A health warning will be raised if downloads are
+      scheduled but no Downloader is available.
+    instrument_name: Downloader
+    instrument_type: downloader
+    permissions:
+      - find
