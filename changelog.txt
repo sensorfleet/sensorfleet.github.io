@@ -40,7 +40,7 @@ Highlights:
 * Breaking change: User Management is now enabled by default. For old installations without User Management,
   refer to User Manual on how to add users to Fleet Management.
 
-Bug fixes:
+- Bug fixes:
   [SEN-1128] - Fleet Tool: fix None handling in getting users (list, remove commands)
   [SEN-1129] - Rule Manager Instrument: Fix some Rule Manager Address Group UI usability issues
   [SEN-1105] - Rule Manager Instrument: Rule Manager Instrument Tag Edit UI tags title missing
@@ -78,7 +78,7 @@ Bug fixes:
 
 2.8.1: release-2.8-staging 2025-01-13, release-2.8 2025-01-28
 
-Bug fixes:
+- Bug fixes:
   [SEN-1119] - Ansible: remove kernel after packages are configured (fixes firewall module issue with some cloud VM installs)
   [SEN-1112] - Ansible: modified apt auth.conf to support sending basic auth over http
   [SEN-1121] - AssetGuard Instrument: remove illegal characters from (dhcp or other originated) hostnames
@@ -108,7 +108,7 @@ Release highlights:
 - Netflow Instrument: New nfdump version with new data format. Note that old version nfdump cannot read this format.
 - Some other bug fixes
 
-Bug fixes:
+- Bug fixes:
   [SEN-1045] - AssetGuard Instrument: Fix event subscription with multiple AssetProbes
   [SEN-1019] - Log Forwarder Instrument: fix permissions issue after 2.6 -> 2.7 upgrade
   [SEN-1028] - Log Forwarder Instrument: fix situation where no event history was found and history=false
@@ -161,24 +161,24 @@ Bug fixes:
 
 2.7.4: release-2.7 2024-09-11
 
-Bug fixes:
+- Bug fixes:
   [SEN-1006] - Rule Manager: Suricata rule validation does not consider custom variables
 
 2.7.3: release-2.7-staging 2024-07-24, release-2.7 2024-07-26
 
-Bug fixes:
+- Bug fixes:
   [SEN-928] - Recorder Instrument: Instrument configuration changes cause invalid stats event to be generated
   [SEN-937] - Capture Engine: Fix regression that broke optics statistics
   [SEN-938] - Suricata Instrument: Update to 7.0.6 to address security issues
 
 2.7.2: release-2.7-staging 2024-07-02
 
-Bug fixes:
+- Bug fixes:
   [SEN-875] - Capture Engine: fix pipe leak on pyroute2.IPRoute usage causing continuous memory usage increase
 
 2.7.1: release-2.7 2024-06-13
 
-Bug fixes:
+- Bug fixes:
   [SEN-839] - Capture Engine: Fix erroring out on missing optical info on SFP transceiver
   [SEN-864] - Capture Engine: Fix ethtool usage when reading interface statistics, causing a memory leak
   [SEN-817] - Kernel: Depend on initramfs-tools or sensorfleet-efi, fixing Ansible run on non-installer installed Sensors
@@ -200,7 +200,7 @@ Release highlights:
 - Lots of OS & 3rd party component updates, including Vue 2 -> Vue 3 migration
 - Statistics events support with sensorfleet-statistics package
 
-Bug fixes:
+- Bug fixes:
   [SEN-517] - AssetGuard Instrument: Fix overlapping vendor mac addresses
   [SEN-534] - Recorder Instrument: Fix incorrect parameter being sent to index cleanup logic
   [SEN-599] - Kernel: Fix latest tag in build and grep in build.sh
