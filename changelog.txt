@@ -9,17 +9,20 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
+* release-2.9: version 2.9.0
+* release-2.9-beta: version 2.9.0
+* release-2.9-staging: version 2.9.0
 * release-2.8: version 2.8.1
 * release-2.8-beta: version 2.8.1
 * release-2.8-staging: version 2.8.1
+
+Unsupported old releases:
 * release-2.7: version 2.7.4
 * release-2.7-beta: version 2.7.4
 * release-2.7-staging: version 2.7.4
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
 * release-2.6-staging: version 2.6.5
-
-Unsupported old releases:
 * release-2.5: version 2.5.2
 * release-2.5-beta: version 2.5.2
 * release-2.5-staging: version 2.5.2
@@ -29,6 +32,49 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.9.0: release-2.9 2025-04-14
+
+Highlights:
+* Added Single Sign On support (SAMLv2) in FM UI. Refer to User Manual for usage. (BETA)
+* Breaking change: User Management is now enabled by default. For old installations without User Management,
+  refer to User Manual on how to add users to Fleet Management.
+
+Bug fixes:
+  [SEN-1128] - Fleet Tool: fix None handling in getting users (list, remove commands)
+  [SEN-1129] - Rule Manager Instrument: Fix some Rule Manager Address Group UI usability issues
+  [SEN-1105] - Rule Manager Instrument: Rule Manager Instrument Tag Edit UI tags title missing
+
+- New features and other improvements:
+  [SEN-1153] - UI: Implement Single Sign On (SSO) Support for FM UI (BETA)
+  [SEN-835] - Enable User Management by default
+  [SEN-1194] - SBOMs and vulnerability scan results are now uploaded to https://sbom.sensorfleet.com
+  [SEN-1187] - All Instruments: update Alpine to 3.20.6
+  [SEN-1134] - Zeek Instrument: update Zeek to 7.0.5
+  [SEN-1160] - Log Forwarder Instrument: Add sentinel DCR-based api plugin microsoft-sentinel-log-analytics-logstash-output-plugin
+  [SEN-1134] - Log Forwarder Instrument: update logstash to 7.17.27
+  [SEN-1134] - Recorder Instrument: update ElasticSearch to 8.17.1
+  [SEN-1180] - Zeek Instrument: Zeek support for SR-IOV and physical interfaces
+  [SEN-1172] - Fleet Tool: Support for on-demand record command
+  [SEN-1177] - Netflow Instrument: Add support for SR-IOV VF and physical interfaces
+  [SEN-1217] - Recorder Instrument: Allow Arkime to free unused memory
+  [SEN-1140] - Recorder Instrument: Suricata alerts to Arkime integration
+  [SEN-1184] - Recorder Instrument: Configurable tpacketv3 buffer parameters
+  [SEN-1183] - Recorder Instrument: Use mimalloc only with tpacketv3
+  [SEN-1178] - Recorder Instrument: Add support for SR-IOV VF and physical interfaces
+  [SEN-1118] - Kernel: added support for Qlogic QED interfaces
+  [SEN-1051] - Rule Manager Instrument: return the error when processing rulesource for upper functions to display the error to user
+  [SEN-1234] - Suricata Instrument: Suricata record request filtering
+  [SEN-1224] - Suricata Instrument: [SEN-1224] Use mimalloc for suricata allocations
+  [SEN-1176] - Suricata Instrument: Add support for SR-IOV VF and physical interfaces
+  [SEN-1210] - UI: support for X-Real-IP, X-Forwarded-For, X-SensorFleet-User  headers
+  [SEN-1225] - UI: support for PASETO Token based sensor ui authentication
+  [SEN-1203] - PassiveDNS Instrument: Implement database partitioning for better performance
+  [SEN-1166] - Capture Engine: Implement support for SR-IOV on Capture Engine
+  [SEN-1143] - Capture Engine: Update capco to new PF_RING version 8.8.0-stable
+  [SEN-918] - Sensor Orchestrator: Implement support for event type based retention
+  [SEN-1144] - Sensor Orchestrator: Implement SR-IOV NIC support
+  [SEN-1255] - Rule Manager Instrument: Implement ruleset_sent message title
 
 2.8.1: release-2.8-staging 2025-01-13, release-2.8 2025-01-28
 
