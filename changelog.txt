@@ -35,10 +35,15 @@ Unsupported old releases:
 
 2.9.0: release-2.9 2025-04-14
 
-Highlights:
-* Added Single Sign On support (SAMLv2) in FM UI. Refer to User Manual for usage. (BETA)
-* Breaking change: User Management is now enabled by default. For old installations without User Management,
-  refer to User Manual on how to add users to Fleet Management.
+Release highlights:
+- BETA: Added Single Sign On support (SAMLv2) in FM UI.
+- BREAKING CHANGE: User Management is now enabled by default. For old installations without User Management,
+  refer to User Manual on how to add users to Fleet Management. This does not affect typical installations.
+- Performance improvements to Suricata, Recorder Instrument and PassiveDNS.
+- Suricata-Arkime integration enabled by default in Recorder Instrument. You can now see Suricata alerts in Arkime
+  with default configuration.
+- Configurable Recording Requests for Suricata Alerting (advanced filtering for Triggered Mode recording).
+- Log Forwarder has built-in support for DCR-based Sentinel API.
 
 - Bug fixes:
   [SEN-1128] - Fleet Tool: fix None handling in getting users (list, remove commands)
@@ -57,7 +62,6 @@ Highlights:
   [SEN-1180] - Zeek Instrument: Zeek support for SR-IOV and physical interfaces
   [SEN-1172] - Fleet Tool: Support for on-demand record command
   [SEN-1177] - Netflow Instrument: Add support for SR-IOV VF and physical interfaces
-  [SEN-1217] - Recorder Instrument: Allow Arkime to free unused memory
   [SEN-1140] - Recorder Instrument: Suricata alerts to Arkime integration
   [SEN-1184] - Recorder Instrument: Configurable tpacketv3 buffer parameters
   [SEN-1183] - Recorder Instrument: Use mimalloc only with tpacketv3
@@ -65,7 +69,7 @@ Highlights:
   [SEN-1118] - Kernel: added support for Qlogic QED interfaces
   [SEN-1051] - Rule Manager Instrument: return the error when processing rulesource for upper functions to display the error to user
   [SEN-1234] - Suricata Instrument: Suricata record request filtering
-  [SEN-1224] - Suricata Instrument: [SEN-1224] Use mimalloc for suricata allocations
+  [SEN-1224] - Suricata Instrument: Use mimalloc for Suricata allocations to improve performance
   [SEN-1176] - Suricata Instrument: Add support for SR-IOV VF and physical interfaces
   [SEN-1210] - UI: support for X-Real-IP, X-Forwarded-For, X-SensorFleet-User  headers
   [SEN-1225] - UI: support for PASETO Token based sensor ui authentication
