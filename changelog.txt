@@ -49,6 +49,8 @@ Release highlights:
   [SEN-1128] - Fleet Tool: fix None handling in getting users (list, remove commands)
   [SEN-1129] - Rule Manager Instrument: Fix some Rule Manager Address Group UI usability issues
   [SEN-1105] - Rule Manager Instrument: Rule Manager Instrument Tag Edit UI tags title missing
+  [SEN-1265] - Ansible: Fix overwriting kernel parameters in non-TPM SensorFleet-EFI installs
+  [SEN-1266] - Installer v2: Create multiline kernel commandline parameters instead of single line
 
 - New features and other improvements:
   [SEN-1153] - UI: Implement Single Sign On (SSO) Support for FM UI (BETA)
