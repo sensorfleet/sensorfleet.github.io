@@ -44,6 +44,7 @@ Release highlights:
   with default configuration.
 - Configurable Recording Requests for Suricata Alerting (advanced filtering for Triggered Mode recording).
 - Log Forwarder has built-in support for DCR-based Sentinel API.
+- Fix for non-TPM Installer v2 EFI installation (broken by auditd changes in Ansible)
 
 - Bug fixes:
   [SEN-1128] - Fleet Tool: fix None handling in getting users (list, remove commands)
