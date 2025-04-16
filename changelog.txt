@@ -52,6 +52,8 @@ Release highlights:
   [SEN-1105] - Rule Manager Instrument: Rule Manager Instrument Tag Edit UI tags title missing
   [SEN-1265] - Ansible: Fix overwriting kernel parameters in non-TPM SensorFleet-EFI installs
   [SEN-1266] - Installer v2: Create multiline kernel commandline parameters instead of single line
+  [SEN-1258] - Sensor UI: Fix inconsistent clear behaviour for data retention duration input
+  [SEN-1267] - SFConfig Importer: Fix sfconfig-makedisk not accepting parameters through the CLI alias
 
 - New features and other improvements:
   [SEN-1153] - UI: Implement Single Sign On (SSO) Support for FM UI (BETA)
@@ -82,6 +84,7 @@ Release highlights:
   [SEN-918] - Sensor Orchestrator: Implement support for event type based retention
   [SEN-1144] - Sensor Orchestrator: Implement SR-IOV NIC support
   [SEN-1255] - Rule Manager Instrument: Implement ruleset_sent message title
+  [SEN-1220] - Kernel: add nvidia open driver
 
 2.8.1: release-2.8-staging 2025-01-13, release-2.8 2025-01-28
 
