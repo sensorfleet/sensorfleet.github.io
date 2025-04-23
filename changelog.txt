@@ -33,7 +33,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.9.0: release-2.9 2025-04-14
+2.9.0: release-2.9 2025-04-23
 
 Release highlights:
 - BETA: Added Single Sign On support (SAMLv2) in FM UI.
@@ -46,12 +46,18 @@ Release highlights:
 - Log Forwarder has built-in support for DCR-based Sentinel API.
 - Fix for non-TPM Installer v2 EFI installation (broken by auditd changes in Ansible)
 
+Known issues:
+- Logging in to Sensor UI through the FM UI is no longer possible. Logging to local Sensor UI directly is
+  still possible, provided that you manually add a user. Sensor configuration and management through the
+  FM UI works normally.
+
 - Bug fixes:
   [SEN-1128] - Fleet Tool: fix None handling in getting users (list, remove commands)
   [SEN-1129] - Rule Manager Instrument: Fix some Rule Manager Address Group UI usability issues
   [SEN-1105] - Rule Manager Instrument: Rule Manager Instrument Tag Edit UI tags title missing
   [SEN-1265] - Ansible: Fix overwriting kernel parameters in non-TPM SensorFleet-EFI installs
   [SEN-1266] - Installer v2: Create multiline kernel commandline parameters instead of single line
+  [SEN-1271] - Installer v2: Install missing sudo package for non-privileged Ansible installs
   [SEN-1258] - Sensor UI: Fix inconsistent clear behaviour for data retention duration input
   [SEN-1267] - SFConfig Importer: Fix sfconfig-makedisk not accepting parameters through the CLI alias
 
