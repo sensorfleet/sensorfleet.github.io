@@ -62,6 +62,7 @@ Known issues:
   [SEN-1267] - SFConfig Importer: Fix sfconfig-makedisk not accepting parameters through the CLI alias
 
 - New features and other improvements:
+  [SEN-1279] - Kernel: Update kernel to 6.6 and PF_RING to 8.8
   [SEN-1153] - UI: Implement Single Sign On (SSO) Support for FM UI (BETA)
   [SEN-835] - Enable User Management by default
   [SEN-1194] - SBOMs and vulnerability scan results are now uploaded to https://sbom.sensorfleet.com
