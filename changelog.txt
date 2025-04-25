@@ -9,17 +9,20 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
+* release-2.9: version 2.9.0
+* release-2.9-beta: version 2.9.0
+* release-2.9-staging: version 2.9.0
 * release-2.8: version 2.8.1
 * release-2.8-beta: version 2.8.1
 * release-2.8-staging: version 2.8.1
+
+Unsupported old releases:
 * release-2.7: version 2.7.4
 * release-2.7-beta: version 2.7.4
 * release-2.7-staging: version 2.7.4
 * release-2.6: version 2.6.3
 * release-2.6-beta: version 2.6.3
 * release-2.6-staging: version 2.6.5
-
-Unsupported old releases:
 * release-2.5: version 2.5.2
 * release-2.5-beta: version 2.5.2
 * release-2.5-staging: version 2.5.2
@@ -30,9 +33,68 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
+2.9.0: release-2.9 2025-04-23
+
+Release highlights:
+- BETA: Added Single Sign On support (SAMLv2) in FM UI.
+- BREAKING CHANGE: User Management is now enabled by default. For old installations without User Management,
+  refer to User Manual on how to add users to Fleet Management. This does not affect typical installations.
+- Performance improvements to Suricata, Recorder Instrument and PassiveDNS.
+- Suricata-Arkime integration enabled by default in Recorder Instrument. You can now see Suricata alerts in Arkime
+  with default configuration.
+- Configurable Recording Requests for Suricata Alerting (advanced filtering for Triggered Mode recording).
+- Log Forwarder has built-in support for DCR-based Sentinel API.
+- Fix for non-TPM Installer v2 EFI installation (broken by auditd changes in Ansible)
+
+Known issues:
+- Logging in to Sensor UI through the FM UI is no longer possible. Logging to local Sensor UI directly is
+  still possible, provided that you manually add a user. Sensor configuration and management through the
+  FM UI works normally.
+
+- Bug fixes:
+  [SEN-1128] - Fleet Tool: fix None handling in getting users (list, remove commands)
+  [SEN-1129] - Rule Manager Instrument: Fix some Rule Manager Address Group UI usability issues
+  [SEN-1105] - Rule Manager Instrument: Rule Manager Instrument Tag Edit UI tags title missing
+  [SEN-1265] - Ansible: Fix overwriting kernel parameters in non-TPM SensorFleet-EFI installs
+  [SEN-1266] - Installer v2: Create multiline kernel commandline parameters instead of single line
+  [SEN-1271] - Installer v2: Install missing sudo package for non-privileged Ansible installs
+  [SEN-1258] - Sensor UI: Fix inconsistent clear behaviour for data retention duration input
+  [SEN-1267] - SFConfig Importer: Fix sfconfig-makedisk not accepting parameters through the CLI alias
+
+- New features and other improvements:
+  [SEN-1153] - UI: Implement Single Sign On (SSO) Support for FM UI (BETA)
+  [SEN-835] - Enable User Management by default
+  [SEN-1194] - SBOMs and vulnerability scan results are now uploaded to https://sbom.sensorfleet.com
+  [SEN-1187] - All Instruments: update Alpine to 3.20.6
+  [SEN-1134] - Zeek Instrument: update Zeek to 7.0.5
+  [SEN-1160] - Log Forwarder Instrument: Add sentinel DCR-based api plugin microsoft-sentinel-log-analytics-logstash-output-plugin
+  [SEN-1134] - Log Forwarder Instrument: update logstash to 7.17.27
+  [SEN-1134] - Recorder Instrument: update ElasticSearch to 8.17.1
+  [SEN-1180] - Zeek Instrument: Zeek support for SR-IOV and physical interfaces
+  [SEN-1172] - Fleet Tool: Support for on-demand record command
+  [SEN-1177] - Netflow Instrument: Add support for SR-IOV VF and physical interfaces
+  [SEN-1140] - Recorder Instrument: Suricata alerts to Arkime integration
+  [SEN-1184] - Recorder Instrument: Configurable tpacketv3 buffer parameters
+  [SEN-1183] - Recorder Instrument: Use mimalloc only with tpacketv3
+  [SEN-1178] - Recorder Instrument: Add support for SR-IOV VF and physical interfaces
+  [SEN-1118] - Kernel: added support for Qlogic QED interfaces
+  [SEN-1051] - Rule Manager Instrument: return the error when processing rulesource for upper functions to display the error to user
+  [SEN-1234] - Suricata Instrument: Suricata record request filtering
+  [SEN-1224] - Suricata Instrument: Use mimalloc for Suricata allocations to improve performance
+  [SEN-1176] - Suricata Instrument: Add support for SR-IOV VF and physical interfaces
+  [SEN-1210] - UI: support for X-Real-IP, X-Forwarded-For, X-SensorFleet-User  headers
+  [SEN-1225] - UI: support for PASETO Token based sensor ui authentication
+  [SEN-1203] - PassiveDNS Instrument: Implement database partitioning for better performance
+  [SEN-1166] - Capture Engine: Implement support for SR-IOV on Capture Engine
+  [SEN-1143] - Capture Engine: Update capco to new PF_RING version 8.8.0-stable
+  [SEN-918] - Sensor Orchestrator: Implement support for event type based retention
+  [SEN-1144] - Sensor Orchestrator: Implement SR-IOV NIC support
+  [SEN-1255] - Rule Manager Instrument: Implement ruleset_sent message title
+  [SEN-1220] - Kernel: add nvidia open driver
+
 2.8.1: release-2.8-staging 2025-01-13, release-2.8 2025-01-28
 
-Bug fixes:
+- Bug fixes:
   [SEN-1119] - Ansible: remove kernel after packages are configured (fixes firewall module issue with some cloud VM installs)
   [SEN-1112] - Ansible: modified apt auth.conf to support sending basic auth over http
   [SEN-1121] - AssetGuard Instrument: remove illegal characters from (dhcp or other originated) hostnames
@@ -62,7 +124,7 @@ Release highlights:
 - Netflow Instrument: New nfdump version with new data format. Note that old version nfdump cannot read this format.
 - Some other bug fixes
 
-Bug fixes:
+- Bug fixes:
   [SEN-1045] - AssetGuard Instrument: Fix event subscription with multiple AssetProbes
   [SEN-1019] - Log Forwarder Instrument: fix permissions issue after 2.6 -> 2.7 upgrade
   [SEN-1028] - Log Forwarder Instrument: fix situation where no event history was found and history=false
@@ -115,24 +177,24 @@ Bug fixes:
 
 2.7.4: release-2.7 2024-09-11
 
-Bug fixes:
+- Bug fixes:
   [SEN-1006] - Rule Manager: Suricata rule validation does not consider custom variables
 
 2.7.3: release-2.7-staging 2024-07-24, release-2.7 2024-07-26
 
-Bug fixes:
+- Bug fixes:
   [SEN-928] - Recorder Instrument: Instrument configuration changes cause invalid stats event to be generated
   [SEN-937] - Capture Engine: Fix regression that broke optics statistics
   [SEN-938] - Suricata Instrument: Update to 7.0.6 to address security issues
 
 2.7.2: release-2.7-staging 2024-07-02
 
-Bug fixes:
+- Bug fixes:
   [SEN-875] - Capture Engine: fix pipe leak on pyroute2.IPRoute usage causing continuous memory usage increase
 
 2.7.1: release-2.7 2024-06-13
 
-Bug fixes:
+- Bug fixes:
   [SEN-839] - Capture Engine: Fix erroring out on missing optical info on SFP transceiver
   [SEN-864] - Capture Engine: Fix ethtool usage when reading interface statistics, causing a memory leak
   [SEN-817] - Kernel: Depend on initramfs-tools or sensorfleet-efi, fixing Ansible run on non-installer installed Sensors
@@ -154,7 +216,7 @@ Release highlights:
 - Lots of OS & 3rd party component updates, including Vue 2 -> Vue 3 migration
 - Statistics events support with sensorfleet-statistics package
 
-Bug fixes:
+- Bug fixes:
   [SEN-517] - AssetGuard Instrument: Fix overlapping vendor mac addresses
   [SEN-534] - Recorder Instrument: Fix incorrect parameter being sent to index cleanup logic
   [SEN-599] - Kernel: Fix latest tag in build and grep in build.sh
