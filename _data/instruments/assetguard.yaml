@@ -38,3 +38,6 @@ produced_event_types:
   - match: instruments.assetguard.asset.moved
     type: exact
     title: Asset moved alert
+  - match: instruments.assetguard.asset.updated
+    type: exact
+    title: Asset updated
