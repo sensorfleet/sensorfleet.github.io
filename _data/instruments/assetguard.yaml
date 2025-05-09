@@ -41,3 +41,6 @@ produced_event_types:
   - match: instruments.assetguard.asset.updated
     type: exact
     title: Asset updated
+  - match: instruments.assetguard.assets.details
+    type: exact
+    title: All assets and their details
