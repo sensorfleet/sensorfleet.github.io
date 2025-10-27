@@ -1,0 +1,77 @@
+<div class="main">
+  <div class="container-md">
+    <a href="{{lang-link-href}}" style="font-size: 1.25rem;">{{lang-link-text}}</a>
+    <div class="content">
+      <div class="block">
+        <h1>{{page.title}}</h1>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <p class="lead">{{traficom-lead}}</p>
+          </div>
+          <div class="col-lg-6">
+            <img class="img-fluid" style="background-color: white;" src="{{traficom-logo}}">
+          </div>
+        </div>
+        <div class="row align-items-center my-4">
+          <div class="col-lg-6">
+            <p class="lead">{{sensorfleet-lead}}</p>
+          </div>
+          <div class="col-lg-6">
+            <img class="img-fluid" style="width: 100%;" src="../img/sensorfleet-white2.png">
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h2>{{deployment-title}}</h2>
+        <p>{{deployment}}</p>
+        <img class="img-fluid" src="../img/havaro-peruspavelu-diagram.png">
+      </div>
+      <div class="block">
+        <h2>{{content-title}}</h2>
+        <p>{{content}}</p>
+        <div class="box-grid">
+          <div class="box p-2">
+            <h3>SensorFleet</h3>
+            <p>{{content-sensorfleet}}</p>
+          </div>
+          <div class="box p-2">
+            <h3>{{content-traficom-title}}</h3>
+            <p>{{content-traficom}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h2>{{protection-title}}</h2>
+        <p>{{protection}}</p>
+        <div class="row align-items-center">
+          <div class="col-lg-2">
+            <img class="img-fluid p-1" style="background-color: white;" src="../img/havaro.svg">
+          </div>
+          <div class="col-lg-10">
+            <h3>{{protection-subtitle}}</h3>
+            <ul>
+              {% for bullet in protection-bullets %}
+                <li>{{bullet}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h2>{{additional-services-title}}</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-10">
+            <p>{{additional-services}}</p>
+          </div>
+          <div class="col-lg-2">
+            <img class="img-fluid" src="../img/instrument-cart.png">
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>{{interested-title}}</h2>
+        <p>{{interested}}</p>
+      </div>
+    </div>
+  </div>
+</div>
