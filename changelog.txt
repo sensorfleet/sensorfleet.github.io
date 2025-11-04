@@ -57,6 +57,7 @@ Bug fix, security and compatibility update.
   [SEN-1485] - Suricata Instrument, Rule Manager Instrument: Update suricata to 7.0.12
   [SEN-1470] - Statistics Collector: Implement new drop count metrics from Capture Engine
   [SEN-1428] - SensorFleet EFI: Improve UEFI compatibility with weird UEFI implementations by adding BOOTX64.EFI
+  [SEN-1532] - Instruments: Update Alpine Linux to 3.20.8
 
 2.9.0: release-2.9 2025-04-23
 
