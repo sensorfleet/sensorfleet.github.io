@@ -33,7 +33,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.9.1: staging 2025-10-31
+2.9.1: staging 2025-11-20
 
 Bug fix, security and compatibility update.
 
@@ -54,10 +54,14 @@ Bug fix, security and compatibility update.
   [SEN-1448] - Capture Engine: Update PF_RING to 9.0.0
   [SEN-1446] - Kernel: Update kernel to 6.6.108 and PF_RING to latest
   [SEN-1433] - Capture Engine: Implement drop count metrics
-  [SEN-1485] - Suricata Instrument, Rule Manager Instrument: Update suricata to 7.0.12
+  [SEN-1567] - Suricata Instrument, Rule Manager Instrument: Update suricata to 7.0.13
   [SEN-1470] - Statistics Collector: Implement new drop count metrics from Capture Engine
   [SEN-1428] - SensorFleet EFI: Improve UEFI compatibility with weird UEFI implementations by adding BOOTX64.EFI
   [SEN-1532] - Instruments: Update Alpine Linux to 3.20.8
+  [SEN-1545] - Log Forwarder Instrument: Update logstash to 7.17.29
+  [SEN-1532] - All Instruments: Update alpine to 3.20.8
+  [SEN-1535] - Rule Manager, PassiveDNS, AssetGuard: Update PostgreSQL 12 to 12.21 (only used for migration)
+  [SEN-1540] - Cowrie Instrument: Update Cowrie to 2.8.1
 
 2.9.0: release-2.9 2025-04-23
 
