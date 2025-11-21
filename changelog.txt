@@ -9,8 +9,8 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.9: version 2.9.0
-* release-2.9-beta: version 2.9.0
+* release-2.9: version 2.9.1
+* release-2.9-beta: version 2.9.1
 * release-2.9-staging: version 2.9.1
 
 Unsupported old releases:
@@ -33,12 +33,12 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.9.1: staging 2025-11-20
+2.9.1: staging 2025-11-20, stable 2025-11-21
 
 Bug fix, security and compatibility update.
 
 KNOWN ISSUES
-- Ansible role vpn_client might be inompatible with latest Ansible versions, depending on used library versions.
+- Ansible role vpn_client might be inompatible with latest Ansible versions (with ansible.netcommon >= 8.0.0).
   Downgrade to an older Ansible e.g. 2.16 or manually patch incompatible roles.
   Will be fixed in 2.10 because compatibility with old Ansible will break due to API changes.
 
