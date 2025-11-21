@@ -11,12 +11,12 @@ See User Manual for details on release channels and their usage.
 Supported current releases:
 * release-2.9: version 2.9.0
 * release-2.9-beta: version 2.9.0
-* release-2.9-staging: version 2.9.0
+* release-2.9-staging: version 2.9.1
+
+Unsupported old releases:
 * release-2.8: version 2.8.1
 * release-2.8-beta: version 2.8.1
 * release-2.8-staging: version 2.8.1
-
-Unsupported old releases:
 * release-2.7: version 2.7.4
 * release-2.7-beta: version 2.7.4
 * release-2.7-staging: version 2.7.4
@@ -32,6 +32,36 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.9.1: staging 2025-11-20
+
+Bug fix, security and compatibility update.
+
+- Bug fixes:
+  [SEN-1488] - Installer v2: Installer should install resolver to global configuration instead of interface-based
+  [SEN-1306] - Installer v2: Generate unique machine-id on installation to prevent duplicate DHCP client IPs
+  [SEN-1398] - Ansible: Prevent sensorfleet-efi package from being removed by APT (affects installerv2 non-TPM installs)
+  [SEN-1404] - UI: API token does not work over FM to remote Sensor Instrument UIs (Broken in 2.9.0)
+  [SEN-1380] - UI: Opening Sensor UI through FM reverse proxy does not work if user management enabled in Sensor,
+               remove unnecessary UI buttons from FM
+  [SEN-1461] - Adoption VPN: openvpn user/group might be missing when running fleet adoption vpn import
+  [SEN-1401] - SensorFleet EFI: Improve compatibility with flash memory cards by enchancing EFI partition detection
+  [SEN-1299] - SensorFleet EFI: Fix Fleet-EFI Boot Manager command cannot handle >9 boot entries
+  [SEN-1301] - SensorFleet EFI: Fix debug kernel image does not contain the commandline
+
+- New features and other improvements:
+  [SEN-1478] - Kernel: Support Broadcom MPI3 in the Fleet Kernel
+  [SEN-1448] - Capture Engine: Update PF_RING to 9.0.0
+  [SEN-1446] - Kernel: Update kernel to 6.6.108 and PF_RING to latest
+  [SEN-1433] - Capture Engine: Implement drop count metrics
+  [SEN-1567] - Suricata Instrument, Rule Manager Instrument: Update suricata to 7.0.13
+  [SEN-1470] - Statistics Collector: Implement new drop count metrics from Capture Engine
+  [SEN-1428] - SensorFleet EFI: Improve UEFI compatibility with weird UEFI implementations by adding BOOTX64.EFI
+  [SEN-1532] - Instruments: Update Alpine Linux to 3.20.8
+  [SEN-1545] - Log Forwarder Instrument: Update logstash to 7.17.29
+  [SEN-1532] - All Instruments: Update alpine to 3.20.8
+  [SEN-1535] - Rule Manager, PassiveDNS, AssetGuard: Update PostgreSQL 12 to 12.21 (only used for migration)
+  [SEN-1540] - Cowrie Instrument: Update Cowrie to 2.8.1
 
 2.9.0: release-2.9 2025-04-23
 
