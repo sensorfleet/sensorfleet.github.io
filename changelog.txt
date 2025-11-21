@@ -37,10 +37,15 @@ Unsupported old releases:
 
 Bug fix, security and compatibility update.
 
+KNOWN ISSUES
+- Ansible role vpn_client might be inompatible with latest Ansible versions, depending on used library versions.
+  Downgrade to an older Ansible e.g. 2.16 or manually patch incompatible roles.
+  Will be fixed in 2.10 because compatibility with old Ansible will break due to API changes.
+
 - Bug fixes:
   [SEN-1488] - Installer v2: Installer should install resolver to global configuration instead of interface-based
   [SEN-1306] - Installer v2: Generate unique machine-id on installation to prevent duplicate DHCP client IPs
-  [SEN-1398] - Ansible: Prevent sensorfleet-efi package from being removed by APT (affects installerv2 non-TPM installs)
+  [SEN-1398] - Ansible: Prevent sensorfleet-efi package from being removed by APT (affects installer v2 non-TPM installs)
   [SEN-1404] - UI: API token does not work over FM to remote Sensor Instrument UIs (Broken in 2.9.0)
   [SEN-1380] - UI: Opening Sensor UI through FM reverse proxy does not work if user management enabled in Sensor,
                remove unnecessary UI buttons from FM
