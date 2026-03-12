@@ -44,6 +44,7 @@ Bug fix, security and compatibility update.
 
 - New features and other improvements:
   [SEN-1755] - Option to Prevent cross-sensor subscriptions and messaging (filter_sensor_to_sensor, default false)
+  [SEN-1815] - Relax Sensor configuration schema by allowing extra fields in many places
   [SEN-1719] - Suricata Instrument, Rule Manager: Update Suricata to 7.0.14
   [SEN-1718] - Fleet Tool: Adding users has a new --privilege option, use sane defaults
   [SEN-1720] - Zeek Instrument: Update Zeek to 7.0.11
