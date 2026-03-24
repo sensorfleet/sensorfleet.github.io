@@ -42,8 +42,6 @@ Security patch release (CrackArmor + Suricata)
   [SEN-1821] - Capture Engine: Update PF_RING to latest
   [SEN-1833] - Update Suricata to 7.0.15 and libhtp to 0.5.53
 
-*** CHANGELOG ***
-
 2.9.2: staging 2026-03-12, stable 2026-03-16
 
 Bug fix, security and compatibility update.
