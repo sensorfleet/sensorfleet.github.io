@@ -9,8 +9,8 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.9: version 2.9.4
-* release-2.9-beta: version 2.9.4
+* release-2.9: version 2.9.5
+* release-2.9-beta: version 2.9.5
 * release-2.9-staging: version 2.9.5
 
 Unsupported old releases:
@@ -36,7 +36,7 @@ Unsupported old releases:
 2.9.5: staging 2026-04-17, stable 2026-04-17
 
 - Bug fixes:
-  [SEN-1854] - Kernel: Revert PF_RING version, 2.9.3 introduced a packet dupe regression in Capture Engine
+  [SEN-1887] - Kernel: Revert PF_RING version, 2.9.3 introduced a packet dupe regression in Capture Engine
 
 2.9.4: staging 2026-04-09, stable 2026-04-10
 
