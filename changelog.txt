@@ -4,6 +4,9 @@ Changes marked with ansible mean that an ansible re-run with new playbook is req
 Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
 any repository.
 
+*** https://copy.fail vulneratiblity information ***
+See here: https://repository.sensorfleet.com/misc/copyfail_mitigation.txt
+
 See User Manual for details on release channels and their usage.
 
 *** CHANNELS ***
