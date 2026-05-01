@@ -14,7 +14,7 @@ See User Manual for details on release channels and their usage.
 Supported current releases:
 * release-2.9: version 2.9.5
 * release-2.9-beta: version 2.9.5
-* release-2.9-staging: version 2.9.5
+* release-2.9-staging: version 2.9.6
 
 Unsupported old releases:
 * release-2.8: version 2.8.1
@@ -35,6 +35,13 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.9.6: staging 2026-05-01
+
+IMPORTANT SECURITY UPDATE! Remember to reboot.
+
+- Bug fixes:
+  [SEN-1919] - Kernel: Update to 6.6.137 (Fixes CVE-2026-31431 copy.fail vulnerability)
 
 2.9.5: staging 2026-04-17, stable 2026-04-17
 
