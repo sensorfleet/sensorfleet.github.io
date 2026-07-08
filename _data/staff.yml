@@ -5,23 +5,11 @@ sami:
   image: /img/staff/sami.jpg
   phone: +358 40 503 0745
 
-simo:
-  name: Simo Mäkipaja
-  position: Sales Director
-  linkedin: https://www.linkedin.com/in/simo-makipaja-5779a598/
-  image: /img/staff/simo.jpg
-
 keitsi:
   name: Mikko Korkalo
   position: Head of R&D
   linkedin: https://www.linkedin.com/in/mikko-korkalo-695b915/
   image: /img/staff/keitsi.jpg
-
-esa:
-  name: Esa Törmikoski
-  position: Developer
-  linkedin: https://www.linkedin.com/in/esa-t%C3%B6rmikoski-66a45171/
-  image: /img/staff/esa.jpg
 
 fellu:
   name: Felix Ippolitov
@@ -33,7 +21,7 @@ fellu:
 
 jtt:
   name: Jukka Taimisto
-  position: Developer
+  position: R&D Manager
   linkedin: https://www.linkedin.com/in/jukka-taimisto-b200b22
   image: /img/staff/jtt.jpg
 
@@ -42,3 +30,9 @@ dae:
   position: Developer
   image: /img/staff/dae.jpg
   github: https://github.com/atonkyra
+
+mikko:
+  name: Mikko Huhmo
+  position: Account Manager
+  image: /img/staff/mikko.jpg
+  linkedin: https://www.linkedin.com/in/mikko-huhmo-951b06125/
