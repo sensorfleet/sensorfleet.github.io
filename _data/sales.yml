@@ -4,3 +4,10 @@ sami:
   linkedin: https://www.linkedin.com/in/petajasoja/
   image: /img/staff/sami.jpg
   phone: +358 40 503 0745
+
+mikko:
+  name: Mikko Huhmo
+  position: Account Manager
+  image: /img/staff/mikko.jpg
+  linkedin: https://www.linkedin.com/in/mikko-huhmo-951b06125/
+  phone: +358 44 522 3309
