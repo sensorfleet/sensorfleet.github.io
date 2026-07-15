@@ -36,18 +36,14 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-<<<<<<< HEAD
-2.9.8: staging 2026-05-25, stable 2026-06-08
-=======
 2.9.9: staging 2026-07-15
->>>>>>> b2c6a1b (release 2.9.9)
 
 IMPORTANT SECURITY UPDATE! Remember to reboot.
 
 - Bug fixes:
   [SEN-2019] - Kernel: Update to 6.6.144
 
-2.9.8: staging 2026-05-25
+2.9.8: staging 2026-05-25, stable 2026-06-08
 
 - Bug fixes:
   [SEN-1951] - Kernel: Update to 6.6.140
