@@ -14,7 +14,7 @@ See User Manual for details on release channels and their usage.
 Supported current releases:
 * release-2.9: version 2.9.8
 * release-2.9-beta: version 2.9.8
-* release-2.9-staging: version 2.9.9
+* release-2.9-staging: version 2.9.10
 
 Unsupported old releases:
 * release-2.8: version 2.8.1
@@ -35,6 +35,15 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.9.10: staging 2026-07-23
+
+CRITICAL SECURITY UPDATE! Remember to reboot.
+
+- Bug fixes:
+  [SEN-2019] - Kernel: Backport RefluxFS CVE-2026-64600 patch to 6.6.144
+  [SEN-2026] - MessageBroker: Fix a critical vulnerability in handling of incoming Sensor messages
+  [SEN-2027] - Disable MongoDB script engine to disallow running JS by MongoDB
 
 2.9.9: staging 2026-07-15
 
