@@ -14,7 +14,7 @@ See User Manual for details on release channels and their usage.
 Supported current releases:
 * release-2.9: version 2.9.8
 * release-2.9-beta: version 2.9.8
-* release-2.9-staging: version 2.9.10
+* release-2.9-staging: version 2.9.11
 
 Unsupported old releases:
 * release-2.8: version 2.8.1
@@ -35,6 +35,13 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+2.9.11: staging 2026-08-24
+
+IMPORTANT SECURITY UPDATE! Remember to reboot.
+
+- Bug fixes:
+  [SEN-2041] - Kernel: Update kernel to 6.6.148
 
 2.9.10: staging 2026-07-23
 
