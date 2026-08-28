@@ -28,6 +28,9 @@ produced_event_types:
   - match: instruments.logforwarder.stats
     type: exact
     title: Logforwarder statistics event
+  - match: instruments.logforwarder.input_ev.
+    type: prefix
+    title: Events from the input event pipeline
 network_access_type: active
 required_interfaces:
   - type: any
