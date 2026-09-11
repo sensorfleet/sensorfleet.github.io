@@ -435,6 +435,39 @@ a.box:hover {
   margin: 1em 0;
 }
 
+.layout-post img.align-left {
+  display: block;
+  float: left;
+  margin: 0.25em 1.5em 1em 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.layout-post .image-text-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.layout-post .image-text-row > p {
+  margin: 0;
+  flex: 0 1 auto;
+}
+.layout-post .image-text-row > p > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.layout-post .image-text-row > div {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.layout-post .image-text-row > div > :last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 992px) {
   .navbar-nav .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.1);
