@@ -12,8 +12,8 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.9: version 2.9.8
-* release-2.9-beta: version 2.9.8
+* release-2.9: version 2.9.11
+* release-2.9-beta: version 2.9.11
 * release-2.9-staging: version 2.9.11
 
 Unsupported old releases:
@@ -36,7 +36,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.9.11: staging 2026-08-24
+2.9.11: staging 2026-08-24, stable 2026-09-16
 
 IMPORTANT SECURITY UPDATE! Remember to reboot.
 
