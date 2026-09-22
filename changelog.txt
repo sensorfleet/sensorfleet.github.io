@@ -12,7 +12,7 @@ See User Manual for details on release channels and their usage.
 *** CHANNELS ***
 
 Supported current releases:
-* release-2.9: version 2.9.11
+* release-2.9: version 2.9.12
 * release-2.9-beta: version 2.9.12
 * release-2.9-staging: version 2.9.12
 
@@ -36,7 +36,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-2.9.12: staging 2026-09-16, beta 2026-09-17
+2.9.12: staging 2026-09-16, beta 2026-09-17, stable 2026-09-22
 
 IMPORTANT SECURITY UPDATE!
 Suricata is updated to a newer major version due to Suricata 7 EOL and severe upcoming vulnerabilities.
