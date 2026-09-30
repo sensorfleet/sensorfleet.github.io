@@ -54,7 +54,6 @@ Release highlights:
 - User Management: two-factor authentication (TOTP), including enforcing it for all users, and admins can
   lock and unlock users and change their passwords.
 - Audit logging for Rule Manager, the UI, Recorder PCAP downloads and Netflow downloads.
-- Rule Manager validates Suricata rules before delivering them to Sensors.
 - AssetGuard: service and protocol detection, VLAN observations and events for updated assets.
 - Log Forwarder: input pipelines and pipeline statistics.
 - BETA: Self-hosted minirepo mirror for installing and updating without Internet access, see User Manual.
@@ -71,7 +70,6 @@ Release highlights:
               no legacy vsyscall or kexec, Intel IBT, unused subsystems such as SCTP and NFS server removed)
 
 - Bug fixes:
-  [SEN-2149] - Suricata Instrument: Address and port groups are lost when the Instrument is restarted
   [SEN-2147] - Rule Manager Instrument: Report the actual number of rules in the "ruleset sent" event
   [SEN-2129] - Rule Manager Instrument: Suricata adoption could stop permanently after a failed health report
   [SEN-2126] - UI: FM UI could fail to show the Sensor software version for up to 12 hours
