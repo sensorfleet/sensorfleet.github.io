@@ -39,7 +39,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-26.1.0: release-26.1 YYYY-MM-DD
+26.1.0: release-26.1 2026-09-30
 
 Release highlights:
 - New version numbering: releases are now numbered by year (26.1) instead of 2.x.
