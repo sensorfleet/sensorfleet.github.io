@@ -1,17 +1,20 @@
 SensorFleet software changelog
 
 Changes marked with ansible mean that an ansible re-run with new playbook is required.
-Contact SensorFleet to obtain new version of the ansible playbook, it's not yet available from
-any repository.
+The Ansible playbook for release 26.1 is available at https://github.com/sensorfleet/ansible-sensorfleet.
+For release 2.9 and older, contact SensorFleet to obtain the Ansible playbook.
 
 *** https://copy.fail vulneratiblity information ***
 See here: https://repository.sensorfleet.com/misc/copyfail_mitigation.txt
 
-See User Manual for details on release channels and their usage.
+See User Manual (https://docs.sensorfleet.com) for details on release channels and their usage.
 
 *** CHANNELS ***
 
 Supported current releases:
+* release-26.1: version 26.1.0
+* release-26.1-beta: version 26.1.0
+* release-26.1-staging: version 26.1.0
 * release-2.9: version 2.9.13
 * release-2.9-beta: version 2.9.13
 * release-2.9-staging: version 2.9.13
@@ -35,6 +38,93 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+26.1.0: release-26.1 2026-09-30
+
+Release highlights:
+- New version numbering: releases are now numbered by year (26.1) instead of 2.x.
+- BREAKING CHANGE: New Ansible playbook, published at https://github.com/sensorfleet/ansible-sensorfleet.
+  The previous playbook is not compatible with release 26.1. A migration tool for existing inventories is
+  included, see User Manual at https://docs.sensorfleet.com.
+- BREAKING CHANGE: Sensor MessageBroker now stores events in PostgreSQL instead of MongoDB. Existing events are
+  migrated automatically during the upgrade (limited to last 100 000 events by default). Refer to User Manual for details.
+- Upgrading to 26.1 is supported from release 2.9. Older releases must be upgraded to 2.9 first.
+- Supported installation methods: Installer v2, or Ubuntu 22.04 with the prepare_ubuntu Ansible playbook.
+  Installer v1 is not supported with release 26.1.
+- User Management: two-factor authentication (TOTP), including enforcing it for all users, and admins can
+  lock and unlock users and change their passwords.
+- Audit logging for Rule Manager, the UI, Recorder PCAP downloads and Netflow downloads.
+- AssetGuard: service and protocol detection, VLAN observations and events for updated assets.
+- Log Forwarder: input pipelines and pipeline statistics.
+- BETA: Self-hosted minirepo mirror for installing and updating without Internet access, see User Manual.
+- Kernel hardening: stricter kernel configuration with a reduced attack surface.
+- Maintenance: Alpine Linux 3.24.1 and Python 3.14 for all Instruments, LXD 5.0.9, Arkime 6.7.0.
+
+- Security fixes:
+  [SEN-2152] - UI: Fix HEAD requests bypassing permission checks (infoleak)
+  [SEN-1386] - UI: Require admin write permission for changing Sensor configuration through the API
+  [SEN-1383] - Sensor configuration: Fix authenticated privilege escalation through Instrument container options
+  [SEN-1385] - Sensor configuration: Validate Instrument IDs to prevent web server configuration injection
+  [SEN-2158] - Installer v2: Install Ubuntu updates and security fixes
+  [SEN-1952] - Kernel: Hardened kernel configuration (restricted /dev/mem and I/O port access, unprivileged BPF off,
+              no legacy vsyscall or kexec, Intel IBT, unused subsystems such as SCTP and NFS server removed)
+
+- Bug fixes:
+  [SEN-2147] - Rule Manager Instrument: Report the actual number of rules in the "ruleset sent" event
+  [SEN-2129] - Rule Manager Instrument: Suricata adoption could stop permanently after a failed health report
+  [SEN-2126] - UI: FM UI could fail to show the Sensor software version for up to 12 hours
+  [SEN-2075] - UI: Show only the Instruments available on each Sensor
+  [SEN-2071] - MessageBroker: Fix reconnect flood after a messaging connection drops
+  [SEN-2074] - Recorder Instrument: Rotate events.json so that it cannot fill the disk
+  [SEN-2013] - Netflow Instrument: Improve softflowd health checks
+  [SEN-1839] - Fleet Tool: Fix the --transient option
+  [SEN-1823] - Sensor configuration: Allow underscore in event type retention rules
+  [SEN-1546] - UI: Fix error handling in Object and YAML configuration editors
+  [SEN-1345] - UI: Fix saving nested Instrument settings
+  [SEN-1330] - UI: Hide the non-functional software upgrade button
+  [SEN-1308] - AssetGuard Instrument: Fix the asset import dialog
+  [SEN-1298] - Rule Manager Instrument: Disable Instrument name editing, which had no effect
+  [SEN-1269] - UI: Fix Instrument container options not being shown
+
+- New features and other improvements:
+  [SEN-1343] - MessageBroker: Migrate the event database from MongoDB to PostgreSQL
+  [SEN-2106] - MessageBroker: Allow skipping or time-limiting the event migration
+  [SEN-1537] - UI: Two-factor authentication (TOTP) for login, with pairing and admin removal of 2FA
+  [SEN-1635] - UI: Option to require two-factor authentication
+  [SEN-1409] - UI: Admins can lock and unlock users
+  [SEN-1410] - UI: Admins can change user passwords, optionally forcing a password change at next login
+  [SEN-1414] - UI: Editable Sensor metadata
+  [SEN-2104] - UI: Listen on IPv6 as well
+  [SEN-1738] - UI: Remove the obsolete data_base64 field from events
+  [SEN-1259] - UI: Audit logging
+  [SEN-1207] - Rule Manager Instrument: Audit logging
+  [SEN-1283] - Recorder Instrument: Audit events for the PCAP API
+  [SEN-1284] - Netflow Instrument: Audit events for the download API
+  [SEN-1201] - Rule Manager Instrument: Validate Suricata rules before delivery
+  [SEN-1953] - Rule Manager Instrument: Faster validation of multiple Suricata rules
+  [SEN-1300] - AssetGuard Instrument: Port-based service protocol detection
+  [SEN-1305] - AssetGuard Instrument: Protocol observations
+  [SEN-1263] - AssetGuard Instrument: Observations for VLAN IDs
+  [SEN-1239] - AssetGuard Instrument: Send an event when an existing asset is updated
+  [SEN-1241] - AssetGuard Instrument: Periodic asset details event
+  [SEN-1289] - AssetGuard Instrument: UDP listening port detection (experimental)
+  [SEN-1336] - Log Forwarder Instrument: Support for input pipelines
+  [SEN-1788] - Log Forwarder Instrument: Input pipeline statistics and connection failures in health status
+  [SEN-873] - Log Forwarder Instrument: Plain text editor for pipeline configuration
+  [SEN-1337] - Statistics Collector: Log Forwarder pipeline statistics
+  [SEN-1665] - Event Exporter Instrument: Base64 encode binary event data
+  [SEN-242] - Recorder Instrument: Retention checks follow the last packet time
+  [SEN-626] - Capture Engine: Better default thread count
+  [SEN-1827] - Sensor Orchestrator: Use the maximum NIC ring buffer size on physical interfaces
+  [SEN-1835] - Sensor Orchestrator: Certificate expiration monitoring
+  [SEN-1654] - Fleet Tool: Sensors can fetch software updates through the FM
+  [SEN-142] - Fleet Tool: Backup of all configuration (experimental)
+  [SEN-2077] - Update LXD to 5.0.9
+  [SEN-2073] - All Instruments: Update Alpine Linux to 3.24.1 and Python to 3.14
+  [SEN-2073] - Recorder Instrument: Update Arkime to 6.7.0
+  [SEN-1978] - Cowrie Instrument: Update Cowrie to 3.0.1
+  [SEN-1339] - PortDiff Instrument: Update pscan to 0.3.2
+  [SEN-1357] - Netflow Instrument: Update softflowd to 1.1.1
 
 2.9.13: staging 2026-09-23, stable 2026-09-28
 
