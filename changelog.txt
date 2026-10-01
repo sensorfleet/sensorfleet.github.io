@@ -47,7 +47,7 @@ Release highlights:
   The previous playbook is not compatible with release 26.1. A migration tool for existing inventories is
   included, see User Manual at https://docs.sensorfleet.com.
 - BREAKING CHANGE: Sensor MessageBroker now stores events in PostgreSQL instead of MongoDB. Existing events are
-  migrated automatically during the upgrade. The migration can be skipped or time-limited, see User Manual.
+  migrated automatically during the upgrade (limited to last 100 000 events by default). Refer to User Manual for details.
 - Upgrading to 26.1 is supported from release 2.9. Older releases must be upgraded to 2.9 first.
 - Supported installation methods: Installer v2, or Ubuntu 22.04 with the prepare_ubuntu Ansible playbook.
   Installer v1 is not supported with release 26.1.
