@@ -4,9 +4,6 @@ Changes marked with ansible mean that an ansible re-run with new playbook is req
 The Ansible playbook for release 26.1 is available at https://github.com/sensorfleet/ansible-sensorfleet.
 For release 2.9 and older, contact SensorFleet to obtain the Ansible playbook.
 
-*** https://copy.fail vulneratiblity information ***
-See here: https://repository.sensorfleet.com/misc/copyfail_mitigation.txt
-
 See User Manual (https://docs.sensorfleet.com) for details on release channels and their usage.
 
 *** CHANNELS ***
@@ -14,7 +11,7 @@ See User Manual (https://docs.sensorfleet.com) for details on release channels a
 Supported current releases:
 * release-26.1: version 26.1.0
 * release-26.1-beta: version 26.1.0
-* release-26.1-staging: version 26.1.0
+* release-26.1-staging: version 26.1.1
 * release-2.9: version 2.9.13
 * release-2.9-beta: version 2.9.13
 * release-2.9-staging: version 2.9.13
@@ -38,6 +35,17 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+26.1.1: staging 2026-10-12
+
+- Bug fixes:
+  [SEN-2165] - UI: Instruments without a UI could show a UI button on new installations
+  [SEN-2165] - Ansible: Install the Instrument metadata on all hosts, so that all Instruments can be added without refreshing [ansible]
+  [SEN-2160] - Ansible: Recreate internal certificates that lack the IP address (IP SubjectAltName), as on older installations [ansible]
+  [SEN-2182] - Log Forwarder Instrument: Fix the Microsoft Sentinel output
+  [SEN-2181] - UI: FM UI could fail to start and show "Something went wrong" after new Sensors were added
+  [SEN-2181] - MessageBroker: A new event subscription could miss an event created at the same moment
+  [SEN-2180] - Capture Engine Instrument: Fix an error being logged every 10 seconds while no interfaces are configured
 
 26.1.0: release-26.1 2026-09-30
 
