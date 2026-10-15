@@ -9,8 +9,8 @@ See User Manual (https://docs.sensorfleet.com) for details on release channels a
 *** CHANNELS ***
 
 Supported current releases:
-* release-26.1: version 26.1.0
-* release-26.1-beta: version 26.1.0
+* release-26.1: version 26.1.2
+* release-26.1-beta: version 26.1.2
 * release-26.1-staging: version 26.1.2
 * release-2.9: version 2.9.13
 * release-2.9-beta: version 2.9.13
@@ -36,7 +36,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-26.1.2: staging 2026-10-14
+26.1.2: staging 2026-10-14, stable 2026-10-15
 
 - Bug fixes:
   [SEN-2187]: UI: fix sensorfleet-base package removing UI socket dir, causing UI failure to start
