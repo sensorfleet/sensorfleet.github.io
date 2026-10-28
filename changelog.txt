@@ -9,8 +9,8 @@ See User Manual (https://docs.sensorfleet.com) for details on release channels a
 *** CHANNELS ***
 
 Supported current releases:
-* release-26.1: version 26.1.2
-* release-26.1-beta: version 26.1.2
+* release-26.1: version 26.1.3
+* release-26.1-beta: version 26.1.3
 * release-26.1-staging: version 26.1.3
 * release-2.9: version 2.9.13
 * release-2.9-beta: version 2.9.13
@@ -36,7 +36,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-26.1.3: staging 2026-10-19
+26.1.3: staging 2026-10-19, stable 2026-10-28
 
 - Bug fixes:
   [SEN-2198]: Kernel: Fix Hyper-V VM boot with >1 vCPUs (CONFIG_HYPERV_VTL_MODE)
