@@ -11,7 +11,7 @@ See User Manual (https://docs.sensorfleet.com) for details on release channels a
 Supported current releases:
 * release-26.1: version 26.1.3
 * release-26.1-beta: version 26.1.3
-* release-26.1-staging: version 26.1.3
+* release-26.1-staging: version 26.1.4
 * release-2.9: version 2.9.13
 * release-2.9-beta: version 2.9.13
 * release-2.9-staging: version 2.9.13
@@ -35,6 +35,22 @@ Unsupported old releases:
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
+
+26.1.4: staging 2026-10-29
+
+- Bug fixes:
+  [SEN-2214] - Instruments: Update Alpine Linux base to 3.24.3
+  [SEN-2223] - UI: ignore sources.list commented lines in version check
+  [SEN-2217] - UI: fix role-based SSO login bouncing back to login page
+  [SEN-2226] - UI: Don't let unconnected services stall fm-ui startup after reboot
+  [SEN-2200] - Ansible, fleetcert: The default UI certificate expired one year after installation and was never renewed.
+           FM now uses a UI certificate signed by the FM CA that is renewed automatically, and Sensors use their
+           internal certificate. Custom UI certificates are not changed. Requires re-running Ansible [ansible]
+  [SEN-2176] - Kernel: Update Kernel to 6.6.158, PF_RING to 9.4.0
+  [SEN-2196] - Suricata Instrument: Update mimalloc to version 3.5.4 to mitigate memory fragmentation on some sensors
+  [SEN-2197] - Recorder Instrument: Update mimalloc to version 3.5.4 to mitigate memory fragmentation on some sensors
+  [SEN-2225] - Log Forwarder Instrument: clear stale input pipeline errors
+  [SEN-2189] - Log Forwarder Instrument: Report Logstash JVM memory problems clearly
 
 26.1.3: staging 2026-10-19, stable 2026-10-28
 
