@@ -29,7 +29,7 @@ Unsupported old releases:
 
 *** CHANGELOG ***
 
-26.1.5: staging 2026-11-20
+26.1.5: staging 2026-11-23
 
 - Bug fixes:
   [SEN-2231] - UI, MessageBroker: redact TOTP secrets and SAML private key written to the configuration audit log
