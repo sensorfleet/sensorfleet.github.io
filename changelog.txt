@@ -9,34 +9,43 @@ See User Manual (https://docs.sensorfleet.com) for details on release channels a
 *** CHANNELS ***
 
 Supported current releases:
-* release-26.1: version 26.1.3
-* release-26.1-beta: version 26.1.3
-* release-26.1-staging: version 26.1.4
+* release-26.1: version 26.1.4
+* release-26.1-staging: version 26.1.5
 * release-2.9: version 2.9.13
-* release-2.9-beta: version 2.9.13
 * release-2.9-staging: version 2.9.13
 
 Unsupported old releases:
 * release-2.8: version 2.8.1
-* release-2.8-beta: version 2.8.1
 * release-2.8-staging: version 2.8.1
 * release-2.7: version 2.7.4
-* release-2.7-beta: version 2.7.4
 * release-2.7-staging: version 2.7.4
 * release-2.6: version 2.6.3
-* release-2.6-beta: version 2.6.3
 * release-2.6-staging: version 2.6.5
 * release-2.5: version 2.5.2
-* release-2.5-beta: version 2.5.2
 * release-2.5-staging: version 2.5.2
 * release-2.4: version 2.4.13
-* release-2.4-beta: version 2.4.13
 * release-2.4-staging: version 2.4.13
 * release-2.3: version 2.3.12
 
 *** CHANGELOG ***
 
-26.1.4: staging 2026-10-29
+26.1.5: staging 2026-11-23
+
+- Bug fixes:
+  [SEN-2231] - UI, MessageBroker: redact TOTP secrets and SAML private key written to the configuration audit log
+  [SEN-2245] - UI: Users without admin:read permission got an "Access forbidden" error right after logging in to FM UI
+  [SEN-2260] - UI: UI could stop responding when the audit log socket was not being read
+  [SEN-2237] - Kernel: Update Kernel to 6.6.161 and grsecurity patch to the latest 6.6 release
+  [SEN-2083] - Sensor Orchestrator: When SR-IOV VF requirements changed, the Instruments of the wrong SR-IOV PF could be restarted instead of the affected ones
+  [SEN-2235] - Suricata Instrument: Update Suricata to 8.0.8
+  [SEN-2261] - MessageBroker: Refreshing an event subscription while its event history was being sent failed with an error,
+           and the error for a subscription owned by another client named the wrong subscriber
+
+  Other Alpine package updates:
+    Updated PostgreSQL to 16.16-r0 (Rule Manager, PassiveDNS, AssetGuard Instruments)
+    Updated OpenJDK to 11.0.33.1_p0-r0 (Log Forwarder Instrument)
+
+26.1.4: staging 2026-10-29, stable 2026-11-06
 
 - Bug fixes:
   [SEN-2214] - Instruments: Update Alpine Linux base to 3.24.3
